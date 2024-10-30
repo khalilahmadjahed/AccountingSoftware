@@ -92,7 +92,7 @@
             help_btn.BackgroundImage = Properties.Resources.butt_background;
             help_btn.BackgroundImageLayout = ImageLayout.Stretch;
             help_btn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            help_btn.Image = Properties.Resources.top_report_butt;
+            help_btn.Image = Properties.Resources.top_help;
             help_btn.Location = new Point(316, 6);
             help_btn.Name = "help_btn";
             help_btn.Size = new Size(90, 63);
@@ -120,7 +120,7 @@
             report_btn.BackgroundImage = Properties.Resources.butt_background;
             report_btn.BackgroundImageLayout = ImageLayout.Stretch;
             report_btn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            report_btn.Image = Properties.Resources.top_report_butt;
+            report_btn.Image = Properties.Resources.top_report2;
             report_btn.Location = new Point(130, 6);
             report_btn.Name = "report_btn";
             report_btn.Size = new Size(90, 63);
@@ -134,7 +134,7 @@
             Accounting_btn.BackgroundImage = Properties.Resources.butt_background;
             Accounting_btn.BackgroundImageLayout = ImageLayout.Stretch;
             Accounting_btn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Accounting_btn.Image = Properties.Resources.top_input_butt;
+            Accounting_btn.Image = Properties.Resources.top_accounting3;
             Accounting_btn.Location = new Point(7, 6);
             Accounting_btn.Name = "Accounting_btn";
             Accounting_btn.Size = new Size(120, 63);

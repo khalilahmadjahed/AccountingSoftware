@@ -63,6 +63,16 @@ namespace AccountingSoftware.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _4213426_about_description_help_info_information_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("4213426_about_description_help_info_information_icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap background {
             get {
                 object obj = ResourceManager.GetObject("background", resourceCulture);
@@ -153,6 +163,26 @@ namespace AccountingSoftware.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap top_accounting3 {
+            get {
+                object obj = ResourceManager.GetObject("top-accounting3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap top_help {
+            get {
+                object obj = ResourceManager.GetObject("top-help", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap top_Help_butt {
             get {
                 object obj = ResourceManager.GetObject("top_Help_butt", resourceCulture);
@@ -176,6 +206,16 @@ namespace AccountingSoftware.Properties {
         internal static System.Drawing.Bitmap top_report_butt {
             get {
                 object obj = ResourceManager.GetObject("top_report_butt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap top_report2 {
+            get {
+                object obj = ResourceManager.GetObject("top-report2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
