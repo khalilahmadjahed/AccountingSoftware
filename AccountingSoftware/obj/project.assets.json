@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\project\\implemeting\\forGit\\AccountingSoftwareSn\\AccountingSoftware\\AccountingSoftware.csproj",
+      "projectUniqueName": "D:\\project\\implemeting\\forGit\\AccountingSoftware\\AccountingSoftware\\AccountingSoftware.csproj",
       "projectName": "AccountingSoftware",
-      "projectPath": "D:\\project\\implemeting\\forGit\\AccountingSoftwareSn\\AccountingSoftware\\AccountingSoftware.csproj",
+      "projectPath": "D:\\project\\implemeting\\forGit\\AccountingSoftware\\AccountingSoftware\\AccountingSoftware.csproj",
       "packagesPath": "C:\\Users\\khali\\.nuget\\packages\\",
-      "outputPath": "D:\\project\\implemeting\\forGit\\AccountingSoftwareSn\\AccountingSoftware\\obj\\",
+      "outputPath": "D:\\project\\implemeting\\forGit\\AccountingSoftware\\AccountingSoftware\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\khali\\AppData\\Roaming\\NuGet\\NuGet.Config",
