@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\project\\implemeting\\forGit\\AccountingSoftware\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|d:\\project\\implemeting\\forgit\\accountingsoftware\\accountingsoftware\\mainfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\mainfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|d:\\project\\implemeting\\forgit\\accountingsoftware\\accountingsoftware\\mainfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\mainfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|d:\\project\\implemeting\\forgit\\accountingsoftware\\accountingsoftware\\mainfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\mainfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,7 +26,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainFrm.cs [Design]",
               "DocumentMoniker": "D:\\project\\implemeting\\forGit\\AccountingSoftware\\AccountingSoftware\\MainFrm.cs",
               "RelativeDocumentMoniker": "AccountingSoftware\\MainFrm.cs",
@@ -38,15 +38,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainFrm.cs",
               "DocumentMoniker": "D:\\project\\implemeting\\forGit\\AccountingSoftware\\AccountingSoftware\\MainFrm.cs",
               "RelativeDocumentMoniker": "AccountingSoftware\\MainFrm.cs",
               "ToolTip": "D:\\project\\implemeting\\forGit\\AccountingSoftware\\AccountingSoftware\\MainFrm.cs",
               "RelativeToolTip": "AccountingSoftware\\MainFrm.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAMwCQAAABwAAAAAAAAAA==",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAiwFQAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T11:14:04.169Z"
+              "WhenOpened": "2024-10-30T11:14:04.169Z",
+              "EditorCaption": ""
             }
           ]
         },

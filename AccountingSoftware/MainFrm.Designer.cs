@@ -29,6 +29,16 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            TreeNode treeNode10 = new TreeNode("Customers");
+            TreeNode treeNode11 = new TreeNode("Sales Invoice");
+            TreeNode treeNode12 = new TreeNode("Purchase Bill");
+            TreeNode treeNode13 = new TreeNode("Invoices", new TreeNode[] { treeNode11, treeNode12 });
+            TreeNode treeNode14 = new TreeNode("Spend Money");
+            TreeNode treeNode15 = new TreeNode("Receive Money");
+            TreeNode treeNode16 = new TreeNode("Payments", new TreeNode[] { treeNode14, treeNode15 });
+            TreeNode treeNode17 = new TreeNode("Expense");
+            TreeNode treeNode18 = new TreeNode("All Tools", new TreeNode[] { treeNode10, treeNode13, treeNode16, treeNode17 });
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrm));
             top_panel1 = new Panel();
             cls_btn = new Button();
             min_btn = new Button();
@@ -38,21 +48,29 @@
             Accounting_btn = new Button();
             bott_pnl = new Panel();
             pictureBox1 = new PictureBox();
-            comboBox1 = new ComboBox();
+            background_comBox = new ComboBox();
             dateTime_lbl = new Label();
             label3 = new Label();
             label1 = new Label();
             label2 = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
+            treeView_panel1 = new Panel();
+            collapse_btn = new Button();
+            expand_btn = new Button();
+            acc_treeView = new TreeView();
+            imageList1 = new ImageList(components);
             top_panel1.SuspendLayout();
             bott_pnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            treeView_panel1.SuspendLayout();
             SuspendLayout();
             // 
             // top_panel1
             // 
-            top_panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            top_panel1.BorderStyle = BorderStyle.FixedSingle;
+            top_panel1.BackColor = Color.FromArgb(224, 224, 224);
+            top_panel1.BackgroundImage = Properties.Resources.butt_background;
+            top_panel1.BackgroundImageLayout = ImageLayout.None;
+            top_panel1.BorderStyle = BorderStyle.Fixed3D;
             top_panel1.Controls.Add(cls_btn);
             top_panel1.Controls.Add(min_btn);
             top_panel1.Controls.Add(help_btn);
@@ -62,14 +80,14 @@
             top_panel1.Dock = DockStyle.Top;
             top_panel1.Location = new Point(0, 0);
             top_panel1.Name = "top_panel1";
-            top_panel1.Size = new Size(800, 75);
+            top_panel1.Size = new Size(826, 77);
             top_panel1.TabIndex = 0;
             // 
             // cls_btn
             // 
             cls_btn.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cls_btn.Image = Properties.Resources.Close_butt;
-            cls_btn.Location = new Point(767, 6);
+            cls_btn.Location = new Point(791, 6);
             cls_btn.Name = "cls_btn";
             cls_btn.Size = new Size(24, 24);
             cls_btn.TabIndex = 5;
@@ -80,7 +98,7 @@
             // 
             min_btn.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             min_btn.Image = Properties.Resources.min_butt;
-            min_btn.Location = new Point(743, 6);
+            min_btn.Location = new Point(767, 6);
             min_btn.Name = "min_btn";
             min_btn.Size = new Size(24, 24);
             min_btn.TabIndex = 4;
@@ -93,9 +111,9 @@
             help_btn.BackgroundImageLayout = ImageLayout.Stretch;
             help_btn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             help_btn.Image = Properties.Resources.top_help;
-            help_btn.Location = new Point(316, 6);
+            help_btn.Location = new Point(339, 7);
             help_btn.Name = "help_btn";
-            help_btn.Size = new Size(90, 63);
+            help_btn.Size = new Size(103, 63);
             help_btn.TabIndex = 3;
             help_btn.Text = "Help F5";
             help_btn.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -107,9 +125,9 @@
             tools_btn.BackgroundImageLayout = ImageLayout.Stretch;
             tools_btn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             tools_btn.Image = Properties.Resources.top_Tools_butt;
-            tools_btn.Location = new Point(223, 6);
+            tools_btn.Location = new Point(234, 7);
             tools_btn.Name = "tools_btn";
-            tools_btn.Size = new Size(90, 63);
+            tools_btn.Size = new Size(103, 63);
             tools_btn.TabIndex = 2;
             tools_btn.Text = "Tools F4";
             tools_btn.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -121,9 +139,9 @@
             report_btn.BackgroundImageLayout = ImageLayout.Stretch;
             report_btn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             report_btn.Image = Properties.Resources.top_report2;
-            report_btn.Location = new Point(130, 6);
+            report_btn.Location = new Point(129, 7);
             report_btn.Name = "report_btn";
-            report_btn.Size = new Size(90, 63);
+            report_btn.Size = new Size(103, 63);
             report_btn.TabIndex = 1;
             report_btn.Text = "Report F3";
             report_btn.TextImageRelation = TextImageRelation.ImageAboveText;
@@ -135,27 +153,28 @@
             Accounting_btn.BackgroundImageLayout = ImageLayout.Stretch;
             Accounting_btn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Accounting_btn.Image = Properties.Resources.top_accounting3;
-            Accounting_btn.Location = new Point(7, 6);
+            Accounting_btn.Location = new Point(7, 7);
             Accounting_btn.Name = "Accounting_btn";
             Accounting_btn.Size = new Size(120, 63);
             Accounting_btn.TabIndex = 0;
             Accounting_btn.Text = "Accounting F2";
             Accounting_btn.TextImageRelation = TextImageRelation.ImageAboveText;
             Accounting_btn.UseVisualStyleBackColor = true;
+            Accounting_btn.Click += Accounting_btn_Click;
             // 
             // bott_pnl
             // 
             bott_pnl.BorderStyle = BorderStyle.FixedSingle;
             bott_pnl.Controls.Add(pictureBox1);
-            bott_pnl.Controls.Add(comboBox1);
+            bott_pnl.Controls.Add(background_comBox);
             bott_pnl.Controls.Add(dateTime_lbl);
             bott_pnl.Controls.Add(label3);
             bott_pnl.Controls.Add(label1);
             bott_pnl.Controls.Add(label2);
             bott_pnl.Dock = DockStyle.Bottom;
-            bott_pnl.Location = new Point(0, 416);
+            bott_pnl.Location = new Point(0, 485);
             bott_pnl.Name = "bott_pnl";
-            bott_pnl.Size = new Size(800, 34);
+            bott_pnl.Size = new Size(826, 34);
             bott_pnl.TabIndex = 1;
             // 
             // pictureBox1
@@ -167,14 +186,16 @@
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
-            // comboBox1
+            // background_comBox
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Image 1", "Image 2", "Image 3", "Image 4", "Image 5", "Image 6" });
-            comboBox1.Location = new Point(83, 5);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 3;
+            background_comBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            background_comBox.FormattingEnabled = true;
+            background_comBox.Items.AddRange(new object[] { "Image 1", "Image 2", "Image 3", "Image 4", "Image 5", "Image 6" });
+            background_comBox.Location = new Point(83, 5);
+            background_comBox.Name = "background_comBox";
+            background_comBox.Size = new Size(121, 23);
+            background_comBox.TabIndex = 3;
+            background_comBox.SelectedIndexChanged += background_comBox_SelectedIndexChanged;
             // 
             // dateTime_lbl
             // 
@@ -222,11 +243,117 @@
             timer1.Interval = 1000;
             timer1.Tick += timer1_Tick;
             // 
+            // treeView_panel1
+            // 
+            treeView_panel1.BorderStyle = BorderStyle.FixedSingle;
+            treeView_panel1.Controls.Add(collapse_btn);
+            treeView_panel1.Controls.Add(expand_btn);
+            treeView_panel1.Controls.Add(acc_treeView);
+            treeView_panel1.Location = new Point(9, 75);
+            treeView_panel1.Name = "treeView_panel1";
+            treeView_panel1.Size = new Size(278, 377);
+            treeView_panel1.TabIndex = 2;
+            treeView_panel1.Visible = false;
+            // 
+            // collapse_btn
+            // 
+            collapse_btn.BackgroundImage = Properties.Resources.collapse;
+            collapse_btn.BackgroundImageLayout = ImageLayout.Stretch;
+            collapse_btn.Location = new Point(241, 7);
+            collapse_btn.Name = "collapse_btn";
+            collapse_btn.Size = new Size(28, 28);
+            collapse_btn.TabIndex = 3;
+            collapse_btn.UseVisualStyleBackColor = true;
+            collapse_btn.Click += collapse_btn_Click;
+            // 
+            // expand_btn
+            // 
+            expand_btn.BackgroundImage = Properties.Resources.expand;
+            expand_btn.BackgroundImageLayout = ImageLayout.Stretch;
+            expand_btn.Location = new Point(211, 7);
+            expand_btn.Name = "expand_btn";
+            expand_btn.Size = new Size(28, 28);
+            expand_btn.TabIndex = 3;
+            expand_btn.UseVisualStyleBackColor = true;
+            expand_btn.Click += expand_btn_Click;
+            // 
+            // acc_treeView
+            // 
+            acc_treeView.Cursor = Cursors.Hand;
+            acc_treeView.Dock = DockStyle.Fill;
+            acc_treeView.ImageIndex = 0;
+            acc_treeView.ImageList = imageList1;
+            acc_treeView.Indent = 40;
+            acc_treeView.ItemHeight = 40;
+            acc_treeView.Location = new Point(0, 0);
+            acc_treeView.Name = "acc_treeView";
+            treeNode10.ImageKey = "tree_customers.png";
+            treeNode10.Name = "Customers";
+            treeNode10.SelectedImageKey = "tree_customers.png";
+            treeNode10.Text = "Customers";
+            treeNode11.ImageKey = "tree_sale_invoice.png";
+            treeNode11.Name = "Sales_Invoice";
+            treeNode11.SelectedImageKey = "tree_sale_invoice.png";
+            treeNode11.Text = "Sales Invoice";
+            treeNode12.ImageKey = "tree_purchase_bill.png";
+            treeNode12.Name = "Purchase_Bill";
+            treeNode12.SelectedImageKey = "tree_purchase_bill.png";
+            treeNode12.Text = "Purchase Bill";
+            treeNode13.ImageKey = "tree_invoice.png";
+            treeNode13.Name = "Invoices";
+            treeNode13.SelectedImageKey = "tree_invoice.png";
+            treeNode13.Text = "Invoices";
+            treeNode14.ImageKey = "tree_spend.png";
+            treeNode14.Name = "Spend_Money";
+            treeNode14.SelectedImageKey = "tree_spend.png";
+            treeNode14.Text = "Spend Money";
+            treeNode15.ImageKey = "tree_receive.png";
+            treeNode15.Name = "Receive_Money";
+            treeNode15.SelectedImageKey = "tree_receive.png";
+            treeNode15.Text = "Receive Money";
+            treeNode16.ImageKey = "tree_payment.png";
+            treeNode16.Name = "Payments";
+            treeNode16.SelectedImageKey = "tree_payment.png";
+            treeNode16.Text = "Payments";
+            treeNode17.ImageKey = "tree_expense.png";
+            treeNode17.Name = "Expense";
+            treeNode17.SelectedImageKey = "tree_expense.png";
+            treeNode17.Text = "Expense";
+            treeNode18.ImageKey = "tree_root.png";
+            treeNode18.Name = "Root";
+            treeNode18.SelectedImageKey = "tree_root.png";
+            treeNode18.Text = "All Tools";
+            acc_treeView.Nodes.AddRange(new TreeNode[] { treeNode18 });
+            acc_treeView.SelectedImageIndex = 0;
+            acc_treeView.Size = new Size(276, 375);
+            acc_treeView.TabIndex = 0;
+            // 
+            // imageList1
+            // 
+            imageList1.ColorDepth = ColorDepth.Depth32Bit;
+            imageList1.ImageStream = (ImageListStreamer)resources.GetObject("imageList1.ImageStream");
+            imageList1.TransparentColor = Color.Transparent;
+            imageList1.Images.SetKeyName(0, "collapse.png");
+            imageList1.Images.SetKeyName(1, "expand.png");
+            imageList1.Images.SetKeyName(2, "products.png");
+            imageList1.Images.SetKeyName(3, "tree_customers.png");
+            imageList1.Images.SetKeyName(4, "tree_expense.png");
+            imageList1.Images.SetKeyName(5, "tree_invoice.png");
+            imageList1.Images.SetKeyName(6, "tree_payment.png");
+            imageList1.Images.SetKeyName(7, "tree_purchase_bill.png");
+            imageList1.Images.SetKeyName(8, "tree_receive.png");
+            imageList1.Images.SetKeyName(9, "tree_reports.png");
+            imageList1.Images.SetKeyName(10, "tree_root.png");
+            imageList1.Images.SetKeyName(11, "tree_sale_invoice.png");
+            imageList1.Images.SetKeyName(12, "tree_spend.png");
+            // 
             // MainFrm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(826, 519);
+            Controls.Add(treeView_panel1);
             Controls.Add(bott_pnl);
             Controls.Add(top_panel1);
             FormBorderStyle = FormBorderStyle.None;
@@ -236,10 +363,12 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MainFrm";
             WindowState = FormWindowState.Maximized;
+            Load += MainFrm_Load;
             top_panel1.ResumeLayout(false);
             bott_pnl.ResumeLayout(false);
             bott_pnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            treeView_panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -253,12 +382,17 @@
         private Button min_btn;
         private Button cls_btn;
         private Panel bott_pnl;
-        private ComboBox comboBox1;
+        private ComboBox background_comBox;
         private Label label2;
         private PictureBox pictureBox1;
         private Label label1;
         private Label dateTime_lbl;
         private Label label3;
         private System.Windows.Forms.Timer timer1;
+        private Panel treeView_panel1;
+        private TreeView acc_treeView;
+        private ImageList imageList1;
+        private Button collapse_btn;
+        private Button expand_btn;
     }
 }

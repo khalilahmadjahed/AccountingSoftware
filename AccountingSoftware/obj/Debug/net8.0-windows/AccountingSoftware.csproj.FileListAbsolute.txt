@@ -32,3 +32,10 @@ D:\project\implemeting\forGit\AccountingSoftware\AccountingSoftware\obj\Debug\ne
 D:\project\implemeting\forGit\AccountingSoftware\AccountingSoftware\obj\Debug\net8.0-windows\AccountingSoftware.pdb
 D:\project\implemeting\forGit\AccountingSoftware\AccountingSoftware\obj\Debug\net8.0-windows\AccountingSoftware.genruntimeconfig.cache
 D:\project\implemeting\forGit\AccountingSoftware\AccountingSoftware\obj\Debug\net8.0-windows\ref\AccountingSoftware.dll
+D:\project\implemeting\forGit\AccountingSoftware\AccountingSoftware\bin\Debug\net8.0-windows\Data\Pictures\0.jpg
+D:\project\implemeting\forGit\AccountingSoftware\AccountingSoftware\bin\Debug\net8.0-windows\Data\Pictures\1.jpg
+D:\project\implemeting\forGit\AccountingSoftware\AccountingSoftware\bin\Debug\net8.0-windows\Data\Pictures\2.jpg
+D:\project\implemeting\forGit\AccountingSoftware\AccountingSoftware\bin\Debug\net8.0-windows\Data\Pictures\3.jpg
+D:\project\implemeting\forGit\AccountingSoftware\AccountingSoftware\bin\Debug\net8.0-windows\Data\Pictures\4.jpg
+D:\project\implemeting\forGit\AccountingSoftware\AccountingSoftware\bin\Debug\net8.0-windows\Data\Pictures\5.jpg
+D:\project\implemeting\forGit\AccountingSoftware\AccountingSoftware\bin\Debug\net8.0-windows\AccountingSoftware.dll.config
