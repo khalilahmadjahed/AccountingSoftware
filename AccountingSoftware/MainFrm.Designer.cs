@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            TreeNode treeNode10 = new TreeNode("Customers");
-            TreeNode treeNode11 = new TreeNode("Sales Invoice");
-            TreeNode treeNode12 = new TreeNode("Purchase Bill");
-            TreeNode treeNode13 = new TreeNode("Invoices", new TreeNode[] { treeNode11, treeNode12 });
-            TreeNode treeNode14 = new TreeNode("Spend Money");
-            TreeNode treeNode15 = new TreeNode("Receive Money");
-            TreeNode treeNode16 = new TreeNode("Payments", new TreeNode[] { treeNode14, treeNode15 });
-            TreeNode treeNode17 = new TreeNode("Expense");
-            TreeNode treeNode18 = new TreeNode("All Tools", new TreeNode[] { treeNode10, treeNode13, treeNode16, treeNode17 });
+            TreeNode treeNode1 = new TreeNode("Customers");
+            TreeNode treeNode2 = new TreeNode("Sales Invoice");
+            TreeNode treeNode3 = new TreeNode("Purchase Bill");
+            TreeNode treeNode4 = new TreeNode("Invoices", new TreeNode[] { treeNode2, treeNode3 });
+            TreeNode treeNode5 = new TreeNode("Spend Money");
+            TreeNode treeNode6 = new TreeNode("Receive Money");
+            TreeNode treeNode7 = new TreeNode("Payments", new TreeNode[] { treeNode5, treeNode6 });
+            TreeNode treeNode8 = new TreeNode("Expense");
+            TreeNode treeNode9 = new TreeNode("All Tools", new TreeNode[] { treeNode1, treeNode4, treeNode7, treeNode8 });
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrm));
             top_panel1 = new Panel();
             cls_btn = new Button();
@@ -109,6 +109,7 @@
             // 
             help_btn.BackgroundImage = Properties.Resources.butt_background;
             help_btn.BackgroundImageLayout = ImageLayout.Stretch;
+            help_btn.Cursor = Cursors.Hand;
             help_btn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             help_btn.Image = Properties.Resources.top_help;
             help_btn.Location = new Point(339, 7);
@@ -123,6 +124,7 @@
             // 
             tools_btn.BackgroundImage = Properties.Resources.butt_background;
             tools_btn.BackgroundImageLayout = ImageLayout.Stretch;
+            tools_btn.Cursor = Cursors.Hand;
             tools_btn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             tools_btn.Image = Properties.Resources.top_Tools_butt;
             tools_btn.Location = new Point(234, 7);
@@ -137,6 +139,7 @@
             // 
             report_btn.BackgroundImage = Properties.Resources.butt_background;
             report_btn.BackgroundImageLayout = ImageLayout.Stretch;
+            report_btn.Cursor = Cursors.Hand;
             report_btn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             report_btn.Image = Properties.Resources.top_report2;
             report_btn.Location = new Point(129, 7);
@@ -151,6 +154,7 @@
             // 
             Accounting_btn.BackgroundImage = Properties.Resources.butt_background;
             Accounting_btn.BackgroundImageLayout = ImageLayout.Stretch;
+            Accounting_btn.Cursor = Cursors.Hand;
             Accounting_btn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Accounting_btn.Image = Properties.Resources.top_accounting3;
             Accounting_btn.Location = new Point(7, 7);
@@ -188,6 +192,7 @@
             // 
             // background_comBox
             // 
+            background_comBox.Cursor = Cursors.Hand;
             background_comBox.DropDownStyle = ComboBoxStyle.DropDownList;
             background_comBox.FormattingEnabled = true;
             background_comBox.Items.AddRange(new object[] { "Image 1", "Image 2", "Image 3", "Image 4", "Image 5", "Image 6" });
@@ -259,6 +264,7 @@
             // 
             collapse_btn.BackgroundImage = Properties.Resources.collapse;
             collapse_btn.BackgroundImageLayout = ImageLayout.Stretch;
+            collapse_btn.Cursor = Cursors.Hand;
             collapse_btn.Location = new Point(241, 7);
             collapse_btn.Name = "collapse_btn";
             collapse_btn.Size = new Size(28, 28);
@@ -270,6 +276,7 @@
             // 
             expand_btn.BackgroundImage = Properties.Resources.expand;
             expand_btn.BackgroundImageLayout = ImageLayout.Stretch;
+            expand_btn.Cursor = Cursors.Hand;
             expand_btn.Location = new Point(211, 7);
             expand_btn.Name = "expand_btn";
             expand_btn.Size = new Size(28, 28);
@@ -287,43 +294,43 @@
             acc_treeView.ItemHeight = 40;
             acc_treeView.Location = new Point(0, 0);
             acc_treeView.Name = "acc_treeView";
-            treeNode10.ImageKey = "tree_customers.png";
-            treeNode10.Name = "Customers";
-            treeNode10.SelectedImageKey = "tree_customers.png";
-            treeNode10.Text = "Customers";
-            treeNode11.ImageKey = "tree_sale_invoice.png";
-            treeNode11.Name = "Sales_Invoice";
-            treeNode11.SelectedImageKey = "tree_sale_invoice.png";
-            treeNode11.Text = "Sales Invoice";
-            treeNode12.ImageKey = "tree_purchase_bill.png";
-            treeNode12.Name = "Purchase_Bill";
-            treeNode12.SelectedImageKey = "tree_purchase_bill.png";
-            treeNode12.Text = "Purchase Bill";
-            treeNode13.ImageKey = "tree_invoice.png";
-            treeNode13.Name = "Invoices";
-            treeNode13.SelectedImageKey = "tree_invoice.png";
-            treeNode13.Text = "Invoices";
-            treeNode14.ImageKey = "tree_spend.png";
-            treeNode14.Name = "Spend_Money";
-            treeNode14.SelectedImageKey = "tree_spend.png";
-            treeNode14.Text = "Spend Money";
-            treeNode15.ImageKey = "tree_receive.png";
-            treeNode15.Name = "Receive_Money";
-            treeNode15.SelectedImageKey = "tree_receive.png";
-            treeNode15.Text = "Receive Money";
-            treeNode16.ImageKey = "tree_payment.png";
-            treeNode16.Name = "Payments";
-            treeNode16.SelectedImageKey = "tree_payment.png";
-            treeNode16.Text = "Payments";
-            treeNode17.ImageKey = "tree_expense.png";
-            treeNode17.Name = "Expense";
-            treeNode17.SelectedImageKey = "tree_expense.png";
-            treeNode17.Text = "Expense";
-            treeNode18.ImageKey = "tree_root.png";
-            treeNode18.Name = "Root";
-            treeNode18.SelectedImageKey = "tree_root.png";
-            treeNode18.Text = "All Tools";
-            acc_treeView.Nodes.AddRange(new TreeNode[] { treeNode18 });
+            treeNode1.ImageKey = "tree_customers.png";
+            treeNode1.Name = "Customers";
+            treeNode1.SelectedImageKey = "tree_customers.png";
+            treeNode1.Text = "Customers";
+            treeNode2.ImageKey = "tree_sale_invoice.png";
+            treeNode2.Name = "Sales_Invoice";
+            treeNode2.SelectedImageKey = "tree_sale_invoice.png";
+            treeNode2.Text = "Sales Invoice";
+            treeNode3.ImageKey = "tree_purchase_bill.png";
+            treeNode3.Name = "Purchase_Bill";
+            treeNode3.SelectedImageKey = "tree_purchase_bill.png";
+            treeNode3.Text = "Purchase Bill";
+            treeNode4.ImageKey = "tree_invoice.png";
+            treeNode4.Name = "Invoices";
+            treeNode4.SelectedImageKey = "tree_invoice.png";
+            treeNode4.Text = "Invoices";
+            treeNode5.ImageKey = "tree_spend.png";
+            treeNode5.Name = "Spend_Money";
+            treeNode5.SelectedImageKey = "tree_spend.png";
+            treeNode5.Text = "Spend Money";
+            treeNode6.ImageKey = "tree_receive.png";
+            treeNode6.Name = "Receive_Money";
+            treeNode6.SelectedImageKey = "tree_receive.png";
+            treeNode6.Text = "Receive Money";
+            treeNode7.ImageKey = "tree_payment.png";
+            treeNode7.Name = "Payments";
+            treeNode7.SelectedImageKey = "tree_payment.png";
+            treeNode7.Text = "Payments";
+            treeNode8.ImageKey = "tree_expense.png";
+            treeNode8.Name = "Expense";
+            treeNode8.SelectedImageKey = "tree_expense.png";
+            treeNode8.Text = "Expense";
+            treeNode9.ImageKey = "tree_root.png";
+            treeNode9.Name = "Root";
+            treeNode9.SelectedImageKey = "tree_root.png";
+            treeNode9.Text = "All Tools";
+            acc_treeView.Nodes.AddRange(new TreeNode[] { treeNode9 });
             acc_treeView.SelectedImageIndex = 0;
             acc_treeView.Size = new Size(276, 375);
             acc_treeView.TabIndex = 0;

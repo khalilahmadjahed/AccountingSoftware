@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\project\\implemeting\\forGit\\AccountingSoftware\\AccountingSoftware\\AccountingSoftware.csproj": {}
+    "C:\\Users\\khali\\Desktop\\forGit\\AccountingSoftware\\AccountingSoftware\\AccountingSoftware.csproj": {}
   },
   "projects": {
-    "D:\\project\\implemeting\\forGit\\AccountingSoftware\\AccountingSoftware\\AccountingSoftware.csproj": {
+    "C:\\Users\\khali\\Desktop\\forGit\\AccountingSoftware\\AccountingSoftware\\AccountingSoftware.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\project\\implemeting\\forGit\\AccountingSoftware\\AccountingSoftware\\AccountingSoftware.csproj",
+        "projectUniqueName": "C:\\Users\\khali\\Desktop\\forGit\\AccountingSoftware\\AccountingSoftware\\AccountingSoftware.csproj",
         "projectName": "AccountingSoftware",
-        "projectPath": "D:\\project\\implemeting\\forGit\\AccountingSoftware\\AccountingSoftware\\AccountingSoftware.csproj",
+        "projectPath": "C:\\Users\\khali\\Desktop\\forGit\\AccountingSoftware\\AccountingSoftware\\AccountingSoftware.csproj",
         "packagesPath": "C:\\Users\\khali\\.nuget\\packages\\",
-        "outputPath": "D:\\project\\implemeting\\forGit\\AccountingSoftware\\AccountingSoftware\\obj\\",
+        "outputPath": "C:\\Users\\khali\\Desktop\\forGit\\AccountingSoftware\\AccountingSoftware\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\khali\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -44,6 +44,12 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.2.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
