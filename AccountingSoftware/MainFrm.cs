@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AccountingSoftware.Accounting;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -90,6 +91,18 @@ namespace AccountingSoftware
             {
                 this.treeView_panel1.Visible = true;
             }
+        }
+
+        private void acc_treeView_DoubleClick(object sender, EventArgs e)
+        {
+            //Customers
+            if (this.acc_treeView.SelectedNode.Name == "Customers")
+            {
+                AccountingSoftware.Accounting.CustomersFrm CFrm = new CustomersFrm(); // CFrm == Customers Form
+                CFrm.MdiParent = this;
+                CFrm.Show();
+            }
+
         }
     }
 }

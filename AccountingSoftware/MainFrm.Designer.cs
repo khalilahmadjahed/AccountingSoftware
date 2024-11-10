@@ -334,6 +334,7 @@
             acc_treeView.SelectedImageIndex = 0;
             acc_treeView.Size = new Size(276, 375);
             acc_treeView.TabIndex = 0;
+            acc_treeView.DoubleClick += acc_treeView_DoubleClick;
             // 
             // imageList1
             // 
@@ -364,6 +365,7 @@
             Controls.Add(bott_pnl);
             Controls.Add(top_panel1);
             FormBorderStyle = FormBorderStyle.None;
+            IsMdiContainer = true;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "MainFrm";
