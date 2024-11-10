@@ -78,6 +78,9 @@ namespace AccountingSoftware.Accounting
         {
             is_del_btn = false;
             new_edit_delete_btn();
+            //Add a row
+            this.bindingSource1.AddNew();
+            
         }
 
         private void edit_btn_Click(object sender, EventArgs e)
@@ -90,16 +93,43 @@ namespace AccountingSoftware.Accounting
         {
             is_del_btn = true;
             new_edit_delete_btn();
+            //Remove a row
+            this.bindingSource1.RemoveCurrent();
+           
         }
 
         private void save_btn_Click(object sender, EventArgs e)
         {
-            save_cancle_btns();
+            try
+            {
+                this.bindingSource1.EndEdit();
+                int returnValue;
+                returnValue = this.customersTableAdapter1.Update(this.accDs1.Customers);
+                //--------------
+                if (returnValue > 0)
+                {
+                    save_cancle_btns();
+                    MessageBox.Show("It's saved! count: " + returnValue.ToString());
+                }
+                else
+                {
+                    MessageBox.Show("Not saved!");
+                }
+                //--------------
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            
         }
 
         private void cancel_btn_Click(object sender, EventArgs e)
         {
             save_cancle_btns();
+            //---------------
+            this.bindingSource1.CancelEdit();
+            this.accDs1.Customers.RejectChanges();
         }
     }
 }

@@ -62,6 +62,14 @@
             id_txtBox = new TextBox();
             label1 = new Label();
             dataGridView1 = new DataGridView();
+            panel1 = new Panel();
+            label15 = new Label();
+            regTime_lbl = new Label();
+            label13 = new Label();
+            regDate_lbl = new Label();
+            label11 = new Label();
+            regUser_lbl = new Label();
+            customersTableAdapter1 = new Ds.AccDsTableAdapters.CustomersTableAdapter();
             iDDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             firstNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             lastNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -74,14 +82,6 @@
             regNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             regDateDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             regTimeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            panel1 = new Panel();
-            label15 = new Label();
-            regTime_lbl = new Label();
-            label13 = new Label();
-            regDate_lbl = new Label();
-            label11 = new Label();
-            regUser_lbl = new Label();
-            customersTableAdapter1 = new Ds.AccDsTableAdapters.CustomersTableAdapter();
             toolStrip1.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
@@ -397,90 +397,6 @@
             dataGridView1.Size = new Size(660, 125);
             dataGridView1.TabIndex = 2;
             // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            iDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // firstNameDataGridViewTextBoxColumn
-            // 
-            firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
-            firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            firstNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
-            lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            lastNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // genderDataGridViewTextBoxColumn
-            // 
-            genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
-            genderDataGridViewTextBoxColumn.HeaderText = "Gender";
-            genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
-            genderDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // landLineDataGridViewTextBoxColumn
-            // 
-            landLineDataGridViewTextBoxColumn.DataPropertyName = "LandLine";
-            landLineDataGridViewTextBoxColumn.HeaderText = "LandLine";
-            landLineDataGridViewTextBoxColumn.Name = "landLineDataGridViewTextBoxColumn";
-            landLineDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cellNumDataGridViewTextBoxColumn
-            // 
-            cellNumDataGridViewTextBoxColumn.DataPropertyName = "CellNum";
-            cellNumDataGridViewTextBoxColumn.HeaderText = "CellNum";
-            cellNumDataGridViewTextBoxColumn.Name = "cellNumDataGridViewTextBoxColumn";
-            cellNumDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            emailDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // adressDataGridViewTextBoxColumn
-            // 
-            adressDataGridViewTextBoxColumn.DataPropertyName = "Adress";
-            adressDataGridViewTextBoxColumn.HeaderText = "Adress";
-            adressDataGridViewTextBoxColumn.Name = "adressDataGridViewTextBoxColumn";
-            adressDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // commentDataGridViewTextBoxColumn
-            // 
-            commentDataGridViewTextBoxColumn.DataPropertyName = "Comment";
-            commentDataGridViewTextBoxColumn.HeaderText = "Comment";
-            commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
-            commentDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // regNameDataGridViewTextBoxColumn
-            // 
-            regNameDataGridViewTextBoxColumn.DataPropertyName = "RegName";
-            regNameDataGridViewTextBoxColumn.HeaderText = "RegName";
-            regNameDataGridViewTextBoxColumn.Name = "regNameDataGridViewTextBoxColumn";
-            regNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // regDateDataGridViewTextBoxColumn
-            // 
-            regDateDataGridViewTextBoxColumn.DataPropertyName = "RegDate";
-            regDateDataGridViewTextBoxColumn.HeaderText = "RegDate";
-            regDateDataGridViewTextBoxColumn.Name = "regDateDataGridViewTextBoxColumn";
-            regDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // regTimeDataGridViewTextBoxColumn
-            // 
-            regTimeDataGridViewTextBoxColumn.DataPropertyName = "RegTime";
-            regTimeDataGridViewTextBoxColumn.HeaderText = "RegTime";
-            regTimeDataGridViewTextBoxColumn.Name = "regTimeDataGridViewTextBoxColumn";
-            regTimeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
@@ -557,6 +473,98 @@
             // 
             customersTableAdapter1.ClearBeforeFill = true;
             // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            iDDataGridViewTextBoxColumn.ReadOnly = true;
+            iDDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            firstNameDataGridViewTextBoxColumn.HeaderText = "First Name";
+            firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            firstNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            lastNameDataGridViewTextBoxColumn.HeaderText = "Last Name";
+            lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            lastNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // genderDataGridViewTextBoxColumn
+            // 
+            genderDataGridViewTextBoxColumn.DataPropertyName = "Gender";
+            genderDataGridViewTextBoxColumn.HeaderText = "Gender";
+            genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
+            genderDataGridViewTextBoxColumn.ReadOnly = true;
+            genderDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // landLineDataGridViewTextBoxColumn
+            // 
+            landLineDataGridViewTextBoxColumn.DataPropertyName = "LandLine";
+            landLineDataGridViewTextBoxColumn.HeaderText = "Land Line";
+            landLineDataGridViewTextBoxColumn.Name = "landLineDataGridViewTextBoxColumn";
+            landLineDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cellNumDataGridViewTextBoxColumn
+            // 
+            cellNumDataGridViewTextBoxColumn.DataPropertyName = "CellNum";
+            cellNumDataGridViewTextBoxColumn.HeaderText = "Cell Number";
+            cellNumDataGridViewTextBoxColumn.Name = "cellNumDataGridViewTextBoxColumn";
+            cellNumDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            emailDataGridViewTextBoxColumn.ReadOnly = true;
+            emailDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // adressDataGridViewTextBoxColumn
+            // 
+            adressDataGridViewTextBoxColumn.DataPropertyName = "Adress";
+            adressDataGridViewTextBoxColumn.HeaderText = "Adress";
+            adressDataGridViewTextBoxColumn.Name = "adressDataGridViewTextBoxColumn";
+            adressDataGridViewTextBoxColumn.ReadOnly = true;
+            adressDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // commentDataGridViewTextBoxColumn
+            // 
+            commentDataGridViewTextBoxColumn.DataPropertyName = "Comment";
+            commentDataGridViewTextBoxColumn.HeaderText = "Comment";
+            commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
+            commentDataGridViewTextBoxColumn.ReadOnly = true;
+            commentDataGridViewTextBoxColumn.Width = 300;
+            // 
+            // regNameDataGridViewTextBoxColumn
+            // 
+            regNameDataGridViewTextBoxColumn.DataPropertyName = "RegName";
+            regNameDataGridViewTextBoxColumn.HeaderText = "Reg Name";
+            regNameDataGridViewTextBoxColumn.Name = "regNameDataGridViewTextBoxColumn";
+            regNameDataGridViewTextBoxColumn.ReadOnly = true;
+            regNameDataGridViewTextBoxColumn.Width = 65;
+            // 
+            // regDateDataGridViewTextBoxColumn
+            // 
+            regDateDataGridViewTextBoxColumn.DataPropertyName = "RegDate";
+            regDateDataGridViewTextBoxColumn.HeaderText = "Reg Date";
+            regDateDataGridViewTextBoxColumn.Name = "regDateDataGridViewTextBoxColumn";
+            regDateDataGridViewTextBoxColumn.ReadOnly = true;
+            regDateDataGridViewTextBoxColumn.Width = 65;
+            // 
+            // regTimeDataGridViewTextBoxColumn
+            // 
+            regTimeDataGridViewTextBoxColumn.DataPropertyName = "RegTime";
+            regTimeDataGridViewTextBoxColumn.HeaderText = "Reg Time";
+            regTimeDataGridViewTextBoxColumn.Name = "regTimeDataGridViewTextBoxColumn";
+            regTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            regTimeDataGridViewTextBoxColumn.Width = 65;
+            // 
             // CustomersFrm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -627,6 +635,7 @@
         private Ds.AccDs accDs1;
         private BindingSource bindingSource1;
         private ComboBox gender_comboBox1;
+        private Ds.AccDsTableAdapters.CustomersTableAdapter customersTableAdapter1;
         private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
@@ -639,6 +648,5 @@
         private DataGridViewTextBoxColumn regNameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn regDateDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn regTimeDataGridViewTextBoxColumn;
-        private Ds.AccDsTableAdapters.CustomersTableAdapter customersTableAdapter1;
     }
 }
