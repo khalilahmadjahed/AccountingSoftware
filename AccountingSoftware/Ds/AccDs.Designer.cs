@@ -1400,7 +1400,7 @@ namespace AccountingSoftware.Ds.AccDsTableAdapters {
             this._adapter.InsertCommand = new global::Microsoft.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = @"INSERT INTO [Customers] ([FirstName], [LastName], [Gender], [LandLine], [CellNum], [Email], [Adress], [Comment], [RegName], [RegDate], [RegTime]) VALUES (@FirstName, @LastName, @Gender, @LandLine, @CellNum, @Email, @Adress, @Comment, @RegName, @RegDate, @RegTime);
-SELECT ID, FirstName, LastName, Gender, LandLine, CellNum, Email, Adress, Comment, RegName, RegDate, RegTime FROM Customers WHERE (ID = SCOPE_IDENTITY())";
+SELECT ID, FirstName, LastName, Gender, LandLine, CellNum, Email, Adress, Comment, RegName, RegDate, RegTime FROM Customers WHERE (ID = SCOPE_IDENTITY()) ORDER BY ID";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::Microsoft.Data.SqlClient.SqlParameter();
             param.ParameterName = "@FirstName";
@@ -1473,7 +1473,7 @@ SELECT ID, FirstName, LastName, Gender, LandLine, CellNum, Email, Adress, Commen
             this._adapter.UpdateCommand = new global::Microsoft.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE [Customers] SET [FirstName] = @FirstName, [LastName] = @LastName, [Gender] = @Gender, [LandLine] = @LandLine, [CellNum] = @CellNum, [Email] = @Email, [Adress] = @Adress, [Comment] = @Comment, [RegName] = @RegName, [RegDate] = @RegDate, [RegTime] = @RegTime WHERE (([ID] = @Original_ID) AND ((@IsNull_FirstName = 1 AND [FirstName] IS NULL) OR ([FirstName] = @Original_FirstName)) AND ((@IsNull_LastName = 1 AND [LastName] IS NULL) OR ([LastName] = @Original_LastName)) AND ((@IsNull_Gender = 1 AND [Gender] IS NULL) OR ([Gender] = @Original_Gender)) AND ((@IsNull_LandLine = 1 AND [LandLine] IS NULL) OR ([LandLine] = @Original_LandLine)) AND ((@IsNull_CellNum = 1 AND [CellNum] IS NULL) OR ([CellNum] = @Original_CellNum)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)) AND ((@IsNull_Adress = 1 AND [Adress] IS NULL) OR ([Adress] = @Original_Adress)) AND ((@IsNull_Comment = 1 AND [Comment] IS NULL) OR ([Comment] = @Original_Comment)) AND ((@IsNull_RegName = 1 AND [RegName] IS NULL) OR ([RegName] = @Original_RegName)) AND ((@IsNull_RegDate = 1 AND [RegDate] IS NULL) OR ([RegDate] = @Original_RegDate)) AND ((@IsNull_RegTime = 1 AND [RegTime] IS NULL) OR ([RegTime] = @Original_RegTime)));
-SELECT ID, FirstName, LastName, Gender, LandLine, CellNum, Email, Adress, Comment, RegName, RegDate, RegTime FROM Customers WHERE (ID = @ID)";
+SELECT ID, FirstName, LastName, Gender, LandLine, CellNum, Email, Adress, Comment, RegName, RegDate, RegTime FROM Customers WHERE (ID = @ID) ORDER BY ID";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::Microsoft.Data.SqlClient.SqlParameter();
             param.ParameterName = "@FirstName";
@@ -1750,17 +1750,43 @@ SELECT ID, FirstName, LastName, Gender, LandLine, CellNum, Email, Adress, Commen
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::Microsoft.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::Microsoft.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::Microsoft.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        ID, FirstName, LastName, Gender, LandLine, CellNum, Email, Adress, " +
-                "Comment, RegName, RegDate, RegTime\r\nFROM            Customers";
+                "Comment, RegName, RegDate, RegTime\r\nFROM            Customers\r\nORDER BY ID";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::Microsoft.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        ID, FirstName, LastName, LandLine, CellNum\r\nFROM            Custome" +
-                "rs";
+            this._commandCollection[1].CommandText = "SELECT Adress, CellNum, Comment, Email, FirstName, Gender, ID, LandLine, LastName" +
+                ", RegDate, RegName, RegTime FROM Customers";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2] = new global::Microsoft.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT Adress, CellNum, Comment, Email, FirstName, Gender, ID, LandLine, LastName" +
+                ", RegDate, RegName, RegTime FROM Customers WHERE (ID = @search_id)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            global::Microsoft.Data.SqlClient.SqlParameter param = new global::Microsoft.Data.SqlClient.SqlParameter();
+            param.ParameterName = "@search_id";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.SqlDbType = global::System.Data.SqlDbType.Int;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "ID";
+            this._commandCollection[2].Parameters.Add(param);
+            this._commandCollection[3] = new global::Microsoft.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "SELECT        ID, FirstName, LastName, Gender, LandLine, CellNum, Email, Adress, " +
+                "Comment, RegName, RegDate, RegTime\r\nFROM            Customers\r\nWHERE        (Las" +
+                "tName LIKE @search_lName)\r\nORDER BY ID";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            param = new global::Microsoft.Data.SqlClient.SqlParameter();
+            param.ParameterName = "@search_lName";
+            param.SqlDbType = global::System.Data.SqlDbType.NVarChar;
+            param.Size = 70;
+            param.IsNullable = true;
+            param.SourceColumn = "LastName";
+            this._commandCollection[3].Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1782,6 +1808,39 @@ SELECT ID, FirstName, LastName, Gender, LandLine, CellNum, Email, Adress, Commen
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillBy_Cell_Number(AccDs.CustomersDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy_id(AccDs.CustomersDataTable dataTable, int search_id) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(search_id));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy_lastName(AccDs.CustomersDataTable dataTable, string search_lName) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
+            if ((search_lName == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(search_lName));
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }

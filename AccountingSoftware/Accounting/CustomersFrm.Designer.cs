@@ -40,6 +40,9 @@
             toolStripSeparator4 = new ToolStripSeparator();
             cancel_btn = new ToolStripButton();
             toolStripSeparator5 = new ToolStripSeparator();
+            toolStripSeparator6 = new ToolStripSeparator();
+            search_btn = new ToolStripButton();
+            toolStripSeparator7 = new ToolStripSeparator();
             groupBox1 = new GroupBox();
             gender_comboBox1 = new ComboBox();
             bindingSource1 = new BindingSource(components);
@@ -62,14 +65,6 @@
             id_txtBox = new TextBox();
             label1 = new Label();
             dataGridView1 = new DataGridView();
-            panel1 = new Panel();
-            label15 = new Label();
-            regTime_lbl = new Label();
-            label13 = new Label();
-            regDate_lbl = new Label();
-            label11 = new Label();
-            regUser_lbl = new Label();
-            customersTableAdapter1 = new Ds.AccDsTableAdapters.CustomersTableAdapter();
             iDDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             firstNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             lastNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -82,18 +77,34 @@
             regNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             regDateDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             regTimeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            panel1 = new Panel();
+            label12 = new Label();
+            reg_time_label = new Label();
+            reg_date_label = new Label();
+            label13 = new Label();
+            reg_user_label = new Label();
+            label10 = new Label();
+            customersTableAdapter1 = new Ds.AccDsTableAdapters.CustomersTableAdapter();
+            search_panel2 = new Panel();
+            search_lName_button2 = new Button();
+            search_id_button1 = new Button();
+            search_lName_textBox2 = new TextBox();
+            search_id_textBox1 = new TextBox();
+            label14 = new Label();
+            label11 = new Label();
             toolStrip1.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)accDs1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
+            search_panel2.SuspendLayout();
             SuspendLayout();
             // 
             // toolStrip1
             // 
             toolStrip1.AutoSize = false;
-            toolStrip1.Items.AddRange(new ToolStripItem[] { new_btn, toolStripSeparator1, edit_btn, toolStripSeparator2, del_btn, toolStripSeparator3, save_btn, toolStripSeparator4, cancel_btn, toolStripSeparator5 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { new_btn, toolStripSeparator1, edit_btn, toolStripSeparator2, del_btn, toolStripSeparator3, save_btn, toolStripSeparator4, cancel_btn, toolStripSeparator5, toolStripSeparator6, search_btn, toolStripSeparator7 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(684, 64);
@@ -187,6 +198,31 @@
             toolStripSeparator5.Name = "toolStripSeparator5";
             toolStripSeparator5.Size = new Size(6, 64);
             // 
+            // toolStripSeparator6
+            // 
+            toolStripSeparator6.Alignment = ToolStripItemAlignment.Right;
+            toolStripSeparator6.Name = "toolStripSeparator6";
+            toolStripSeparator6.Size = new Size(6, 64);
+            // 
+            // search_btn
+            // 
+            search_btn.Alignment = ToolStripItemAlignment.Right;
+            search_btn.AutoSize = false;
+            search_btn.Image = Properties.Resources.Search;
+            search_btn.ImageScaling = ToolStripItemImageScaling.None;
+            search_btn.ImageTransparentColor = Color.Magenta;
+            search_btn.Name = "search_btn";
+            search_btn.Size = new Size(90, 58);
+            search_btn.Text = "Search";
+            search_btn.TextImageRelation = TextImageRelation.ImageAboveText;
+            search_btn.Click += search_btn_Click;
+            // 
+            // toolStripSeparator7
+            // 
+            toolStripSeparator7.Alignment = ToolStripItemAlignment.Right;
+            toolStripSeparator7.Name = "toolStripSeparator7";
+            toolStripSeparator7.Size = new Size(6, 64);
+            // 
             // groupBox1
             // 
             groupBox1.Controls.Add(gender_comboBox1);
@@ -209,7 +245,7 @@
             groupBox1.Controls.Add(label1);
             groupBox1.Location = new Point(12, 67);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(660, 286);
+            groupBox1.Size = new Size(660, 287);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Info";
@@ -397,82 +433,6 @@
             dataGridView1.Size = new Size(660, 125);
             dataGridView1.TabIndex = 2;
             // 
-            // panel1
-            // 
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(label15);
-            panel1.Controls.Add(regTime_lbl);
-            panel1.Controls.Add(label13);
-            panel1.Controls.Add(regDate_lbl);
-            panel1.Controls.Add(label11);
-            panel1.Controls.Add(regUser_lbl);
-            panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(0, 490);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(684, 34);
-            panel1.TabIndex = 3;
-            // 
-            // label15
-            // 
-            label15.DataBindings.Add(new Binding("Text", bindingSource1, "RegTime", true));
-            label15.Location = new Point(564, 9);
-            label15.Name = "label15";
-            label15.Size = new Size(107, 15);
-            label15.TabIndex = 4;
-            label15.Text = "-";
-            label15.Click += label11_Click;
-            // 
-            // regTime_lbl
-            // 
-            regTime_lbl.AutoSize = true;
-            regTime_lbl.Location = new Point(502, 9);
-            regTime_lbl.Name = "regTime_lbl";
-            regTime_lbl.Size = new Size(59, 15);
-            regTime_lbl.TabIndex = 4;
-            regTime_lbl.Text = "Reg Time:";
-            // 
-            // label13
-            // 
-            label13.DataBindings.Add(new Binding("Text", bindingSource1, "RegDate", true));
-            label13.Location = new Point(307, 9);
-            label13.Name = "label13";
-            label13.Size = new Size(107, 15);
-            label13.TabIndex = 4;
-            label13.Text = "-";
-            label13.Click += label11_Click;
-            // 
-            // regDate_lbl
-            // 
-            regDate_lbl.AutoSize = true;
-            regDate_lbl.Location = new Point(245, 9);
-            regDate_lbl.Name = "regDate_lbl";
-            regDate_lbl.Size = new Size(57, 15);
-            regDate_lbl.TabIndex = 4;
-            regDate_lbl.Text = "Reg Date:";
-            // 
-            // label11
-            // 
-            label11.DataBindings.Add(new Binding("Text", bindingSource1, "RegName", true));
-            label11.Location = new Point(73, 9);
-            label11.Name = "label11";
-            label11.Size = new Size(107, 15);
-            label11.TabIndex = 4;
-            label11.Text = "-";
-            label11.Click += label11_Click;
-            // 
-            // regUser_lbl
-            // 
-            regUser_lbl.AutoSize = true;
-            regUser_lbl.Location = new Point(11, 9);
-            regUser_lbl.Name = "regUser_lbl";
-            regUser_lbl.Size = new Size(56, 15);
-            regUser_lbl.TabIndex = 4;
-            regUser_lbl.Text = "Reg User:";
-            // 
-            // customersTableAdapter1
-            // 
-            customersTableAdapter1.ClearBeforeFill = true;
-            // 
             // iDDataGridViewTextBoxColumn
             // 
             iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
@@ -565,11 +525,151 @@
             regTimeDataGridViewTextBoxColumn.ReadOnly = true;
             regTimeDataGridViewTextBoxColumn.Width = 65;
             // 
+            // panel1
+            // 
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(label12);
+            panel1.Controls.Add(reg_time_label);
+            panel1.Controls.Add(reg_date_label);
+            panel1.Controls.Add(label13);
+            panel1.Controls.Add(reg_user_label);
+            panel1.Controls.Add(label10);
+            panel1.Dock = DockStyle.Bottom;
+            panel1.Location = new Point(0, 490);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(684, 34);
+            panel1.TabIndex = 3;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(516, 9);
+            label12.Name = "label12";
+            label12.Size = new Size(59, 15);
+            label12.TabIndex = 0;
+            label12.Text = "Reg Time:";
+            // 
+            // reg_time_label
+            // 
+            reg_time_label.Location = new Point(581, 9);
+            reg_time_label.Name = "reg_time_label";
+            reg_time_label.Size = new Size(90, 15);
+            reg_time_label.TabIndex = 0;
+            reg_time_label.Text = "-";
+            // 
+            // reg_date_label
+            // 
+            reg_date_label.Location = new Point(320, 9);
+            reg_date_label.Name = "reg_date_label";
+            reg_date_label.Size = new Size(90, 15);
+            reg_date_label.TabIndex = 0;
+            reg_date_label.Text = "-";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(257, 9);
+            label13.Name = "label13";
+            label13.Size = new Size(57, 15);
+            label13.TabIndex = 0;
+            label13.Text = "Reg Date:";
+            // 
+            // reg_user_label
+            // 
+            reg_user_label.Location = new Point(73, 9);
+            reg_user_label.Name = "reg_user_label";
+            reg_user_label.Size = new Size(90, 15);
+            reg_user_label.TabIndex = 0;
+            reg_user_label.Text = "-";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(11, 9);
+            label10.Name = "label10";
+            label10.Size = new Size(56, 15);
+            label10.TabIndex = 0;
+            label10.Text = "Reg User:";
+            // 
+            // customersTableAdapter1
+            // 
+            customersTableAdapter1.ClearBeforeFill = true;
+            // 
+            // search_panel2
+            // 
+            search_panel2.BorderStyle = BorderStyle.Fixed3D;
+            search_panel2.Controls.Add(search_lName_button2);
+            search_panel2.Controls.Add(search_id_button1);
+            search_panel2.Controls.Add(search_lName_textBox2);
+            search_panel2.Controls.Add(search_id_textBox1);
+            search_panel2.Controls.Add(label14);
+            search_panel2.Controls.Add(label11);
+            search_panel2.Location = new Point(459, 65);
+            search_panel2.Name = "search_panel2";
+            search_panel2.Size = new Size(220, 86);
+            search_panel2.TabIndex = 4;
+            search_panel2.Visible = false;
+            // 
+            // search_lName_button2
+            // 
+            search_lName_button2.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            search_lName_button2.Location = new Point(174, 47);
+            search_lName_button2.Name = "search_lName_button2";
+            search_lName_button2.Size = new Size(37, 23);
+            search_lName_button2.TabIndex = 2;
+            search_lName_button2.Text = "Go";
+            search_lName_button2.UseVisualStyleBackColor = true;
+            search_lName_button2.Click += search_lName_button2_Click;
+            // 
+            // search_id_button1
+            // 
+            search_id_button1.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            search_id_button1.Location = new Point(174, 11);
+            search_id_button1.Name = "search_id_button1";
+            search_id_button1.Size = new Size(37, 23);
+            search_id_button1.TabIndex = 2;
+            search_id_button1.Text = "Go";
+            search_id_button1.UseVisualStyleBackColor = true;
+            search_id_button1.Click += search_id_button1_Click;
+            // 
+            // search_lName_textBox2
+            // 
+            search_lName_textBox2.Location = new Point(71, 47);
+            search_lName_textBox2.Name = "search_lName_textBox2";
+            search_lName_textBox2.Size = new Size(100, 23);
+            search_lName_textBox2.TabIndex = 1;
+            // 
+            // search_id_textBox1
+            // 
+            search_id_textBox1.Location = new Point(71, 11);
+            search_id_textBox1.Name = "search_id_textBox1";
+            search_id_textBox1.Size = new Size(100, 23);
+            search_id_textBox1.TabIndex = 1;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(4, 50);
+            label14.Name = "label14";
+            label14.Size = new Size(66, 15);
+            label14.TabIndex = 0;
+            label14.Text = "Last Name:";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(4, 13);
+            label11.Name = "label11";
+            label11.Size = new Size(21, 15);
+            label11.TabIndex = 0;
+            label11.Text = "ID:";
+            // 
             // CustomersFrm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(684, 524);
+            Controls.Add(search_panel2);
             Controls.Add(panel1);
             Controls.Add(dataGridView1);
             Controls.Add(groupBox1);
@@ -590,6 +690,8 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            search_panel2.ResumeLayout(false);
+            search_panel2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -626,12 +728,6 @@
         private Label label1;
         private TextBox comment_txtBox;
         private Label label9;
-        private Label regUser_lbl;
-        private Label label11;
-        private Label label15;
-        private Label regTime_lbl;
-        private Label label13;
-        private Label regDate_lbl;
         private Ds.AccDs accDs1;
         private BindingSource bindingSource1;
         private ComboBox gender_comboBox1;
@@ -648,5 +744,21 @@
         private DataGridViewTextBoxColumn regNameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn regDateDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn regTimeDataGridViewTextBoxColumn;
+        private Label label12;
+        private Label reg_time_label;
+        private Label reg_date_label;
+        private Label label13;
+        private Label reg_user_label;
+        private Label label10;
+        private ToolStripSeparator toolStripSeparator6;
+        private Panel search_panel2;
+        private Label label11;
+        private Button search_id_button1;
+        private TextBox search_lName_textBox2;
+        private TextBox search_id_textBox1;
+        private Label label14;
+        private Button search_lName_button2;
+        private ToolStripButton search_btn;
+        private ToolStripSeparator toolStripSeparator7;
     }
 }

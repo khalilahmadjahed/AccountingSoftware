@@ -50,7 +50,7 @@ namespace AccountingSoftware.Accounting
             this.dataGridView1.Enabled = false;
             if (is_del_btn == false)
             {
-            this.groupBox1.Enabled = true;
+                this.groupBox1.Enabled = true;
             }
             else
             {
@@ -80,7 +80,12 @@ namespace AccountingSoftware.Accounting
             new_edit_delete_btn();
             //Add a row
             this.bindingSource1.AddNew();
-            
+
+            //Reg_user, Reg_Date and Reg_time
+            this.reg_user_label.Text = "Login User";
+            this.reg_date_label.Text = DateTime.Now.ToShortDateString();
+            this.reg_time_label.Text = DateTime.Now.ToString("HH:mm:ss");
+
         }
 
         private void edit_btn_Click(object sender, EventArgs e)
@@ -95,7 +100,7 @@ namespace AccountingSoftware.Accounting
             new_edit_delete_btn();
             //Remove a row
             this.bindingSource1.RemoveCurrent();
-           
+
         }
 
         private void save_btn_Click(object sender, EventArgs e)
@@ -121,7 +126,7 @@ namespace AccountingSoftware.Accounting
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-            
+
         }
 
         private void cancel_btn_Click(object sender, EventArgs e)
@@ -130,6 +135,32 @@ namespace AccountingSoftware.Accounting
             //---------------
             this.bindingSource1.CancelEdit();
             this.accDs1.Customers.RejectChanges();
+        }
+
+        private void search_btn_Click(object sender, EventArgs e)
+        {
+            if (this.search_panel2.Visible == true)
+            {
+                this.search_panel2.Visible = false;
+            }
+            else
+            {
+                this.search_panel2.Visible = true;
+            }
+        }
+
+        private void search_id_button1_Click(object sender, EventArgs e)
+        {
+            Int32 id;
+            Int32.TryParse(this.search_id_textBox1.Text, out id);
+            this.customersTableAdapter1.FillBy_id(accDs1.Customers, id);
+        }
+
+        private void search_lName_button2_Click(object sender, EventArgs e)
+        {
+            string searchByLastName;
+            searchByLastName = "%" + this.search_lName_textBox2.Text + "%";
+            this.customersTableAdapter1.FillBy_lastName(accDs1.Customers, searchByLastName);
         }
     }
 }
