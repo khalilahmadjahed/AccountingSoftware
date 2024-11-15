@@ -1,26 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\khali\\Desktop\\forGit\\AccountingSoftware\\",
+  "WorkspaceRootPath": "C:\\Users\\khali\\Desktop\\continou\\forGit\\AccountingSoftware\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|c:\\users\\khali\\desktop\\forgit\\accountingsoftware\\accountingsoftware\\mainfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\mainfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|c:\\users\\khali\\desktop\\continou\\forgit\\accountingsoftware\\accountingsoftware\\accounting\\productsfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\accounting\\productsfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|c:\\users\\khali\\desktop\\forgit\\accountingsoftware\\accountingsoftware\\mainfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\mainfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|c:\\users\\khali\\desktop\\forgit\\accountingsoftware\\accountingsoftware\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|C:\\Users\\khali\\Desktop\\forGit\\AccountingSoftware\\accountingsoftware\\accounting\\customersfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\accounting\\customersfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|c:\\users\\khali\\desktop\\forgit\\accountingsoftware\\accountingsoftware\\accounting\\customersfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\accounting\\customersfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|C:\\Users\\khali\\Desktop\\continou\\forGit\\AccountingSoftware\\accountingsoftware\\accounting\\productsfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\accounting\\productsfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,71 +26,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\khali\\Desktop\\forGit\\AccountingSoftware\\AccountingSoftware\\Program.cs",
-              "RelativeDocumentMoniker": "AccountingSoftware\\Program.cs",
-              "ToolTip": "C:\\Users\\khali\\Desktop\\forGit\\AccountingSoftware\\AccountingSoftware\\Program.cs",
-              "RelativeToolTip": "AccountingSoftware\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T17:42:56.34Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainFrm.cs",
-              "DocumentMoniker": "C:\\Users\\khali\\Desktop\\forGit\\AccountingSoftware\\AccountingSoftware\\MainFrm.cs",
-              "RelativeDocumentMoniker": "AccountingSoftware\\MainFrm.cs",
-              "ToolTip": "C:\\Users\\khali\\Desktop\\forGit\\AccountingSoftware\\AccountingSoftware\\MainFrm.cs",
-              "RelativeToolTip": "AccountingSoftware\\MainFrm.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAYwGUAAAAmAAAAAAAAAA==",
+              "Title": "ProductsFrm.cs",
+              "DocumentMoniker": "C:\\Users\\khali\\Desktop\\continou\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\ProductsFrm.cs",
+              "RelativeDocumentMoniker": "AccountingSoftware\\Accounting\\ProductsFrm.cs",
+              "ToolTip": "C:\\Users\\khali\\Desktop\\continou\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\ProductsFrm.cs",
+              "RelativeToolTip": "AccountingSoftware\\Accounting\\ProductsFrm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T17:37:47.56Z",
+              "WhenOpened": "2024-11-15T12:59:32.369Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MainFrm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\khali\\Desktop\\forGit\\AccountingSoftware\\AccountingSoftware\\MainFrm.cs",
-              "RelativeDocumentMoniker": "AccountingSoftware\\MainFrm.cs",
-              "ToolTip": "C:\\Users\\khali\\Desktop\\forGit\\AccountingSoftware\\AccountingSoftware\\MainFrm.cs [Design]",
-              "RelativeToolTip": "AccountingSoftware\\MainFrm.cs [Design]",
+              "Title": "ProductsFrm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\khali\\Desktop\\continou\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\ProductsFrm.cs",
+              "RelativeDocumentMoniker": "AccountingSoftware\\Accounting\\ProductsFrm.cs",
+              "ToolTip": "C:\\Users\\khali\\Desktop\\continou\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\ProductsFrm.cs [Design]",
+              "RelativeToolTip": "AccountingSoftware\\Accounting\\ProductsFrm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T17:33:59.372Z",
+              "WhenOpened": "2024-11-13T12:47:03.493Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CustomersFrm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\khali\\Desktop\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\CustomersFrm.cs",
-              "RelativeDocumentMoniker": "AccountingSoftware\\Accounting\\CustomersFrm.cs",
-              "ToolTip": "C:\\Users\\khali\\Desktop\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\CustomersFrm.cs [Design]",
-              "RelativeToolTip": "AccountingSoftware\\Accounting\\CustomersFrm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-10T15:39:26.466Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CustomersFrm.cs",
-              "DocumentMoniker": "C:\\Users\\khali\\Desktop\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\CustomersFrm.cs",
-              "RelativeDocumentMoniker": "AccountingSoftware\\Accounting\\CustomersFrm.cs",
-              "ToolTip": "C:\\Users\\khali\\Desktop\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\CustomersFrm.cs",
-              "RelativeToolTip": "AccountingSoftware\\Accounting\\CustomersFrm.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAcwA4AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T12:12:42.273Z",
-              "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 1858,
+          "DockedWidth": 200,
           "SelectedChildIndex": -1,
           "Children": [
             {

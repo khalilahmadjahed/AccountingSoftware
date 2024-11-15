@@ -10,25 +10,14 @@ using System.Windows.Forms;
 
 namespace AccountingSoftware.Accounting
 {
-    public partial class CustomersFrm : Form
+    public partial class ProductsFrm : Form
     {
-        public CustomersFrm()
+        public ProductsFrm()
         {
             InitializeComponent();
         }
 
         Boolean is_del_btn = false;
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
         //this function will Enable the Save and Cancle buttons after clicking the New, Edit or Delete buttons
         void new_edit_delete_btn()
@@ -68,10 +57,12 @@ namespace AccountingSoftware.Accounting
             this.dataGridView1.Enabled = true;
             this.groupBox1.Enabled = false;
         }
-        private void CustomersFrm_Load(object sender, EventArgs e)
+
+        private void ProductsFrm_Load(object sender, EventArgs e)
         {
             save_cancle_btns();
-            this.customersTableAdapter1.Fill_All(this.accDs1.Customers);
+            this.productsTableAdapter1.Fill_All(this.accDs1.Products);
+            //MessageBox.Show(this.accDs1.Products.Rows.Count.ToString());
         }
 
         private void new_btn_Click(object sender, EventArgs e)
@@ -85,7 +76,6 @@ namespace AccountingSoftware.Accounting
             this.reg_user_label.Text = "Login User";
             this.reg_date_label.Text = DateTime.Now.ToShortDateString();
             this.reg_time_label.Text = DateTime.Now.ToString("HH:mm:ss");
-
         }
 
         private void edit_btn_Click(object sender, EventArgs e)
@@ -100,7 +90,6 @@ namespace AccountingSoftware.Accounting
             new_edit_delete_btn();
             //Remove a row
             this.bindingSource1.RemoveCurrent();
-
         }
 
         private void save_btn_Click(object sender, EventArgs e)
@@ -109,7 +98,7 @@ namespace AccountingSoftware.Accounting
             {
                 this.bindingSource1.EndEdit();
                 int returnValue;
-                returnValue = this.customersTableAdapter1.Update(this.accDs1.Customers);
+                returnValue = this.productsTableAdapter1.Update(this.accDs1.Products);
                 //--------------
                 if (returnValue > 0)
                 {
@@ -126,7 +115,6 @@ namespace AccountingSoftware.Accounting
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-
         }
 
         private void cancel_btn_Click(object sender, EventArgs e)
@@ -153,19 +141,14 @@ namespace AccountingSoftware.Accounting
         {
             Int32 id;
             Int32.TryParse(this.search_id_textBox1.Text, out id);
-            this.customersTableAdapter1.FillBy_id(accDs1.Customers, id);
+            this.productsTableAdapter1.FillBy_id(accDs1.Products, id);
         }
 
         private void search_lName_button2_Click(object sender, EventArgs e)
         {
             string searchByLastName;
-            searchByLastName = "%" + this.search_lName_textBox2.Text + "%";
-            this.customersTableAdapter1.FillBy_lastName(accDs1.Customers, searchByLastName);
-        }
-
-        private void email_txtBox_TextChanged(object sender, EventArgs e)
-        {
-
+            searchByLastName = "%" + this.search_proName_textBox2.Text + "%";
+            this.productsTableAdapter1.FillBy_productName(accDs1.Products, searchByLastName);
         }
     }
 }

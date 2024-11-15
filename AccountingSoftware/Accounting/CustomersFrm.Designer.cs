@@ -254,12 +254,13 @@
             // gender_comboBox1
             // 
             gender_comboBox1.DataBindings.Add(new Binding("Text", bindingSource1, "Gender", true));
+            gender_comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             gender_comboBox1.FormattingEnabled = true;
             gender_comboBox1.Items.AddRange(new object[] { "Male", "Female" });
             gender_comboBox1.Location = new Point(246, 104);
             gender_comboBox1.Name = "gender_comboBox1";
             gender_comboBox1.Size = new Size(238, 23);
-            gender_comboBox1.TabIndex = 6;
+            gender_comboBox1.TabIndex = 4;
             // 
             // bindingSource1
             // 
@@ -278,7 +279,7 @@
             comment_txtBox.Location = new Point(246, 248);
             comment_txtBox.Name = "comment_txtBox";
             comment_txtBox.Size = new Size(238, 23);
-            comment_txtBox.TabIndex = 5;
+            comment_txtBox.TabIndex = 9;
             // 
             // label9
             // 
@@ -295,7 +296,7 @@
             address_txtBox.Location = new Point(246, 219);
             address_txtBox.Name = "address_txtBox";
             address_txtBox.Size = new Size(238, 23);
-            address_txtBox.TabIndex = 5;
+            address_txtBox.TabIndex = 8;
             // 
             // label8
             // 
@@ -312,7 +313,8 @@
             email_txtBox.Location = new Point(246, 190);
             email_txtBox.Name = "email_txtBox";
             email_txtBox.Size = new Size(238, 23);
-            email_txtBox.TabIndex = 5;
+            email_txtBox.TabIndex = 7;
+            email_txtBox.TextChanged += email_txtBox_TextChanged;
             // 
             // label7
             // 
@@ -329,7 +331,7 @@
             cellPhone_txtBox.Location = new Point(246, 161);
             cellPhone_txtBox.Name = "cellPhone_txtBox";
             cellPhone_txtBox.Size = new Size(238, 23);
-            cellPhone_txtBox.TabIndex = 5;
+            cellPhone_txtBox.TabIndex = 6;
             // 
             // label6
             // 
@@ -372,7 +374,7 @@
             lastName_txtBox.Location = new Point(246, 74);
             lastName_txtBox.Name = "lastName_txtBox";
             lastName_txtBox.Size = new Size(238, 23);
-            lastName_txtBox.TabIndex = 5;
+            lastName_txtBox.TabIndex = 3;
             // 
             // label3
             // 
@@ -389,7 +391,7 @@
             userName_txtBox.Location = new Point(246, 45);
             userName_txtBox.Name = "userName_txtBox";
             userName_txtBox.Size = new Size(238, 23);
-            userName_txtBox.TabIndex = 5;
+            userName_txtBox.TabIndex = 2;
             // 
             // label2
             // 
@@ -407,7 +409,7 @@
             id_txtBox.Name = "id_txtBox";
             id_txtBox.ReadOnly = true;
             id_txtBox.Size = new Size(238, 23);
-            id_txtBox.TabIndex = 5;
+            id_txtBox.TabIndex = 1;
             // 
             // label1
             // 

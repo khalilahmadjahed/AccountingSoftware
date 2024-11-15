@@ -95,7 +95,7 @@ namespace AccountingSoftware
 
         private void acc_treeView_DoubleClick(object sender, EventArgs e)
         {
-            //Customers
+            //Customers Form
             if (this.acc_treeView.SelectedNode.Name == "Customers")
             {
                 AccountingSoftware.Accounting.CustomersFrm CFrm = new CustomersFrm(); // CFrm == Customers Form
@@ -103,6 +103,13 @@ namespace AccountingSoftware
                 CFrm.Show();
             }
 
+            //Products Form
+            if (this.acc_treeView.SelectedNode.Name == "products")
+            {
+                AccountingSoftware.Accounting.ProductsFrm PFrm = new ProductsFrm(); // PFrm == Products Form
+                PFrm.MdiParent = this;
+                PFrm.Show();
+            }
         }
     }
 }
