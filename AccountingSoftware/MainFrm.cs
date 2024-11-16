@@ -111,5 +111,19 @@ namespace AccountingSoftware
                 PFrm.Show();
             }
         }
+
+        private void tools_btn_Click(object sender, EventArgs e)
+        {
+            Point settingPoint;
+            settingPoint = new Point(this.tools_btn.Left, this.top_panel1.Height);
+            this.tools_contextMenu.Show(settingPoint);
+        }
+
+        private void settings_MenuItem_Click(object sender, EventArgs e)
+        {
+            AccountingSoftware.Accounting.SettingsFrm SFrm = new SettingsFrm(); // SFrm == Settings Form
+            SFrm.MdiParent = this;
+            SFrm.Show();
+        }
     }
 }

@@ -613,7 +613,7 @@
             Name = "ProductsFrm";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "ProductsFrm";
+            Text = "Products";
             Load += ProductsFrm_Load;
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();

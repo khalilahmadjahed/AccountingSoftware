@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "edde8u3fZI4=",
+  "dgSpecHash": "NwVQ5k+tWU4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\khali\\Desktop\\continou\\forGit\\AccountingSoftware\\AccountingSoftware\\AccountingSoftware.csproj",
+  "projectFilePath": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\AccountingSoftware.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\khali\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\khali\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

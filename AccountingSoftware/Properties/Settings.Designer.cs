@@ -34,5 +34,101 @@ namespace AccountingSoftware.Properties {
                 this["sel_img_index"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Test Software Company")]
+        public string sett_companyName {
+            get {
+                return ((string)(this["sett_companyName"]));
+            }
+            set {
+                this["sett_companyName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Jahed")]
+        public string sett_manager {
+            get {
+                return ((string)(this["sett_manager"]));
+            }
+            set {
+                this["sett_manager"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("123(558)")]
+        public string sett_landLine {
+            get {
+                return ((string)(this["sett_landLine"]));
+            }
+            set {
+                this["sett_landLine"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("+93729908940")]
+        public string sett_cellNumber {
+            get {
+                return ((string)(this["sett_cellNumber"]));
+            }
+            set {
+                this["sett_cellNumber"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Afghanistan, Herat")]
+        public string sett_address {
+            get {
+                return ((string)(this["sett_address"]));
+            }
+            set {
+                this["sett_address"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("test.com")]
+        public string sett_webSite {
+            get {
+                return ((string)(this["sett_webSite"]));
+            }
+            set {
+                this["sett_webSite"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("6.6")]
+        public double sett_salesTax {
+            get {
+                return ((double)(this["sett_salesTax"]));
+            }
+            set {
+                this["sett_salesTax"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("4")]
+        public double sett_billTax {
+            get {
+                return ((double)(this["sett_billTax"]));
+            }
+            set {
+                this["sett_billTax"] = value;
+            }
+        }
     }
 }

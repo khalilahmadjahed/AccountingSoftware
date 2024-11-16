@@ -7,6 +7,9 @@
     <Compile Update="Accounting\ProductsFrm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Accounting\SettingsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="MainFrm.cs">
       <SubType>Form</SubType>
     </Compile>

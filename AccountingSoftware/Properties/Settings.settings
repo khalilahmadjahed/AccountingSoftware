@@ -5,5 +5,29 @@
     <Setting Name="sel_img_index" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">3</Value>
     </Setting>
+    <Setting Name="sett_companyName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Test Software Company</Value>
+    </Setting>
+    <Setting Name="sett_manager" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Jahed</Value>
+    </Setting>
+    <Setting Name="sett_landLine" Type="System.String" Scope="User">
+      <Value Profile="(Default)">123(558)</Value>
+    </Setting>
+    <Setting Name="sett_cellNumber" Type="System.String" Scope="User">
+      <Value Profile="(Default)">+93729908940</Value>
+    </Setting>
+    <Setting Name="sett_address" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Afghanistan, Herat</Value>
+    </Setting>
+    <Setting Name="sett_webSite" Type="System.String" Scope="User">
+      <Value Profile="(Default)">test.com</Value>
+    </Setting>
+    <Setting Name="sett_salesTax" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">6.6</Value>
+    </Setting>
+    <Setting Name="sett_billTax" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">4</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
