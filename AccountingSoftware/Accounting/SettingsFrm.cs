@@ -16,6 +16,25 @@ namespace AccountingSoftware.Accounting
         {
             InitializeComponent();
         }
+        private void SettingsFrm_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                this.companyName_txtBox.Text = AccountingSoftware.Properties.Settings.Default.sett_companyName;
+                this.manager_txtBox.Text = AccountingSoftware.Properties.Settings.Default.sett_manager;
+                this.landLine_txtBox.Text = AccountingSoftware.Properties.Settings.Default.sett_landLine;
+                this.cellNumber_txtBox.Text = AccountingSoftware.Properties.Settings.Default.sett_cellNumber;
+                this.address_txtBox.Text = AccountingSoftware.Properties.Settings.Default.sett_address;
+                this.webSite_txtBox.Text = AccountingSoftware.Properties.Settings.Default.sett_webSite;
+                //--------------------------
+                this.salesTax_txtBox.Text = AccountingSoftware.Properties.Settings.Default.sett_salesTax.ToString();
+                this.billTax_textBox.Text = AccountingSoftware.Properties.Settings.Default.sett_salesTax.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
+            }
+        }
 
         private void save_and_exit_button1_Click(object sender, EventArgs e)
         {
@@ -34,27 +53,6 @@ namespace AccountingSoftware.Accounting
                 AccountingSoftware.Properties.Settings.Default.Save();
                 MessageBox.Show("It's saved!");
                 this.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error" + ex.Message);
-            }
-
-        }
-
-        private void SettingsFrm_Load(object sender, EventArgs e)
-        {
-            try
-            {
-                this.companyName_txtBox.Text = AccountingSoftware.Properties.Settings.Default.sett_companyName;
-                this.manager_txtBox.Text = AccountingSoftware.Properties.Settings.Default.sett_manager;
-                this.landLine_txtBox.Text = AccountingSoftware.Properties.Settings.Default.sett_landLine;
-                this.cellNumber_txtBox.Text = AccountingSoftware.Properties.Settings.Default.sett_cellNumber;
-                this.address_txtBox.Text = AccountingSoftware.Properties.Settings.Default.sett_address;
-                this.webSite_txtBox.Text = AccountingSoftware.Properties.Settings.Default.sett_webSite;
-                //--------------------------
-                this.salesTax_txtBox.Text = AccountingSoftware.Properties.Settings.Default.sett_salesTax.ToString();
-                this.billTax_textBox.Text = AccountingSoftware.Properties.Settings.Default.sett_salesTax.ToString();
             }
             catch (Exception ex)
             {

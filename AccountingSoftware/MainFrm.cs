@@ -110,6 +110,14 @@ namespace AccountingSoftware
                 PFrm.MdiParent = this;
                 PFrm.Show();
             }
+
+            //Sales_Invoice
+            if (this.acc_treeView.SelectedNode.Name == "Sales_Invoice")
+            {
+                AccountingSoftware.Accounting.SalesInvoiceFrm SIFrm = new SalesInvoiceFrm();
+                SIFrm.MdiParent = this;
+                SIFrm.Show();
+            }
         }
 
         private void tools_btn_Click(object sender, EventArgs e)

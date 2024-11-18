@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|c:\\users\\khali\\desktop\\forgit\\forgit\\accountingsoftware\\accountingsoftware\\accounting\\settingsfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\accounting\\settingsfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\accountingsoftware\\accounting\\salesinvoicefrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\accounting\\salesinvoicefrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|c:\\users\\khali\\desktop\\forgit\\forgit\\accountingsoftware\\accountingsoftware\\accounting\\settingsfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\accounting\\settingsfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|c:\\users\\khali\\desktop\\forgit\\forgit\\accountingsoftware\\accountingsoftware\\accounting\\salesinvoicefrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\accounting\\salesinvoicefrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\accountingsoftware\\accounting\\customersearchfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\accounting\\customersearchfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|c:\\users\\khali\\desktop\\forgit\\forgit\\accountingsoftware\\accountingsoftware\\accounting\\customersearchfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\accounting\\customersearchfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,8 +25,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 480,
-          "SelectedChildIndex": 2,
+          "DockedWidth": 559,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,33 +34,58 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SettingsFrm.cs",
-              "DocumentMoniker": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\SettingsFrm.cs",
-              "RelativeDocumentMoniker": "AccountingSoftware\\Accounting\\SettingsFrm.cs",
-              "ToolTip": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\SettingsFrm.cs",
-              "RelativeToolTip": "AccountingSoftware\\Accounting\\SettingsFrm.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAkwDgAAAB0AAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "CustomerSearchFrm.cs",
+              "DocumentMoniker": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\CustomerSearchFrm.cs",
+              "RelativeDocumentMoniker": "AccountingSoftware\\Accounting\\CustomerSearchFrm.cs",
+              "ToolTip": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\CustomerSearchFrm.cs",
+              "RelativeToolTip": "AccountingSoftware\\Accounting\\CustomerSearchFrm.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAIAwwCYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T10:39:36.121Z",
+              "WhenOpened": "2024-11-18T11:19:18.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SalesInvoiceFrm.cs",
+              "DocumentMoniker": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\SalesInvoiceFrm.cs",
+              "RelativeDocumentMoniker": "AccountingSoftware\\Accounting\\SalesInvoiceFrm.cs",
+              "ToolTip": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\SalesInvoiceFrm.cs*",
+              "RelativeToolTip": "AccountingSoftware\\Accounting\\SalesInvoiceFrm.cs*",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAjwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T13:00:00.271Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SettingsFrm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\SettingsFrm.cs",
-              "RelativeDocumentMoniker": "AccountingSoftware\\Accounting\\SettingsFrm.cs",
-              "ToolTip": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\SettingsFrm.cs [Design]",
-              "RelativeToolTip": "AccountingSoftware\\Accounting\\SettingsFrm.cs [Design]",
+              "Title": "SalesInvoiceFrm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\SalesInvoiceFrm.cs",
+              "RelativeDocumentMoniker": "AccountingSoftware\\Accounting\\SalesInvoiceFrm.cs",
+              "ToolTip": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\SalesInvoiceFrm.cs [Design]*",
+              "RelativeToolTip": "AccountingSoftware\\Accounting\\SalesInvoiceFrm.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T10:19:59.73Z",
+              "WhenOpened": "2024-11-17T12:57:43.495Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CustomerSearchFrm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\CustomerSearchFrm.cs",
+              "RelativeDocumentMoniker": "AccountingSoftware\\Accounting\\CustomerSearchFrm.cs",
+              "ToolTip": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\CustomerSearchFrm.cs [Design]",
+              "RelativeToolTip": "AccountingSoftware\\Accounting\\CustomerSearchFrm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T12:56:46.734Z",
               "EditorCaption": " [Design]"
             }
           ]
         },
         {
-          "DockedWidth": 200,
+          "DockedWidth": 559,
           "SelectedChildIndex": -1,
           "Children": [
             {
