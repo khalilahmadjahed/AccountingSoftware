@@ -325,7 +325,7 @@
             ok_btn.Image = Properties.Resources.ok;
             ok_btn.Location = new Point(12, 402);
             ok_btn.Name = "ok_btn";
-            ok_btn.Size = new Size(147, 45);
+            ok_btn.Size = new Size(147, 44);
             ok_btn.TabIndex = 9;
             ok_btn.Text = "OK";
             ok_btn.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -338,7 +338,7 @@
             button1.Image = Properties.Resources.canecl_butt;
             button1.Location = new Point(165, 402);
             button1.Name = "button1";
-            button1.Size = new Size(110, 46);
+            button1.Size = new Size(110, 45);
             button1.TabIndex = 9;
             button1.Text = "Cancle";
             button1.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -355,7 +355,7 @@
             showAll_btn.Image = Properties.Resources.show_all;
             showAll_btn.Location = new Point(460, 400);
             showAll_btn.Name = "showAll_btn";
-            showAll_btn.Size = new Size(147, 45);
+            showAll_btn.Size = new Size(147, 44);
             showAll_btn.TabIndex = 2;
             showAll_btn.Text = "Show All";
             showAll_btn.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -366,8 +366,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.WhiteSmoke;
-            ClientSize = new Size(619, 462);
+            BackColor = Color.FromArgb(192, 255, 255);
+            ClientSize = new Size(611, 454);
             ControlBox = false;
             Controls.Add(showAll_btn);
             Controls.Add(button1);

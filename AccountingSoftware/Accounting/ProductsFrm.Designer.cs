@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             toolStrip1 = new ToolStrip();
             new_btn = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
@@ -44,16 +47,18 @@
             search_btn = new ToolStripButton();
             toolStripSeparator7 = new ToolStripSeparator();
             groupBox1 = new GroupBox();
-            comment_txtBox = new TextBox();
+            label9 = new Label();
+            label3 = new Label();
+            discount_nud = new NumericUpDown();
             bindingSource1 = new BindingSource(components);
             accDs1 = new Ds.AccDs();
-            discount_txtBox = new TextBox();
+            price_nud = new NumericUpDown();
+            initialQty_nud = new NumericUpDown();
+            comment_txtBox = new TextBox();
             label8 = new Label();
-            price_txtBox = new TextBox();
             label7 = new Label();
             unit_txtBox = new TextBox();
             label6 = new Label();
-            initialQty_txtBox = new TextBox();
             label5 = new Label();
             label4 = new Label();
             productName_txtBox = new TextBox();
@@ -68,6 +73,14 @@
             label14 = new Label();
             label11 = new Label();
             dataGridView1 = new DataGridView();
+            panel1 = new Panel();
+            label12 = new Label();
+            reg_time_label = new Label();
+            reg_date_label = new Label();
+            label13 = new Label();
+            reg_user_label = new Label();
+            label10 = new Label();
+            productsTableAdapter1 = new Ds.AccDsTableAdapters.ProductsTableAdapter();
             productIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             productNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             initialQtyDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -78,18 +91,13 @@
             regUserDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             regDateDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             regTimeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            panel1 = new Panel();
-            label12 = new Label();
-            reg_time_label = new Label();
-            reg_date_label = new Label();
-            label13 = new Label();
-            reg_user_label = new Label();
-            label10 = new Label();
-            productsTableAdapter1 = new Ds.AccDsTableAdapters.ProductsTableAdapter();
             toolStrip1.SuspendLayout();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)discount_nud).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)accDs1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)price_nud).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)initialQty_nud).BeginInit();
             search_panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
@@ -219,14 +227,16 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(label9);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(discount_nud);
+            groupBox1.Controls.Add(price_nud);
+            groupBox1.Controls.Add(initialQty_nud);
             groupBox1.Controls.Add(comment_txtBox);
-            groupBox1.Controls.Add(discount_txtBox);
             groupBox1.Controls.Add(label8);
-            groupBox1.Controls.Add(price_txtBox);
             groupBox1.Controls.Add(label7);
             groupBox1.Controls.Add(unit_txtBox);
             groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(initialQty_txtBox);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(productName_txtBox);
@@ -240,13 +250,32 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Info";
             // 
-            // comment_txtBox
+            // label9
             // 
-            comment_txtBox.DataBindings.Add(new Binding("Text", bindingSource1, "Comment", true));
-            comment_txtBox.Location = new Point(252, 193);
-            comment_txtBox.Name = "comment_txtBox";
-            comment_txtBox.Size = new Size(238, 23);
-            comment_txtBox.TabIndex = 9;
+            label9.AutoSize = true;
+            label9.Location = new Point(233, 164);
+            label9.Name = "label9";
+            label9.Size = new Size(13, 15);
+            label9.TabIndex = 16;
+            label9.Text = "$";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(233, 136);
+            label3.Name = "label3";
+            label3.Size = new Size(13, 15);
+            label3.TabIndex = 16;
+            label3.Text = "$";
+            // 
+            // discount_nud
+            // 
+            discount_nud.DataBindings.Add(new Binding("Value", bindingSource1, "Discount", true));
+            discount_nud.Location = new Point(252, 162);
+            discount_nud.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
+            discount_nud.Name = "discount_nud";
+            discount_nud.Size = new Size(238, 23);
+            discount_nud.TabIndex = 15;
             // 
             // bindingSource1
             // 
@@ -259,13 +288,31 @@
             accDs1.Namespace = "http://tempuri.org/AccDs.xsd";
             accDs1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // discount_txtBox
+            // price_nud
             // 
-            discount_txtBox.DataBindings.Add(new Binding("Text", bindingSource1, "Discount", true));
-            discount_txtBox.Location = new Point(252, 164);
-            discount_txtBox.Name = "discount_txtBox";
-            discount_txtBox.Size = new Size(238, 23);
-            discount_txtBox.TabIndex = 8;
+            price_nud.DataBindings.Add(new Binding("Value", bindingSource1, "Price", true));
+            price_nud.Location = new Point(252, 132);
+            price_nud.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
+            price_nud.Name = "price_nud";
+            price_nud.Size = new Size(238, 23);
+            price_nud.TabIndex = 15;
+            // 
+            // initialQty_nud
+            // 
+            initialQty_nud.DataBindings.Add(new Binding("Value", bindingSource1, "InitialQty", true));
+            initialQty_nud.Location = new Point(252, 73);
+            initialQty_nud.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
+            initialQty_nud.Name = "initialQty_nud";
+            initialQty_nud.Size = new Size(238, 23);
+            initialQty_nud.TabIndex = 15;
+            // 
+            // comment_txtBox
+            // 
+            comment_txtBox.DataBindings.Add(new Binding("Text", bindingSource1, "Comment", true));
+            comment_txtBox.Location = new Point(252, 193);
+            comment_txtBox.Name = "comment_txtBox";
+            comment_txtBox.Size = new Size(238, 23);
+            comment_txtBox.TabIndex = 9;
             // 
             // label8
             // 
@@ -275,14 +322,6 @@
             label8.Size = new Size(64, 15);
             label8.TabIndex = 4;
             label8.Text = "Comment:";
-            // 
-            // price_txtBox
-            // 
-            price_txtBox.DataBindings.Add(new Binding("Text", bindingSource1, "Price", true));
-            price_txtBox.Location = new Point(252, 135);
-            price_txtBox.Name = "price_txtBox";
-            price_txtBox.Size = new Size(238, 23);
-            price_txtBox.TabIndex = 7;
             // 
             // label7
             // 
@@ -309,14 +348,6 @@
             label6.Size = new Size(36, 15);
             label6.TabIndex = 4;
             label6.Text = "Price:";
-            // 
-            // initialQty_txtBox
-            // 
-            initialQty_txtBox.DataBindings.Add(new Binding("Text", bindingSource1, "InitialQty", true));
-            initialQty_txtBox.Location = new Point(252, 74);
-            initialQty_txtBox.Name = "initialQty_txtBox";
-            initialQty_txtBox.Size = new Size(238, 23);
-            initialQty_txtBox.TabIndex = 5;
             // 
             // label5
             // 
@@ -455,76 +486,6 @@
             dataGridView1.Size = new Size(660, 149);
             dataGridView1.TabIndex = 6;
             // 
-            // productIdDataGridViewTextBoxColumn
-            // 
-            productIdDataGridViewTextBoxColumn.DataPropertyName = "ProductId";
-            productIdDataGridViewTextBoxColumn.HeaderText = "ProductId";
-            productIdDataGridViewTextBoxColumn.Name = "productIdDataGridViewTextBoxColumn";
-            productIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // productNameDataGridViewTextBoxColumn
-            // 
-            productNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName";
-            productNameDataGridViewTextBoxColumn.HeaderText = "ProductName";
-            productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
-            productNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // initialQtyDataGridViewTextBoxColumn
-            // 
-            initialQtyDataGridViewTextBoxColumn.DataPropertyName = "InitialQty";
-            initialQtyDataGridViewTextBoxColumn.HeaderText = "InitialQty";
-            initialQtyDataGridViewTextBoxColumn.Name = "initialQtyDataGridViewTextBoxColumn";
-            initialQtyDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // unitDataGridViewTextBoxColumn
-            // 
-            unitDataGridViewTextBoxColumn.DataPropertyName = "Unit";
-            unitDataGridViewTextBoxColumn.HeaderText = "Unit";
-            unitDataGridViewTextBoxColumn.Name = "unitDataGridViewTextBoxColumn";
-            unitDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            priceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // discountDataGridViewTextBoxColumn
-            // 
-            discountDataGridViewTextBoxColumn.DataPropertyName = "Discount";
-            discountDataGridViewTextBoxColumn.HeaderText = "Discount";
-            discountDataGridViewTextBoxColumn.Name = "discountDataGridViewTextBoxColumn";
-            discountDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // commentDataGridViewTextBoxColumn
-            // 
-            commentDataGridViewTextBoxColumn.DataPropertyName = "Comment";
-            commentDataGridViewTextBoxColumn.HeaderText = "Comment";
-            commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
-            commentDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // regUserDataGridViewTextBoxColumn
-            // 
-            regUserDataGridViewTextBoxColumn.DataPropertyName = "RegUser";
-            regUserDataGridViewTextBoxColumn.HeaderText = "RegUser";
-            regUserDataGridViewTextBoxColumn.Name = "regUserDataGridViewTextBoxColumn";
-            regUserDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // regDateDataGridViewTextBoxColumn
-            // 
-            regDateDataGridViewTextBoxColumn.DataPropertyName = "RegDate";
-            regDateDataGridViewTextBoxColumn.HeaderText = "RegDate";
-            regDateDataGridViewTextBoxColumn.Name = "regDateDataGridViewTextBoxColumn";
-            regDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // regTimeDataGridViewTextBoxColumn
-            // 
-            regTimeDataGridViewTextBoxColumn.DataPropertyName = "RegTime";
-            regTimeDataGridViewTextBoxColumn.HeaderText = "RegTime";
-            regTimeDataGridViewTextBoxColumn.Name = "regTimeDataGridViewTextBoxColumn";
-            regTimeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
@@ -598,6 +559,82 @@
             // 
             productsTableAdapter1.ClearBeforeFill = true;
             // 
+            // productIdDataGridViewTextBoxColumn
+            // 
+            productIdDataGridViewTextBoxColumn.DataPropertyName = "ProductId";
+            productIdDataGridViewTextBoxColumn.HeaderText = "ProductId";
+            productIdDataGridViewTextBoxColumn.Name = "productIdDataGridViewTextBoxColumn";
+            productIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // productNameDataGridViewTextBoxColumn
+            // 
+            productNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName";
+            productNameDataGridViewTextBoxColumn.HeaderText = "ProductName";
+            productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
+            productNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // initialQtyDataGridViewTextBoxColumn
+            // 
+            initialQtyDataGridViewTextBoxColumn.DataPropertyName = "InitialQty";
+            dataGridViewCellStyle1.Format = "N0";
+            initialQtyDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            initialQtyDataGridViewTextBoxColumn.HeaderText = "InitialQty";
+            initialQtyDataGridViewTextBoxColumn.Name = "initialQtyDataGridViewTextBoxColumn";
+            initialQtyDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // unitDataGridViewTextBoxColumn
+            // 
+            unitDataGridViewTextBoxColumn.DataPropertyName = "Unit";
+            unitDataGridViewTextBoxColumn.HeaderText = "Unit";
+            unitDataGridViewTextBoxColumn.Name = "unitDataGridViewTextBoxColumn";
+            unitDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            dataGridViewCellStyle2.Format = "C2";
+            priceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            priceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // discountDataGridViewTextBoxColumn
+            // 
+            discountDataGridViewTextBoxColumn.DataPropertyName = "Discount";
+            dataGridViewCellStyle3.Format = "C2";
+            discountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            discountDataGridViewTextBoxColumn.HeaderText = "Discount";
+            discountDataGridViewTextBoxColumn.Name = "discountDataGridViewTextBoxColumn";
+            discountDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // commentDataGridViewTextBoxColumn
+            // 
+            commentDataGridViewTextBoxColumn.DataPropertyName = "Comment";
+            commentDataGridViewTextBoxColumn.HeaderText = "Comment";
+            commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
+            commentDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // regUserDataGridViewTextBoxColumn
+            // 
+            regUserDataGridViewTextBoxColumn.DataPropertyName = "RegUser";
+            regUserDataGridViewTextBoxColumn.HeaderText = "RegUser";
+            regUserDataGridViewTextBoxColumn.Name = "regUserDataGridViewTextBoxColumn";
+            regUserDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // regDateDataGridViewTextBoxColumn
+            // 
+            regDateDataGridViewTextBoxColumn.DataPropertyName = "RegDate";
+            regDateDataGridViewTextBoxColumn.HeaderText = "RegDate";
+            regDateDataGridViewTextBoxColumn.Name = "regDateDataGridViewTextBoxColumn";
+            regDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // regTimeDataGridViewTextBoxColumn
+            // 
+            regTimeDataGridViewTextBoxColumn.DataPropertyName = "RegTime";
+            regTimeDataGridViewTextBoxColumn.HeaderText = "RegTime";
+            regTimeDataGridViewTextBoxColumn.Name = "regTimeDataGridViewTextBoxColumn";
+            regTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // ProductsFrm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -619,8 +656,11 @@
             toolStrip1.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)discount_nud).EndInit();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
             ((System.ComponentModel.ISupportInitialize)accDs1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)price_nud).EndInit();
+            ((System.ComponentModel.ISupportInitialize)initialQty_nud).EndInit();
             search_panel2.ResumeLayout(false);
             search_panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -675,6 +715,14 @@
         private Label label13;
         private Label reg_user_label;
         private Label label10;
+        private BindingSource bindingSource1;
+        private Ds.AccDs accDs1;
+        private Ds.AccDsTableAdapters.ProductsTableAdapter productsTableAdapter1;
+        private Label label3;
+        private NumericUpDown initialQty_nud;
+        private NumericUpDown discount_nud;
+        private NumericUpDown price_nud;
+        private Label label9;
         private DataGridViewTextBoxColumn productIdDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn initialQtyDataGridViewTextBoxColumn;
@@ -685,8 +733,5 @@
         private DataGridViewTextBoxColumn regUserDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn regDateDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn regTimeDataGridViewTextBoxColumn;
-        private BindingSource bindingSource1;
-        private Ds.AccDs accDs1;
-        private Ds.AccDsTableAdapters.ProductsTableAdapter productsTableAdapter1;
     }
 }

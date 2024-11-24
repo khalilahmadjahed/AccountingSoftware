@@ -1,6 +1,6 @@
 ﻿namespace AccountingSoftware.Accounting
 {
-    partial class SalesInvoiceFrm
+    partial class SalesInvoiceProductsFrm
     {
         /// <summary>
         /// Required designer variable.
@@ -51,35 +51,46 @@
             search_btn = new ToolStripButton();
             toolStripSeparator7 = new ToolStripSeparator();
             groupBox1 = new GroupBox();
-            invoiceId_txtBox = new TextBox();
-            bindingSource1 = new BindingSource(components);
+            taxRate_btn = new Button();
+            id_txtBox = new TextBox();
+            bindingSource3 = new BindingSource(components);
             accDs1 = new Ds.AccDs();
+            label21 = new Label();
+            label19 = new Label();
+            label17 = new Label();
+            label15 = new Label();
+            label11 = new Label();
             label7 = new Label();
-            label4 = new Label();
-            other_numericUpDown1 = new NumericUpDown();
-            shipping_numericUpDown1 = new NumericUpDown();
-            customerSearch_btn = new Button();
-            invoiceDate_dtp = new DateTimePicker();
+            netAmount_nud = new NumericUpDown();
+            taxSum_nud = new NumericUpDown();
+            taxRate_nud = new NumericUpDown();
+            amount_nud = new NumericUpDown();
+            discount_nud = new NumericUpDown();
+            unitPrice_nud = new NumericUpDown();
+            qty_nud = new NumericUpDown();
+            label20 = new Label();
+            productSearch_btn = new Button();
+            label18 = new Label();
+            unit_txtBox = new TextBox();
+            label16 = new Label();
+            label3 = new Label();
+            label14 = new Label();
             comment_txtBox = new TextBox();
+            label8 = new Label();
             label9 = new Label();
             label6 = new Label();
-            customerName_txtBox = new TextBox();
+            productName_txtBox = new TextBox();
             label5 = new Label();
-            label2 = new Label();
             label1 = new Label();
-            label3 = new Label();
+            label2 = new Label();
             panel1 = new Panel();
             label12 = new Label();
-            customerId_lbl = new Label();
+            invoiceId_lbl = new Label();
             reg_time_label = new Label();
             reg_date_label = new Label();
             label13 = new Label();
             reg_user_label = new Label();
             label10 = new Label();
-            salesInvoiceTableAdapter1 = new Ds.AccDsTableAdapters.SalesInvoiceTableAdapter();
-            panel2 = new Panel();
-            productList_btn = new Button();
-            bindingSource3 = new BindingSource(components);
             dataGridView1 = new DataGridView();
             iDDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             productNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -96,45 +107,21 @@
             regDateDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             regTimeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             salesInvoiceProductsTableAdapter1 = new Ds.AccDsTableAdapters.SalesInvoiceProductsTableAdapter();
-            label8 = new Label();
-            amount_nud = new NumericUpDown();
-            label11 = new Label();
-            taxSum_nud = new NumericUpDown();
-            label14 = new Label();
-            netAmount_nud = new NumericUpDown();
-            label15 = new Label();
-            shipping_nud = new NumericUpDown();
-            label16 = new Label();
-            other_nud = new NumericUpDown();
-            label17 = new Label();
-            total_nud = new NumericUpDown();
-            label18 = new Label();
-            label19 = new Label();
-            label20 = new Label();
-            label21 = new Label();
-            label22 = new Label();
-            label24 = new Label();
-            label23 = new Label();
-            label25 = new Label();
-            label26 = new Label();
-            label27 = new Label();
-            label28 = new Label();
+            label4 = new Label();
+            productId_txtBox = new TextBox();
             toolStrip1.SuspendLayout();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)accDs1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)other_numericUpDown1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)shipping_numericUpDown1).BeginInit();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bindingSource3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)amount_nud).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)taxSum_nud).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)accDs1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)netAmount_nud).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)shipping_nud).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)other_nud).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)total_nud).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)taxSum_nud).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)taxRate_nud).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)amount_nud).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)discount_nud).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)unitPrice_nud).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)qty_nud).BeginInit();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // toolStrip1
@@ -144,7 +131,7 @@
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(889, 64);
-            toolStrip1.TabIndex = 1;
+            toolStrip1.TabIndex = 2;
             toolStrip1.Text = "toolStrip1";
             // 
             // new_btn
@@ -191,14 +178,12 @@
             del_btn.Size = new Size(90, 58);
             del_btn.Text = "Delete";
             del_btn.TextImageRelation = TextImageRelation.ImageAboveText;
-            del_btn.Visible = false;
             del_btn.Click += del_btn_Click;
             // 
             // toolStripSeparator3
             // 
             toolStripSeparator3.Name = "toolStripSeparator3";
             toolStripSeparator3.Size = new Size(6, 64);
-            toolStripSeparator3.Visible = false;
             // 
             // save_btn
             // 
@@ -262,41 +247,67 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(invoiceId_txtBox);
+            groupBox1.Controls.Add(taxRate_btn);
+            groupBox1.Controls.Add(id_txtBox);
+            groupBox1.Controls.Add(label21);
+            groupBox1.Controls.Add(label19);
+            groupBox1.Controls.Add(label17);
+            groupBox1.Controls.Add(label15);
+            groupBox1.Controls.Add(label11);
             groupBox1.Controls.Add(label7);
-            groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(other_numericUpDown1);
-            groupBox1.Controls.Add(shipping_numericUpDown1);
-            groupBox1.Controls.Add(customerSearch_btn);
-            groupBox1.Controls.Add(invoiceDate_dtp);
+            groupBox1.Controls.Add(netAmount_nud);
+            groupBox1.Controls.Add(taxSum_nud);
+            groupBox1.Controls.Add(taxRate_nud);
+            groupBox1.Controls.Add(amount_nud);
+            groupBox1.Controls.Add(discount_nud);
+            groupBox1.Controls.Add(unitPrice_nud);
+            groupBox1.Controls.Add(qty_nud);
+            groupBox1.Controls.Add(label20);
+            groupBox1.Controls.Add(productSearch_btn);
+            groupBox1.Controls.Add(label18);
+            groupBox1.Controls.Add(unit_txtBox);
+            groupBox1.Controls.Add(label16);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(label14);
             groupBox1.Controls.Add(comment_txtBox);
+            groupBox1.Controls.Add(label8);
             groupBox1.Controls.Add(label9);
             groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(customerName_txtBox);
+            groupBox1.Controls.Add(productName_txtBox);
             groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
             groupBox1.Location = new Point(12, 67);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(865, 224);
-            groupBox1.TabIndex = 2;
+            groupBox1.Size = new Size(739, 352);
+            groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "Info";
             // 
-            // invoiceId_txtBox
+            // taxRate_btn
             // 
-            invoiceId_txtBox.BorderStyle = BorderStyle.FixedSingle;
-            invoiceId_txtBox.DataBindings.Add(new Binding("Text", bindingSource1, "InvoiceId", true));
-            invoiceId_txtBox.Location = new Point(294, 30);
-            invoiceId_txtBox.Name = "invoiceId_txtBox";
-            invoiceId_txtBox.ReadOnly = true;
-            invoiceId_txtBox.Size = new Size(258, 23);
-            invoiceId_txtBox.TabIndex = 14;
+            taxRate_btn.Location = new Point(489, 225);
+            taxRate_btn.Name = "taxRate_btn";
+            taxRate_btn.Size = new Size(75, 23);
+            taxRate_btn.TabIndex = 14;
+            taxRate_btn.Text = "Tax Rate";
+            taxRate_btn.UseVisualStyleBackColor = true;
+            taxRate_btn.Click += taxRate_btn_Click;
             // 
-            // bindingSource1
+            // id_txtBox
             // 
-            bindingSource1.DataMember = "SalesInvoice";
-            bindingSource1.DataSource = accDs1;
+            id_txtBox.BorderStyle = BorderStyle.FixedSingle;
+            id_txtBox.DataBindings.Add(new Binding("Text", bindingSource3, "ID", true));
+            id_txtBox.Location = new Point(226, 22);
+            id_txtBox.Name = "id_txtBox";
+            id_txtBox.ReadOnly = true;
+            id_txtBox.Size = new Size(258, 23);
+            id_txtBox.TabIndex = 1;
+            // 
+            // bindingSource3
+            // 
+            bindingSource3.AllowNew = true;
+            bindingSource3.DataMember = "SalesInvoiceProducts";
+            bindingSource3.DataSource = accDs1;
             // 
             // accDs1
             // 
@@ -304,77 +315,230 @@
             accDs1.Namespace = "http://tempuri.org/AccDs.xsd";
             accDs1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Location = new Point(207, 287);
+            label21.Name = "label21";
+            label21.Size = new Size(13, 15);
+            label21.TabIndex = 13;
+            label21.Text = "$";
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Location = new Point(207, 258);
+            label19.Name = "label19";
+            label19.Size = new Size(13, 15);
+            label19.TabIndex = 13;
+            label19.Text = "$";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Location = new Point(207, 229);
+            label17.Name = "label17";
+            label17.Size = new Size(17, 15);
+            label17.TabIndex = 13;
+            label17.Text = "%";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(207, 200);
+            label15.Name = "label15";
+            label15.Size = new Size(13, 15);
+            label15.TabIndex = 13;
+            label15.Text = "$";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(207, 171);
+            label11.Name = "label11";
+            label11.Size = new Size(13, 15);
+            label11.TabIndex = 13;
+            label11.Text = "$";
+            // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(277, 150);
+            label7.Location = new Point(207, 142);
             label7.Name = "label7";
             label7.Size = new Size(13, 15);
             label7.TabIndex = 13;
             label7.Text = "$";
             // 
-            // label4
+            // netAmount_nud
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(277, 119);
-            label4.Name = "label4";
-            label4.Size = new Size(13, 15);
-            label4.TabIndex = 13;
-            label4.Text = "$";
+            netAmount_nud.DataBindings.Add(new Binding("Value", bindingSource3, "NetAmount", true));
+            netAmount_nud.DecimalPlaces = 2;
+            netAmount_nud.Increment = new decimal(new int[] { 0, 0, 0, 0 });
+            netAmount_nud.Location = new Point(226, 283);
+            netAmount_nud.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
+            netAmount_nud.Name = "netAmount_nud";
+            netAmount_nud.ReadOnly = true;
+            netAmount_nud.Size = new Size(258, 23);
+            netAmount_nud.TabIndex = 12;
             // 
-            // other_numericUpDown1
+            // taxSum_nud
             // 
-            other_numericUpDown1.DataBindings.Add(new Binding("Value", bindingSource1, "Other", true));
-            other_numericUpDown1.DecimalPlaces = 2;
-            other_numericUpDown1.Increment = new decimal(new int[] { 5, 0, 0, 65536 });
-            other_numericUpDown1.Location = new Point(294, 146);
-            other_numericUpDown1.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
-            other_numericUpDown1.Name = "other_numericUpDown1";
-            other_numericUpDown1.Size = new Size(258, 23);
-            other_numericUpDown1.TabIndex = 12;
+            taxSum_nud.DataBindings.Add(new Binding("Value", bindingSource3, "TaxSum", true));
+            taxSum_nud.DecimalPlaces = 2;
+            taxSum_nud.Increment = new decimal(new int[] { 0, 0, 0, 0 });
+            taxSum_nud.Location = new Point(226, 254);
+            taxSum_nud.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
+            taxSum_nud.Name = "taxSum_nud";
+            taxSum_nud.ReadOnly = true;
+            taxSum_nud.Size = new Size(258, 23);
+            taxSum_nud.TabIndex = 11;
             // 
-            // shipping_numericUpDown1
+            // taxRate_nud
             // 
-            shipping_numericUpDown1.DataBindings.Add(new Binding("Value", bindingSource1, "Shipping", true));
-            shipping_numericUpDown1.DecimalPlaces = 2;
-            shipping_numericUpDown1.Increment = new decimal(new int[] { 5, 0, 0, 65536 });
-            shipping_numericUpDown1.Location = new Point(294, 117);
-            shipping_numericUpDown1.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
-            shipping_numericUpDown1.Name = "shipping_numericUpDown1";
-            shipping_numericUpDown1.Size = new Size(258, 23);
-            shipping_numericUpDown1.TabIndex = 12;
+            taxRate_nud.DataBindings.Add(new Binding("Value", bindingSource3, "TaxRate", true));
+            taxRate_nud.DecimalPlaces = 2;
+            taxRate_nud.Increment = new decimal(new int[] { 0, 0, 0, 0 });
+            taxRate_nud.Location = new Point(226, 225);
+            taxRate_nud.Name = "taxRate_nud";
+            taxRate_nud.ReadOnly = true;
+            taxRate_nud.Size = new Size(258, 23);
+            taxRate_nud.TabIndex = 10;
             // 
-            // customerSearch_btn
+            // amount_nud
             // 
-            customerSearch_btn.Location = new Point(176, 88);
-            customerSearch_btn.Name = "customerSearch_btn";
-            customerSearch_btn.Size = new Size(108, 23);
-            customerSearch_btn.TabIndex = 11;
-            customerSearch_btn.Text = "Customer Name:";
-            customerSearch_btn.UseVisualStyleBackColor = true;
-            customerSearch_btn.Click += customerSearch_btn_Click;
+            amount_nud.DataBindings.Add(new Binding("Value", bindingSource3, "Amount", true));
+            amount_nud.DecimalPlaces = 2;
+            amount_nud.Increment = new decimal(new int[] { 0, 0, 0, 0 });
+            amount_nud.Location = new Point(226, 196);
+            amount_nud.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
+            amount_nud.Name = "amount_nud";
+            amount_nud.ReadOnly = true;
+            amount_nud.Size = new Size(258, 23);
+            amount_nud.TabIndex = 9;
             // 
-            // invoiceDate_dtp
+            // discount_nud
             // 
-            invoiceDate_dtp.DataBindings.Add(new Binding("Value", bindingSource1, "InvoiceDate", true));
-            invoiceDate_dtp.Format = DateTimePickerFormat.Short;
-            invoiceDate_dtp.Location = new Point(294, 59);
-            invoiceDate_dtp.Name = "invoiceDate_dtp";
-            invoiceDate_dtp.Size = new Size(258, 23);
-            invoiceDate_dtp.TabIndex = 10;
+            discount_nud.DataBindings.Add(new Binding("Value", bindingSource3, "Discount", true));
+            discount_nud.DecimalPlaces = 2;
+            discount_nud.Increment = new decimal(new int[] { 5, 0, 0, 65536 });
+            discount_nud.Location = new Point(226, 167);
+            discount_nud.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
+            discount_nud.Name = "discount_nud";
+            discount_nud.Size = new Size(258, 23);
+            discount_nud.TabIndex = 8;
+            discount_nud.ValueChanged += discount_nud_ValueChanged;
+            discount_nud.KeyUp += discount_nud_KeyUp;
+            // 
+            // unitPrice_nud
+            // 
+            unitPrice_nud.DataBindings.Add(new Binding("Value", bindingSource3, "UnitPrice", true));
+            unitPrice_nud.DecimalPlaces = 2;
+            unitPrice_nud.Increment = new decimal(new int[] { 5, 0, 0, 65536 });
+            unitPrice_nud.Location = new Point(226, 138);
+            unitPrice_nud.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
+            unitPrice_nud.Name = "unitPrice_nud";
+            unitPrice_nud.Size = new Size(258, 23);
+            unitPrice_nud.TabIndex = 7;
+            unitPrice_nud.ValueChanged += unitPrice_nud_ValueChanged;
+            unitPrice_nud.KeyUp += unitPrice_nud_KeyUp;
+            // 
+            // qty_nud
+            // 
+            qty_nud.DataBindings.Add(new Binding("Value", bindingSource3, "Qty", true));
+            qty_nud.Location = new Point(226, 80);
+            qty_nud.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
+            qty_nud.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            qty_nud.Name = "qty_nud";
+            qty_nud.Size = new Size(258, 23);
+            qty_nud.TabIndex = 5;
+            qty_nud.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            qty_nud.ValueChanged += qty_nud_ValueChanged;
+            qty_nud.KeyUp += qty_nud_KeyUp;
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Location = new Point(89, 287);
+            label20.Name = "label20";
+            label20.Size = new Size(76, 15);
+            label20.TabIndex = 4;
+            label20.Text = "Net Amount:";
+            // 
+            // productSearch_btn
+            // 
+            productSearch_btn.Location = new Point(89, 51);
+            productSearch_btn.Name = "productSearch_btn";
+            productSearch_btn.Size = new Size(112, 23);
+            productSearch_btn.TabIndex = 3;
+            productSearch_btn.Text = "Products Name:";
+            productSearch_btn.UseVisualStyleBackColor = true;
+            productSearch_btn.Click += productSearch_btn_Click;
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Location = new Point(89, 258);
+            label18.Name = "label18";
+            label18.Size = new Size(54, 15);
+            label18.TabIndex = 4;
+            label18.Text = "Tax Sum:";
+            // 
+            // unit_txtBox
+            // 
+            unit_txtBox.DataBindings.Add(new Binding("Text", bindingSource3, "Unit", true));
+            unit_txtBox.Location = new Point(227, 109);
+            unit_txtBox.Name = "unit_txtBox";
+            unit_txtBox.Size = new Size(258, 23);
+            unit_txtBox.TabIndex = 6;
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Location = new Point(89, 229);
+            label16.Name = "label16";
+            label16.Size = new Size(53, 15);
+            label16.TabIndex = 4;
+            label16.Text = "Tax Rate:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(89, 113);
+            label3.Name = "label3";
+            label3.Size = new Size(32, 15);
+            label3.TabIndex = 4;
+            label3.Text = "Unit:";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(89, 200);
+            label14.Name = "label14";
+            label14.Size = new Size(54, 15);
+            label14.TabIndex = 4;
+            label14.Text = "Amount:";
             // 
             // comment_txtBox
             // 
-            comment_txtBox.DataBindings.Add(new Binding("Text", bindingSource1, "Comment", true));
-            comment_txtBox.Location = new Point(294, 175);
+            comment_txtBox.DataBindings.Add(new Binding("Text", bindingSource3, "comment", true));
+            comment_txtBox.Location = new Point(226, 312);
             comment_txtBox.Name = "comment_txtBox";
             comment_txtBox.Size = new Size(412, 23);
-            comment_txtBox.TabIndex = 9;
+            comment_txtBox.TabIndex = 13;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(89, 171);
+            label8.Name = "label8";
+            label8.Size = new Size(57, 15);
+            label8.TabIndex = 4;
+            label8.Text = "Discount:";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(176, 179);
+            label9.Location = new Point(89, 316);
             label9.Name = "label9";
             label9.Size = new Size(64, 15);
             label9.TabIndex = 4;
@@ -383,97 +547,88 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(176, 150);
+            label6.Location = new Point(89, 142);
             label6.Name = "label6";
-            label6.Size = new Size(40, 15);
+            label6.Size = new Size(61, 15);
             label6.TabIndex = 4;
-            label6.Text = "Other:";
+            label6.Text = "Unit Price:";
             // 
-            // customerName_txtBox
+            // productName_txtBox
             // 
-            customerName_txtBox.BorderStyle = BorderStyle.FixedSingle;
-            customerName_txtBox.DataBindings.Add(new Binding("Text", bindingSource1, "CustomerName", true));
-            customerName_txtBox.Location = new Point(294, 88);
-            customerName_txtBox.Name = "customerName_txtBox";
-            customerName_txtBox.ReadOnly = true;
-            customerName_txtBox.Size = new Size(258, 23);
-            customerName_txtBox.TabIndex = 5;
+            productName_txtBox.BorderStyle = BorderStyle.FixedSingle;
+            productName_txtBox.DataBindings.Add(new Binding("Text", bindingSource3, "ProductName", true));
+            productName_txtBox.Location = new Point(226, 51);
+            productName_txtBox.Name = "productName_txtBox";
+            productName_txtBox.ReadOnly = true;
+            productName_txtBox.Size = new Size(258, 23);
+            productName_txtBox.TabIndex = 4;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(176, 121);
+            label5.Location = new Point(89, 84);
             label5.Name = "label5";
-            label5.Size = new Size(57, 15);
+            label5.Size = new Size(31, 15);
             label5.TabIndex = 4;
-            label5.Text = "Shipping:";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(176, 63);
-            label2.Name = "label2";
-            label2.Size = new Size(75, 15);
-            label2.TabIndex = 4;
-            label2.Text = "Invoice Date:";
+            label5.Text = "QTY:";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(176, 34);
+            label1.Location = new Point(89, 26);
             label1.Name = "label1";
-            label1.Size = new Size(62, 15);
+            label1.Size = new Size(21, 15);
             label1.TabIndex = 4;
-            label1.Text = "Invoice ID:";
+            label1.Text = "ID:";
             // 
-            // label3
+            // label2
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(748, 9);
-            label3.Name = "label3";
-            label3.Size = new Size(76, 15);
-            label3.TabIndex = 4;
-            label3.Text = "Customer ID:";
+            label2.AutoSize = true;
+            label2.Location = new Point(546, 9);
+            label2.Name = "label2";
+            label2.Size = new Size(62, 15);
+            label2.TabIndex = 4;
+            label2.Text = "Invoice ID:";
             // 
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(label12);
-            panel1.Controls.Add(customerId_lbl);
+            panel1.Controls.Add(invoiceId_lbl);
             panel1.Controls.Add(reg_time_label);
             panel1.Controls.Add(reg_date_label);
             panel1.Controls.Add(label13);
             panel1.Controls.Add(reg_user_label);
-            panel1.Controls.Add(label3);
             panel1.Controls.Add(label10);
+            panel1.Controls.Add(label2);
             panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(0, 735);
+            panel1.Location = new Point(0, 637);
             panel1.Name = "panel1";
             panel1.Size = new Size(889, 34);
-            panel1.TabIndex = 4;
+            panel1.TabIndex = 5;
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(504, 9);
+            label12.Location = new Point(370, 9);
             label12.Name = "label12";
             label12.Size = new Size(59, 15);
             label12.TabIndex = 0;
             label12.Text = "Reg Time:";
             // 
-            // customerId_lbl
+            // invoiceId_lbl
             // 
-            customerId_lbl.DataBindings.Add(new Binding("Text", bindingSource1, "CustomerId", true));
-            customerId_lbl.Location = new Point(821, 9);
-            customerId_lbl.Name = "customerId_lbl";
-            customerId_lbl.Size = new Size(60, 15);
-            customerId_lbl.TabIndex = 0;
-            customerId_lbl.Text = "0";
+            invoiceId_lbl.DataBindings.Add(new Binding("Text", bindingSource3, "InvoiceId", true));
+            invoiceId_lbl.Location = new Point(606, 9);
+            invoiceId_lbl.Name = "invoiceId_lbl";
+            invoiceId_lbl.Size = new Size(90, 15);
+            invoiceId_lbl.TabIndex = 0;
+            invoiceId_lbl.Text = "0";
             // 
             // reg_time_label
             // 
-            reg_time_label.DataBindings.Add(new Binding("Text", bindingSource1, "RegTime", true));
-            reg_time_label.Location = new Point(561, 9);
+            reg_time_label.DataBindings.Add(new Binding("Text", bindingSource3, "RegTime", true));
+            reg_time_label.Location = new Point(427, 9);
             reg_time_label.Name = "reg_time_label";
             reg_time_label.Size = new Size(90, 15);
             reg_time_label.TabIndex = 0;
@@ -481,8 +636,8 @@
             // 
             // reg_date_label
             // 
-            reg_date_label.DataBindings.Add(new Binding("Text", bindingSource1, "RegDate", true));
-            reg_date_label.Location = new Point(293, 9);
+            reg_date_label.DataBindings.Add(new Binding("Text", bindingSource3, "RegDate", true));
+            reg_date_label.Location = new Point(251, 9);
             reg_date_label.Name = "reg_date_label";
             reg_date_label.Size = new Size(90, 15);
             reg_date_label.TabIndex = 0;
@@ -491,7 +646,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(239, 9);
+            label13.Location = new Point(197, 9);
             label13.Name = "label13";
             label13.Size = new Size(57, 15);
             label13.TabIndex = 0;
@@ -499,8 +654,8 @@
             // 
             // reg_user_label
             // 
-            reg_user_label.DataBindings.Add(new Binding("Text", bindingSource1, "RegUser", true));
-            reg_user_label.Location = new Point(64, 9);
+            reg_user_label.DataBindings.Add(new Binding("Text", bindingSource3, "RegUser", true));
+            reg_user_label.Location = new Point(75, 9);
             reg_user_label.Name = "reg_user_label";
             reg_user_label.Size = new Size(90, 15);
             reg_user_label.TabIndex = 0;
@@ -509,39 +664,11 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(11, 9);
+            label10.Location = new Point(22, 9);
             label10.Name = "label10";
             label10.Size = new Size(56, 15);
             label10.TabIndex = 0;
             label10.Text = "Reg User:";
-            // 
-            // salesInvoiceTableAdapter1
-            // 
-            salesInvoiceTableAdapter1.ClearBeforeFill = true;
-            // 
-            // panel2
-            // 
-            panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Controls.Add(productList_btn);
-            panel2.Location = new Point(12, 297);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(865, 43);
-            panel2.TabIndex = 5;
-            // 
-            // productList_btn
-            // 
-            productList_btn.Location = new Point(3, 4);
-            productList_btn.Name = "productList_btn";
-            productList_btn.Size = new Size(108, 34);
-            productList_btn.TabIndex = 0;
-            productList_btn.Text = "Product List";
-            productList_btn.UseVisualStyleBackColor = true;
-            productList_btn.Click += productList_btn_Click;
-            // 
-            // bindingSource3
-            // 
-            bindingSource3.DataMember = "SalesInvoiceProducts";
-            bindingSource3.DataSource = accDs1;
             // 
             // dataGridView1
             // 
@@ -552,11 +679,11 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn, productNameDataGridViewTextBoxColumn, qtyDataGridViewTextBoxColumn, unitDataGridViewTextBoxColumn, unitPriceDataGridViewTextBoxColumn, discountDataGridViewTextBoxColumn, amountDataGridViewTextBoxColumn, taxRateDataGridViewTextBoxColumn, taxSumDataGridViewTextBoxColumn, netAmountDataGridViewTextBoxColumn, commentDataGridViewTextBoxColumn, regUserDataGridViewTextBoxColumn, regDateDataGridViewTextBoxColumn, regTimeDataGridViewTextBoxColumn });
             dataGridView1.DataSource = bindingSource3;
-            dataGridView1.Location = new Point(12, 348);
+            dataGridView1.Location = new Point(12, 425);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.Size = new Size(865, 205);
-            dataGridView1.TabIndex = 8;
+            dataGridView1.TabIndex = 7;
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -622,7 +749,7 @@
             // taxRateDataGridViewTextBoxColumn
             // 
             taxRateDataGridViewTextBoxColumn.DataPropertyName = "TaxRate";
-            dataGridViewCellStyle5.Format = "C2";
+            dataGridViewCellStyle5.Format = "N2";
             taxRateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
             taxRateDataGridViewTextBoxColumn.HeaderText = "Tax Rate";
             taxRateDataGridViewTextBoxColumn.Name = "taxRateDataGridViewTextBoxColumn";
@@ -679,307 +806,61 @@
             // 
             salesInvoiceProductsTableAdapter1.ClearBeforeFill = true;
             // 
-            // label8
+            // label4
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            label8.Location = new Point(582, 559);
-            label8.Name = "label8";
-            label8.Size = new Size(66, 19);
-            label8.TabIndex = 9;
-            label8.Text = "Amount:";
+            label4.AutoSize = true;
+            label4.Location = new Point(758, 234);
+            label4.Name = "label4";
+            label4.Size = new Size(66, 15);
+            label4.TabIndex = 4;
+            label4.Text = "Product ID:";
             // 
-            // amount_nud
+            // productId_txtBox
             // 
-            amount_nud.DecimalPlaces = 2;
-            amount_nud.Increment = new decimal(new int[] { 0, 0, 0, 0 });
-            amount_nud.Location = new Point(712, 559);
-            amount_nud.Maximum = new decimal(new int[] { 100000000, 0, 0, 0 });
-            amount_nud.Name = "amount_nud";
-            amount_nud.ReadOnly = true;
-            amount_nud.Size = new Size(165, 23);
-            amount_nud.TabIndex = 10;
-            amount_nud.ThousandsSeparator = true;
+            productId_txtBox.BorderStyle = BorderStyle.FixedSingle;
+            productId_txtBox.DataBindings.Add(new Binding("Text", bindingSource3, "ProductId", true));
+            productId_txtBox.Location = new Point(824, 230);
+            productId_txtBox.Name = "productId_txtBox";
+            productId_txtBox.ReadOnly = true;
+            productId_txtBox.Size = new Size(51, 23);
+            productId_txtBox.TabIndex = 1;
             // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 10F);
-            label11.Location = new Point(582, 588);
-            label11.Name = "label11";
-            label11.Size = new Size(61, 19);
-            label11.TabIndex = 9;
-            label11.Text = "Tax Sum:";
-            // 
-            // taxSum_nud
-            // 
-            taxSum_nud.DecimalPlaces = 2;
-            taxSum_nud.Increment = new decimal(new int[] { 0, 0, 0, 0 });
-            taxSum_nud.Location = new Point(712, 588);
-            taxSum_nud.Maximum = new decimal(new int[] { 100000000, 0, 0, 0 });
-            taxSum_nud.Name = "taxSum_nud";
-            taxSum_nud.ReadOnly = true;
-            taxSum_nud.Size = new Size(165, 23);
-            taxSum_nud.TabIndex = 10;
-            taxSum_nud.ThousandsSeparator = true;
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            label14.Location = new Point(582, 617);
-            label14.Name = "label14";
-            label14.Size = new Size(94, 19);
-            label14.TabIndex = 9;
-            label14.Text = "Net Amount:";
-            // 
-            // netAmount_nud
-            // 
-            netAmount_nud.DecimalPlaces = 2;
-            netAmount_nud.Increment = new decimal(new int[] { 0, 0, 0, 0 });
-            netAmount_nud.Location = new Point(712, 617);
-            netAmount_nud.Maximum = new decimal(new int[] { 100000000, 0, 0, 0 });
-            netAmount_nud.Name = "netAmount_nud";
-            netAmount_nud.ReadOnly = true;
-            netAmount_nud.Size = new Size(165, 23);
-            netAmount_nud.TabIndex = 10;
-            netAmount_nud.ThousandsSeparator = true;
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Font = new Font("Segoe UI", 10F);
-            label15.Location = new Point(582, 646);
-            label15.Name = "label15";
-            label15.Size = new Size(65, 19);
-            label15.TabIndex = 9;
-            label15.Text = "Shipping:";
-            // 
-            // shipping_nud
-            // 
-            shipping_nud.DecimalPlaces = 2;
-            shipping_nud.Increment = new decimal(new int[] { 0, 0, 0, 0 });
-            shipping_nud.Location = new Point(712, 646);
-            shipping_nud.Maximum = new decimal(new int[] { 100000000, 0, 0, 0 });
-            shipping_nud.Name = "shipping_nud";
-            shipping_nud.ReadOnly = true;
-            shipping_nud.Size = new Size(165, 23);
-            shipping_nud.TabIndex = 10;
-            shipping_nud.ThousandsSeparator = true;
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Font = new Font("Segoe UI", 10F);
-            label16.Location = new Point(582, 675);
-            label16.Name = "label16";
-            label16.Size = new Size(48, 19);
-            label16.TabIndex = 9;
-            label16.Text = "Other:";
-            // 
-            // other_nud
-            // 
-            other_nud.DecimalPlaces = 2;
-            other_nud.Increment = new decimal(new int[] { 0, 0, 0, 0 });
-            other_nud.Location = new Point(712, 675);
-            other_nud.Maximum = new decimal(new int[] { 100000000, 0, 0, 0 });
-            other_nud.Name = "other_nud";
-            other_nud.ReadOnly = true;
-            other_nud.Size = new Size(165, 23);
-            other_nud.TabIndex = 10;
-            other_nud.ThousandsSeparator = true;
-            // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            label17.ForeColor = Color.FromArgb(230, 0, 25);
-            label17.Location = new Point(582, 704);
-            label17.Name = "label17";
-            label17.Size = new Size(46, 19);
-            label17.TabIndex = 9;
-            label17.Text = "Total:";
-            // 
-            // total_nud
-            // 
-            total_nud.DecimalPlaces = 2;
-            total_nud.Increment = new decimal(new int[] { 0, 0, 0, 0 });
-            total_nud.Location = new Point(712, 704);
-            total_nud.Maximum = new decimal(new int[] { 1215752192, 23, 0, 0 });
-            total_nud.Name = "total_nud";
-            total_nud.ReadOnly = true;
-            total_nud.Size = new Size(165, 23);
-            total_nud.TabIndex = 10;
-            total_nud.ThousandsSeparator = true;
-            // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.Font = new Font("Segoe UI", 10F);
-            label18.Location = new Point(561, 590);
-            label18.Name = "label18";
-            label18.Size = new Size(19, 19);
-            label18.TabIndex = 9;
-            label18.Text = "+";
-            // 
-            // label19
-            // 
-            label19.AutoSize = true;
-            label19.Font = new Font("Segoe UI", 10F);
-            label19.Location = new Point(561, 617);
-            label19.Name = "label19";
-            label19.Size = new Size(19, 19);
-            label19.TabIndex = 9;
-            label19.Text = "=";
-            // 
-            // label20
-            // 
-            label20.AutoSize = true;
-            label20.Font = new Font("Segoe UI", 10F);
-            label20.Location = new Point(561, 646);
-            label20.Name = "label20";
-            label20.Size = new Size(19, 19);
-            label20.TabIndex = 9;
-            label20.Text = "+";
-            // 
-            // label21
-            // 
-            label21.AutoSize = true;
-            label21.Font = new Font("Segoe UI", 10F);
-            label21.Location = new Point(561, 675);
-            label21.Name = "label21";
-            label21.Size = new Size(19, 19);
-            label21.TabIndex = 9;
-            label21.Text = "+";
-            // 
-            // label22
-            // 
-            label22.AutoSize = true;
-            label22.Font = new Font("Segoe UI", 10F);
-            label22.Location = new Point(561, 704);
-            label22.Name = "label22";
-            label22.Size = new Size(19, 19);
-            label22.TabIndex = 9;
-            label22.Text = "=";
-            // 
-            // label24
-            // 
-            label24.AutoSize = true;
-            label24.Font = new Font("Segoe UI", 10F);
-            label24.Location = new Point(694, 561);
-            label24.Name = "label24";
-            label24.Size = new Size(17, 19);
-            label24.TabIndex = 9;
-            label24.Text = "$";
-            // 
-            // label23
-            // 
-            label23.AutoSize = true;
-            label23.Font = new Font("Segoe UI", 10F);
-            label23.Location = new Point(694, 590);
-            label23.Name = "label23";
-            label23.Size = new Size(17, 19);
-            label23.TabIndex = 9;
-            label23.Text = "$";
-            // 
-            // label25
-            // 
-            label25.AutoSize = true;
-            label25.Font = new Font("Segoe UI", 10F);
-            label25.Location = new Point(694, 619);
-            label25.Name = "label25";
-            label25.Size = new Size(17, 19);
-            label25.TabIndex = 9;
-            label25.Text = "$";
-            // 
-            // label26
-            // 
-            label26.AutoSize = true;
-            label26.Font = new Font("Segoe UI", 10F);
-            label26.Location = new Point(694, 648);
-            label26.Name = "label26";
-            label26.Size = new Size(17, 19);
-            label26.TabIndex = 9;
-            label26.Text = "$";
-            // 
-            // label27
-            // 
-            label27.AutoSize = true;
-            label27.Font = new Font("Segoe UI", 10F);
-            label27.Location = new Point(694, 677);
-            label27.Name = "label27";
-            label27.Size = new Size(17, 19);
-            label27.TabIndex = 9;
-            label27.Text = "$";
-            // 
-            // label28
-            // 
-            label28.AutoSize = true;
-            label28.Font = new Font("Segoe UI", 10F);
-            label28.Location = new Point(694, 706);
-            label28.Name = "label28";
-            label28.Size = new Size(17, 19);
-            label28.TabIndex = 9;
-            label28.Text = "$";
-            // 
-            // SalesInvoiceFrm
+            // SalesInvoiceProductsFrm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(889, 769);
-            Controls.Add(total_nud);
-            Controls.Add(label17);
-            Controls.Add(other_nud);
-            Controls.Add(label16);
-            Controls.Add(shipping_nud);
-            Controls.Add(label15);
-            Controls.Add(netAmount_nud);
-            Controls.Add(label14);
-            Controls.Add(taxSum_nud);
-            Controls.Add(label21);
-            Controls.Add(label20);
-            Controls.Add(label22);
-            Controls.Add(label19);
-            Controls.Add(label28);
-            Controls.Add(label27);
-            Controls.Add(label26);
-            Controls.Add(label25);
-            Controls.Add(label23);
-            Controls.Add(label24);
-            Controls.Add(label18);
-            Controls.Add(label11);
-            Controls.Add(amount_nud);
-            Controls.Add(label8);
+            BackColor = Color.LightSteelBlue;
+            ClientSize = new Size(889, 671);
+            Controls.Add(productId_txtBox);
             Controls.Add(dataGridView1);
-            Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(groupBox1);
             Controls.Add(toolStrip1);
+            Controls.Add(label4);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Name = "SalesInvoiceFrm";
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "SalesInvoiceProductsFrm";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Sales Invoice";
-            Load += SalesInvoiceFrm_Load;
+            Text = "Products List";
+            Load += SalesInvoiceProductsFrm_Load;
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)bindingSource3).EndInit();
             ((System.ComponentModel.ISupportInitialize)accDs1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)other_numericUpDown1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)shipping_numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)netAmount_nud).EndInit();
+            ((System.ComponentModel.ISupportInitialize)taxSum_nud).EndInit();
+            ((System.ComponentModel.ISupportInitialize)taxRate_nud).EndInit();
+            ((System.ComponentModel.ISupportInitialize)amount_nud).EndInit();
+            ((System.ComponentModel.ISupportInitialize)discount_nud).EndInit();
+            ((System.ComponentModel.ISupportInitialize)unitPrice_nud).EndInit();
+            ((System.ComponentModel.ISupportInitialize)qty_nud).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)bindingSource3).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)amount_nud).EndInit();
-            ((System.ComponentModel.ISupportInitialize)taxSum_nud).EndInit();
-            ((System.ComponentModel.ISupportInitialize)netAmount_nud).EndInit();
-            ((System.ComponentModel.ISupportInitialize)shipping_nud).EndInit();
-            ((System.ComponentModel.ISupportInitialize)other_nud).EndInit();
-            ((System.ComponentModel.ISupportInitialize)total_nud).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1001,12 +882,16 @@
         private ToolStripButton search_btn;
         private ToolStripSeparator toolStripSeparator7;
         private GroupBox groupBox1;
+        private TextBox id_txtBox;
+        private Label label7;
+        private NumericUpDown unitPrice_nud;
+        private NumericUpDown qty_nud;
+        private Button productSearch_btn;
         private TextBox comment_txtBox;
         private Label label9;
         private Label label6;
+        private TextBox productName_txtBox;
         private Label label5;
-        private Label label3;
-        private Label label2;
         private Label label1;
         private Panel panel1;
         private Label label12;
@@ -1015,22 +900,30 @@
         private Label label13;
         private Label reg_user_label;
         private Label label10;
-        private DateTimePicker invoiceDate_dtp;
-        private Button customerSearch_btn;
-        private TextBox customerName_txtBox;
-        private NumericUpDown shipping_numericUpDown1;
-        private NumericUpDown other_numericUpDown1;
-        private Ds.AccDs accDs1;
-        private Ds.AccDsTableAdapters.SalesInvoiceTableAdapter salesInvoiceTableAdapter1;
-        private BindingSource bindingSource1;
-        private Label label4;
-        private Label label7;
-        private TextBox invoiceId_txtBox;
-        private Panel panel2;
-        private Button productList_btn;
-        private BindingSource bindingSource3;
-        private Label customerId_lbl;
         private DataGridView dataGridView1;
+        private Ds.AccDs accDs1;
+        private Ds.AccDsTableAdapters.SalesInvoiceProductsTableAdapter salesInvoiceProductsTableAdapter1;
+        private Label label2;
+        private TextBox unit_txtBox;
+        private Label label3;
+        private Label label21;
+        private Label label19;
+        private Label label17;
+        private Label label15;
+        private Label label11;
+        private NumericUpDown netAmount_nud;
+        private NumericUpDown taxSum_nud;
+        private NumericUpDown taxRate_nud;
+        private NumericUpDown amount_nud;
+        private NumericUpDown discount_nud;
+        private Label label20;
+        private Label label18;
+        private Label label16;
+        private Label label14;
+        private Label label8;
+        private Label invoiceId_lbl;
+        private Label label4;
+        private TextBox productId_txtBox;
         private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn qtyDataGridViewTextBoxColumn;
@@ -1045,29 +938,7 @@
         private DataGridViewTextBoxColumn regUserDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn regDateDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn regTimeDataGridViewTextBoxColumn;
-        private Ds.AccDsTableAdapters.SalesInvoiceProductsTableAdapter salesInvoiceProductsTableAdapter1;
-        private Label label8;
-        private NumericUpDown amount_nud;
-        private Label label11;
-        private NumericUpDown taxSum_nud;
-        private Label label14;
-        private NumericUpDown netAmount_nud;
-        private Label label15;
-        private NumericUpDown shipping_nud;
-        private Label label16;
-        private NumericUpDown other_nud;
-        private Label label17;
-        private NumericUpDown total_nud;
-        private Label label18;
-        private Label label19;
-        private Label label20;
-        private Label label21;
-        private Label label22;
-        private Label label24;
-        private Label label23;
-        private Label label25;
-        private Label label26;
-        private Label label27;
-        private Label label28;
+        private BindingSource bindingSource3;
+        private Button taxRate_btn;
     }
 }

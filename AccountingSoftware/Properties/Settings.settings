@@ -23,10 +23,10 @@
     <Setting Name="sett_webSite" Type="System.String" Scope="User">
       <Value Profile="(Default)">test.com</Value>
     </Setting>
-    <Setting Name="sett_salesTax" Type="System.Double" Scope="User">
+    <Setting Name="sett_salesTax" Type="System.Decimal" Scope="User">
       <Value Profile="(Default)">6.6</Value>
     </Setting>
-    <Setting Name="sett_billTax" Type="System.Double" Scope="User">
+    <Setting Name="sett_billTax" Type="System.Decimal" Scope="User">
       <Value Profile="(Default)">4</Value>
     </Setting>
   </Settings>

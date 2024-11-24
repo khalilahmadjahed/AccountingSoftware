@@ -110,9 +110,9 @@ namespace AccountingSoftware.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("6.6")]
-        public double sett_salesTax {
+        public decimal sett_salesTax {
             get {
-                return ((double)(this["sett_salesTax"]));
+                return ((decimal)(this["sett_salesTax"]));
             }
             set {
                 this["sett_salesTax"] = value;
@@ -122,9 +122,9 @@ namespace AccountingSoftware.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("4")]
-        public double sett_billTax {
+        public decimal sett_billTax {
             get {
-                return ((double)(this["sett_billTax"]));
+                return ((decimal)(this["sett_billTax"]));
             }
             set {
                 this["sett_billTax"] = value;

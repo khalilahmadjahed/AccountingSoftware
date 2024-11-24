@@ -47,8 +47,8 @@ namespace AccountingSoftware.Accounting
                 AccountingSoftware.Properties.Settings.Default.sett_address = this.address_txtBox.Text;
                 AccountingSoftware.Properties.Settings.Default.sett_webSite = this.webSite_txtBox.Text;
                 //--------------------------
-                AccountingSoftware.Properties.Settings.Default.sett_salesTax = Double.Parse(this.salesTax_txtBox.Text);
-                AccountingSoftware.Properties.Settings.Default.sett_billTax = double.Parse(this.billTax_textBox.Text);
+                AccountingSoftware.Properties.Settings.Default.sett_salesTax = decimal.Parse(this.salesTax_txtBox.Text);
+                AccountingSoftware.Properties.Settings.Default.sett_billTax = decimal.Parse(this.billTax_textBox.Text);
                 //--------------------------
                 AccountingSoftware.Properties.Settings.Default.Save();
                 MessageBox.Show("It's saved!");

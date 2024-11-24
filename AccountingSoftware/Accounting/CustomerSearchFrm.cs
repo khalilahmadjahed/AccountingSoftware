@@ -32,7 +32,7 @@ namespace AccountingSoftware.Accounting
         {
             string searchByLastName;
             searchByLastName = "%" + this.search_lName_textBox2.Text + "%";
-            this.customersTableAdapter1.FillBy_lastName(accDs1.Customers, searchByLastName);
+            this.customersTableAdapter1.FillBy_lastName(this.accDs1.Customers, searchByLastName);
         }
 
         private void ok_btn_Click(object sender, EventArgs e)

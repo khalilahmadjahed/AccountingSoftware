@@ -82,6 +82,50 @@ namespace AccountingSoftware.Ds
 {
 }
 
+namespace AccountingSoftware.Ds
+{
+}
+
+namespace AccountingSoftware.Ds
+{
+}
+
+namespace AccountingSoftware.Ds
+{
+}
+
+namespace AccountingSoftware.Ds
+{
+}
+
+namespace AccountingSoftware.Ds
+{
+}
+
+namespace AccountingSoftware.Ds
+{
+}
+
+namespace AccountingSoftware.Ds
+{
+}
+
+namespace AccountingSoftware.Ds
+{
+}
+
+namespace AccountingSoftware.Ds
+{
+}
+
+namespace AccountingSoftware.Ds
+{
+}
+
+namespace AccountingSoftware.Ds
+{
+}
+
 namespace AccountingSoftware.AccDsTableAdapters {
     
     
