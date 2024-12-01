@@ -139,7 +139,7 @@ namespace AccountingSoftware.Accounting
         {
             AccountingSoftware.Accounting.ProductSearchFrm PSFrm = new ProductSearchFrm(); //PSFrm ==> Product Search Form
             PSFrm.ShowDialog();
-            if (PSFrm.ShowDialog() == DialogResult.OK)
+            if (PSFrm.DialogResult == DialogResult.OK)
             {
                 this.productId_txtBox.Text = PSFrm.id_lbl.Text;
                 this.productName_txtBox.Text = PSFrm.productName_lbl.Text;

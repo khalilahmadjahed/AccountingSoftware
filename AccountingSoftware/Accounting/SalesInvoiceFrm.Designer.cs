@@ -119,6 +119,20 @@
             label26 = new Label();
             label27 = new Label();
             label28 = new Label();
+            groupBox2 = new GroupBox();
+            receiveMoney_btn = new Button();
+            payTotal_nud = new NumericUpDown();
+            label29 = new Label();
+            label30 = new Label();
+            paidAmount_nud = new NumericUpDown();
+            label31 = new Label();
+            label32 = new Label();
+            label34 = new Label();
+            totalDue_nud = new NumericUpDown();
+            label33 = new Label();
+            label36 = new Label();
+            label35 = new Label();
+            receiveMoneyTableAdapter1 = new Ds.AccDsTableAdapters.ReceiveMoneyTableAdapter();
             toolStrip1.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
@@ -135,6 +149,10 @@
             ((System.ComponentModel.ISupportInitialize)shipping_nud).BeginInit();
             ((System.ComponentModel.ISupportInitialize)other_nud).BeginInit();
             ((System.ComponentModel.ISupportInitialize)total_nud).BeginInit();
+            groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)payTotal_nud).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)paidAmount_nud).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)totalDue_nud).BeginInit();
             SuspendLayout();
             // 
             // toolStrip1
@@ -692,6 +710,7 @@
             // amount_nud
             // 
             amount_nud.DecimalPlaces = 2;
+            amount_nud.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             amount_nud.Increment = new decimal(new int[] { 0, 0, 0, 0 });
             amount_nud.Location = new Point(712, 559);
             amount_nud.Maximum = new decimal(new int[] { 100000000, 0, 0, 0 });
@@ -736,6 +755,7 @@
             // netAmount_nud
             // 
             netAmount_nud.DecimalPlaces = 2;
+            netAmount_nud.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             netAmount_nud.Increment = new decimal(new int[] { 0, 0, 0, 0 });
             netAmount_nud.Location = new Point(712, 617);
             netAmount_nud.Maximum = new decimal(new int[] { 100000000, 0, 0, 0 });
@@ -803,6 +823,7 @@
             // total_nud
             // 
             total_nud.DecimalPlaces = 2;
+            total_nud.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             total_nud.Increment = new decimal(new int[] { 0, 0, 0, 0 });
             total_nud.Location = new Point(712, 704);
             total_nud.Maximum = new decimal(new int[] { 1215752192, 23, 0, 0 });
@@ -922,11 +943,166 @@
             label28.TabIndex = 9;
             label28.Text = "$";
             // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(receiveMoney_btn);
+            groupBox2.Controls.Add(payTotal_nud);
+            groupBox2.Controls.Add(label29);
+            groupBox2.Controls.Add(label30);
+            groupBox2.Controls.Add(paidAmount_nud);
+            groupBox2.Controls.Add(label31);
+            groupBox2.Controls.Add(label32);
+            groupBox2.Controls.Add(label34);
+            groupBox2.Controls.Add(totalDue_nud);
+            groupBox2.Controls.Add(label33);
+            groupBox2.Controls.Add(label36);
+            groupBox2.Controls.Add(label35);
+            groupBox2.Location = new Point(12, 559);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(529, 170);
+            groupBox2.TabIndex = 11;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Payment Info";
+            // 
+            // receiveMoney_btn
+            // 
+            receiveMoney_btn.Location = new Point(368, 83);
+            receiveMoney_btn.Name = "receiveMoney_btn";
+            receiveMoney_btn.Size = new Size(108, 23);
+            receiveMoney_btn.TabIndex = 0;
+            receiveMoney_btn.Text = "Payment";
+            receiveMoney_btn.UseVisualStyleBackColor = true;
+            receiveMoney_btn.Click += receiveMoney_btn_Click;
+            // 
+            // payTotal_nud
+            // 
+            payTotal_nud.DecimalPlaces = 2;
+            payTotal_nud.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            payTotal_nud.Increment = new decimal(new int[] { 0, 0, 0, 0 });
+            payTotal_nud.Location = new Point(190, 47);
+            payTotal_nud.Maximum = new decimal(new int[] { 1215752192, 23, 0, 0 });
+            payTotal_nud.Name = "payTotal_nud";
+            payTotal_nud.ReadOnly = true;
+            payTotal_nud.Size = new Size(165, 23);
+            payTotal_nud.TabIndex = 10;
+            payTotal_nud.ThousandsSeparator = true;
+            // 
+            // label29
+            // 
+            label29.AutoSize = true;
+            label29.Font = new Font("Segoe UI", 10F);
+            label29.Location = new Point(172, 49);
+            label29.Name = "label29";
+            label29.Size = new Size(17, 19);
+            label29.TabIndex = 9;
+            label29.Text = "$";
+            // 
+            // label30
+            // 
+            label30.AutoSize = true;
+            label30.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            label30.ForeColor = Color.FromArgb(230, 0, 25);
+            label30.Location = new Point(60, 47);
+            label30.Name = "label30";
+            label30.Size = new Size(46, 19);
+            label30.TabIndex = 9;
+            label30.Text = "Total:";
+            // 
+            // paidAmount_nud
+            // 
+            paidAmount_nud.DecimalPlaces = 2;
+            paidAmount_nud.Increment = new decimal(new int[] { 0, 0, 0, 0 });
+            paidAmount_nud.Location = new Point(190, 83);
+            paidAmount_nud.Maximum = new decimal(new int[] { 1215752192, 23, 0, 0 });
+            paidAmount_nud.Name = "paidAmount_nud";
+            paidAmount_nud.ReadOnly = true;
+            paidAmount_nud.Size = new Size(165, 23);
+            paidAmount_nud.TabIndex = 10;
+            paidAmount_nud.ThousandsSeparator = true;
+            // 
+            // label31
+            // 
+            label31.AutoSize = true;
+            label31.Font = new Font("Segoe UI", 10F);
+            label31.Location = new Point(60, 83);
+            label31.Name = "label31";
+            label31.Size = new Size(92, 19);
+            label31.TabIndex = 9;
+            label31.Text = "Paid Amount:";
+            // 
+            // label32
+            // 
+            label32.AutoSize = true;
+            label32.Font = new Font("Segoe UI", 10F);
+            label32.Location = new Point(172, 85);
+            label32.Name = "label32";
+            label32.Size = new Size(17, 19);
+            label32.TabIndex = 9;
+            label32.Text = "$";
+            // 
+            // label34
+            // 
+            label34.AutoSize = true;
+            label34.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            label34.Location = new Point(60, 119);
+            label34.Name = "label34";
+            label34.Size = new Size(76, 19);
+            label34.TabIndex = 9;
+            label34.Text = "Total Due:";
+            // 
+            // totalDue_nud
+            // 
+            totalDue_nud.DecimalPlaces = 2;
+            totalDue_nud.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            totalDue_nud.Increment = new decimal(new int[] { 0, 0, 0, 0 });
+            totalDue_nud.Location = new Point(190, 119);
+            totalDue_nud.Maximum = new decimal(new int[] { 1215752192, 23, 0, 0 });
+            totalDue_nud.Name = "totalDue_nud";
+            totalDue_nud.ReadOnly = true;
+            totalDue_nud.Size = new Size(165, 23);
+            totalDue_nud.TabIndex = 10;
+            totalDue_nud.ThousandsSeparator = true;
+            // 
+            // label33
+            // 
+            label33.AutoSize = true;
+            label33.Font = new Font("Segoe UI", 10F);
+            label33.Location = new Point(172, 121);
+            label33.Name = "label33";
+            label33.Size = new Size(17, 19);
+            label33.TabIndex = 9;
+            label33.Text = "$";
+            // 
+            // label36
+            // 
+            label36.AutoSize = true;
+            label36.Font = new Font("Segoe UI", 10F);
+            label36.Location = new Point(43, 83);
+            label36.Name = "label36";
+            label36.Size = new Size(15, 19);
+            label36.TabIndex = 9;
+            label36.Text = "-";
+            // 
+            // label35
+            // 
+            label35.AutoSize = true;
+            label35.Font = new Font("Segoe UI", 10F);
+            label35.Location = new Point(43, 119);
+            label35.Name = "label35";
+            label35.Size = new Size(19, 19);
+            label35.TabIndex = 9;
+            label35.Text = "=";
+            // 
+            // receiveMoneyTableAdapter1
+            // 
+            receiveMoneyTableAdapter1.ClearBeforeFill = true;
+            // 
             // SalesInvoiceFrm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(889, 769);
+            Controls.Add(groupBox2);
             Controls.Add(total_nud);
             Controls.Add(label17);
             Controls.Add(other_nud);
@@ -980,6 +1156,11 @@
             ((System.ComponentModel.ISupportInitialize)shipping_nud).EndInit();
             ((System.ComponentModel.ISupportInitialize)other_nud).EndInit();
             ((System.ComponentModel.ISupportInitialize)total_nud).EndInit();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)payTotal_nud).EndInit();
+            ((System.ComponentModel.ISupportInitialize)paidAmount_nud).EndInit();
+            ((System.ComponentModel.ISupportInitialize)totalDue_nud).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1069,5 +1250,19 @@
         private Label label26;
         private Label label27;
         private Label label28;
+        private GroupBox groupBox2;
+        private Button receiveMoney_btn;
+        private NumericUpDown payTotal_nud;
+        private Label label29;
+        private Label label30;
+        private NumericUpDown paidAmount_nud;
+        private Label label31;
+        private Label label32;
+        private Label label34;
+        private NumericUpDown totalDue_nud;
+        private Label label33;
+        private Label label36;
+        private Label label35;
+        private Ds.AccDsTableAdapters.ReceiveMoneyTableAdapter receiveMoneyTableAdapter1;
     }
 }

@@ -332,3 +332,4 @@ C:\Users\khali\Desktop\forgit\forGit\AccountingSoftware\AccountingSoftware\obj\D
 C:\Users\khali\Desktop\forgit\forGit\AccountingSoftware\AccountingSoftware\obj\Debug\net8.0-windows\ref\AccountingSoftware.dll
 C:\Users\khali\Desktop\forgit\forGit\AccountingSoftware\AccountingSoftware\obj\Debug\net8.0-windows\AccountingSoftware.Accounting.SalesInvoiceProductsFrm.resources
 C:\Users\khali\Desktop\forgit\forGit\AccountingSoftware\AccountingSoftware\obj\Debug\net8.0-windows\AccountingSoftware.Accounting.ProductSearchFrm.resources
+C:\Users\khali\Desktop\forgit\forGit\AccountingSoftware\AccountingSoftware\obj\Debug\net8.0-windows\AccountingSoftware.Accounting.ReceiveMoneyFrm.resources

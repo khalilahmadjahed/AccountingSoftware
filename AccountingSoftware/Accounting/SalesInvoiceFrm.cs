@@ -116,8 +116,8 @@ namespace AccountingSoftware.Accounting
                 if (returnValue > 0)
                 {
                     save_cancle_btns();
-                    
-                    AllSumCalc(); //this function will asign the sum od colmns to the numericUpDowns!
+
+                    AllSumCalc(); //this function will asign the sum of colmns to the numericUpDowns!
                     MessageBox.Show("It's saved: count:" + returnValue.ToString());
                 }
                 else
@@ -182,49 +182,87 @@ namespace AccountingSoftware.Accounting
             SIPFrm.ShowDialog();
 
             //--------Load invoice products----------
-            int selectedInvoiceId = int.Parse(this.invoiceId_txtBox.Text);
+            int selectedInvoiceId;
+            selectedInvoiceId = int.Parse(this.invoiceId_txtBox.Text);
             this.salesInvoiceProductsTableAdapter1.FillBy_InvoiceId(this.accDs1.SalesInvoiceProducts, selectedInvoiceId);
 
             AllSumCalc();
 
         }
-        //this function will asign the sum od colmns to the numericUpDowns!
+        //this function will asign the sum of colmns to the numericUpDowns!
         void AllSumCalc()
         {
-            //Calculate Sum of Colnms
-            decimal totalAmount, totalTaxSum, totalNetAmount, shipping, other, total;
-            //------------calc sum of amount--------------
-            totalAmount = CalculateSum("Amount");
-            this.amount_nud.Value = totalAmount;
+            try
+            {
+                //--------Load invoice products----------
+                int selectedInvoiceId;
+                selectedInvoiceId = int.Parse(this.invoiceId_txtBox.Text);
+                this.salesInvoiceProductsTableAdapter1.FillBy_InvoiceId(this.accDs1.SalesInvoiceProducts, selectedInvoiceId);
 
-            //------------calc sum of tax sum-------------
-            totalTaxSum = CalculateSum("TaxSum");
-            this.taxSum_nud.Value = totalTaxSum;
+                //Calculate Sum of Colnms
+                decimal totalAmount, totalTaxSum, totalNetAmount, shipping, other, total, paidCash, totalDue;
+                //------------calc sum of amount--------------
+                totalAmount = CalculateSum("Amount");
+                this.amount_nud.Value = totalAmount;
 
-            //------------calc sum of net amount-------------
-            totalNetAmount = totalAmount + totalTaxSum;
-            this.netAmount_nud.Value = totalNetAmount;
+                //------------calc sum of tax sum-------------
+                totalTaxSum = CalculateSum("TaxSum");
+                this.taxSum_nud.Value = totalTaxSum;
 
-            //------------shipping and other numericUpDown-------------
+                //------------calc sum of net amount-------------
+                totalNetAmount = totalAmount + totalTaxSum;
+                this.netAmount_nud.Value = totalNetAmount;
+
+                //------------shipping and other numericUpDown-------------
                 // shipping and other which are on the top, in the data grid view
-            shipping = this.shipping_numericUpDown1.Value; 
-            other = this.other_numericUpDown1.Value;
+                shipping = this.shipping_numericUpDown1.Value;
+                other = this.other_numericUpDown1.Value;
 
                 //shipping and other which are on the botton
-            this.shipping_nud.Value = shipping;
-            this.other_nud.Value = other;
+                this.shipping_nud.Value = shipping;
+                this.other_nud.Value = other;
 
-            //------------calc the total ==> netAmount + shipping + other
-            total = totalNetAmount + shipping + other;
-            this.total_nud.Value = total;
+                //------------calc the total ==> netAmount + shipping + other
+                total = totalNetAmount + shipping + other;
+                this.total_nud.Value = total;
+
+                //--------Load Receive Money----------
+                selectedInvoiceId = int.Parse(this.invoiceId_txtBox.Text);
+                this.receiveMoneyTableAdapter1.FillBy_InvoiceId(this.accDs1.ReceiveMoney, selectedInvoiceId);
+
+                //--------Calc sum----------
+
+                this.payTotal_nud.Value = total;
+                //--------------------------
+
+                paidCash = CalculateReceiveMoneySum();
+                this.paidAmount_nud.Value = paidCash;
+                //--------------------------
+                totalDue = total - paidCash;
+                if (totalDue < 0)
+                {
+                    this.totalDue_nud.Minimum = totalDue;
+                }
+                else
+                {
+                    this.totalDue_nud.Minimum = 0;
+                }
+                this.totalDue_nud.Value = totalDue;
+                  
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+
         }
 
-        //this function will calculate the sum of same colmns
-        decimal CalculateSum(string colName)
+        decimal CalculateReceiveMoneySum()
         {
             decimal d_totalCols;
             object totalCols;
-            totalCols = this.accDs1.SalesInvoiceProducts.Compute("sum("+colName+")", "");
+            totalCols = this.accDs1.ReceiveMoney.Compute("sum(CashAmount)", "");
 
             //-------------------------
             if (totalCols != DBNull.Value)
@@ -236,6 +274,66 @@ namespace AccountingSoftware.Accounting
                 d_totalCols = 0;
             }
             return d_totalCols;
+        }
+
+        //this function will calculate the sum of same colmns
+        decimal CalculateSum(string colName)
+        {
+            decimal d_totalCols;
+            object totalCols;
+            totalCols = this.accDs1.SalesInvoiceProducts.Compute("sum(" + colName + ")", "");
+
+            //-------------------------
+            if (totalCols != DBNull.Value)
+            {
+                d_totalCols = decimal.Parse(totalCols.ToString());
+            }
+            else
+            {
+                d_totalCols = 0;
+            }
+            return d_totalCols;
+        }
+
+        private void receiveMoney_btn_Click(object sender, EventArgs e)
+        {
+            if (this.invoiceId_txtBox.Text == "")
+            {
+                MessageBox.Show("Please save your invoice!");
+                return;
+            }
+            //----------------
+            int id = int.Parse(this.invoiceId_txtBox.Text);
+            if (id <= 0)
+            {
+                MessageBox.Show("Please save your invoice!");
+                return;
+            }
+
+            //-----------------
+            if(this.customerName_txtBox.Text == "")
+            {
+                MessageBox.Show("Please select your customer!");
+                return;
+            }
+
+
+            AccountingSoftware.Accounting.ReceiveMoneyFrm RMFrm = new ReceiveMoneyFrm(); //RMFrm ==> Receive Money form
+
+            //------------------
+            RMFrm.selectedInvoiceId = Int32.Parse(this.invoiceId_txtBox.Text);
+            RMFrm.selectedCustomerId = Int32.Parse(this.customerId_lbl.Text);
+            RMFrm.selectedCustomerName = this.customerName_txtBox.Text;       
+            //------------------
+
+            RMFrm.ShowDialog();
+
+            //--------Load Receive Money----------
+            int selectedInvoiceId;
+            selectedInvoiceId = int.Parse(this.invoiceId_txtBox.Text);
+            this.receiveMoneyTableAdapter1.FillBy_InvoiceId(this.accDs1.ReceiveMoney, selectedInvoiceId);
+
+            AllSumCalc();
         }
     }
 }

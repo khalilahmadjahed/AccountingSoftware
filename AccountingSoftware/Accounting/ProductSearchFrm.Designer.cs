@@ -401,7 +401,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 224, 192);
-            ClientSize = new Size(789, 446);
+            ClientSize = new Size(785, 456);
             ControlBox = false;
             Controls.Add(discount_lbl);
             Controls.Add(label7);

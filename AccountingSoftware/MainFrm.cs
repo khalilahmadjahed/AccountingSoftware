@@ -118,6 +118,19 @@ namespace AccountingSoftware
                 SIFrm.MdiParent = this;
                 SIFrm.Show();
             }
+
+            //Receive_Money
+            if(this.acc_treeView.SelectedNode.Name == "Receive_Money")
+            {
+                AccountingSoftware.Accounting.ReceiveMoneyFrm RMFrm = new ReceiveMoneyFrm(); //RmFrm ==> Receive Money Form
+
+                RMFrm.selectedInvoiceId = 0;
+                RMFrm.selectedCustomerId = 0;
+                RMFrm.selectedCustomerName = "";
+
+                RMFrm.MdiParent= this;
+                RMFrm.Show();
+            }
         }
 
         private void tools_btn_Click(object sender, EventArgs e)
