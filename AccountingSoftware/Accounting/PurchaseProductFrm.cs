@@ -10,15 +10,15 @@ using System.Windows.Forms;
 
 namespace AccountingSoftware.Accounting
 {
-    public partial class SalesInvoiceProductsFrm : Form
+    public partial class PurchaseProductFrm : Form
     {
-        public SalesInvoiceProductsFrm()
+        public PurchaseProductFrm()
         {
             InitializeComponent();
         }
 
         Boolean is_del_btn = false;
-        public int selected_invoice_id = 0;
+        public int selected_purchase_id = 0;
 
         //this function will Enable the Save and Cancle buttons after clicking the New, Edit or Delete buttons
         void new_edit_delete_btn()
@@ -32,7 +32,7 @@ namespace AccountingSoftware.Accounting
             this.cancel_btn.Enabled = true;
 
             //----------------------
-            this.dataGridView1.Enabled = false;
+            //this.dataGridView1.Enabled = false;
             if (is_del_btn == false)
             {
                 this.groupBox1.Enabled = true;
@@ -55,15 +55,8 @@ namespace AccountingSoftware.Accounting
             this.del_btn.Enabled = true;
 
             //------------------------
-            this.dataGridView1.Enabled = true;
+            //this.dataGridView1.Enabled = true;
             this.groupBox1.Enabled = false;
-        }
-
-        private void SalesInvoiceProductsFrm_Load(object sender, EventArgs e)
-        {
-            save_cancle_btns();
-            //this.salesInvoiceProductsTableAdapter1.Fill_All(this.accDs1.SalesInvoiceProducts);
-            this.salesInvoiceProductsTableAdapter1.FillBy_InvoiceId(this.accDs1.SalesInvoiceProducts, selected_invoice_id);
         }
 
         private void new_btn_Click(object sender, EventArgs e)
@@ -71,9 +64,9 @@ namespace AccountingSoftware.Accounting
             is_del_btn = false;
             new_edit_delete_btn();
             //Add a row
-            this.bindingSource3.AddNew();
+            this.bindingSource1.AddNew();
             //---------------------
-            this.invoiceId_lbl.Text = selected_invoice_id.ToString();
+            this.purchaseId_lbl.Text = selected_purchase_id.ToString();
             //---------------------
             //Reg_user, Reg_Date and Reg_time
             this.reg_user_label.Text = "Login User";
@@ -81,12 +74,19 @@ namespace AccountingSoftware.Accounting
             this.reg_time_label.Text = DateTime.Now.ToString("HH:mm:ss");
         }
 
+        private void PurchaseProductFrm_Load(object sender, EventArgs e)
+        {
+            save_cancle_btns();
+            //this.salesInvoiceProductsTableAdapter1.Fill_All(this.accDs1.SalesInvoiceProducts);
+            this.purchaseProductTableAdapter1.FillBy_PurchaseId(this.accDs1.PurchaseProduct, selected_purchase_id);
+        }
+
         private void edit_btn_Click(object sender, EventArgs e)
         {
             is_del_btn = false;
             new_edit_delete_btn();
             //---------------------
-            this.invoiceId_lbl.Text = selected_invoice_id.ToString();
+            this.purchaseId_lbl.Text = selected_purchase_id.ToString();
             //--------------------- 
             //Reg_user, Reg_Date and Reg_time
             this.reg_user_label.Text = "Login User";
@@ -99,16 +99,16 @@ namespace AccountingSoftware.Accounting
             is_del_btn = true;
             new_edit_delete_btn();
             //Remove a row
-            this.bindingSource3.RemoveCurrent();
+            this.bindingSource1.RemoveCurrent();
         }
 
         private void save_btn_Click(object sender, EventArgs e)
         {
             try
             {
-                this.bindingSource3.EndEdit();
+                this.bindingSource1.EndEdit();
                 int returnValue;
-                returnValue = this.salesInvoiceProductsTableAdapter1.Update(this.accDs1.SalesInvoiceProducts);
+                returnValue = this.purchaseProductTableAdapter1.Update(this.accDs1.PurchaseProduct);
                 //--------------
                 if (returnValue > 0)
                 {
@@ -131,8 +131,8 @@ namespace AccountingSoftware.Accounting
         {
             save_cancle_btns();
             //---------------
-            this.bindingSource3.CancelEdit();
-            this.accDs1.SalesInvoiceProducts.RejectChanges();
+            this.bindingSource1.CancelEdit();
+            this.accDs1.PurchaseProduct.RejectChanges();
         }
 
         private void productSearch_btn_Click(object sender, EventArgs e)
@@ -169,7 +169,7 @@ namespace AccountingSoftware.Accounting
                 this.amount_nud.Value = amount;
 
                 //tax_sum
-                tax_rate = AccountingSoftware.Properties.Settings.Default.sett_salesTax;
+                tax_rate = AccountingSoftware.Properties.Settings.Default.sett_billTax;
                 tax_sum = (amount * tax_rate) / 100;
 
                 //-----------------------------------
@@ -216,12 +216,18 @@ namespace AccountingSoftware.Accounting
             sum_calc();
         }
 
-        //-------------------------------------------
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         private void taxRate_btn_Click(object sender, EventArgs e)
         {
             AccountingSoftware.Accounting.SettingsFrm SettFrm = new SettingsFrm(); //SettFrm ==> Setting form
             SettFrm.ShowDialog();
-            this.taxRate_nud.Value = AccountingSoftware.Properties.Settings.Default.sett_salesTax;
+            this.taxRate_nud.Value = AccountingSoftware.Properties.Settings.Default.sett_billTax;
         }
     }
+
+
 }

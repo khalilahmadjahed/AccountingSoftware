@@ -142,7 +142,7 @@
             new_btn.ImageTransparentColor = Color.Magenta;
             new_btn.Name = "new_btn";
             new_btn.Size = new Size(100, 58);
-            new_btn.Text = "New Invoice";
+            new_btn.Text = "New Product";
             new_btn.TextImageRelation = TextImageRelation.ImageAboveText;
             new_btn.Click += new_btn_Click;
             // 
@@ -568,7 +568,7 @@
             label5.AutoSize = true;
             label5.Location = new Point(89, 84);
             label5.Name = "label5";
-            label5.Size = new Size(31, 15);
+            label5.Size = new Size(32, 15);
             label5.TabIndex = 4;
             label5.Text = "QTY:";
             // 
@@ -612,7 +612,7 @@
             label12.AutoSize = true;
             label12.Location = new Point(370, 9);
             label12.Name = "label12";
-            label12.Size = new Size(59, 15);
+            label12.Size = new Size(60, 15);
             label12.TabIndex = 0;
             label12.Text = "Reg Time:";
             // 

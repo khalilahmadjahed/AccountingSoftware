@@ -131,6 +131,14 @@ namespace AccountingSoftware
                 RMFrm.MdiParent= this;
                 RMFrm.Show();
             }
+
+            //Purchase_Bill
+            if (this.acc_treeView.SelectedNode.Name == "Purchase_Bill")
+            {
+                AccountingSoftware.Accounting.PurchaseBillFrm frm = new PurchaseBillFrm();
+                frm.MdiParent = this;
+                frm.Show();
+            }
         }
 
         private void tools_btn_Click(object sender, EventArgs e)
