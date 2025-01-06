@@ -425,7 +425,7 @@
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AutoGenerateColumns = false;
-            dataGridView1.BackgroundColor = Color.FromArgb(224, 224, 224);
+            dataGridView1.BackgroundColor = Color.WhiteSmoke;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn, firstNameDataGridViewTextBoxColumn, lastNameDataGridViewTextBoxColumn, genderDataGridViewTextBoxColumn, landLineDataGridViewTextBoxColumn, cellNumDataGridViewTextBoxColumn, emailDataGridViewTextBoxColumn, adressDataGridViewTextBoxColumn, commentDataGridViewTextBoxColumn, regNameDataGridViewTextBoxColumn, regDateDataGridViewTextBoxColumn, regTimeDataGridViewTextBoxColumn });
             dataGridView1.DataSource = bindingSource1;
@@ -478,6 +478,7 @@
             cellNumDataGridViewTextBoxColumn.HeaderText = "Cell Number";
             cellNumDataGridViewTextBoxColumn.Name = "cellNumDataGridViewTextBoxColumn";
             cellNumDataGridViewTextBoxColumn.ReadOnly = true;
+            cellNumDataGridViewTextBoxColumn.Width = 110;
             // 
             // emailDataGridViewTextBoxColumn
             // 
@@ -547,7 +548,7 @@
             label12.AutoSize = true;
             label12.Location = new Point(516, 9);
             label12.Name = "label12";
-            label12.Size = new Size(59, 15);
+            label12.Size = new Size(60, 15);
             label12.TabIndex = 0;
             label12.Text = "Reg Time:";
             // 
@@ -681,7 +682,7 @@
             Name = "CustomersFrm";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "CustomersFrm";
+            Text = "Customers";
             Load += CustomersFrm_Load;
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
@@ -734,18 +735,6 @@
         private BindingSource bindingSource1;
         private ComboBox gender_comboBox1;
         private Ds.AccDsTableAdapters.CustomersTableAdapter customersTableAdapter1;
-        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn landLineDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn cellNumDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn adressDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn commentDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn regNameDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn regDateDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn regTimeDataGridViewTextBoxColumn;
         private Label label12;
         private Label reg_time_label;
         private Label reg_date_label;
@@ -762,5 +751,17 @@
         private Button search_lName_button2;
         private ToolStripButton search_btn;
         private ToolStripSeparator toolStripSeparator7;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn landLineDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn cellNumDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn adressDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn commentDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn regNameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn regDateDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn regTimeDataGridViewTextBoxColumn;
     }
 }

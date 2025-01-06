@@ -145,6 +145,7 @@
             // label12
             // 
             label12.AutoSize = true;
+            label12.ForeColor = Color.White;
             label12.Location = new Point(370, 9);
             label12.Name = "label12";
             label12.Size = new Size(60, 15);
@@ -154,7 +155,8 @@
             // invoiceId_lbl
             // 
             invoiceId_lbl.DataBindings.Add(new Binding("Text", bindingSource1, "PurchaseId", true));
-            invoiceId_lbl.Location = new Point(606, 9);
+            invoiceId_lbl.ForeColor = Color.White;
+            invoiceId_lbl.Location = new Point(611, 9);
             invoiceId_lbl.Name = "invoiceId_lbl";
             invoiceId_lbl.Size = new Size(90, 15);
             invoiceId_lbl.TabIndex = 0;
@@ -174,7 +176,8 @@
             // reg_time_label
             // 
             reg_time_label.DataBindings.Add(new Binding("Text", bindingSource1, "RegTime", true));
-            reg_time_label.Location = new Point(427, 9);
+            reg_time_label.ForeColor = Color.White;
+            reg_time_label.Location = new Point(432, 9);
             reg_time_label.Name = "reg_time_label";
             reg_time_label.Size = new Size(90, 15);
             reg_time_label.TabIndex = 0;
@@ -183,7 +186,8 @@
             // reg_date_label
             // 
             reg_date_label.DataBindings.Add(new Binding("Text", bindingSource1, "RegDate", true));
-            reg_date_label.Location = new Point(251, 9);
+            reg_date_label.ForeColor = Color.White;
+            reg_date_label.Location = new Point(256, 9);
             reg_date_label.Name = "reg_date_label";
             reg_date_label.Size = new Size(90, 15);
             reg_date_label.TabIndex = 0;
@@ -192,6 +196,7 @@
             // label13
             // 
             label13.AutoSize = true;
+            label13.ForeColor = Color.White;
             label13.Location = new Point(197, 9);
             label13.Name = "label13";
             label13.Size = new Size(57, 15);
@@ -201,7 +206,8 @@
             // reg_user_label
             // 
             reg_user_label.DataBindings.Add(new Binding("Text", bindingSource1, "RegUser", true));
-            reg_user_label.Location = new Point(75, 9);
+            reg_user_label.ForeColor = Color.White;
+            reg_user_label.Location = new Point(80, 9);
             reg_user_label.Name = "reg_user_label";
             reg_user_label.Size = new Size(90, 15);
             reg_user_label.TabIndex = 0;
@@ -210,6 +216,7 @@
             // label10
             // 
             label10.AutoSize = true;
+            label10.ForeColor = Color.White;
             label10.Location = new Point(22, 9);
             label10.Name = "label10";
             label10.Size = new Size(56, 15);
@@ -219,6 +226,7 @@
             // purchaseId_lbl
             // 
             purchaseId_lbl.AutoSize = true;
+            purchaseId_lbl.ForeColor = Color.White;
             purchaseId_lbl.Location = new Point(537, 9);
             purchaseId_lbl.Name = "purchaseId_lbl";
             purchaseId_lbl.Size = new Size(72, 15);
@@ -239,7 +247,7 @@
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AutoGenerateColumns = false;
-            dataGridView1.BackgroundColor = Color.FromArgb(255, 224, 192);
+            dataGridView1.BackgroundColor = Color.FromArgb(46, 80, 119);
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn, productNameDataGridViewTextBoxColumn, qtyDataGridViewTextBoxColumn, unitDataGridViewTextBoxColumn, unitPriceDataGridViewTextBoxColumn, discountDataGridViewTextBoxColumn, amountDataGridViewTextBoxColumn, productIdDataGridViewTextBoxColumn, purchaseIdDataGridViewTextBoxColumn, taxRateDataGridViewTextBoxColumn, taxSumDataGridViewTextBoxColumn, netAmountDataGridViewTextBoxColumn, commentDataGridViewTextBoxColumn, regUserDataGridViewTextBoxColumn, regDateDataGridViewTextBoxColumn, regTimeDataGridViewTextBoxColumn });
             dataGridView1.DataSource = bindingSource1;
@@ -376,6 +384,7 @@
             // 
             // taxRate_btn
             // 
+            taxRate_btn.ForeColor = Color.Black;
             taxRate_btn.Location = new Point(489, 225);
             taxRate_btn.Name = "taxRate_btn";
             taxRate_btn.Size = new Size(75, 23);
@@ -560,6 +569,7 @@
             groupBox1.Controls.Add(productName_txtBox);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label1);
+            groupBox1.ForeColor = Color.White;
             groupBox1.Location = new Point(12, 67);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(739, 352);
@@ -633,7 +643,7 @@
             // label20
             // 
             label20.AutoSize = true;
-            label20.Location = new Point(89, 287);
+            label20.Location = new Point(109, 287);
             label20.Name = "label20";
             label20.Size = new Size(76, 15);
             label20.TabIndex = 4;
@@ -641,6 +651,7 @@
             // 
             // productSearch_btn
             // 
+            productSearch_btn.ForeColor = Color.Black;
             productSearch_btn.Location = new Point(89, 51);
             productSearch_btn.Name = "productSearch_btn";
             productSearch_btn.Size = new Size(112, 23);
@@ -652,7 +663,7 @@
             // label18
             // 
             label18.AutoSize = true;
-            label18.Location = new Point(89, 258);
+            label18.Location = new Point(109, 258);
             label18.Name = "label18";
             label18.Size = new Size(54, 15);
             label18.TabIndex = 4;
@@ -669,7 +680,7 @@
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(89, 229);
+            label16.Location = new Point(109, 229);
             label16.Name = "label16";
             label16.Size = new Size(53, 15);
             label16.TabIndex = 4;
@@ -678,7 +689,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(89, 113);
+            label3.Location = new Point(109, 113);
             label3.Name = "label3";
             label3.Size = new Size(32, 15);
             label3.TabIndex = 4;
@@ -687,7 +698,7 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(89, 200);
+            label14.Location = new Point(109, 200);
             label14.Name = "label14";
             label14.Size = new Size(54, 15);
             label14.TabIndex = 4;
@@ -704,7 +715,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(89, 171);
+            label8.Location = new Point(109, 171);
             label8.Name = "label8";
             label8.Size = new Size(57, 15);
             label8.TabIndex = 4;
@@ -713,7 +724,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(89, 316);
+            label9.Location = new Point(109, 316);
             label9.Name = "label9";
             label9.Size = new Size(64, 15);
             label9.TabIndex = 4;
@@ -722,7 +733,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(89, 142);
+            label6.Location = new Point(109, 142);
             label6.Name = "label6";
             label6.Size = new Size(61, 15);
             label6.TabIndex = 4;
@@ -741,7 +752,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(89, 84);
+            label5.Location = new Point(109, 84);
             label5.Name = "label5";
             label5.Size = new Size(32, 15);
             label5.TabIndex = 4;
@@ -750,7 +761,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(89, 26);
+            label1.Location = new Point(109, 26);
             label1.Name = "label1";
             label1.Size = new Size(21, 15);
             label1.TabIndex = 4;
@@ -838,7 +849,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 224, 192);
+            BackColor = Color.FromArgb(46, 80, 119);
             ClientSize = new Size(754, 671);
             Controls.Add(panel1);
             Controls.Add(label4);

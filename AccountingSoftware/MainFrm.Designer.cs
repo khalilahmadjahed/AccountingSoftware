@@ -343,6 +343,7 @@
             acc_treeView.SelectedImageIndex = 0;
             acc_treeView.Size = new Size(276, 415);
             acc_treeView.TabIndex = 0;
+            acc_treeView.AfterSelect += acc_treeView_AfterSelect;
             acc_treeView.DoubleClick += acc_treeView_DoubleClick;
             // 
             // imageList1

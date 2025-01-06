@@ -77,47 +77,49 @@
             // 
             // showAll_btn
             // 
+            showAll_btn.BackColor = Color.FromArgb(246, 244, 240);
             showAll_btn.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
             showAll_btn.Image = Properties.Resources.show_all;
-            showAll_btn.Location = new Point(459, 400);
+            showAll_btn.Location = new Point(459, 402);
             showAll_btn.Name = "showAll_btn";
-            showAll_btn.Size = new Size(147, 44);
+            showAll_btn.Size = new Size(147, 38);
             showAll_btn.TabIndex = 10;
             showAll_btn.Text = "Show All";
             showAll_btn.TextImageRelation = TextImageRelation.ImageBeforeText;
-            showAll_btn.UseVisualStyleBackColor = true;
+            showAll_btn.UseVisualStyleBackColor = false;
             showAll_btn.Click += showAll_btn_Click;
             // 
             // cancle_btn
             // 
+            cancle_btn.BackColor = Color.FromArgb(246, 244, 240);
             cancle_btn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cancle_btn.Image = Properties.Resources.canecl_butt;
             cancle_btn.Location = new Point(164, 402);
             cancle_btn.Name = "cancle_btn";
-            cancle_btn.Size = new Size(110, 45);
+            cancle_btn.Size = new Size(110, 38);
             cancle_btn.TabIndex = 14;
             cancle_btn.Text = "Cancle";
             cancle_btn.TextImageRelation = TextImageRelation.ImageBeforeText;
-            cancle_btn.UseVisualStyleBackColor = true;
+            cancle_btn.UseVisualStyleBackColor = false;
             cancle_btn.Click += cancle_btn_Click;
             // 
             // ok_btn
             // 
+            ok_btn.BackColor = Color.FromArgb(246, 244, 240);
             ok_btn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ok_btn.Image = Properties.Resources.ok;
             ok_btn.Location = new Point(11, 402);
             ok_btn.Name = "ok_btn";
-            ok_btn.Size = new Size(147, 44);
+            ok_btn.Size = new Size(147, 38);
             ok_btn.TabIndex = 15;
             ok_btn.Text = "OK";
             ok_btn.TextImageRelation = TextImageRelation.ImageBeforeText;
-            ok_btn.UseVisualStyleBackColor = true;
+            ok_btn.UseVisualStyleBackColor = false;
             ok_btn.Click += ok_btn_Click;
             // 
             // panel1
             // 
-            panel1.BackColor = Color.WhiteSmoke;
-            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.BackColor = Color.FromArgb(77, 161, 169);
             panel1.Controls.Add(productName_lbl);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(id_lbl);
@@ -179,7 +181,8 @@
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AutoGenerateColumns = false;
-            dataGridView1.BackgroundColor = Color.WhiteSmoke;
+            dataGridView1.BackgroundColor = SystemColors.Window;
+            dataGridView1.CausesValidation = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { productIdDataGridViewTextBoxColumn, productNameDataGridViewTextBoxColumn, initialQtyDataGridViewTextBoxColumn, unitDataGridViewTextBoxColumn, priceDataGridViewTextBoxColumn, discountDataGridViewTextBoxColumn, commentDataGridViewTextBoxColumn, regUserDataGridViewTextBoxColumn, regDateDataGridViewTextBoxColumn, regTimeDataGridViewTextBoxColumn });
             dataGridView1.DataSource = bindingSource1;
@@ -271,8 +274,7 @@
             // 
             // search_panel2
             // 
-            search_panel2.BackColor = Color.WhiteSmoke;
-            search_panel2.BorderStyle = BorderStyle.FixedSingle;
+            search_panel2.BackColor = Color.FromArgb(77, 161, 169);
             search_panel2.Controls.Add(search_productId_button2);
             search_panel2.Controls.Add(search_id_button1);
             search_panel2.Controls.Add(search_productName_textBox2);
@@ -308,6 +310,7 @@
             // 
             // search_productName_textBox2
             // 
+            search_productName_textBox2.BackColor = Color.FromArgb(246, 244, 240);
             search_productName_textBox2.Location = new Point(417, 11);
             search_productName_textBox2.Name = "search_productName_textBox2";
             search_productName_textBox2.Size = new Size(100, 23);
@@ -315,6 +318,7 @@
             // 
             // search_id_textBox1
             // 
+            search_id_textBox1.BackColor = Color.FromArgb(246, 244, 240);
             search_id_textBox1.Location = new Point(58, 11);
             search_id_textBox1.Name = "search_id_textBox1";
             search_id_textBox1.Size = new Size(100, 23);
@@ -323,7 +327,8 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(329, 15);
+            label14.Font = new Font("Segoe UI", 9F);
+            label14.Location = new Point(328, 15);
             label14.Name = "label14";
             label14.Size = new Size(87, 15);
             label14.TabIndex = 0;
@@ -332,7 +337,8 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(35, 15);
+            label11.Font = new Font("Segoe UI", 9F);
+            label11.Location = new Point(33, 15);
             label11.Name = "label11";
             label11.Size = new Size(21, 15);
             label11.TabIndex = 0;
@@ -345,6 +351,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.ForeColor = Color.White;
             label1.Location = new Point(644, 67);
             label1.Name = "label1";
             label1.Size = new Size(32, 15);
@@ -354,6 +361,7 @@
             // unit_lbl
             // 
             unit_lbl.DataBindings.Add(new Binding("Text", bindingSource1, "Unit", true));
+            unit_lbl.ForeColor = Color.White;
             unit_lbl.Location = new Point(701, 67);
             unit_lbl.Name = "unit_lbl";
             unit_lbl.Size = new Size(74, 15);
@@ -363,6 +371,7 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.ForeColor = Color.White;
             label5.Location = new Point(644, 93);
             label5.Name = "label5";
             label5.Size = new Size(36, 15);
@@ -372,6 +381,7 @@
             // price_lbl
             // 
             price_lbl.DataBindings.Add(new Binding("Text", bindingSource1, "Price", true));
+            price_lbl.ForeColor = Color.White;
             price_lbl.Location = new Point(701, 93);
             price_lbl.Name = "price_lbl";
             price_lbl.Size = new Size(74, 15);
@@ -381,6 +391,7 @@
             // label7
             // 
             label7.AutoSize = true;
+            label7.ForeColor = Color.White;
             label7.Location = new Point(644, 119);
             label7.Name = "label7";
             label7.Size = new Size(57, 15);
@@ -390,6 +401,7 @@
             // discount_lbl
             // 
             discount_lbl.DataBindings.Add(new Binding("Text", bindingSource1, "Discount", true));
+            discount_lbl.ForeColor = Color.White;
             discount_lbl.Location = new Point(701, 119);
             discount_lbl.Name = "discount_lbl";
             discount_lbl.Size = new Size(74, 15);
@@ -400,8 +412,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 224, 192);
-            ClientSize = new Size(785, 456);
+            BackColor = Color.FromArgb(46, 80, 119);
+            ClientSize = new Size(773, 444);
             ControlBox = false;
             Controls.Add(discount_lbl);
             Controls.Add(label7);

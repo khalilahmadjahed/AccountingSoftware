@@ -335,3 +335,4 @@ C:\Users\khali\Desktop\forgit\forGit\AccountingSoftware\AccountingSoftware\obj\D
 C:\Users\khali\Desktop\forgit\forGit\AccountingSoftware\AccountingSoftware\obj\Debug\net8.0-windows\AccountingSoftware.genruntimeconfig.cache
 C:\Users\khali\Desktop\forgit\forGit\AccountingSoftware\AccountingSoftware\obj\Debug\net8.0-windows\ref\AccountingSoftware.dll
 C:\Users\khali\Desktop\forgit\forGit\AccountingSoftware\AccountingSoftware\obj\Debug\net8.0-windows\AccountingSoftware.Accounting.PurchaseProductFrm.resources
+C:\Users\khali\Desktop\forgit\forGit\AccountingSoftware\AccountingSoftware\obj\Debug\net8.0-windows\AccountingSoftware.Accounting.SpendMoneyFrm.resources

@@ -2882,6 +2882,8 @@ namespace AccountingSoftware.Ds {
                 this.columnPurchaseId.ReadOnly = true;
                 this.columnPurchaseId.Unique = true;
                 this.columnCustomerName.MaxLength = 100;
+                this.columnShipping.DefaultValue = ((decimal)(0m));
+                this.columnOther.DefaultValue = ((decimal)(0m));
                 this.columnComment.MaxLength = 250;
                 this.columnRegUser.MaxLength = 50;
             }
@@ -3359,7 +3361,14 @@ namespace AccountingSoftware.Ds {
                 this.columnID.ReadOnly = true;
                 this.columnID.Unique = true;
                 this.columnProductName.MaxLength = 90;
+                this.columnQty.DefaultValue = ((int)(1));
                 this.columnUnit.MaxLength = 50;
+                this.columnUnitPrice.DefaultValue = ((decimal)(0m));
+                this.columnDiscount.DefaultValue = ((decimal)(0m));
+                this.columnAmount.DefaultValue = ((decimal)(0m));
+                this.columnTaxRate.DefaultValue = ((decimal)(0m));
+                this.columnTaxSum.DefaultValue = ((decimal)(0m));
+                this.columnNetAmount.DefaultValue = ((decimal)(0m));
                 this.columncomment.MaxLength = 150;
                 this.columnRegUser.MaxLength = 50;
             }
@@ -3753,6 +3762,7 @@ namespace AccountingSoftware.Ds {
                 this.columnId.ReadOnly = true;
                 this.columnId.Unique = true;
                 this.columnCusromerName.MaxLength = 120;
+                this.columnCashAmount.DefaultValue = ((decimal)(0m));
                 this.columnComment.MaxLength = 250;
                 this.columnRegUser.MaxLength = 50;
             }

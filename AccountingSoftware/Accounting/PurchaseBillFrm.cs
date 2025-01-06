@@ -322,15 +322,15 @@ namespace AccountingSoftware.Accounting
             }
 
 
-            AccountingSoftware.Accounting.ReceiveMoneyFrm RMFrm = new ReceiveMoneyFrm(); //RMFrm ==> Receive Money form
+            AccountingSoftware.Accounting.SpendMoneyFrm frm = new SpendMoneyFrm(); 
 
             //------------------
-            RMFrm.selectedInvoiceId = Int32.Parse(this.purchaseId_txtBox.Text);
-            RMFrm.selectedCustomerId = Int32.Parse(this.customerId_lbl.Text);
-            RMFrm.selectedCustomerName = this.customerName_txtBox.Text;
+            frm.selectedPurchaseId = Int32.Parse(this.purchaseId_txtBox.Text);
+            frm.selectedCustomerId = Int32.Parse(this.customerId_lbl.Text);
+            frm.selectedCustomerName = this.customerName_txtBox.Text;
             //------------------
 
-            RMFrm.ShowDialog();
+            frm.ShowDialog();
 
             AllSumCalc();
         }

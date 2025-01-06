@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             toolStrip1 = new ToolStrip();
             new_btn = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
@@ -55,9 +55,9 @@
             comment_txtBox = new TextBox();
             label9 = new Label();
             customerName_txtBox = new TextBox();
-            label5 = new Label();
-            label2 = new Label();
             label1 = new Label();
+            label2 = new Label();
+            label5 = new Label();
             dataGridView1 = new DataGridView();
             idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             cusromerNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -93,6 +93,7 @@
             // toolStrip1
             // 
             toolStrip1.AutoSize = false;
+            toolStrip1.BackColor = Color.WhiteSmoke;
             toolStrip1.Items.AddRange(new ToolStripItem[] { new_btn, toolStripSeparator1, edit_btn, toolStripSeparator2, del_btn, toolStripSeparator3, save_btn, toolStripSeparator4, cancel_btn, toolStripSeparator5, toolStripSeparator6, search_btn, toolStripSeparator7 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
@@ -103,6 +104,7 @@
             // new_btn
             // 
             new_btn.AutoSize = false;
+            new_btn.ForeColor = Color.Black;
             new_btn.Image = Properties.Resources.new_butt;
             new_btn.ImageScaling = ToolStripItemImageScaling.None;
             new_btn.ImageTransparentColor = Color.Magenta;
@@ -114,12 +116,14 @@
             // 
             // toolStripSeparator1
             // 
+            toolStripSeparator1.ForeColor = Color.Black;
             toolStripSeparator1.Name = "toolStripSeparator1";
             toolStripSeparator1.Size = new Size(6, 64);
             // 
             // edit_btn
             // 
             edit_btn.AutoSize = false;
+            edit_btn.ForeColor = Color.Black;
             edit_btn.Image = Properties.Resources.edit_butt;
             edit_btn.ImageScaling = ToolStripItemImageScaling.None;
             edit_btn.ImageTransparentColor = Color.Magenta;
@@ -131,12 +135,14 @@
             // 
             // toolStripSeparator2
             // 
+            toolStripSeparator2.ForeColor = Color.Black;
             toolStripSeparator2.Name = "toolStripSeparator2";
             toolStripSeparator2.Size = new Size(6, 64);
             // 
             // del_btn
             // 
             del_btn.AutoSize = false;
+            del_btn.ForeColor = Color.Black;
             del_btn.Image = Properties.Resources.del_butt;
             del_btn.ImageScaling = ToolStripItemImageScaling.None;
             del_btn.ImageTransparentColor = Color.Magenta;
@@ -148,6 +154,7 @@
             // 
             // toolStripSeparator3
             // 
+            toolStripSeparator3.ForeColor = Color.Black;
             toolStripSeparator3.Name = "toolStripSeparator3";
             toolStripSeparator3.Size = new Size(6, 64);
             // 
@@ -155,6 +162,7 @@
             // 
             save_btn.AutoSize = false;
             save_btn.Enabled = false;
+            save_btn.ForeColor = Color.Black;
             save_btn.Image = Properties.Resources.save_utt;
             save_btn.ImageScaling = ToolStripItemImageScaling.None;
             save_btn.ImageTransparentColor = Color.Magenta;
@@ -166,6 +174,7 @@
             // 
             // toolStripSeparator4
             // 
+            toolStripSeparator4.ForeColor = Color.Black;
             toolStripSeparator4.Name = "toolStripSeparator4";
             toolStripSeparator4.Size = new Size(6, 64);
             // 
@@ -173,6 +182,7 @@
             // 
             cancel_btn.AutoSize = false;
             cancel_btn.Enabled = false;
+            cancel_btn.ForeColor = Color.Black;
             cancel_btn.Image = Properties.Resources.canecl_butt;
             cancel_btn.ImageScaling = ToolStripItemImageScaling.None;
             cancel_btn.ImageTransparentColor = Color.Magenta;
@@ -184,12 +194,14 @@
             // 
             // toolStripSeparator5
             // 
+            toolStripSeparator5.ForeColor = Color.Black;
             toolStripSeparator5.Name = "toolStripSeparator5";
             toolStripSeparator5.Size = new Size(6, 64);
             // 
             // toolStripSeparator6
             // 
             toolStripSeparator6.Alignment = ToolStripItemAlignment.Right;
+            toolStripSeparator6.ForeColor = Color.Black;
             toolStripSeparator6.Name = "toolStripSeparator6";
             toolStripSeparator6.Size = new Size(6, 64);
             // 
@@ -197,6 +209,7 @@
             // 
             search_btn.Alignment = ToolStripItemAlignment.Right;
             search_btn.AutoSize = false;
+            search_btn.ForeColor = Color.Black;
             search_btn.Image = Properties.Resources.Search;
             search_btn.ImageScaling = ToolStripItemImageScaling.None;
             search_btn.ImageTransparentColor = Color.Magenta;
@@ -221,9 +234,10 @@
             groupBox1.Controls.Add(comment_txtBox);
             groupBox1.Controls.Add(label9);
             groupBox1.Controls.Add(customerName_txtBox);
-            groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(label5);
+            groupBox1.ForeColor = Color.White;
             groupBox1.Location = new Point(12, 67);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(648, 176);
@@ -274,6 +288,7 @@
             // 
             // customerSearch_btn
             // 
+            customerSearch_btn.ForeColor = Color.Black;
             customerSearch_btn.Location = new Point(71, 81);
             customerSearch_btn.Name = "customerSearch_btn";
             customerSearch_btn.Size = new Size(108, 23);
@@ -302,7 +317,8 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(71, 143);
+            label9.ForeColor = Color.WhiteSmoke;
+            label9.Location = new Point(81, 143);
             label9.Name = "label9";
             label9.Size = new Size(64, 15);
             label9.TabIndex = 4;
@@ -318,42 +334,46 @@
             customerName_txtBox.Size = new Size(258, 23);
             customerName_txtBox.TabIndex = 5;
             // 
-            // label5
+            // label1
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(71, 114);
-            label5.Name = "label5";
-            label5.Size = new Size(54, 15);
-            label5.TabIndex = 4;
-            label5.Text = "Amount:";
+            label1.AutoSize = true;
+            label1.ForeColor = Color.WhiteSmoke;
+            label1.Location = new Point(81, 27);
+            label1.Name = "label1";
+            label1.Size = new Size(71, 15);
+            label1.TabIndex = 4;
+            label1.Text = "Payment ID:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(71, 56);
+            label2.ForeColor = Color.WhiteSmoke;
+            label2.Location = new Point(81, 56);
             label2.Name = "label2";
             label2.Size = new Size(84, 15);
             label2.TabIndex = 4;
             label2.Text = "Payment Date:";
             // 
-            // label1
+            // label5
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(71, 27);
-            label1.Name = "label1";
-            label1.Size = new Size(71, 15);
-            label1.TabIndex = 4;
-            label1.Text = "Payment ID:";
+            label5.AutoSize = true;
+            label5.ForeColor = Color.WhiteSmoke;
+            label5.Location = new Point(81, 114);
+            label5.Name = "label5";
+            label5.Size = new Size(54, 15);
+            label5.TabIndex = 4;
+            label5.Text = "Amount:";
             // 
             // dataGridView1
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AutoGenerateColumns = false;
-            dataGridView1.BackgroundColor = Color.FromArgb(224, 224, 224);
+            dataGridView1.BackgroundColor = Color.FromArgb(46, 80, 119);
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn, cusromerNameDataGridViewTextBoxColumn, payDateDataGridViewTextBoxColumn, cashAmountDataGridViewTextBoxColumn, commentDataGridViewTextBoxColumn, invoiceIdDataGridViewTextBoxColumn, customerIdDataGridViewTextBoxColumn, regUserDataGridViewTextBoxColumn, regDateDataGridViewTextBoxColumn, regTimeDataGridViewTextBoxColumn });
             dataGridView1.DataSource = bindingSource1;
+            dataGridView1.GridColor = Color.Black;
             dataGridView1.Location = new Point(12, 249);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
@@ -386,8 +406,8 @@
             // cashAmountDataGridViewTextBoxColumn
             // 
             cashAmountDataGridViewTextBoxColumn.DataPropertyName = "CashAmount";
-            dataGridViewCellStyle3.Format = "C2";
-            cashAmountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Format = "C2";
+            cashAmountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             cashAmountDataGridViewTextBoxColumn.HeaderText = "Cash Amount";
             cashAmountDataGridViewTextBoxColumn.Name = "cashAmountDataGridViewTextBoxColumn";
             cashAmountDataGridViewTextBoxColumn.ReadOnly = true;
@@ -438,6 +458,7 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.FromArgb(77, 161, 169);
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(label12);
             panel1.Controls.Add(reg_time_label);
@@ -454,16 +475,20 @@
             // label12
             // 
             label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label12.ForeColor = Color.White;
             label12.Location = new Point(646, 9);
             label12.Name = "label12";
-            label12.Size = new Size(59, 15);
+            label12.Size = new Size(63, 15);
             label12.TabIndex = 0;
             label12.Text = "Reg Time:";
             // 
             // reg_time_label
             // 
             reg_time_label.DataBindings.Add(new Binding("Text", bindingSource1, "RegTime", true));
-            reg_time_label.Location = new Point(703, 9);
+            reg_time_label.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            reg_time_label.ForeColor = Color.White;
+            reg_time_label.Location = new Point(710, 9);
             reg_time_label.Name = "reg_time_label";
             reg_time_label.Size = new Size(90, 15);
             reg_time_label.TabIndex = 0;
@@ -472,7 +497,9 @@
             // reg_date_label
             // 
             reg_date_label.DataBindings.Add(new Binding("Text", bindingSource1, "RegDate", true));
-            reg_date_label.Location = new Point(368, 9);
+            reg_date_label.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            reg_date_label.ForeColor = Color.White;
+            reg_date_label.Location = new Point(376, 9);
             reg_date_label.Name = "reg_date_label";
             reg_date_label.Size = new Size(90, 15);
             reg_date_label.TabIndex = 0;
@@ -481,16 +508,20 @@
             // label13
             // 
             label13.AutoSize = true;
+            label13.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label13.ForeColor = Color.White;
             label13.Location = new Point(314, 9);
             label13.Name = "label13";
-            label13.Size = new Size(57, 15);
+            label13.Size = new Size(62, 15);
             label13.TabIndex = 0;
             label13.Text = "Reg Date:";
             // 
             // reg_user_label
             // 
             reg_user_label.DataBindings.Add(new Binding("Text", bindingSource1, "RegUser", true));
-            reg_user_label.Location = new Point(64, 9);
+            reg_user_label.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            reg_user_label.ForeColor = Color.White;
+            reg_user_label.Location = new Point(73, 9);
             reg_user_label.Name = "reg_user_label";
             reg_user_label.Size = new Size(90, 15);
             reg_user_label.TabIndex = 0;
@@ -499,9 +530,11 @@
             // label10
             // 
             label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label10.ForeColor = Color.White;
             label10.Location = new Point(11, 9);
             label10.Name = "label10";
-            label10.Size = new Size(56, 15);
+            label10.Size = new Size(61, 15);
             label10.TabIndex = 0;
             label10.Text = "Reg User:";
             // 
@@ -512,6 +545,7 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.ForeColor = Color.White;
             label3.Location = new Point(683, 122);
             label3.Name = "label3";
             label3.Size = new Size(76, 15);
@@ -530,6 +564,7 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.ForeColor = Color.White;
             label6.Location = new Point(683, 152);
             label6.Name = "label6";
             label6.Size = new Size(62, 15);
@@ -549,6 +584,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(46, 80, 119);
             ClientSize = new Size(866, 493);
             Controls.Add(panel1);
             Controls.Add(dataGridView1);

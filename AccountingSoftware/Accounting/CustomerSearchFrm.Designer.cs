@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             search_panel2 = new Panel();
             search_lName_button2 = new Button();
             search_id_button1 = new Button();
@@ -71,8 +72,7 @@
             // 
             // search_panel2
             // 
-            search_panel2.BackColor = Color.WhiteSmoke;
-            search_panel2.BorderStyle = BorderStyle.FixedSingle;
+            search_panel2.BackColor = Color.FromArgb(77, 161, 169);
             search_panel2.Controls.Add(search_lName_button2);
             search_panel2.Controls.Add(search_id_button1);
             search_panel2.Controls.Add(search_lName_textBox2);
@@ -123,18 +123,22 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(350, 15);
+            label14.Font = new Font("Segoe UI", 9.1F, FontStyle.Bold);
+            label14.ForeColor = Color.White;
+            label14.Location = new Point(334, 13);
             label14.Name = "label14";
-            label14.Size = new Size(66, 15);
+            label14.Size = new Size(77, 17);
             label14.TabIndex = 0;
             label14.Text = "Last Name:";
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(35, 15);
+            label11.Font = new Font("Segoe UI", 9.1F, FontStyle.Bold);
+            label11.ForeColor = Color.White;
+            label11.Location = new Point(26, 13);
             label11.Name = "label11";
-            label11.Size = new Size(21, 15);
+            label11.Size = new Size(26, 17);
             label11.TabIndex = 0;
             label11.Text = "ID:";
             // 
@@ -143,7 +147,15 @@
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AutoGenerateColumns = false;
-            dataGridView1.BackgroundColor = Color.WhiteSmoke;
+            dataGridView1.BackgroundColor = Color.FromArgb(46, 80, 119);
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn, firstNameDataGridViewTextBoxColumn, lastNameDataGridViewTextBoxColumn, genderDataGridViewTextBoxColumn, landLineDataGridViewTextBoxColumn, cellNumDataGridViewTextBoxColumn, emailDataGridViewTextBoxColumn, adressDataGridViewTextBoxColumn, commentDataGridViewTextBoxColumn, regNameDataGridViewTextBoxColumn, regDateDataGridViewTextBoxColumn, regTimeDataGridViewTextBoxColumn });
             dataGridView1.DataSource = bindingSource1;
@@ -252,14 +264,14 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.WhiteSmoke;
-            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.BackColor = Color.FromArgb(77, 161, 169);
             panel1.Controls.Add(lastName_lbl);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(firstName_lbl);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(id_lbl);
             panel1.Controls.Add(label2);
+            panel1.ForeColor = Color.White;
             panel1.Location = new Point(12, 356);
             panel1.Name = "panel1";
             panel1.Size = new Size(595, 38);
@@ -268,7 +280,9 @@
             // lastName_lbl
             // 
             lastName_lbl.DataBindings.Add(new Binding("Text", bindingSource1, "LastName", true));
-            lastName_lbl.Location = new Point(492, 11);
+            lastName_lbl.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lastName_lbl.ForeColor = Color.White;
+            lastName_lbl.Location = new Point(496, 11);
             lastName_lbl.Name = "lastName_lbl";
             lastName_lbl.Size = new Size(90, 15);
             lastName_lbl.TabIndex = 0;
@@ -277,16 +291,20 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label5.ForeColor = Color.White;
             label5.Location = new Point(430, 10);
             label5.Name = "label5";
-            label5.Size = new Size(66, 15);
+            label5.Size = new Size(68, 15);
             label5.TabIndex = 0;
             label5.Text = "Last Name:";
             // 
             // firstName_lbl
             // 
             firstName_lbl.DataBindings.Add(new Binding("Text", bindingSource1, "FirstName", true));
-            firstName_lbl.Location = new Point(260, 10);
+            firstName_lbl.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            firstName_lbl.ForeColor = Color.White;
+            firstName_lbl.Location = new Point(264, 10);
             firstName_lbl.Name = "firstName_lbl";
             firstName_lbl.Size = new Size(102, 15);
             firstName_lbl.TabIndex = 0;
@@ -295,16 +313,20 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label3.ForeColor = Color.White;
             label3.Location = new Point(195, 10);
             label3.Name = "label3";
-            label3.Size = new Size(67, 15);
+            label3.Size = new Size(70, 15);
             label3.TabIndex = 0;
             label3.Text = "First Name:";
             // 
             // id_lbl
             // 
             id_lbl.DataBindings.Add(new Binding("Text", bindingSource1, "ID", true));
-            id_lbl.Location = new Point(34, 10);
+            id_lbl.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            id_lbl.ForeColor = Color.White;
+            id_lbl.Location = new Point(37, 10);
             id_lbl.Name = "id_lbl";
             id_lbl.Size = new Size(78, 15);
             id_lbl.TabIndex = 0;
@@ -313,36 +335,40 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label2.ForeColor = Color.White;
             label2.Location = new Point(16, 10);
             label2.Name = "label2";
-            label2.Size = new Size(21, 15);
+            label2.Size = new Size(23, 15);
             label2.TabIndex = 0;
             label2.Text = "ID:";
             // 
             // ok_btn
             // 
-            ok_btn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ok_btn.BackColor = Color.FromArgb(246, 244, 240);
+            ok_btn.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ok_btn.Image = Properties.Resources.ok;
-            ok_btn.Location = new Point(12, 402);
+            ok_btn.Location = new Point(12, 400);
             ok_btn.Name = "ok_btn";
-            ok_btn.Size = new Size(147, 44);
+            ok_btn.Size = new Size(113, 32);
             ok_btn.TabIndex = 9;
             ok_btn.Text = "OK";
             ok_btn.TextImageRelation = TextImageRelation.ImageBeforeText;
-            ok_btn.UseVisualStyleBackColor = true;
+            ok_btn.UseVisualStyleBackColor = false;
             ok_btn.Click += ok_btn_Click;
             // 
             // button1
             // 
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.BackColor = Color.FromArgb(246, 244, 240);
+            button1.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.Image = Properties.Resources.canecl_butt;
-            button1.Location = new Point(165, 402);
+            button1.Location = new Point(131, 400);
             button1.Name = "button1";
-            button1.Size = new Size(110, 45);
+            button1.Size = new Size(110, 31);
             button1.TabIndex = 9;
             button1.Text = "Cancle";
             button1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // customersTableAdapter1
@@ -351,23 +377,24 @@
             // 
             // showAll_btn
             // 
-            showAll_btn.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            showAll_btn.BackColor = Color.FromArgb(246, 244, 240);
+            showAll_btn.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             showAll_btn.Image = Properties.Resources.show_all;
             showAll_btn.Location = new Point(460, 400);
             showAll_btn.Name = "showAll_btn";
-            showAll_btn.Size = new Size(147, 44);
+            showAll_btn.Size = new Size(147, 31);
             showAll_btn.TabIndex = 2;
             showAll_btn.Text = "Show All";
             showAll_btn.TextImageRelation = TextImageRelation.ImageBeforeText;
-            showAll_btn.UseVisualStyleBackColor = true;
+            showAll_btn.UseVisualStyleBackColor = false;
             showAll_btn.Click += showAll_btn_Click;
             // 
             // CustomerSearchFrm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(192, 255, 255);
-            ClientSize = new Size(611, 454);
+            BackColor = Color.FromArgb(46, 80, 119);
+            ClientSize = new Size(619, 445);
             ControlBox = false;
             Controls.Add(showAll_btn);
             Controls.Add(button1);

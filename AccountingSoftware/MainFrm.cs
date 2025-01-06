@@ -120,7 +120,7 @@ namespace AccountingSoftware
             }
 
             //Receive_Money
-            if(this.acc_treeView.SelectedNode.Name == "Receive_Money")
+            if (this.acc_treeView.SelectedNode.Name == "Receive_Money")
             {
                 AccountingSoftware.Accounting.ReceiveMoneyFrm RMFrm = new ReceiveMoneyFrm(); //RmFrm ==> Receive Money Form
 
@@ -128,7 +128,7 @@ namespace AccountingSoftware
                 RMFrm.selectedCustomerId = 0;
                 RMFrm.selectedCustomerName = "";
 
-                RMFrm.MdiParent= this;
+                RMFrm.MdiParent = this;
                 RMFrm.Show();
             }
 
@@ -139,6 +139,15 @@ namespace AccountingSoftware
                 frm.MdiParent = this;
                 frm.Show();
             }
+
+            //Spend_Money
+            if(this.acc_treeView.SelectedNode.Name == "Spend_Money")
+            {
+                AccountingSoftware.Accounting.SpendMoneyFrm frm = new SpendMoneyFrm();
+                frm.MdiParent = this;
+                frm.Show();
+            }
+
         }
 
         private void tools_btn_Click(object sender, EventArgs e)
@@ -153,6 +162,11 @@ namespace AccountingSoftware
             AccountingSoftware.Accounting.SettingsFrm SFrm = new SettingsFrm(); // SFrm == Settings Form
             SFrm.MdiParent = this;
             SFrm.Show();
+        }
+
+        private void acc_treeView_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
         }
     }
 }
