@@ -37,7 +37,7 @@
             TreeNode treeNode6 = new TreeNode("Spend Money");
             TreeNode treeNode7 = new TreeNode("Receive Money");
             TreeNode treeNode8 = new TreeNode("Payments", new TreeNode[] { treeNode6, treeNode7 });
-            TreeNode treeNode9 = new TreeNode("Expense");
+            TreeNode treeNode9 = new TreeNode("Cost");
             TreeNode treeNode10 = new TreeNode("All Tools", new TreeNode[] { treeNode1, treeNode2, treeNode5, treeNode8, treeNode9 });
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrm));
             top_panel1 = new Panel();
@@ -332,9 +332,9 @@
             treeNode8.SelectedImageKey = "tree_payment.png";
             treeNode8.Text = "Payments";
             treeNode9.ImageKey = "tree_expense.png";
-            treeNode9.Name = "Expense";
+            treeNode9.Name = "Cost";
             treeNode9.SelectedImageKey = "tree_expense.png";
-            treeNode9.Text = "Expense";
+            treeNode9.Text = "Cost";
             treeNode10.ImageKey = "tree_root.png";
             treeNode10.Name = "Root";
             treeNode10.SelectedImageKey = "tree_root.png";
