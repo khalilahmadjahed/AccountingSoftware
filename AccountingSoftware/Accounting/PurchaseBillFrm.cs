@@ -16,6 +16,8 @@ namespace AccountingSoftware.Accounting
         {
             InitializeComponent();
         }
+        Boolean is_del_butt = false;
+        public Int32 sel_bill_id = 0;
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -28,16 +30,16 @@ namespace AccountingSoftware.Accounting
             save_cancle_btns();
             this.purchaseBillTableAdapter1.Fill_All(this.accDs1.PurchaseBill);//Remove at the end
 
-            if (this.accDs1.PurchaseBill.Rows.Count > 0)
+            if (sel_bill_id > 0)
             {
                 //--------Load invoice products----------//Remove at the end
-                int selected_purchase_id = int.Parse(this.purchaseId_txtBox.Text);
-                this.purchaseProductTableAdapter1.FillBy_PurchaseId(this.accDs1.PurchaseProduct, selected_purchase_id);
+                
+                this.purchaseProductTableAdapter1.FillBy_PurchaseId(this.accDs1.PurchaseProduct, sel_bill_id);
 
                 //--------------------------------------------------
-               AllSumCalc(); //Remove at the end 
+                AllSumCalc(); //Remove at the end 
             }
-            
+
         }
 
         void new_edit_delete_btns()
@@ -201,7 +203,8 @@ namespace AccountingSoftware.Accounting
                 //--------Load invoice products----------
                 int selected_purchase_id;
                 selected_purchase_id = int.Parse(this.purchaseId_txtBox.Text);
-                this.purchaseProductTableAdapter1.FillBy_PurchaseId(this.accDs1.PurchaseProduct, selected_purchase_id);
+                //this.purchaseProductTableAdapter1.FillBy_PurchaseId(this.accDs1.PurchaseProduct, selected_purchase_id);
+                this.purchaseProductTableAdapter1.Fill_All(this.accDs1.PurchaseProduct);
 
                 //Calculate Sum of Colnms
                 decimal totalAmount, totalTaxSum, totalNetAmount, shipping, other, total, paidCash, totalDue;
@@ -322,7 +325,7 @@ namespace AccountingSoftware.Accounting
             }
 
 
-            AccountingSoftware.Accounting.SpendMoneyFrm frm = new SpendMoneyFrm(); 
+            AccountingSoftware.Accounting.SpendMoneyFrm frm = new SpendMoneyFrm();
 
             //------------------
             frm.selectedPurchaseId = Int32.Parse(this.purchaseId_txtBox.Text);
@@ -335,6 +338,9 @@ namespace AccountingSoftware.Accounting
             AllSumCalc();
         }
 
-        
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

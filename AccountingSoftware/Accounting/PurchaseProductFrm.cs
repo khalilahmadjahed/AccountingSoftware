@@ -107,7 +107,7 @@ namespace AccountingSoftware.Accounting
             try
             {
                 this.bindingSource1.EndEdit();
-                int returnValue;
+                int returnValue = 0;
                 returnValue = this.purchaseProductTableAdapter1.Update(this.accDs1.PurchaseProduct);
                 //--------------
                 if (returnValue > 0)
