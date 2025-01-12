@@ -40,6 +40,16 @@
             reg_user_label = new Label();
             label10 = new Label();
             dataGridView1 = new DataGridView();
+            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            cusromerNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            payDateDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            cashAmountDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            commentDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            purchaseIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            customerIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            regUserDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            regDateDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            regTimeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             groupBox1 = new GroupBox();
             spendId_txtBox = new TextBox();
             label4 = new Label();
@@ -64,23 +74,20 @@
             cancel_btn = new ToolStripButton();
             toolStripSeparator5 = new ToolStripSeparator();
             toolStripSeparator6 = new ToolStripSeparator();
-            search_btn = new ToolStripButton();
+            toolStripButton1 = new ToolStripDropDownButton();
+            print_toolStripMenuItem2 = new ToolStripMenuItem();
+            pdf_toolStripMenuItem1 = new ToolStripMenuItem();
+            excel_printToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator7 = new ToolStripSeparator();
             purchaseId_txtBox = new TextBox();
             label6 = new Label();
             customerId_txtBox = new TextBox();
             label3 = new Label();
             spendMoneyTableAdapter1 = new Ds.AccDsTableAdapters.SpendMoneyTableAdapter();
-            idDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            cusromerNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            payDateDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            cashAmountDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            commentDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            purchaseIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            customerIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            regUserDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            regDateDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            regTimeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            prog_panel1 = new Panel();
+            progressBar1 = new ProgressBar();
+            prog_label9 = new Label();
+            label7 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)accDs1).BeginInit();
@@ -88,6 +95,7 @@
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)amount_nud).BeginInit();
             toolStrip1.SuspendLayout();
+            prog_panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -184,6 +192,82 @@
             dataGridView1.ReadOnly = true;
             dataGridView1.Size = new Size(648, 201);
             dataGridView1.TabIndex = 15;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            idDataGridViewTextBoxColumn.HeaderText = "Id";
+            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            idDataGridViewTextBoxColumn.ReadOnly = true;
+            idDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // cusromerNameDataGridViewTextBoxColumn
+            // 
+            cusromerNameDataGridViewTextBoxColumn.DataPropertyName = "CusromerName";
+            cusromerNameDataGridViewTextBoxColumn.HeaderText = "Cusromer Name";
+            cusromerNameDataGridViewTextBoxColumn.Name = "cusromerNameDataGridViewTextBoxColumn";
+            cusromerNameDataGridViewTextBoxColumn.ReadOnly = true;
+            cusromerNameDataGridViewTextBoxColumn.Width = 140;
+            // 
+            // payDateDataGridViewTextBoxColumn
+            // 
+            payDateDataGridViewTextBoxColumn.DataPropertyName = "PayDate";
+            payDateDataGridViewTextBoxColumn.HeaderText = "Pay Date";
+            payDateDataGridViewTextBoxColumn.Name = "payDateDataGridViewTextBoxColumn";
+            payDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cashAmountDataGridViewTextBoxColumn
+            // 
+            cashAmountDataGridViewTextBoxColumn.DataPropertyName = "CashAmount";
+            dataGridViewCellStyle1.Format = "c2";
+            cashAmountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            cashAmountDataGridViewTextBoxColumn.HeaderText = "Cash Amount";
+            cashAmountDataGridViewTextBoxColumn.Name = "cashAmountDataGridViewTextBoxColumn";
+            cashAmountDataGridViewTextBoxColumn.ReadOnly = true;
+            cashAmountDataGridViewTextBoxColumn.Width = 130;
+            // 
+            // commentDataGridViewTextBoxColumn
+            // 
+            commentDataGridViewTextBoxColumn.DataPropertyName = "Comment";
+            commentDataGridViewTextBoxColumn.HeaderText = "Comment";
+            commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
+            commentDataGridViewTextBoxColumn.ReadOnly = true;
+            commentDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // purchaseIdDataGridViewTextBoxColumn
+            // 
+            purchaseIdDataGridViewTextBoxColumn.DataPropertyName = "PurchaseId";
+            purchaseIdDataGridViewTextBoxColumn.HeaderText = "Purchase Id";
+            purchaseIdDataGridViewTextBoxColumn.Name = "purchaseIdDataGridViewTextBoxColumn";
+            purchaseIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // customerIdDataGridViewTextBoxColumn
+            // 
+            customerIdDataGridViewTextBoxColumn.DataPropertyName = "CustomerId";
+            customerIdDataGridViewTextBoxColumn.HeaderText = "Customer Id";
+            customerIdDataGridViewTextBoxColumn.Name = "customerIdDataGridViewTextBoxColumn";
+            customerIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // regUserDataGridViewTextBoxColumn
+            // 
+            regUserDataGridViewTextBoxColumn.DataPropertyName = "RegUser";
+            regUserDataGridViewTextBoxColumn.HeaderText = "RegUser";
+            regUserDataGridViewTextBoxColumn.Name = "regUserDataGridViewTextBoxColumn";
+            regUserDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // regDateDataGridViewTextBoxColumn
+            // 
+            regDateDataGridViewTextBoxColumn.DataPropertyName = "RegDate";
+            regDateDataGridViewTextBoxColumn.HeaderText = "RegDate";
+            regDateDataGridViewTextBoxColumn.Name = "regDateDataGridViewTextBoxColumn";
+            regDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // regTimeDataGridViewTextBoxColumn
+            // 
+            regTimeDataGridViewTextBoxColumn.DataPropertyName = "RegTime";
+            regTimeDataGridViewTextBoxColumn.HeaderText = "RegTime";
+            regTimeDataGridViewTextBoxColumn.Name = "regTimeDataGridViewTextBoxColumn";
+            regTimeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -311,7 +395,7 @@
             // toolStrip1
             // 
             toolStrip1.AutoSize = false;
-            toolStrip1.Items.AddRange(new ToolStripItem[] { new_btn, toolStripSeparator1, edit_btn, toolStripSeparator2, del_btn, toolStripSeparator3, save_btn, toolStripSeparator4, cancel_btn, toolStripSeparator5, toolStripSeparator6, search_btn, toolStripSeparator7 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { new_btn, toolStripSeparator1, edit_btn, toolStripSeparator2, del_btn, toolStripSeparator3, save_btn, toolStripSeparator4, cancel_btn, toolStripSeparator5, toolStripSeparator6, toolStripButton1, toolStripSeparator7 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(866, 64);
@@ -411,21 +495,47 @@
             toolStripSeparator6.Name = "toolStripSeparator6";
             toolStripSeparator6.Size = new Size(6, 64);
             // 
-            // search_btn
+            // toolStripButton1
             // 
-            search_btn.Alignment = ToolStripItemAlignment.Right;
-            search_btn.AutoSize = false;
-            search_btn.Image = Properties.Resources.Search;
-            search_btn.ImageScaling = ToolStripItemImageScaling.None;
-            search_btn.ImageTransparentColor = Color.Magenta;
-            search_btn.Name = "search_btn";
-            search_btn.Size = new Size(90, 58);
-            search_btn.Text = "Search";
-            search_btn.TextImageRelation = TextImageRelation.ImageAboveText;
+            toolStripButton1.AutoSize = false;
+            toolStripButton1.DropDownItems.AddRange(new ToolStripItem[] { print_toolStripMenuItem2, pdf_toolStripMenuItem1, excel_printToolStripMenuItem });
+            toolStripButton1.ForeColor = Color.Black;
+            toolStripButton1.Image = Properties.Resources.printer;
+            toolStripButton1.ImageScaling = ToolStripItemImageScaling.None;
+            toolStripButton1.ImageTransparentColor = Color.Magenta;
+            toolStripButton1.Name = "toolStripButton1";
+            toolStripButton1.Size = new Size(90, 58);
+            toolStripButton1.Text = "Print";
+            toolStripButton1.TextImageRelation = TextImageRelation.ImageAboveText;
+            // 
+            // print_toolStripMenuItem2
+            // 
+            print_toolStripMenuItem2.Image = Properties.Resources.printer;
+            print_toolStripMenuItem2.ImageScaling = ToolStripItemImageScaling.None;
+            print_toolStripMenuItem2.Name = "print_toolStripMenuItem2";
+            print_toolStripMenuItem2.Size = new Size(188, 30);
+            print_toolStripMenuItem2.Text = "Print";
+            print_toolStripMenuItem2.Click += print_toolStripMenuItem2_Click;
+            // 
+            // pdf_toolStripMenuItem1
+            // 
+            pdf_toolStripMenuItem1.Image = Properties.Resources.pdf;
+            pdf_toolStripMenuItem1.ImageScaling = ToolStripItemImageScaling.None;
+            pdf_toolStripMenuItem1.Name = "pdf_toolStripMenuItem1";
+            pdf_toolStripMenuItem1.Size = new Size(188, 30);
+            pdf_toolStripMenuItem1.Text = "Save as Pdf";
+            pdf_toolStripMenuItem1.Click += pdf_toolStripMenuItem1_Click;
+            // 
+            // excel_printToolStripMenuItem
+            // 
+            excel_printToolStripMenuItem.Image = Properties.Resources.excel;
+            excel_printToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
+            excel_printToolStripMenuItem.Name = "excel_printToolStripMenuItem";
+            excel_printToolStripMenuItem.Size = new Size(188, 30);
+            excel_printToolStripMenuItem.Text = "Export to Excel";
             // 
             // toolStripSeparator7
             // 
-            toolStripSeparator7.Alignment = ToolStripItemAlignment.Right;
             toolStripSeparator7.Name = "toolStripSeparator7";
             toolStripSeparator7.Size = new Size(6, 64);
             // 
@@ -470,87 +580,49 @@
             // 
             spendMoneyTableAdapter1.ClearBeforeFill = true;
             // 
-            // idDataGridViewTextBoxColumn
+            // prog_panel1
             // 
-            idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            idDataGridViewTextBoxColumn.HeaderText = "Id";
-            idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            idDataGridViewTextBoxColumn.ReadOnly = true;
-            idDataGridViewTextBoxColumn.Width = 60;
+            prog_panel1.BackColor = Color.FromArgb(77, 161, 169);
+            prog_panel1.Controls.Add(progressBar1);
+            prog_panel1.Controls.Add(prog_label9);
+            prog_panel1.Controls.Add(label7);
+            prog_panel1.Location = new Point(333, 200);
+            prog_panel1.Name = "prog_panel1";
+            prog_panel1.Size = new Size(200, 92);
+            prog_panel1.TabIndex = 21;
+            prog_panel1.Visible = false;
             // 
-            // cusromerNameDataGridViewTextBoxColumn
+            // progressBar1
             // 
-            cusromerNameDataGridViewTextBoxColumn.DataPropertyName = "CusromerName";
-            cusromerNameDataGridViewTextBoxColumn.HeaderText = "Cusromer Name";
-            cusromerNameDataGridViewTextBoxColumn.Name = "cusromerNameDataGridViewTextBoxColumn";
-            cusromerNameDataGridViewTextBoxColumn.ReadOnly = true;
-            cusromerNameDataGridViewTextBoxColumn.Width = 140;
+            progressBar1.Location = new Point(0, 79);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(200, 13);
+            progressBar1.TabIndex = 1;
             // 
-            // payDateDataGridViewTextBoxColumn
+            // prog_label9
             // 
-            payDateDataGridViewTextBoxColumn.DataPropertyName = "PayDate";
-            payDateDataGridViewTextBoxColumn.HeaderText = "Pay Date";
-            payDateDataGridViewTextBoxColumn.Name = "payDateDataGridViewTextBoxColumn";
-            payDateDataGridViewTextBoxColumn.ReadOnly = true;
+            prog_label9.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            prog_label9.Location = new Point(3, 45);
+            prog_label9.Name = "prog_label9";
+            prog_label9.Size = new Size(194, 15);
+            prog_label9.TabIndex = 0;
             // 
-            // cashAmountDataGridViewTextBoxColumn
+            // label7
             // 
-            cashAmountDataGridViewTextBoxColumn.DataPropertyName = "CashAmount";
-            dataGridViewCellStyle1.Format = "c2";
-            cashAmountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
-            cashAmountDataGridViewTextBoxColumn.HeaderText = "Cash Amount";
-            cashAmountDataGridViewTextBoxColumn.Name = "cashAmountDataGridViewTextBoxColumn";
-            cashAmountDataGridViewTextBoxColumn.ReadOnly = true;
-            cashAmountDataGridViewTextBoxColumn.Width = 130;
-            // 
-            // commentDataGridViewTextBoxColumn
-            // 
-            commentDataGridViewTextBoxColumn.DataPropertyName = "Comment";
-            commentDataGridViewTextBoxColumn.HeaderText = "Comment";
-            commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
-            commentDataGridViewTextBoxColumn.ReadOnly = true;
-            commentDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // purchaseIdDataGridViewTextBoxColumn
-            // 
-            purchaseIdDataGridViewTextBoxColumn.DataPropertyName = "PurchaseId";
-            purchaseIdDataGridViewTextBoxColumn.HeaderText = "Purchase Id";
-            purchaseIdDataGridViewTextBoxColumn.Name = "purchaseIdDataGridViewTextBoxColumn";
-            purchaseIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // customerIdDataGridViewTextBoxColumn
-            // 
-            customerIdDataGridViewTextBoxColumn.DataPropertyName = "CustomerId";
-            customerIdDataGridViewTextBoxColumn.HeaderText = "Customer Id";
-            customerIdDataGridViewTextBoxColumn.Name = "customerIdDataGridViewTextBoxColumn";
-            customerIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // regUserDataGridViewTextBoxColumn
-            // 
-            regUserDataGridViewTextBoxColumn.DataPropertyName = "RegUser";
-            regUserDataGridViewTextBoxColumn.HeaderText = "RegUser";
-            regUserDataGridViewTextBoxColumn.Name = "regUserDataGridViewTextBoxColumn";
-            regUserDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // regDateDataGridViewTextBoxColumn
-            // 
-            regDateDataGridViewTextBoxColumn.DataPropertyName = "RegDate";
-            regDateDataGridViewTextBoxColumn.HeaderText = "RegDate";
-            regDateDataGridViewTextBoxColumn.Name = "regDateDataGridViewTextBoxColumn";
-            regDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // regTimeDataGridViewTextBoxColumn
-            // 
-            regTimeDataGridViewTextBoxColumn.DataPropertyName = "RegTime";
-            regTimeDataGridViewTextBoxColumn.HeaderText = "RegTime";
-            regTimeDataGridViewTextBoxColumn.Name = "regTimeDataGridViewTextBoxColumn";
-            regTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label7.Location = new Point(65, 12);
+            label7.Name = "label7";
+            label7.Size = new Size(78, 15);
+            label7.TabIndex = 0;
+            label7.Text = "Please wait...";
             // 
             // SpendMoneyFrm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(866, 493);
+            Controls.Add(prog_panel1);
             Controls.Add(panel1);
             Controls.Add(dataGridView1);
             Controls.Add(groupBox1);
@@ -576,6 +648,8 @@
             ((System.ComponentModel.ISupportInitialize)amount_nud).EndInit();
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
+            prog_panel1.ResumeLayout(false);
+            prog_panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -614,8 +688,6 @@
         private ToolStripButton cancel_btn;
         private ToolStripSeparator toolStripSeparator5;
         private ToolStripSeparator toolStripSeparator6;
-        private ToolStripButton search_btn;
-        private ToolStripSeparator toolStripSeparator7;
         private TextBox purchaseId_txtBox;
         private Label label6;
         private TextBox customerId_txtBox;
@@ -633,5 +705,14 @@
         private DataGridViewTextBoxColumn regUserDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn regDateDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn regTimeDataGridViewTextBoxColumn;
+        private ToolStripDropDownButton toolStripButton1;
+        private ToolStripMenuItem print_toolStripMenuItem2;
+        private ToolStripMenuItem pdf_toolStripMenuItem1;
+        private ToolStripMenuItem excel_printToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator7;
+        private Panel prog_panel1;
+        private ProgressBar progressBar1;
+        private Label prog_label9;
+        private Label label7;
     }
 }
