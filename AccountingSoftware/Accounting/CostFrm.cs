@@ -356,7 +356,7 @@ namespace AccountingSoftware.Accounting
         {
             if (this.accDs1.Cost.Rows.Count == 0)
             {
-                MessageBox.Show("No row to save as PDF!");
+                MessageBox.Show("No row to Print!");
                 return;
             }
             //--------------------

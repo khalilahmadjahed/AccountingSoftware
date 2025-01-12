@@ -71,8 +71,6 @@
             toolStripSeparator4 = new ToolStripSeparator();
             cancel_btn = new ToolStripButton();
             toolStripSeparator5 = new ToolStripSeparator();
-            toolStripSeparator6 = new ToolStripSeparator();
-            search_btn = new ToolStripButton();
             toolStripButton1 = new ToolStripDropDownButton();
             print_toolStripMenuItem2 = new ToolStripMenuItem();
             pdf_toolStripMenuItem1 = new ToolStripMenuItem();
@@ -394,7 +392,7 @@
             // 
             toolStrip1.AutoSize = false;
             toolStrip1.BackColor = Color.WhiteSmoke;
-            toolStrip1.Items.AddRange(new ToolStripItem[] { new_btn, toolStripSeparator1, edit_btn, toolStripSeparator2, del_btn, toolStripSeparator3, save_btn, toolStripSeparator4, cancel_btn, toolStripSeparator5, toolStripSeparator6, search_btn, toolStripButton1, toolStripSeparator8 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { new_btn, toolStripSeparator1, edit_btn, toolStripSeparator2, del_btn, toolStripSeparator3, save_btn, toolStripSeparator4, cancel_btn, toolStripSeparator5, toolStripButton1, toolStripSeparator8 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(694, 64);
@@ -497,26 +495,6 @@
             toolStripSeparator5.ForeColor = Color.Black;
             toolStripSeparator5.Name = "toolStripSeparator5";
             toolStripSeparator5.Size = new Size(6, 64);
-            // 
-            // toolStripSeparator6
-            // 
-            toolStripSeparator6.Alignment = ToolStripItemAlignment.Right;
-            toolStripSeparator6.ForeColor = Color.Black;
-            toolStripSeparator6.Name = "toolStripSeparator6";
-            toolStripSeparator6.Size = new Size(6, 64);
-            // 
-            // search_btn
-            // 
-            search_btn.Alignment = ToolStripItemAlignment.Right;
-            search_btn.AutoSize = false;
-            search_btn.ForeColor = Color.Black;
-            search_btn.Image = Properties.Resources.Search;
-            search_btn.ImageScaling = ToolStripItemImageScaling.None;
-            search_btn.ImageTransparentColor = Color.Magenta;
-            search_btn.Name = "search_btn";
-            search_btn.Size = new Size(90, 58);
-            search_btn.Text = "Search";
-            search_btn.TextImageRelation = TextImageRelation.ImageAboveText;
             // 
             // toolStripButton1
             // 
@@ -668,8 +646,6 @@
         private ToolStripSeparator toolStripSeparator4;
         private ToolStripButton cancel_btn;
         private ToolStripSeparator toolStripSeparator5;
-        private ToolStripSeparator toolStripSeparator6;
-        private ToolStripButton search_btn;
         private Ds.AccDs accDs1;
         private Ds.AccDsTableAdapters.CostTableAdapter costTableAdapter1;
         private BindingSource bindingSource1;
