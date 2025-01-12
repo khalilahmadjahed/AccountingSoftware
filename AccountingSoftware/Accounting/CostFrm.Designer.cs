@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             panel1 = new Panel();
             label12 = new Label();
             reg_time_label = new Label();
@@ -73,13 +73,16 @@
             toolStripSeparator5 = new ToolStripSeparator();
             toolStripSeparator6 = new ToolStripSeparator();
             search_btn = new ToolStripButton();
-            toolStripSeparator7 = new ToolStripSeparator();
-            costTableAdapter1 = new Ds.AccDsTableAdapters.CostTableAdapter();
-            toolStripSeparator8 = new ToolStripSeparator();
             toolStripButton1 = new ToolStripDropDownButton();
-            excel_printToolStripMenuItem = new ToolStripMenuItem();
-            pdf_toolStripMenuItem1 = new ToolStripMenuItem();
             print_toolStripMenuItem2 = new ToolStripMenuItem();
+            pdf_toolStripMenuItem1 = new ToolStripMenuItem();
+            excel_printToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator8 = new ToolStripSeparator();
+            costTableAdapter1 = new Ds.AccDsTableAdapters.CostTableAdapter();
+            prog_panel1 = new Panel();
+            progressBar1 = new ProgressBar();
+            prog_label9 = new Label();
+            label3 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)accDs1).BeginInit();
@@ -87,6 +90,7 @@
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)amount_nud).BeginInit();
             toolStrip1.SuspendLayout();
+            prog_panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -102,7 +106,7 @@
             panel1.Dock = DockStyle.Bottom;
             panel1.Location = new Point(0, 460);
             panel1.Name = "panel1";
-            panel1.Size = new Size(727, 34);
+            panel1.Size = new Size(694, 34);
             panel1.TabIndex = 18;
             // 
             // label12
@@ -223,8 +227,8 @@
             // costAmountDataGridViewTextBoxColumn
             // 
             costAmountDataGridViewTextBoxColumn.DataPropertyName = "CostAmount";
-            dataGridViewCellStyle2.Format = "c2";
-            costAmountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Format = "c2";
+            costAmountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
             costAmountDataGridViewTextBoxColumn.HeaderText = "Amount";
             costAmountDataGridViewTextBoxColumn.Name = "costAmountDataGridViewTextBoxColumn";
             costAmountDataGridViewTextBoxColumn.ReadOnly = true;
@@ -390,10 +394,10 @@
             // 
             toolStrip1.AutoSize = false;
             toolStrip1.BackColor = Color.WhiteSmoke;
-            toolStrip1.Items.AddRange(new ToolStripItem[] { new_btn, toolStripSeparator1, edit_btn, toolStripSeparator2, del_btn, toolStripSeparator3, save_btn, toolStripSeparator4, cancel_btn, toolStripSeparator5, toolStripSeparator6, search_btn, toolStripSeparator7, toolStripButton1, toolStripSeparator8 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { new_btn, toolStripSeparator1, edit_btn, toolStripSeparator2, del_btn, toolStripSeparator3, save_btn, toolStripSeparator4, cancel_btn, toolStripSeparator5, toolStripSeparator6, search_btn, toolStripButton1, toolStripSeparator8 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(727, 64);
+            toolStrip1.Size = new Size(694, 64);
             toolStrip1.TabIndex = 11;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -514,21 +518,6 @@
             search_btn.Text = "Search";
             search_btn.TextImageRelation = TextImageRelation.ImageAboveText;
             // 
-            // toolStripSeparator7
-            // 
-            toolStripSeparator7.Alignment = ToolStripItemAlignment.Right;
-            toolStripSeparator7.Name = "toolStripSeparator7";
-            toolStripSeparator7.Size = new Size(6, 64);
-            // 
-            // costTableAdapter1
-            // 
-            costTableAdapter1.ClearBeforeFill = true;
-            // 
-            // toolStripSeparator8
-            // 
-            toolStripSeparator8.Name = "toolStripSeparator8";
-            toolStripSeparator8.Size = new Size(6, 64);
-            // 
             // toolStripButton1
             // 
             toolStripButton1.AutoSize = false;
@@ -542,13 +531,14 @@
             toolStripButton1.Text = "Print";
             toolStripButton1.TextImageRelation = TextImageRelation.ImageAboveText;
             // 
-            // excel_printToolStripMenuItem
+            // print_toolStripMenuItem2
             // 
-            excel_printToolStripMenuItem.Image = Properties.Resources.excel;
-            excel_printToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
-            excel_printToolStripMenuItem.Name = "excel_printToolStripMenuItem";
-            excel_printToolStripMenuItem.Size = new Size(188, 30);
-            excel_printToolStripMenuItem.Text = "Export to Excel";
+            print_toolStripMenuItem2.Image = Properties.Resources.printer;
+            print_toolStripMenuItem2.ImageScaling = ToolStripItemImageScaling.None;
+            print_toolStripMenuItem2.Name = "print_toolStripMenuItem2";
+            print_toolStripMenuItem2.Size = new Size(188, 30);
+            print_toolStripMenuItem2.Text = "Print";
+            print_toolStripMenuItem2.Click += print_toolStripMenuItem2_Click;
             // 
             // pdf_toolStripMenuItem1
             // 
@@ -557,21 +547,69 @@
             pdf_toolStripMenuItem1.Name = "pdf_toolStripMenuItem1";
             pdf_toolStripMenuItem1.Size = new Size(188, 30);
             pdf_toolStripMenuItem1.Text = "Save as Pdf";
+            pdf_toolStripMenuItem1.Click += pdf_toolStripMenuItem1_Click;
             // 
-            // print_toolStripMenuItem2
+            // excel_printToolStripMenuItem
             // 
-            print_toolStripMenuItem2.Image = Properties.Resources.printer;
-            print_toolStripMenuItem2.ImageScaling = ToolStripItemImageScaling.None;
-            print_toolStripMenuItem2.Name = "print_toolStripMenuItem2";
-            print_toolStripMenuItem2.Size = new Size(188, 30);
-            print_toolStripMenuItem2.Text = "Print";
+            excel_printToolStripMenuItem.Image = Properties.Resources.excel;
+            excel_printToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
+            excel_printToolStripMenuItem.Name = "excel_printToolStripMenuItem";
+            excel_printToolStripMenuItem.Size = new Size(188, 30);
+            excel_printToolStripMenuItem.Text = "Export to Excel";
+            // 
+            // toolStripSeparator8
+            // 
+            toolStripSeparator8.Name = "toolStripSeparator8";
+            toolStripSeparator8.Size = new Size(6, 64);
+            // 
+            // costTableAdapter1
+            // 
+            costTableAdapter1.ClearBeforeFill = true;
+            // 
+            // prog_panel1
+            // 
+            prog_panel1.BackColor = Color.FromArgb(77, 161, 169);
+            prog_panel1.Controls.Add(progressBar1);
+            prog_panel1.Controls.Add(prog_label9);
+            prog_panel1.Controls.Add(label3);
+            prog_panel1.Location = new Point(229, 184);
+            prog_panel1.Name = "prog_panel1";
+            prog_panel1.Size = new Size(200, 92);
+            prog_panel1.TabIndex = 19;
+            prog_panel1.Visible = false;
+            // 
+            // progressBar1
+            // 
+            progressBar1.Location = new Point(0, 80);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(200, 12);
+            progressBar1.TabIndex = 1;
+            // 
+            // prog_label9
+            // 
+            prog_label9.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            prog_label9.Location = new Point(3, 50);
+            prog_label9.Name = "prog_label9";
+            prog_label9.Size = new Size(194, 15);
+            prog_label9.TabIndex = 0;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label3.Location = new Point(65, 12);
+            label3.Name = "label3";
+            label3.Size = new Size(78, 15);
+            label3.TabIndex = 0;
+            label3.Text = "Please wait...";
             // 
             // CostFrm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(46, 80, 119);
-            ClientSize = new Size(727, 494);
+            ClientSize = new Size(694, 494);
+            Controls.Add(prog_panel1);
             Controls.Add(panel1);
             Controls.Add(dataGridView1);
             Controls.Add(groupBox1);
@@ -593,6 +631,8 @@
             ((System.ComponentModel.ISupportInitialize)amount_nud).EndInit();
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
+            prog_panel1.ResumeLayout(false);
+            prog_panel1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -629,7 +669,6 @@
         private ToolStripSeparator toolStripSeparator5;
         private ToolStripSeparator toolStripSeparator6;
         private ToolStripButton search_btn;
-        private ToolStripSeparator toolStripSeparator7;
         private Ds.AccDs accDs1;
         private Ds.AccDsTableAdapters.CostTableAdapter costTableAdapter1;
         private BindingSource bindingSource1;
@@ -648,5 +687,9 @@
         private ToolStripMenuItem pdf_toolStripMenuItem1;
         private ToolStripMenuItem excel_printToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator8;
+        private Panel prog_panel1;
+        private ProgressBar progressBar1;
+        private Label prog_label9;
+        private Label label3;
     }
 }

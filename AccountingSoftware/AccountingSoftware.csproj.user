@@ -10,6 +10,9 @@
     <Compile Update="Accounting\CustomersFrm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Accounting\PrintPreviewFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Accounting\ProductSearchFrm.cs">
       <SubType>Form</SubType>
     </Compile>
