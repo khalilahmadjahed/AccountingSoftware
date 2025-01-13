@@ -46,6 +46,11 @@
             toolStripSeparator6 = new ToolStripSeparator();
             search_btn = new ToolStripButton();
             toolStripSeparator7 = new ToolStripSeparator();
+            toolStripButton1 = new ToolStripDropDownButton();
+            print_toolStripMenuItem2 = new ToolStripMenuItem();
+            pdf_toolStripMenuItem1 = new ToolStripMenuItem();
+            excel_printToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator8 = new ToolStripSeparator();
             groupBox1 = new GroupBox();
             label9 = new Label();
             label3 = new Label();
@@ -73,14 +78,6 @@
             label14 = new Label();
             label11 = new Label();
             dataGridView1 = new DataGridView();
-            panel1 = new Panel();
-            label12 = new Label();
-            reg_time_label = new Label();
-            reg_date_label = new Label();
-            label13 = new Label();
-            reg_user_label = new Label();
-            label10 = new Label();
-            productsTableAdapter1 = new Ds.AccDsTableAdapters.ProductsTableAdapter();
             productIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             productNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             initialQtyDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -91,6 +88,18 @@
             regUserDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             regDateDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             regTimeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            panel1 = new Panel();
+            label12 = new Label();
+            reg_time_label = new Label();
+            reg_date_label = new Label();
+            label13 = new Label();
+            reg_user_label = new Label();
+            label10 = new Label();
+            productsTableAdapter1 = new Ds.AccDsTableAdapters.ProductsTableAdapter();
+            prog_panel1 = new Panel();
+            progressBar1 = new ProgressBar();
+            prog_label9 = new Label();
+            label15 = new Label();
             toolStrip1.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)discount_nud).BeginInit();
@@ -101,15 +110,16 @@
             search_panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
+            prog_panel1.SuspendLayout();
             SuspendLayout();
             // 
             // toolStrip1
             // 
             toolStrip1.AutoSize = false;
-            toolStrip1.Items.AddRange(new ToolStripItem[] { new_btn, toolStripSeparator1, edit_btn, toolStripSeparator2, del_btn, toolStripSeparator3, save_btn, toolStripSeparator4, cancel_btn, toolStripSeparator5, toolStripSeparator6, search_btn, toolStripSeparator7 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { new_btn, toolStripSeparator1, edit_btn, toolStripSeparator2, del_btn, toolStripSeparator3, save_btn, toolStripSeparator4, cancel_btn, toolStripSeparator5, toolStripSeparator6, search_btn, toolStripSeparator7, toolStripButton1, toolStripSeparator8 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(684, 64);
+            toolStrip1.Size = new Size(720, 64);
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -225,6 +235,50 @@
             toolStripSeparator7.Name = "toolStripSeparator7";
             toolStripSeparator7.Size = new Size(6, 64);
             // 
+            // toolStripButton1
+            // 
+            toolStripButton1.AutoSize = false;
+            toolStripButton1.DropDownItems.AddRange(new ToolStripItem[] { print_toolStripMenuItem2, pdf_toolStripMenuItem1, excel_printToolStripMenuItem });
+            toolStripButton1.ForeColor = Color.Black;
+            toolStripButton1.Image = Properties.Resources.printer;
+            toolStripButton1.ImageScaling = ToolStripItemImageScaling.None;
+            toolStripButton1.ImageTransparentColor = Color.Magenta;
+            toolStripButton1.Name = "toolStripButton1";
+            toolStripButton1.Size = new Size(90, 58);
+            toolStripButton1.Text = "Print";
+            toolStripButton1.TextImageRelation = TextImageRelation.ImageAboveText;
+            // 
+            // print_toolStripMenuItem2
+            // 
+            print_toolStripMenuItem2.Image = Properties.Resources.printer;
+            print_toolStripMenuItem2.ImageScaling = ToolStripItemImageScaling.None;
+            print_toolStripMenuItem2.Name = "print_toolStripMenuItem2";
+            print_toolStripMenuItem2.Size = new Size(188, 30);
+            print_toolStripMenuItem2.Text = "Print";
+            print_toolStripMenuItem2.Click += print_toolStripMenuItem2_Click;
+            // 
+            // pdf_toolStripMenuItem1
+            // 
+            pdf_toolStripMenuItem1.Image = Properties.Resources.pdf;
+            pdf_toolStripMenuItem1.ImageScaling = ToolStripItemImageScaling.None;
+            pdf_toolStripMenuItem1.Name = "pdf_toolStripMenuItem1";
+            pdf_toolStripMenuItem1.Size = new Size(188, 30);
+            pdf_toolStripMenuItem1.Text = "Save as Pdf";
+            pdf_toolStripMenuItem1.Click += pdf_toolStripMenuItem1_Click;
+            // 
+            // excel_printToolStripMenuItem
+            // 
+            excel_printToolStripMenuItem.Image = Properties.Resources.excel;
+            excel_printToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
+            excel_printToolStripMenuItem.Name = "excel_printToolStripMenuItem";
+            excel_printToolStripMenuItem.Size = new Size(188, 30);
+            excel_printToolStripMenuItem.Text = "Export to Excel";
+            // 
+            // toolStripSeparator8
+            // 
+            toolStripSeparator8.Name = "toolStripSeparator8";
+            toolStripSeparator8.Size = new Size(6, 64);
+            // 
             // groupBox1
             // 
             groupBox1.Controls.Add(label9);
@@ -245,7 +299,7 @@
             groupBox1.Controls.Add(label1);
             groupBox1.Location = new Point(11, 67);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(660, 230);
+            groupBox1.Size = new Size(695, 230);
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
             groupBox1.Text = "Info";
@@ -253,7 +307,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(233, 164);
+            label9.Location = new Point(245, 164);
             label9.Name = "label9";
             label9.Size = new Size(13, 15);
             label9.TabIndex = 16;
@@ -262,7 +316,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(233, 136);
+            label3.Location = new Point(245, 136);
             label3.Name = "label3";
             label3.Size = new Size(13, 15);
             label3.TabIndex = 16;
@@ -271,7 +325,7 @@
             // discount_nud
             // 
             discount_nud.DataBindings.Add(new Binding("Value", bindingSource1, "Discount", true));
-            discount_nud.Location = new Point(252, 162);
+            discount_nud.Location = new Point(264, 162);
             discount_nud.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
             discount_nud.Name = "discount_nud";
             discount_nud.Size = new Size(238, 23);
@@ -291,7 +345,7 @@
             // price_nud
             // 
             price_nud.DataBindings.Add(new Binding("Value", bindingSource1, "Price", true));
-            price_nud.Location = new Point(252, 132);
+            price_nud.Location = new Point(264, 132);
             price_nud.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
             price_nud.Name = "price_nud";
             price_nud.Size = new Size(238, 23);
@@ -300,7 +354,7 @@
             // initialQty_nud
             // 
             initialQty_nud.DataBindings.Add(new Binding("Value", bindingSource1, "InitialQty", true));
-            initialQty_nud.Location = new Point(252, 73);
+            initialQty_nud.Location = new Point(264, 73);
             initialQty_nud.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
             initialQty_nud.Name = "initialQty_nud";
             initialQty_nud.Size = new Size(238, 23);
@@ -309,7 +363,7 @@
             // comment_txtBox
             // 
             comment_txtBox.DataBindings.Add(new Binding("Text", bindingSource1, "Comment", true));
-            comment_txtBox.Location = new Point(252, 193);
+            comment_txtBox.Location = new Point(264, 193);
             comment_txtBox.Name = "comment_txtBox";
             comment_txtBox.Size = new Size(238, 23);
             comment_txtBox.TabIndex = 9;
@@ -317,7 +371,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(151, 193);
+            label8.Location = new Point(163, 193);
             label8.Name = "label8";
             label8.Size = new Size(64, 15);
             label8.TabIndex = 4;
@@ -326,7 +380,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(151, 164);
+            label7.Location = new Point(163, 164);
             label7.Name = "label7";
             label7.Size = new Size(57, 15);
             label7.TabIndex = 4;
@@ -335,7 +389,7 @@
             // unit_txtBox
             // 
             unit_txtBox.DataBindings.Add(new Binding("Text", bindingSource1, "Unit", true));
-            unit_txtBox.Location = new Point(252, 103);
+            unit_txtBox.Location = new Point(264, 103);
             unit_txtBox.Name = "unit_txtBox";
             unit_txtBox.Size = new Size(238, 23);
             unit_txtBox.TabIndex = 6;
@@ -343,7 +397,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(151, 135);
+            label6.Location = new Point(163, 135);
             label6.Name = "label6";
             label6.Size = new Size(36, 15);
             label6.TabIndex = 4;
@@ -352,7 +406,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(151, 106);
+            label5.Location = new Point(163, 106);
             label5.Name = "label5";
             label5.Size = new Size(32, 15);
             label5.TabIndex = 4;
@@ -361,7 +415,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(151, 77);
+            label4.Location = new Point(163, 77);
             label4.Name = "label4";
             label4.Size = new Size(61, 15);
             label4.TabIndex = 4;
@@ -370,7 +424,7 @@
             // productName_txtBox
             // 
             productName_txtBox.DataBindings.Add(new Binding("Text", bindingSource1, "ProductName", true));
-            productName_txtBox.Location = new Point(252, 45);
+            productName_txtBox.Location = new Point(264, 45);
             productName_txtBox.Name = "productName_txtBox";
             productName_txtBox.Size = new Size(238, 23);
             productName_txtBox.TabIndex = 2;
@@ -378,7 +432,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(151, 48);
+            label2.Location = new Point(163, 48);
             label2.Name = "label2";
             label2.Size = new Size(87, 15);
             label2.TabIndex = 4;
@@ -387,7 +441,7 @@
             // pro_id_txtBox
             // 
             pro_id_txtBox.DataBindings.Add(new Binding("Text", bindingSource1, "ProductId", true));
-            pro_id_txtBox.Location = new Point(252, 16);
+            pro_id_txtBox.Location = new Point(264, 16);
             pro_id_txtBox.Name = "pro_id_txtBox";
             pro_id_txtBox.ReadOnly = true;
             pro_id_txtBox.Size = new Size(238, 23);
@@ -396,7 +450,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(151, 16);
+            label1.Location = new Point(163, 16);
             label1.Name = "label1";
             label1.Size = new Size(65, 15);
             label1.TabIndex = 4;
@@ -411,7 +465,7 @@
             search_panel2.Controls.Add(search_id_textBox1);
             search_panel2.Controls.Add(label14);
             search_panel2.Controls.Add(label11);
-            search_panel2.Location = new Point(437, 67);
+            search_panel2.Location = new Point(458, 67);
             search_panel2.Name = "search_panel2";
             search_panel2.Size = new Size(247, 86);
             search_panel2.TabIndex = 5;
@@ -483,81 +537,8 @@
             dataGridView1.Location = new Point(13, 303);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(660, 149);
+            dataGridView1.Size = new Size(695, 149);
             dataGridView1.TabIndex = 6;
-            // 
-            // panel1
-            // 
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(label12);
-            panel1.Controls.Add(reg_time_label);
-            panel1.Controls.Add(reg_date_label);
-            panel1.Controls.Add(label13);
-            panel1.Controls.Add(reg_user_label);
-            panel1.Controls.Add(label10);
-            panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(0, 458);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(684, 34);
-            panel1.TabIndex = 7;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Location = new Point(516, 9);
-            label12.Name = "label12";
-            label12.Size = new Size(59, 15);
-            label12.TabIndex = 0;
-            label12.Text = "Reg Time:";
-            // 
-            // reg_time_label
-            // 
-            reg_time_label.DataBindings.Add(new Binding("Text", bindingSource1, "RegTime", true));
-            reg_time_label.Location = new Point(581, 9);
-            reg_time_label.Name = "reg_time_label";
-            reg_time_label.Size = new Size(90, 15);
-            reg_time_label.TabIndex = 0;
-            reg_time_label.Text = "-";
-            // 
-            // reg_date_label
-            // 
-            reg_date_label.DataBindings.Add(new Binding("Text", bindingSource1, "RegDate", true));
-            reg_date_label.Location = new Point(320, 9);
-            reg_date_label.Name = "reg_date_label";
-            reg_date_label.Size = new Size(90, 15);
-            reg_date_label.TabIndex = 0;
-            reg_date_label.Text = "-";
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Location = new Point(257, 9);
-            label13.Name = "label13";
-            label13.Size = new Size(57, 15);
-            label13.TabIndex = 0;
-            label13.Text = "Reg Date:";
-            // 
-            // reg_user_label
-            // 
-            reg_user_label.DataBindings.Add(new Binding("Text", bindingSource1, "RegUser", true));
-            reg_user_label.Location = new Point(73, 9);
-            reg_user_label.Name = "reg_user_label";
-            reg_user_label.Size = new Size(90, 15);
-            reg_user_label.TabIndex = 0;
-            reg_user_label.Text = "-";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(11, 9);
-            label10.Name = "label10";
-            label10.Size = new Size(56, 15);
-            label10.TabIndex = 0;
-            label10.Text = "Reg User:";
-            // 
-            // productsTableAdapter1
-            // 
-            productsTableAdapter1.ClearBeforeFill = true;
             // 
             // productIdDataGridViewTextBoxColumn
             // 
@@ -635,11 +616,122 @@
             regTimeDataGridViewTextBoxColumn.Name = "regTimeDataGridViewTextBoxColumn";
             regTimeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // panel1
+            // 
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(label12);
+            panel1.Controls.Add(reg_time_label);
+            panel1.Controls.Add(reg_date_label);
+            panel1.Controls.Add(label13);
+            panel1.Controls.Add(reg_user_label);
+            panel1.Controls.Add(label10);
+            panel1.Dock = DockStyle.Bottom;
+            panel1.Location = new Point(0, 458);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(720, 34);
+            panel1.TabIndex = 7;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(516, 9);
+            label12.Name = "label12";
+            label12.Size = new Size(60, 15);
+            label12.TabIndex = 0;
+            label12.Text = "Reg Time:";
+            // 
+            // reg_time_label
+            // 
+            reg_time_label.DataBindings.Add(new Binding("Text", bindingSource1, "RegTime", true));
+            reg_time_label.Location = new Point(581, 9);
+            reg_time_label.Name = "reg_time_label";
+            reg_time_label.Size = new Size(90, 15);
+            reg_time_label.TabIndex = 0;
+            reg_time_label.Text = "-";
+            // 
+            // reg_date_label
+            // 
+            reg_date_label.DataBindings.Add(new Binding("Text", bindingSource1, "RegDate", true));
+            reg_date_label.Location = new Point(320, 9);
+            reg_date_label.Name = "reg_date_label";
+            reg_date_label.Size = new Size(90, 15);
+            reg_date_label.TabIndex = 0;
+            reg_date_label.Text = "-";
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(257, 9);
+            label13.Name = "label13";
+            label13.Size = new Size(57, 15);
+            label13.TabIndex = 0;
+            label13.Text = "Reg Date:";
+            // 
+            // reg_user_label
+            // 
+            reg_user_label.DataBindings.Add(new Binding("Text", bindingSource1, "RegUser", true));
+            reg_user_label.Location = new Point(73, 9);
+            reg_user_label.Name = "reg_user_label";
+            reg_user_label.Size = new Size(90, 15);
+            reg_user_label.TabIndex = 0;
+            reg_user_label.Text = "-";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(11, 9);
+            label10.Name = "label10";
+            label10.Size = new Size(56, 15);
+            label10.TabIndex = 0;
+            label10.Text = "Reg User:";
+            // 
+            // productsTableAdapter1
+            // 
+            productsTableAdapter1.ClearBeforeFill = true;
+            // 
+            // prog_panel1
+            // 
+            prog_panel1.BackColor = Color.FromArgb(77, 161, 169);
+            prog_panel1.Controls.Add(progressBar1);
+            prog_panel1.Controls.Add(prog_label9);
+            prog_panel1.Controls.Add(label15);
+            prog_panel1.Location = new Point(260, 200);
+            prog_panel1.Name = "prog_panel1";
+            prog_panel1.Size = new Size(200, 92);
+            prog_panel1.TabIndex = 22;
+            prog_panel1.Visible = false;
+            // 
+            // progressBar1
+            // 
+            progressBar1.Location = new Point(0, 79);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(200, 13);
+            progressBar1.TabIndex = 1;
+            // 
+            // prog_label9
+            // 
+            prog_label9.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            prog_label9.Location = new Point(3, 45);
+            prog_label9.Name = "prog_label9";
+            prog_label9.Size = new Size(194, 15);
+            prog_label9.TabIndex = 0;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label15.Location = new Point(65, 12);
+            label15.Name = "label15";
+            label15.Size = new Size(78, 15);
+            label15.TabIndex = 0;
+            label15.Text = "Please wait...";
+            // 
             // ProductsFrm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(684, 492);
+            ClientSize = new Size(720, 492);
+            Controls.Add(prog_panel1);
             Controls.Add(panel1);
             Controls.Add(dataGridView1);
             Controls.Add(search_panel2);
@@ -666,6 +758,8 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            prog_panel1.ResumeLayout(false);
+            prog_panel1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -733,5 +827,14 @@
         private DataGridViewTextBoxColumn regUserDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn regDateDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn regTimeDataGridViewTextBoxColumn;
+        private ToolStripDropDownButton toolStripButton1;
+        private ToolStripMenuItem print_toolStripMenuItem2;
+        private ToolStripMenuItem pdf_toolStripMenuItem1;
+        private ToolStripMenuItem excel_printToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator8;
+        private Panel prog_panel1;
+        private ProgressBar progressBar1;
+        private Label prog_label9;
+        private Label label15;
     }
 }

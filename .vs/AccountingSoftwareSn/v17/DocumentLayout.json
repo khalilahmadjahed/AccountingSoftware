@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|c:\\users\\khali\\desktop\\forgit\\forgit\\accountingsoftware\\accountingsoftware\\accounting\\productsfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\accounting\\productsfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\accountingsoftware\\accounting\\productsfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\accounting\\productsfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|c:\\users\\khali\\desktop\\forgit\\forgit\\accountingsoftware\\accountingsoftware\\accounting\\spendmoneyfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\accounting\\spendmoneyfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|c:\\users\\khali\\desktop\\forgit\\forgit\\accountingsoftware\\accountingsoftware\\accounting\\receivemoneyfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\accounting\\receivemoneyfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\accountingsoftware\\accounting\\spendmoneyfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\accounting\\spendmoneyfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\accountingsoftware\\accounting\\receivemoneyfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\accounting\\receivemoneyfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1290,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +34,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "ProductsFrm.cs",
+              "DocumentMoniker": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\ProductsFrm.cs",
+              "RelativeDocumentMoniker": "AccountingSoftware\\Accounting\\ProductsFrm.cs",
+              "ToolTip": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\ProductsFrm.cs*",
+              "RelativeToolTip": "AccountingSoftware\\Accounting\\ProductsFrm.cs*",
+              "ViewState": "AgIAAEgBAAAAAAAAAAAAwFMBAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T10:19:08.441Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductsFrm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\ProductsFrm.cs",
+              "RelativeDocumentMoniker": "AccountingSoftware\\Accounting\\ProductsFrm.cs",
+              "ToolTip": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\ProductsFrm.cs [Design]*",
+              "RelativeToolTip": "AccountingSoftware\\Accounting\\ProductsFrm.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T10:17:16.335Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "SpendMoneyFrm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\SpendMoneyFrm.cs",
               "RelativeDocumentMoniker": "AccountingSoftware\\Accounting\\SpendMoneyFrm.cs",
@@ -46,41 +71,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "SpendMoneyFrm.cs",
               "DocumentMoniker": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\SpendMoneyFrm.cs",
               "RelativeDocumentMoniker": "AccountingSoftware\\Accounting\\SpendMoneyFrm.cs",
               "ToolTip": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\SpendMoneyFrm.cs",
               "RelativeToolTip": "AccountingSoftware\\Accounting\\SpendMoneyFrm.cs",
-              "ViewState": "AgIAABACAAAAAAAAAAAkwB0CAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAPoBAAAAAAAAAAArwDQCAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-12T12:40:11.254Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ReceiveMoneyFrm.cs",
-              "DocumentMoniker": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\ReceiveMoneyFrm.cs",
-              "RelativeDocumentMoniker": "AccountingSoftware\\Accounting\\ReceiveMoneyFrm.cs",
-              "ToolTip": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\ReceiveMoneyFrm.cs",
-              "RelativeToolTip": "AccountingSoftware\\Accounting\\ReceiveMoneyFrm.cs",
-              "ViewState": "AgIAABkCAAAAAAAAAAAAADoCAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T12:04:27.217Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ReceiveMoneyFrm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\ReceiveMoneyFrm.cs",
-              "RelativeDocumentMoniker": "AccountingSoftware\\Accounting\\ReceiveMoneyFrm.cs",
-              "ToolTip": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\ReceiveMoneyFrm.cs [Design]",
-              "RelativeToolTip": "AccountingSoftware\\Accounting\\ReceiveMoneyFrm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T12:02:08.703Z",
-              "EditorCaption": " [Design]"
             }
           ]
         },
