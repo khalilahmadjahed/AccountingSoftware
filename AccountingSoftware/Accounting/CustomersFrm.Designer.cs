@@ -43,6 +43,11 @@
             toolStripSeparator6 = new ToolStripSeparator();
             search_btn = new ToolStripButton();
             toolStripSeparator7 = new ToolStripSeparator();
+            toolStripButton1 = new ToolStripDropDownButton();
+            print_toolStripMenuItem2 = new ToolStripMenuItem();
+            pdf_toolStripMenuItem1 = new ToolStripMenuItem();
+            excel_printToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator8 = new ToolStripSeparator();
             groupBox1 = new GroupBox();
             gender_comboBox1 = new ComboBox();
             bindingSource1 = new BindingSource(components);
@@ -92,6 +97,10 @@
             search_id_textBox1 = new TextBox();
             label14 = new Label();
             label11 = new Label();
+            prog_panel1 = new Panel();
+            progressBar1 = new ProgressBar();
+            prog_label9 = new Label();
+            label15 = new Label();
             toolStrip1.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
@@ -99,15 +108,16 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             search_panel2.SuspendLayout();
+            prog_panel1.SuspendLayout();
             SuspendLayout();
             // 
             // toolStrip1
             // 
             toolStrip1.AutoSize = false;
-            toolStrip1.Items.AddRange(new ToolStripItem[] { new_btn, toolStripSeparator1, edit_btn, toolStripSeparator2, del_btn, toolStripSeparator3, save_btn, toolStripSeparator4, cancel_btn, toolStripSeparator5, toolStripSeparator6, search_btn, toolStripSeparator7 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { new_btn, toolStripSeparator1, edit_btn, toolStripSeparator2, del_btn, toolStripSeparator3, save_btn, toolStripSeparator4, cancel_btn, toolStripSeparator5, toolStripSeparator6, search_btn, toolStripSeparator7, toolStripButton1, toolStripSeparator8 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(684, 64);
+            toolStrip1.Size = new Size(712, 64);
             toolStrip1.TabIndex = 0;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -223,6 +233,51 @@
             toolStripSeparator7.Name = "toolStripSeparator7";
             toolStripSeparator7.Size = new Size(6, 64);
             // 
+            // toolStripButton1
+            // 
+            toolStripButton1.AutoSize = false;
+            toolStripButton1.DropDownItems.AddRange(new ToolStripItem[] { print_toolStripMenuItem2, pdf_toolStripMenuItem1, excel_printToolStripMenuItem });
+            toolStripButton1.ForeColor = Color.Black;
+            toolStripButton1.Image = Properties.Resources.printer;
+            toolStripButton1.ImageScaling = ToolStripItemImageScaling.None;
+            toolStripButton1.ImageTransparentColor = Color.Magenta;
+            toolStripButton1.Name = "toolStripButton1";
+            toolStripButton1.Size = new Size(90, 58);
+            toolStripButton1.Text = "Print";
+            toolStripButton1.TextImageRelation = TextImageRelation.ImageAboveText;
+            // 
+            // print_toolStripMenuItem2
+            // 
+            print_toolStripMenuItem2.Image = Properties.Resources.printer;
+            print_toolStripMenuItem2.ImageScaling = ToolStripItemImageScaling.None;
+            print_toolStripMenuItem2.Name = "print_toolStripMenuItem2";
+            print_toolStripMenuItem2.Size = new Size(188, 30);
+            print_toolStripMenuItem2.Text = "Print";
+            print_toolStripMenuItem2.Click += print_toolStripMenuItem2_Click;
+            // 
+            // pdf_toolStripMenuItem1
+            // 
+            pdf_toolStripMenuItem1.Image = Properties.Resources.pdf;
+            pdf_toolStripMenuItem1.ImageScaling = ToolStripItemImageScaling.None;
+            pdf_toolStripMenuItem1.Name = "pdf_toolStripMenuItem1";
+            pdf_toolStripMenuItem1.Size = new Size(188, 30);
+            pdf_toolStripMenuItem1.Text = "Save as Pdf";
+            pdf_toolStripMenuItem1.Click += pdf_toolStripMenuItem1_Click;
+            // 
+            // excel_printToolStripMenuItem
+            // 
+            excel_printToolStripMenuItem.Image = Properties.Resources.excel;
+            excel_printToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
+            excel_printToolStripMenuItem.Name = "excel_printToolStripMenuItem";
+            excel_printToolStripMenuItem.Size = new Size(188, 30);
+            excel_printToolStripMenuItem.Text = "Export to Excel";
+            excel_printToolStripMenuItem.Click += excel_printToolStripMenuItem_Click;
+            // 
+            // toolStripSeparator8
+            // 
+            toolStripSeparator8.Name = "toolStripSeparator8";
+            toolStripSeparator8.Size = new Size(6, 64);
+            // 
             // groupBox1
             // 
             groupBox1.Controls.Add(gender_comboBox1);
@@ -243,9 +298,9 @@
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(id_txtBox);
             groupBox1.Controls.Add(label1);
-            groupBox1.Location = new Point(12, 67);
+            groupBox1.Location = new Point(13, 67);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(660, 287);
+            groupBox1.Size = new Size(681, 287);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Info";
@@ -392,6 +447,7 @@
             userName_txtBox.Name = "userName_txtBox";
             userName_txtBox.Size = new Size(238, 23);
             userName_txtBox.TabIndex = 2;
+            userName_txtBox.Text = " ";
             // 
             // label2
             // 
@@ -432,7 +488,7 @@
             dataGridView1.Location = new Point(12, 359);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
-            dataGridView1.Size = new Size(660, 125);
+            dataGridView1.Size = new Size(681, 125);
             dataGridView1.TabIndex = 2;
             // 
             // iDDataGridViewTextBoxColumn
@@ -510,7 +566,7 @@
             regNameDataGridViewTextBoxColumn.HeaderText = "Reg Name";
             regNameDataGridViewTextBoxColumn.Name = "regNameDataGridViewTextBoxColumn";
             regNameDataGridViewTextBoxColumn.ReadOnly = true;
-            regNameDataGridViewTextBoxColumn.Width = 65;
+            regNameDataGridViewTextBoxColumn.Width = 90;
             // 
             // regDateDataGridViewTextBoxColumn
             // 
@@ -518,7 +574,7 @@
             regDateDataGridViewTextBoxColumn.HeaderText = "Reg Date";
             regDateDataGridViewTextBoxColumn.Name = "regDateDataGridViewTextBoxColumn";
             regDateDataGridViewTextBoxColumn.ReadOnly = true;
-            regDateDataGridViewTextBoxColumn.Width = 65;
+            regDateDataGridViewTextBoxColumn.Width = 90;
             // 
             // regTimeDataGridViewTextBoxColumn
             // 
@@ -526,7 +582,7 @@
             regTimeDataGridViewTextBoxColumn.HeaderText = "Reg Time";
             regTimeDataGridViewTextBoxColumn.Name = "regTimeDataGridViewTextBoxColumn";
             regTimeDataGridViewTextBoxColumn.ReadOnly = true;
-            regTimeDataGridViewTextBoxColumn.Width = 65;
+            regTimeDataGridViewTextBoxColumn.Width = 90;
             // 
             // panel1
             // 
@@ -540,7 +596,7 @@
             panel1.Dock = DockStyle.Bottom;
             panel1.Location = new Point(0, 490);
             panel1.Name = "panel1";
-            panel1.Size = new Size(684, 34);
+            panel1.Size = new Size(712, 34);
             panel1.TabIndex = 3;
             // 
             // label12
@@ -609,7 +665,7 @@
             search_panel2.Controls.Add(label11);
             search_panel2.Location = new Point(459, 65);
             search_panel2.Name = "search_panel2";
-            search_panel2.Size = new Size(220, 86);
+            search_panel2.Size = new Size(241, 86);
             search_panel2.TabIndex = 4;
             search_panel2.Visible = false;
             // 
@@ -667,11 +723,49 @@
             label11.TabIndex = 0;
             label11.Text = "ID:";
             // 
+            // prog_panel1
+            // 
+            prog_panel1.BackColor = Color.FromArgb(77, 161, 169);
+            prog_panel1.Controls.Add(progressBar1);
+            prog_panel1.Controls.Add(prog_label9);
+            prog_panel1.Controls.Add(label15);
+            prog_panel1.Location = new Point(256, 216);
+            prog_panel1.Name = "prog_panel1";
+            prog_panel1.Size = new Size(200, 92);
+            prog_panel1.TabIndex = 22;
+            prog_panel1.Visible = false;
+            // 
+            // progressBar1
+            // 
+            progressBar1.Location = new Point(0, 79);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(200, 13);
+            progressBar1.TabIndex = 1;
+            // 
+            // prog_label9
+            // 
+            prog_label9.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            prog_label9.Location = new Point(3, 45);
+            prog_label9.Name = "prog_label9";
+            prog_label9.Size = new Size(194, 15);
+            prog_label9.TabIndex = 0;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label15.Location = new Point(65, 12);
+            label15.Name = "label15";
+            label15.Size = new Size(78, 15);
+            label15.TabIndex = 0;
+            label15.Text = "Please wait...";
+            // 
             // CustomersFrm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(684, 524);
+            ClientSize = new Size(712, 524);
+            Controls.Add(prog_panel1);
             Controls.Add(search_panel2);
             Controls.Add(panel1);
             Controls.Add(dataGridView1);
@@ -695,6 +789,8 @@
             panel1.PerformLayout();
             search_panel2.ResumeLayout(false);
             search_panel2.PerformLayout();
+            prog_panel1.ResumeLayout(false);
+            prog_panel1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -751,6 +847,15 @@
         private Button search_lName_button2;
         private ToolStripButton search_btn;
         private ToolStripSeparator toolStripSeparator7;
+        private ToolStripDropDownButton toolStripButton1;
+        private ToolStripMenuItem print_toolStripMenuItem2;
+        private ToolStripMenuItem pdf_toolStripMenuItem1;
+        private ToolStripMenuItem excel_printToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator8;
+        private Panel prog_panel1;
+        private ProgressBar progressBar1;
+        private Label prog_label9;
+        private Label label15;
         private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
