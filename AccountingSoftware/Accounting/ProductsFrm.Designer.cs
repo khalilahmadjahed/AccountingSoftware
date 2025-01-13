@@ -273,6 +273,7 @@
             excel_printToolStripMenuItem.Name = "excel_printToolStripMenuItem";
             excel_printToolStripMenuItem.Size = new Size(188, 30);
             excel_printToolStripMenuItem.Text = "Export to Excel";
+            excel_printToolStripMenuItem.Click += excel_printToolStripMenuItem_Click;
             // 
             // toolStripSeparator8
             // 
