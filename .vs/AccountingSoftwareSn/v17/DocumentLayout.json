@@ -3,32 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|c:\\users\\khali\\desktop\\forgit\\forgit\\accountingsoftware\\accountingsoftware\\accounting\\salesinvoicelist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\accounting\\salesinvoicelist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\accountingsoftware\\accounting\\purchasebilllistfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\accounting\\purchasebilllistfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\accountingsoftware\\accounting\\salesinvoicelist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\accounting\\salesinvoicelist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\accountingsoftware\\accounting\\salesinvoicefrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\accounting\\salesinvoicefrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|c:\\users\\khali\\desktop\\forgit\\forgit\\accountingsoftware\\accountingsoftware\\accounting\\purchasebilllistfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\accounting\\purchasebilllistfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|c:\\users\\khali\\desktop\\forgit\\forgit\\accountingsoftware\\accountingsoftware\\accounting\\salesinvoicefrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\accounting\\salesinvoicefrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|c:\\users\\khali\\desktop\\forgit\\forgit\\accountingsoftware\\accountingsoftware\\accounting\\costfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\accounting\\costfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|c:\\users\\khali\\desktop\\forgit\\forgit\\accountingsoftware\\accountingsoftware\\accounting\\costfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\accounting\\costfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\accountingsoftware\\mainfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\mainfrm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|c:\\users\\khali\\desktop\\forgit\\forgit\\accountingsoftware\\accountingsoftware\\accounting\\salesinvoicelist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{57DC9958-7AD0-455D-AED7-6A0D1C35AD93}|AccountingSoftware\\AccountingSoftware.csproj|solutionrelative:accountingsoftware\\accounting\\salesinvoicelist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1290,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,77 +34,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "PurchaseBillListFrm.cs",
+              "DocumentMoniker": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\PurchaseBillListFrm.cs",
+              "RelativeDocumentMoniker": "AccountingSoftware\\Accounting\\PurchaseBillListFrm.cs",
+              "ToolTip": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\PurchaseBillListFrm.cs",
+              "RelativeToolTip": "AccountingSoftware\\Accounting\\PurchaseBillListFrm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG4BAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T12:29:18.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "SalesInvoiceList.cs",
               "DocumentMoniker": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\SalesInvoiceList.cs",
               "RelativeDocumentMoniker": "AccountingSoftware\\Accounting\\SalesInvoiceList.cs",
               "ToolTip": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\SalesInvoiceList.cs",
               "RelativeToolTip": "AccountingSoftware\\Accounting\\SalesInvoiceList.cs",
-              "ViewState": "AgIAAFoBAAAAAAAAAAAYwG8BAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAFwBAAAAAAAAAAAjwGABAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T11:06:22.818Z",
+              "WhenOpened": "2025-01-15T12:29:08.636Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CostFrm.cs",
-              "DocumentMoniker": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\CostFrm.cs",
-              "RelativeDocumentMoniker": "AccountingSoftware\\Accounting\\CostFrm.cs",
-              "ToolTip": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\CostFrm.cs",
-              "RelativeToolTip": "AccountingSoftware\\Accounting\\CostFrm.cs",
-              "ViewState": "AgIAANYBAAAAAAAAAAAjwOkBAAAMAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "PurchaseBillListFrm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\PurchaseBillListFrm.cs",
+              "RelativeDocumentMoniker": "AccountingSoftware\\Accounting\\PurchaseBillListFrm.cs",
+              "ToolTip": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\PurchaseBillListFrm.cs [Design]",
+              "RelativeToolTip": "AccountingSoftware\\Accounting\\PurchaseBillListFrm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T11:06:12.31Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CostFrm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\CostFrm.cs",
-              "RelativeDocumentMoniker": "AccountingSoftware\\Accounting\\CostFrm.cs",
-              "ToolTip": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\CostFrm.cs [Design]",
-              "RelativeToolTip": "AccountingSoftware\\Accounting\\CostFrm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T11:05:19.485Z",
+              "WhenOpened": "2025-01-15T11:56:14.316Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SalesInvoiceFrm.cs",
-              "DocumentMoniker": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\SalesInvoiceFrm.cs",
-              "RelativeDocumentMoniker": "AccountingSoftware\\Accounting\\SalesInvoiceFrm.cs",
-              "ToolTip": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\SalesInvoiceFrm.cs",
-              "RelativeToolTip": "AccountingSoftware\\Accounting\\SalesInvoiceFrm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T10:28:08.457Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SalesInvoiceFrm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\SalesInvoiceFrm.cs",
-              "RelativeDocumentMoniker": "AccountingSoftware\\Accounting\\SalesInvoiceFrm.cs",
-              "ToolTip": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\Accounting\\SalesInvoiceFrm.cs [Design]",
-              "RelativeToolTip": "AccountingSoftware\\Accounting\\SalesInvoiceFrm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T10:18:56.257Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainFrm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\MainFrm.cs",
-              "RelativeDocumentMoniker": "AccountingSoftware\\MainFrm.cs",
-              "ToolTip": "C:\\Users\\khali\\Desktop\\forgit\\forGit\\AccountingSoftware\\AccountingSoftware\\MainFrm.cs [Design]",
-              "RelativeToolTip": "AccountingSoftware\\MainFrm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T09:38:55.873Z"
             },
             {
               "$type": "Document",

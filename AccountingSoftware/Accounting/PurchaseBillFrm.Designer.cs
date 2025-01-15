@@ -110,15 +110,17 @@
             purchaseBillTableAdapter1 = new Ds.AccDsTableAdapters.PurchaseBillTableAdapter();
             bindingSource2 = new BindingSource(components);
             dataGridView1 = new DataGridView();
+            purchaseProductTableAdapter1 = new Ds.AccDsTableAdapters.PurchaseProductTableAdapter();
+            spendMoneyTableAdapter1 = new Ds.AccDsTableAdapters.SpendMoneyTableAdapter();
             iDDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            purchaseIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             productNameDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            productIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             qtyDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             unitDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             unitPriceDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             discountDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             amountDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            purchaseIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
+            productIdDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             taxRateDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             taxSumDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             netAmountDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
@@ -126,8 +128,6 @@
             regUserDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             regDateDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
             regTimeDataGridViewTextBoxColumn = new DataGridViewTextBoxColumn();
-            purchaseProductTableAdapter1 = new Ds.AccDsTableAdapters.PurchaseProductTableAdapter();
-            spendMoneyTableAdapter1 = new Ds.AccDsTableAdapters.SpendMoneyTableAdapter();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)payTotal_nud).BeginInit();
             ((System.ComponentModel.ISupportInitialize)paidAmount_nud).BeginInit();
@@ -961,13 +961,21 @@
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.BackgroundColor = Color.WhiteSmoke;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn, purchaseIdDataGridViewTextBoxColumn, productNameDataGridViewTextBoxColumn, productIdDataGridViewTextBoxColumn, qtyDataGridViewTextBoxColumn, unitDataGridViewTextBoxColumn, unitPriceDataGridViewTextBoxColumn, discountDataGridViewTextBoxColumn, amountDataGridViewTextBoxColumn, taxRateDataGridViewTextBoxColumn, taxSumDataGridViewTextBoxColumn, netAmountDataGridViewTextBoxColumn, commentDataGridViewTextBoxColumn, regUserDataGridViewTextBoxColumn, regDateDataGridViewTextBoxColumn, regTimeDataGridViewTextBoxColumn });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { iDDataGridViewTextBoxColumn, productNameDataGridViewTextBoxColumn, qtyDataGridViewTextBoxColumn, unitDataGridViewTextBoxColumn, unitPriceDataGridViewTextBoxColumn, discountDataGridViewTextBoxColumn, amountDataGridViewTextBoxColumn, purchaseIdDataGridViewTextBoxColumn, productIdDataGridViewTextBoxColumn, taxRateDataGridViewTextBoxColumn, taxSumDataGridViewTextBoxColumn, netAmountDataGridViewTextBoxColumn, commentDataGridViewTextBoxColumn, regUserDataGridViewTextBoxColumn, regDateDataGridViewTextBoxColumn, regTimeDataGridViewTextBoxColumn });
             dataGridView1.DataSource = bindingSource2;
             dataGridView1.Location = new Point(6, 342);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.Size = new Size(865, 211);
             dataGridView1.TabIndex = 41;
+            // 
+            // purchaseProductTableAdapter1
+            // 
+            purchaseProductTableAdapter1.ClearBeforeFill = true;
+            // 
+            // spendMoneyTableAdapter1
+            // 
+            spendMoneyTableAdapter1.ClearBeforeFill = true;
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -977,26 +985,12 @@
             iDDataGridViewTextBoxColumn.ReadOnly = true;
             iDDataGridViewTextBoxColumn.Width = 50;
             // 
-            // purchaseIdDataGridViewTextBoxColumn
-            // 
-            purchaseIdDataGridViewTextBoxColumn.DataPropertyName = "PurchaseId";
-            purchaseIdDataGridViewTextBoxColumn.HeaderText = "PurchaseId";
-            purchaseIdDataGridViewTextBoxColumn.Name = "purchaseIdDataGridViewTextBoxColumn";
-            purchaseIdDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // productNameDataGridViewTextBoxColumn
             // 
             productNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName";
             productNameDataGridViewTextBoxColumn.HeaderText = "ProductName";
             productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
             productNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // productIdDataGridViewTextBoxColumn
-            // 
-            productIdDataGridViewTextBoxColumn.DataPropertyName = "ProductId";
-            productIdDataGridViewTextBoxColumn.HeaderText = "ProductId";
-            productIdDataGridViewTextBoxColumn.Name = "productIdDataGridViewTextBoxColumn";
-            productIdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // qtyDataGridViewTextBoxColumn
             // 
@@ -1032,6 +1026,20 @@
             amountDataGridViewTextBoxColumn.HeaderText = "Amount";
             amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
             amountDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // purchaseIdDataGridViewTextBoxColumn
+            // 
+            purchaseIdDataGridViewTextBoxColumn.DataPropertyName = "PurchaseId";
+            purchaseIdDataGridViewTextBoxColumn.HeaderText = "PurchaseId";
+            purchaseIdDataGridViewTextBoxColumn.Name = "purchaseIdDataGridViewTextBoxColumn";
+            purchaseIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // productIdDataGridViewTextBoxColumn
+            // 
+            productIdDataGridViewTextBoxColumn.DataPropertyName = "ProductId";
+            productIdDataGridViewTextBoxColumn.HeaderText = "ProductId";
+            productIdDataGridViewTextBoxColumn.Name = "productIdDataGridViewTextBoxColumn";
+            productIdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // taxRateDataGridViewTextBoxColumn
             // 
@@ -1081,14 +1089,6 @@
             regTimeDataGridViewTextBoxColumn.HeaderText = "RegTime";
             regTimeDataGridViewTextBoxColumn.Name = "regTimeDataGridViewTextBoxColumn";
             regTimeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // purchaseProductTableAdapter1
-            // 
-            purchaseProductTableAdapter1.ClearBeforeFill = true;
-            // 
-            // spendMoneyTableAdapter1
-            // 
-            spendMoneyTableAdapter1.ClearBeforeFill = true;
             // 
             // PurchaseBillFrm
             // 
@@ -1246,14 +1246,14 @@
         private Ds.AccDsTableAdapters.PurchaseProductTableAdapter purchaseProductTableAdapter1;
         private Ds.AccDsTableAdapters.SpendMoneyTableAdapter spendMoneyTableAdapter1;
         private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn purchaseIdDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn productIdDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn qtyDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn unitDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn unitPriceDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn discountDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn purchaseIdDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn productIdDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn taxRateDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn taxSumDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn netAmountDataGridViewTextBoxColumn;

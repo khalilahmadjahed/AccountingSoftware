@@ -35,10 +35,7 @@ namespace AccountingSoftware.Accounting
                 //--------------------------------------------------
                 AllSumCalc(); 
             }
-            this.salesInvoiceProductsTableAdapter1.FillBy_InvoiceId(this.accDs1.SalesInvoiceProducts, sel_invoice_id);
-
-            //--------------------------------------------------
-            AllSumCalc(); //Remove at the end
+            
         }
 
         void new_edit_delete_btns()

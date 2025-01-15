@@ -28,16 +28,18 @@ namespace AccountingSoftware.Accounting
         private void PurchaseBillFrm_Load(object sender, EventArgs e)
         {
             save_cancle_btns();
-            this.purchaseBillTableAdapter1.Fill_All(this.accDs1.PurchaseBill);//Remove at the end
+            // ------------------
+
+            this.purchaseBillTableAdapter1.FillBy_bill_id(this.accDs1.PurchaseBill, sel_bill_id);
+
+            //--------Load invoice products----------
 
             if (sel_bill_id > 0)
             {
-                //--------Load invoice products----------//Remove at the end
-                
                 this.purchaseProductTableAdapter1.FillBy_PurchaseId(this.accDs1.PurchaseProduct, sel_bill_id);
 
                 //--------------------------------------------------
-                AllSumCalc(); //Remove at the end 
+                AllSumCalc();
             }
 
         }
