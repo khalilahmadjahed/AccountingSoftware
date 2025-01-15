@@ -343,7 +343,7 @@ namespace AccountingSoftware.Accounting
             //cl.SetHorizontalAlignment(iText.Layout.Properties.HorizontalAlignment.CENTER);
             cl.SetHeight(20);
             cl.SetVerticalAlignment(VerticalAlignment.MIDDLE);
-            cl.SetFontSize(9);
+            cl.SetFontSize(7);
             cl.Add(new Paragraph(cell_text));
             //----------------------
             tbl.AddCell(cl);
@@ -412,12 +412,12 @@ namespace AccountingSoftware.Accounting
                 final_doc.Add(fs2);
                 //---------------------------
                 //=========Add table header ==================
-                Table tbl = new Table(13, true);
+                Table tbl = new Table(12, true);
                 //----------------------
                 table_header_loader(tbl, "ID", 1);
                 table_header_loader(tbl, "First Name", 2);
                 table_header_loader(tbl, "Last Name", 2);
-                table_header_loader(tbl, "Gender", 1);
+                //table_header_loader(tbl, "Gender", 1);
                 //table_header_loader(tbl, "Land Line", 1);
                 table_header_loader(tbl, "Cell", 2);
                 table_header_loader(tbl, "Email", 3);
@@ -436,7 +436,7 @@ namespace AccountingSoftware.Accounting
 
                     //-------------
 
-                    table_data_loader(tbl, this.gender_comboBox1.Text, 1, TextAlignment.LEFT);
+                    //table_data_loader(tbl, this.gender_comboBox1.Text, 1, TextAlignment.LEFT);
                     //table_data_loader(tbl, this.landLine_txtBox.Text, 1, TextAlignment.LEFT);
                     table_data_loader(tbl, this.cellPhone_txtBox.Text, 2, TextAlignment.LEFT);
                     table_data_loader(tbl, this.email_txtBox.Text, 3, TextAlignment.LEFT);

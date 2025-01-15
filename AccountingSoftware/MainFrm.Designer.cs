@@ -62,11 +62,15 @@
             imageList1 = new ImageList(components);
             tools_contextMenu = new ContextMenuStrip(components);
             settings_MenuItem = new ToolStripMenuItem();
+            rep_cm = new ContextMenuStrip(components);
+            toolStripMenuItem1 = new ToolStripMenuItem();
+            purchaseBillListToolStripMenuItem = new ToolStripMenuItem();
             top_panel1.SuspendLayout();
             bott_pnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             treeView_panel1.SuspendLayout();
             tools_contextMenu.SuspendLayout();
+            rep_cm.SuspendLayout();
             SuspendLayout();
             // 
             // top_panel1
@@ -154,6 +158,7 @@
             report_btn.Text = "Report F3";
             report_btn.TextImageRelation = TextImageRelation.ImageAboveText;
             report_btn.UseVisualStyleBackColor = true;
+            report_btn.Click += report_btn_Click;
             // 
             // Accounting_btn
             // 
@@ -369,15 +374,42 @@
             // 
             tools_contextMenu.Items.AddRange(new ToolStripItem[] { settings_MenuItem });
             tools_contextMenu.Name = "contextMenuStrip1";
-            tools_contextMenu.Size = new Size(117, 44);
+            tools_contextMenu.Size = new Size(133, 44);
             // 
             // settings_MenuItem
             // 
             settings_MenuItem.AutoSize = false;
+            settings_MenuItem.Image = Properties.Resources.settings;
+            settings_MenuItem.ImageScaling = ToolStripItemImageScaling.None;
             settings_MenuItem.Name = "settings_MenuItem";
             settings_MenuItem.Size = new Size(180, 40);
             settings_MenuItem.Text = "Settings";
             settings_MenuItem.Click += settings_MenuItem_Click;
+            // 
+            // rep_cm
+            // 
+            rep_cm.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, purchaseBillListToolStripMenuItem });
+            rep_cm.Name = "contextMenuStrip1";
+            rep_cm.Size = new Size(179, 82);
+            // 
+            // toolStripMenuItem1
+            // 
+            toolStripMenuItem1.AutoSize = false;
+            toolStripMenuItem1.Image = Properties.Resources.tree_sale_invoice;
+            toolStripMenuItem1.ImageScaling = ToolStripItemImageScaling.None;
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            toolStripMenuItem1.Size = new Size(180, 40);
+            toolStripMenuItem1.Text = "Sales Invoice List";
+            toolStripMenuItem1.Click += toolStripMenuItem1_Click;
+            // 
+            // purchaseBillListToolStripMenuItem
+            // 
+            purchaseBillListToolStripMenuItem.Image = Properties.Resources.tree_purchase_bill;
+            purchaseBillListToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
+            purchaseBillListToolStripMenuItem.Name = "purchaseBillListToolStripMenuItem";
+            purchaseBillListToolStripMenuItem.Size = new Size(178, 38);
+            purchaseBillListToolStripMenuItem.Text = "Purchase Bill List";
+            purchaseBillListToolStripMenuItem.Click += purchaseBillListToolStripMenuItem_Click;
             // 
             // MainFrm
             // 
@@ -403,6 +435,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             treeView_panel1.ResumeLayout(false);
             tools_contextMenu.ResumeLayout(false);
+            rep_cm.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -430,5 +463,8 @@
         private Button expand_btn;
         private ContextMenuStrip tools_contextMenu;
         private ToolStripMenuItem settings_MenuItem;
+        private ContextMenuStrip rep_cm;
+        private ToolStripMenuItem toolStripMenuItem1;
+        private ToolStripMenuItem purchaseBillListToolStripMenuItem;
     }
 }

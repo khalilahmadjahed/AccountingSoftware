@@ -18,14 +18,24 @@ namespace AccountingSoftware.Accounting
             InitializeComponent();
         }
 
+        public Int32 sel_invoice_id;
         private void SalesInvoiceFrm_Load(object sender, EventArgs e)
         {
             save_cancle_btns();
-            this.salesInvoiceTableAdapter1.Fill_All(this.accDs1.SalesInvoice);//Remove at the end
+            // ------------------
 
-            //--------Load invoice products----------//Remove at the end
-            int selectedInvoiceId = int.Parse(this.invoiceId_txtBox.Text);
-            this.salesInvoiceProductsTableAdapter1.FillBy_InvoiceId(this.accDs1.SalesInvoiceProducts, selectedInvoiceId);
+            this.salesInvoiceTableAdapter1.FillBy_invoice_id(this.accDs1.SalesInvoice, sel_invoice_id);
+
+            //--------Load invoice products----------
+
+            if (sel_invoice_id > 0)
+            {
+                this.salesInvoiceProductsTableAdapter1.FillBy_InvoiceId(this.accDs1.SalesInvoiceProducts, sel_invoice_id);
+
+                //--------------------------------------------------
+                AllSumCalc(); 
+            }
+            this.salesInvoiceProductsTableAdapter1.FillBy_InvoiceId(this.accDs1.SalesInvoiceProducts, sel_invoice_id);
 
             //--------------------------------------------------
             AllSumCalc(); //Remove at the end

@@ -1247,6 +1247,7 @@ namespace AccountingSoftware.Ds {
                 this.columnProductId.Unique = true;
                 this.columnProductName.MaxLength = 90;
                 this.columnInitialQty.DefaultValue = ((int)(1));
+                this.columnUnit.DefaultValue = ((string)("0"));
                 this.columnUnit.MaxLength = 50;
                 this.columnPrice.DefaultValue = ((decimal)(0m));
                 this.columnDiscount.DefaultValue = ((decimal)(0m));
@@ -10352,11 +10353,25 @@ SELECT InvoiceId, InvoiceDate, CustomerId, CustomerName, Shipping, Other, Commen
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::Microsoft.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::Microsoft.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::Microsoft.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        SalesInvoice.*\r\nFROM            SalesInvoice\r\nORDER BY InvoiceId";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::Microsoft.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT        InvoiceId, InvoiceDate, CustomerId, CustomerName, Shipping, Other, " +
+                "Comment, RegUser, RegDate, RegTime\r\nFROM            SalesInvoice\r\nWHERE        (" +
+                "InvoiceId = @sel_invoice_id)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            global::Microsoft.Data.SqlClient.SqlParameter param = new global::Microsoft.Data.SqlClient.SqlParameter();
+            param.ParameterName = "@sel_invoice_id";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.SqlDbType = global::System.Data.SqlDbType.Int;
+            param.Size = 4;
+            param.IsNullable = true;
+            param.SourceColumn = "InvoiceId";
+            this._commandCollection[1].Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10365,6 +10380,20 @@ SELECT InvoiceId, InvoiceDate, CustomerId, CustomerName, Shipping, Other, Commen
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
         public virtual int Fill_All(AccDs.SalesInvoiceDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy_invoice_id(AccDs.SalesInvoiceDataTable dataTable, int sel_invoice_id) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(sel_invoice_id));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }

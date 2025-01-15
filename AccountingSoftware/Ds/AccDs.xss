@@ -8,7 +8,7 @@
   <Shapes>
     <Shape ID="DesignTable:Customers" ZOrder="8" X="366" Y="153" Height="362" Width="224" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
     <Shape ID="DesignTable:Products" ZOrder="7" X="614" Y="157" Height="305" Width="248" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="216" />
-    <Shape ID="DesignTable:SalesInvoice" ZOrder="9" X="1333" Y="158" Height="248" Width="215" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="197" />
+    <Shape ID="DesignTable:SalesInvoice" ZOrder="9" X="1333" Y="158" Height="286" Width="225" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="216" />
     <Shape ID="DesignTable:SalesInvoiceProducts" ZOrder="6" X="1558" Y="158" Height="324" Width="267" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="254" />
     <Shape ID="DesignTable:ReceiveMoney" ZOrder="5" X="1094" Y="157" Height="286" Width="229" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="216" />
     <Shape ID="DesignTable:PurchaseBill" ZOrder="4" X="612" Y="539" Height="267" Width="215" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="24" OldDataTableHeight="0" SplitterPosition="216" />

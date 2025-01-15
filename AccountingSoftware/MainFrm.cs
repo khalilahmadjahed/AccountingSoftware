@@ -143,7 +143,7 @@ namespace AccountingSoftware
             }
 
             //Spend_Money
-            if(this.acc_treeView.SelectedNode.Name == "Spend_Money")
+            if (this.acc_treeView.SelectedNode.Name == "Spend_Money")
             {
                 AccountingSoftware.Accounting.SpendMoneyFrm frm = new SpendMoneyFrm();
                 frm.MdiParent = this;
@@ -151,7 +151,7 @@ namespace AccountingSoftware
             }
 
             //Cost
-            if(this.acc_treeView.SelectedNode.Name == "Cost")
+            if (this.acc_treeView.SelectedNode.Name == "Cost")
             {
                 AccountingSoftware.Accounting.CostFrm frm = new CostFrm();
                 frm.MdiParent = this;
@@ -177,6 +177,27 @@ namespace AccountingSoftware
         private void acc_treeView_AfterSelect(object sender, TreeViewEventArgs e)
         {
 
+        }
+
+        private void report_btn_Click(object sender, EventArgs e)
+        {
+            Point p;
+            p = new Point(this.report_btn.Left, this.top_panel1.Height);
+            this.rep_cm.Show(p);
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AccountingSoftware.Accounting.SalesInvoiceList SILFrm = new SalesInvoiceList(); // SILFrm == Sales Invoice List Form
+            SILFrm.MdiParent = this;
+            SILFrm.Show();
+        }
+
+        private void purchaseBillListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AccountingSoftware.Accounting.PurchaseBillListFrm PBLFrm = new PurchaseBillListFrm(); // SILFrm == Sales Invoice List Form
+            PBLFrm.MdiParent = this;
+            PBLFrm.Show();
         }
     }
 }
