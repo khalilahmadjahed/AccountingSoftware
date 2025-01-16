@@ -50,6 +50,11 @@
             toolStripSeparator6 = new ToolStripSeparator();
             search_btn = new ToolStripButton();
             toolStripSeparator7 = new ToolStripSeparator();
+            toolStripButton1 = new ToolStripDropDownButton();
+            print_toolStripMenuItem2 = new ToolStripMenuItem();
+            pdf_toolStripMenuItem1 = new ToolStripMenuItem();
+            excel_printToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator8 = new ToolStripSeparator();
             groupBox1 = new GroupBox();
             invoiceId_txtBox = new TextBox();
             bindingSource1 = new BindingSource(components);
@@ -133,6 +138,38 @@
             label36 = new Label();
             label35 = new Label();
             receiveMoneyTableAdapter1 = new Ds.AccDsTableAdapters.ReceiveMoneyTableAdapter();
+            prog_panel1 = new Panel();
+            progressBar1 = new ProgressBar();
+            prog_label9 = new Label();
+            label37 = new Label();
+            pro_id_txtBox = new TextBox();
+            label38 = new Label();
+            label39 = new Label();
+            label40 = new Label();
+            label41 = new Label();
+            label42 = new Label();
+            label43 = new Label();
+            net_amount_numericUpDown1 = new NumericUpDown();
+            tax_sum_numericUpDown2 = new NumericUpDown();
+            taxRate_nud = new NumericUpDown();
+            amount_numericUpDown3 = new NumericUpDown();
+            discount_nud = new NumericUpDown();
+            unitPrice_nud = new NumericUpDown();
+            qty_nud = new NumericUpDown();
+            label44 = new Label();
+            productSearch_btn = new Button();
+            label45 = new Label();
+            unit_txtBox = new TextBox();
+            label46 = new Label();
+            label47 = new Label();
+            label48 = new Label();
+            pro_comment_textBox1 = new TextBox();
+            label49 = new Label();
+            label50 = new Label();
+            label51 = new Label();
+            productName_txtBox = new TextBox();
+            label52 = new Label();
+            label53 = new Label();
             toolStrip1.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
@@ -153,15 +190,23 @@
             ((System.ComponentModel.ISupportInitialize)payTotal_nud).BeginInit();
             ((System.ComponentModel.ISupportInitialize)paidAmount_nud).BeginInit();
             ((System.ComponentModel.ISupportInitialize)totalDue_nud).BeginInit();
+            prog_panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)net_amount_numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)tax_sum_numericUpDown2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)taxRate_nud).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)amount_numericUpDown3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)discount_nud).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)unitPrice_nud).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)qty_nud).BeginInit();
             SuspendLayout();
             // 
             // toolStrip1
             // 
             toolStrip1.AutoSize = false;
-            toolStrip1.Items.AddRange(new ToolStripItem[] { new_btn, toolStripSeparator1, edit_btn, toolStripSeparator2, del_btn, toolStripSeparator3, save_btn, toolStripSeparator4, cancel_btn, toolStripSeparator5, toolStripSeparator6, search_btn, toolStripSeparator7 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { new_btn, toolStripSeparator1, edit_btn, toolStripSeparator2, del_btn, toolStripSeparator3, save_btn, toolStripSeparator4, cancel_btn, toolStripSeparator5, toolStripSeparator6, search_btn, toolStripSeparator7, toolStripButton1, toolStripSeparator8 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(889, 64);
+            toolStrip1.Size = new Size(891, 64);
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -277,6 +322,49 @@
             toolStripSeparator7.Alignment = ToolStripItemAlignment.Right;
             toolStripSeparator7.Name = "toolStripSeparator7";
             toolStripSeparator7.Size = new Size(6, 64);
+            // 
+            // toolStripButton1
+            // 
+            toolStripButton1.AutoSize = false;
+            toolStripButton1.DropDownItems.AddRange(new ToolStripItem[] { print_toolStripMenuItem2, pdf_toolStripMenuItem1, excel_printToolStripMenuItem });
+            toolStripButton1.ForeColor = Color.Black;
+            toolStripButton1.Image = Properties.Resources.printer;
+            toolStripButton1.ImageScaling = ToolStripItemImageScaling.None;
+            toolStripButton1.ImageTransparentColor = Color.Magenta;
+            toolStripButton1.Name = "toolStripButton1";
+            toolStripButton1.Size = new Size(90, 58);
+            toolStripButton1.Text = "Print";
+            toolStripButton1.TextImageRelation = TextImageRelation.ImageAboveText;
+            // 
+            // print_toolStripMenuItem2
+            // 
+            print_toolStripMenuItem2.Image = Properties.Resources.printer;
+            print_toolStripMenuItem2.ImageScaling = ToolStripItemImageScaling.None;
+            print_toolStripMenuItem2.Name = "print_toolStripMenuItem2";
+            print_toolStripMenuItem2.Size = new Size(158, 30);
+            print_toolStripMenuItem2.Text = "Print";
+            print_toolStripMenuItem2.Click += print_toolStripMenuItem2_Click;
+            // 
+            // pdf_toolStripMenuItem1
+            // 
+            pdf_toolStripMenuItem1.Image = Properties.Resources.pdf;
+            pdf_toolStripMenuItem1.ImageScaling = ToolStripItemImageScaling.None;
+            pdf_toolStripMenuItem1.Name = "pdf_toolStripMenuItem1";
+            pdf_toolStripMenuItem1.Size = new Size(158, 30);
+            pdf_toolStripMenuItem1.Text = "Save as Pdf";
+            // 
+            // excel_printToolStripMenuItem
+            // 
+            excel_printToolStripMenuItem.Image = Properties.Resources.excel;
+            excel_printToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
+            excel_printToolStripMenuItem.Name = "excel_printToolStripMenuItem";
+            excel_printToolStripMenuItem.Size = new Size(158, 30);
+            excel_printToolStripMenuItem.Text = "Export to Excel";
+            // 
+            // toolStripSeparator8
+            // 
+            toolStripSeparator8.Name = "toolStripSeparator8";
+            toolStripSeparator8.Size = new Size(6, 64);
             // 
             // groupBox1
             // 
@@ -467,7 +555,7 @@
             panel1.Dock = DockStyle.Bottom;
             panel1.Location = new Point(0, 735);
             panel1.Name = "panel1";
-            panel1.Size = new Size(889, 34);
+            panel1.Size = new Size(891, 34);
             panel1.TabIndex = 4;
             // 
             // label12
@@ -475,7 +563,7 @@
             label12.AutoSize = true;
             label12.Location = new Point(504, 9);
             label12.Name = "label12";
-            label12.Size = new Size(59, 15);
+            label12.Size = new Size(60, 15);
             label12.TabIndex = 0;
             label12.Text = "Reg Time:";
             // 
@@ -1097,11 +1185,362 @@
             // 
             receiveMoneyTableAdapter1.ClearBeforeFill = true;
             // 
+            // prog_panel1
+            // 
+            prog_panel1.BackColor = Color.FromArgb(77, 161, 169);
+            prog_panel1.Controls.Add(progressBar1);
+            prog_panel1.Controls.Add(prog_label9);
+            prog_panel1.Controls.Add(label37);
+            prog_panel1.Location = new Point(344, 338);
+            prog_panel1.Name = "prog_panel1";
+            prog_panel1.Size = new Size(200, 92);
+            prog_panel1.TabIndex = 21;
+            prog_panel1.Visible = false;
+            // 
+            // progressBar1
+            // 
+            progressBar1.Location = new Point(0, 80);
+            progressBar1.Name = "progressBar1";
+            progressBar1.Size = new Size(200, 12);
+            progressBar1.TabIndex = 1;
+            // 
+            // prog_label9
+            // 
+            prog_label9.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            prog_label9.Location = new Point(3, 50);
+            prog_label9.Name = "prog_label9";
+            prog_label9.Size = new Size(194, 15);
+            prog_label9.TabIndex = 0;
+            // 
+            // label37
+            // 
+            label37.AutoSize = true;
+            label37.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label37.Location = new Point(65, 12);
+            label37.Name = "label37";
+            label37.Size = new Size(78, 15);
+            label37.TabIndex = 0;
+            label37.Text = "Please wait...";
+            // 
+            // pro_id_txtBox
+            // 
+            pro_id_txtBox.BorderStyle = BorderStyle.FixedSingle;
+            pro_id_txtBox.DataBindings.Add(new Binding("Text", bindingSource3, "ID", true));
+            pro_id_txtBox.Location = new Point(1065, 93);
+            pro_id_txtBox.Name = "pro_id_txtBox";
+            pro_id_txtBox.ReadOnly = true;
+            pro_id_txtBox.Size = new Size(127, 23);
+            pro_id_txtBox.TabIndex = 22;
+            // 
+            // label38
+            // 
+            label38.AutoSize = true;
+            label38.ForeColor = Color.White;
+            label38.Location = new Point(1046, 358);
+            label38.Name = "label38";
+            label38.Size = new Size(13, 15);
+            label38.TabIndex = 49;
+            label38.Text = "$";
+            // 
+            // label39
+            // 
+            label39.AutoSize = true;
+            label39.ForeColor = Color.White;
+            label39.Location = new Point(1046, 329);
+            label39.Name = "label39";
+            label39.Size = new Size(13, 15);
+            label39.TabIndex = 48;
+            label39.Text = "$";
+            // 
+            // label40
+            // 
+            label40.AutoSize = true;
+            label40.ForeColor = Color.White;
+            label40.Location = new Point(1046, 300);
+            label40.Name = "label40";
+            label40.Size = new Size(17, 15);
+            label40.TabIndex = 47;
+            label40.Text = "%";
+            // 
+            // label41
+            // 
+            label41.AutoSize = true;
+            label41.ForeColor = Color.White;
+            label41.Location = new Point(1046, 271);
+            label41.Name = "label41";
+            label41.Size = new Size(13, 15);
+            label41.TabIndex = 46;
+            label41.Text = "$";
+            // 
+            // label42
+            // 
+            label42.AutoSize = true;
+            label42.ForeColor = Color.White;
+            label42.Location = new Point(1046, 242);
+            label42.Name = "label42";
+            label42.Size = new Size(13, 15);
+            label42.TabIndex = 44;
+            label42.Text = "$";
+            // 
+            // label43
+            // 
+            label43.AutoSize = true;
+            label43.ForeColor = Color.White;
+            label43.Location = new Point(1046, 213);
+            label43.Name = "label43";
+            label43.Size = new Size(13, 15);
+            label43.TabIndex = 43;
+            label43.Text = "$";
+            // 
+            // net_amount_numericUpDown1
+            // 
+            net_amount_numericUpDown1.DataBindings.Add(new Binding("Value", bindingSource3, "NetAmount", true));
+            net_amount_numericUpDown1.DecimalPlaces = 2;
+            net_amount_numericUpDown1.Increment = new decimal(new int[] { 0, 0, 0, 0 });
+            net_amount_numericUpDown1.Location = new Point(1065, 354);
+            net_amount_numericUpDown1.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
+            net_amount_numericUpDown1.Name = "net_amount_numericUpDown1";
+            net_amount_numericUpDown1.ReadOnly = true;
+            net_amount_numericUpDown1.Size = new Size(127, 23);
+            net_amount_numericUpDown1.TabIndex = 42;
+            // 
+            // tax_sum_numericUpDown2
+            // 
+            tax_sum_numericUpDown2.DataBindings.Add(new Binding("Value", bindingSource3, "TaxSum", true));
+            tax_sum_numericUpDown2.DecimalPlaces = 2;
+            tax_sum_numericUpDown2.Increment = new decimal(new int[] { 0, 0, 0, 0 });
+            tax_sum_numericUpDown2.Location = new Point(1065, 325);
+            tax_sum_numericUpDown2.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
+            tax_sum_numericUpDown2.Name = "tax_sum_numericUpDown2";
+            tax_sum_numericUpDown2.ReadOnly = true;
+            tax_sum_numericUpDown2.Size = new Size(127, 23);
+            tax_sum_numericUpDown2.TabIndex = 41;
+            // 
+            // taxRate_nud
+            // 
+            taxRate_nud.DataBindings.Add(new Binding("Value", bindingSource3, "TaxRate", true));
+            taxRate_nud.DecimalPlaces = 2;
+            taxRate_nud.Increment = new decimal(new int[] { 0, 0, 0, 0 });
+            taxRate_nud.Location = new Point(1065, 296);
+            taxRate_nud.Name = "taxRate_nud";
+            taxRate_nud.ReadOnly = true;
+            taxRate_nud.Size = new Size(127, 23);
+            taxRate_nud.TabIndex = 40;
+            // 
+            // amount_numericUpDown3
+            // 
+            amount_numericUpDown3.DataBindings.Add(new Binding("Value", bindingSource3, "Amount", true));
+            amount_numericUpDown3.DecimalPlaces = 2;
+            amount_numericUpDown3.Increment = new decimal(new int[] { 0, 0, 0, 0 });
+            amount_numericUpDown3.Location = new Point(1065, 267);
+            amount_numericUpDown3.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
+            amount_numericUpDown3.Name = "amount_numericUpDown3";
+            amount_numericUpDown3.ReadOnly = true;
+            amount_numericUpDown3.Size = new Size(127, 23);
+            amount_numericUpDown3.TabIndex = 39;
+            // 
+            // discount_nud
+            // 
+            discount_nud.DataBindings.Add(new Binding("Value", bindingSource3, "Discount", true));
+            discount_nud.DecimalPlaces = 2;
+            discount_nud.Increment = new decimal(new int[] { 5, 0, 0, 65536 });
+            discount_nud.Location = new Point(1065, 238);
+            discount_nud.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
+            discount_nud.Name = "discount_nud";
+            discount_nud.Size = new Size(127, 23);
+            discount_nud.TabIndex = 38;
+            // 
+            // unitPrice_nud
+            // 
+            unitPrice_nud.DataBindings.Add(new Binding("Value", bindingSource3, "UnitPrice", true));
+            unitPrice_nud.DecimalPlaces = 2;
+            unitPrice_nud.Increment = new decimal(new int[] { 5, 0, 0, 65536 });
+            unitPrice_nud.Location = new Point(1065, 209);
+            unitPrice_nud.Maximum = new decimal(new int[] { 1000000000, 0, 0, 0 });
+            unitPrice_nud.Name = "unitPrice_nud";
+            unitPrice_nud.Size = new Size(127, 23);
+            unitPrice_nud.TabIndex = 37;
+            // 
+            // qty_nud
+            // 
+            qty_nud.DataBindings.Add(new Binding("Value", bindingSource3, "Qty", true));
+            qty_nud.Location = new Point(1065, 151);
+            qty_nud.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
+            qty_nud.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            qty_nud.Name = "qty_nud";
+            qty_nud.Size = new Size(127, 23);
+            qty_nud.TabIndex = 35;
+            qty_nud.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
+            // label44
+            // 
+            label44.AutoSize = true;
+            label44.ForeColor = Color.Black;
+            label44.Location = new Point(937, 358);
+            label44.Name = "label44";
+            label44.Size = new Size(76, 15);
+            label44.TabIndex = 32;
+            label44.Text = "Net Amount:";
+            // 
+            // productSearch_btn
+            // 
+            productSearch_btn.Location = new Point(921, 122);
+            productSearch_btn.Name = "productSearch_btn";
+            productSearch_btn.Size = new Size(112, 23);
+            productSearch_btn.TabIndex = 23;
+            productSearch_btn.Text = "Products Name:";
+            productSearch_btn.UseVisualStyleBackColor = true;
+            // 
+            // label45
+            // 
+            label45.AutoSize = true;
+            label45.ForeColor = Color.Black;
+            label45.Location = new Point(937, 329);
+            label45.Name = "label45";
+            label45.Size = new Size(54, 15);
+            label45.TabIndex = 31;
+            label45.Text = "Tax Sum:";
+            // 
+            // unit_txtBox
+            // 
+            unit_txtBox.DataBindings.Add(new Binding("Text", bindingSource3, "Unit", true));
+            unit_txtBox.Location = new Point(1066, 180);
+            unit_txtBox.Name = "unit_txtBox";
+            unit_txtBox.Size = new Size(127, 23);
+            unit_txtBox.TabIndex = 36;
+            // 
+            // label46
+            // 
+            label46.AutoSize = true;
+            label46.ForeColor = Color.Black;
+            label46.Location = new Point(937, 300);
+            label46.Name = "label46";
+            label46.Size = new Size(53, 15);
+            label46.TabIndex = 30;
+            label46.Text = "Tax Rate:";
+            // 
+            // label47
+            // 
+            label47.AutoSize = true;
+            label47.ForeColor = Color.Black;
+            label47.Location = new Point(937, 184);
+            label47.Name = "label47";
+            label47.Size = new Size(32, 15);
+            label47.TabIndex = 29;
+            label47.Text = "Unit:";
+            // 
+            // label48
+            // 
+            label48.AutoSize = true;
+            label48.ForeColor = Color.Black;
+            label48.Location = new Point(937, 271);
+            label48.Name = "label48";
+            label48.Size = new Size(54, 15);
+            label48.TabIndex = 28;
+            label48.Text = "Amount:";
+            // 
+            // pro_comment_textBox1
+            // 
+            pro_comment_textBox1.DataBindings.Add(new Binding("Text", bindingSource3, "comment", true));
+            pro_comment_textBox1.Location = new Point(1065, 383);
+            pro_comment_textBox1.Name = "pro_comment_textBox1";
+            pro_comment_textBox1.Size = new Size(281, 23);
+            pro_comment_textBox1.TabIndex = 45;
+            // 
+            // label49
+            // 
+            label49.AutoSize = true;
+            label49.ForeColor = Color.Black;
+            label49.Location = new Point(937, 242);
+            label49.Name = "label49";
+            label49.Size = new Size(57, 15);
+            label49.TabIndex = 27;
+            label49.Text = "Discount:";
+            // 
+            // label50
+            // 
+            label50.AutoSize = true;
+            label50.ForeColor = Color.Black;
+            label50.Location = new Point(937, 387);
+            label50.Name = "label50";
+            label50.Size = new Size(64, 15);
+            label50.TabIndex = 26;
+            label50.Text = "Comment:";
+            // 
+            // label51
+            // 
+            label51.AutoSize = true;
+            label51.ForeColor = Color.Black;
+            label51.Location = new Point(937, 213);
+            label51.Name = "label51";
+            label51.Size = new Size(61, 15);
+            label51.TabIndex = 25;
+            label51.Text = "Unit Price:";
+            // 
+            // productName_txtBox
+            // 
+            productName_txtBox.BorderStyle = BorderStyle.FixedSingle;
+            productName_txtBox.DataBindings.Add(new Binding("Text", bindingSource3, "ProductName", true));
+            productName_txtBox.Location = new Point(1065, 122);
+            productName_txtBox.Name = "productName_txtBox";
+            productName_txtBox.ReadOnly = true;
+            productName_txtBox.Size = new Size(127, 23);
+            productName_txtBox.TabIndex = 24;
+            // 
+            // label52
+            // 
+            label52.AutoSize = true;
+            label52.ForeColor = Color.Black;
+            label52.Location = new Point(937, 155);
+            label52.Name = "label52";
+            label52.Size = new Size(32, 15);
+            label52.TabIndex = 33;
+            label52.Text = "QTY:";
+            // 
+            // label53
+            // 
+            label53.AutoSize = true;
+            label53.ForeColor = Color.Black;
+            label53.Location = new Point(937, 97);
+            label53.Name = "label53";
+            label53.Size = new Size(21, 15);
+            label53.TabIndex = 34;
+            label53.Text = "ID:";
+            // 
             // SalesInvoiceFrm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(889, 769);
+            ClientSize = new Size(891, 769);
+            Controls.Add(pro_id_txtBox);
+            Controls.Add(label38);
+            Controls.Add(label39);
+            Controls.Add(label40);
+            Controls.Add(label41);
+            Controls.Add(label42);
+            Controls.Add(label43);
+            Controls.Add(net_amount_numericUpDown1);
+            Controls.Add(tax_sum_numericUpDown2);
+            Controls.Add(taxRate_nud);
+            Controls.Add(amount_numericUpDown3);
+            Controls.Add(discount_nud);
+            Controls.Add(unitPrice_nud);
+            Controls.Add(qty_nud);
+            Controls.Add(label44);
+            Controls.Add(productSearch_btn);
+            Controls.Add(label45);
+            Controls.Add(unit_txtBox);
+            Controls.Add(label46);
+            Controls.Add(label47);
+            Controls.Add(label48);
+            Controls.Add(pro_comment_textBox1);
+            Controls.Add(label49);
+            Controls.Add(label50);
+            Controls.Add(label51);
+            Controls.Add(productName_txtBox);
+            Controls.Add(label52);
+            Controls.Add(label53);
+            Controls.Add(prog_panel1);
             Controls.Add(groupBox2);
             Controls.Add(total_nud);
             Controls.Add(label17);
@@ -1161,6 +1600,15 @@
             ((System.ComponentModel.ISupportInitialize)payTotal_nud).EndInit();
             ((System.ComponentModel.ISupportInitialize)paidAmount_nud).EndInit();
             ((System.ComponentModel.ISupportInitialize)totalDue_nud).EndInit();
+            prog_panel1.ResumeLayout(false);
+            prog_panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)net_amount_numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)tax_sum_numericUpDown2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)taxRate_nud).EndInit();
+            ((System.ComponentModel.ISupportInitialize)amount_numericUpDown3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)discount_nud).EndInit();
+            ((System.ComponentModel.ISupportInitialize)unitPrice_nud).EndInit();
+            ((System.ComponentModel.ISupportInitialize)qty_nud).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1264,5 +1712,42 @@
         private Label label36;
         private Label label35;
         private Ds.AccDsTableAdapters.ReceiveMoneyTableAdapter receiveMoneyTableAdapter1;
+        private ToolStripDropDownButton toolStripButton1;
+        private ToolStripMenuItem print_toolStripMenuItem2;
+        private ToolStripMenuItem pdf_toolStripMenuItem1;
+        private ToolStripMenuItem excel_printToolStripMenuItem;
+        private Panel prog_panel1;
+        private ProgressBar progressBar1;
+        private Label prog_label9;
+        private Label label37;
+        private TextBox pro_id_txtBox;
+        private Label label38;
+        private Label label39;
+        private Label label40;
+        private Label label41;
+        private Label label42;
+        private Label label43;
+        private NumericUpDown net_amount_numericUpDown1;
+        private NumericUpDown tax_sum_numericUpDown2;
+        private NumericUpDown taxRate_nud;
+        private NumericUpDown amount_numericUpDown3;
+        private NumericUpDown discount_nud;
+        private NumericUpDown unitPrice_nud;
+        private NumericUpDown qty_nud;
+        private Label label44;
+        private Button productSearch_btn;
+        private Label label45;
+        private TextBox unit_txtBox;
+        private Label label46;
+        private Label label47;
+        private Label label48;
+        private TextBox pro_comment_textBox1;
+        private Label label49;
+        private Label label50;
+        private Label label51;
+        private TextBox productName_txtBox;
+        private Label label52;
+        private Label label53;
+        private ToolStripSeparator toolStripSeparator8;
     }
 }
