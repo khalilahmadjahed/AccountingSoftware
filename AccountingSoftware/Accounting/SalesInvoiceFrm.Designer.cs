@@ -206,7 +206,7 @@
             toolStrip1.Items.AddRange(new ToolStripItem[] { new_btn, toolStripSeparator1, edit_btn, toolStripSeparator2, del_btn, toolStripSeparator3, save_btn, toolStripSeparator4, cancel_btn, toolStripSeparator5, toolStripSeparator6, search_btn, toolStripSeparator7, toolStripButton1, toolStripSeparator8 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(891, 64);
+            toolStrip1.Size = new Size(1269, 64);
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -341,7 +341,7 @@
             print_toolStripMenuItem2.Image = Properties.Resources.printer;
             print_toolStripMenuItem2.ImageScaling = ToolStripItemImageScaling.None;
             print_toolStripMenuItem2.Name = "print_toolStripMenuItem2";
-            print_toolStripMenuItem2.Size = new Size(158, 30);
+            print_toolStripMenuItem2.Size = new Size(188, 30);
             print_toolStripMenuItem2.Text = "Print";
             print_toolStripMenuItem2.Click += print_toolStripMenuItem2_Click;
             // 
@@ -350,7 +350,7 @@
             pdf_toolStripMenuItem1.Image = Properties.Resources.pdf;
             pdf_toolStripMenuItem1.ImageScaling = ToolStripItemImageScaling.None;
             pdf_toolStripMenuItem1.Name = "pdf_toolStripMenuItem1";
-            pdf_toolStripMenuItem1.Size = new Size(158, 30);
+            pdf_toolStripMenuItem1.Size = new Size(188, 30);
             pdf_toolStripMenuItem1.Text = "Save as Pdf";
             // 
             // excel_printToolStripMenuItem
@@ -358,7 +358,7 @@
             excel_printToolStripMenuItem.Image = Properties.Resources.excel;
             excel_printToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
             excel_printToolStripMenuItem.Name = "excel_printToolStripMenuItem";
-            excel_printToolStripMenuItem.Size = new Size(158, 30);
+            excel_printToolStripMenuItem.Size = new Size(188, 30);
             excel_printToolStripMenuItem.Text = "Export to Excel";
             // 
             // toolStripSeparator8
@@ -555,7 +555,7 @@
             panel1.Dock = DockStyle.Bottom;
             panel1.Location = new Point(0, 735);
             panel1.Name = "panel1";
-            panel1.Size = new Size(891, 34);
+            panel1.Size = new Size(1269, 34);
             panel1.TabIndex = 4;
             // 
             // label12
@@ -1511,7 +1511,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(891, 769);
+            ClientSize = new Size(1269, 769);
             Controls.Add(pro_id_txtBox);
             Controls.Add(label38);
             Controls.Add(label39);

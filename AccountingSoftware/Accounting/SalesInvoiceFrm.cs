@@ -439,18 +439,18 @@ namespace AccountingSoftware.Accounting
                 //==============add table data==============================
                 for (int row_index = 0; row_index < this.accDs1.SalesInvoiceProducts.Rows.Count; row_index++)
                 {
-                    this.bindingSource1.Position = row_index;
+                    this.bindingSource3.Position = row_index;
                     table_data_loader(tbl, this.pro_id_txtBox.Text, 1, TextAlignment.CENTER);
                     table_data_loader(tbl, this.productName_txtBox.Text, 2, TextAlignment.LEFT);
                     table_data_loader(tbl, this.qty_nud.Text, 1, TextAlignment.LEFT);
-                    table_data_loader(tbl, this.unit_txtBox.Text, 1, TextAlignment.LEFT);
+                    table_data_loader(tbl, this.unit_txtBox.Text, 1, TextAlignment.CENTER);
 
                     //-------------
-                    table_data_loader(tbl, "$ " + this.unitPrice_nud.Value.ToString("F"), 1, TextAlignment.LEFT);
-                    table_data_loader(tbl, "$ " + this.discount_nud.Value.ToString("F"), 1, TextAlignment.LEFT);
-                    table_data_loader(tbl, "$ " + this.amount_nud.Value.ToString("F"), 1, TextAlignment.LEFT);
-                    table_data_loader(tbl, "$ " + this.tax_sum_numericUpDown2.Value.ToString("F"), 1, TextAlignment.LEFT);
-                    table_data_loader(tbl, "$ " + this.net_amount_numericUpDown1.Value.ToString("F"), 2, TextAlignment.LEFT);
+                    table_data_loader(tbl, "$ " + this.unitPrice_nud.Value.ToString("F"), 1, TextAlignment.CENTER);
+                    table_data_loader(tbl, "$ " + this.discount_nud.Value.ToString("F"), 1, TextAlignment.CENTER);
+                    table_data_loader(tbl, "$ " + this.amount_nud.Value.ToString("F"), 1, TextAlignment.CENTER);
+                    table_data_loader(tbl, "$ " + this.tax_sum_numericUpDown2.Value.ToString("F"), 1, TextAlignment.CENTER);
+                    table_data_loader(tbl, "$ " + this.net_amount_numericUpDown1.Value.ToString("F"), 2, TextAlignment.CENTER);
 
                     //-------------
                     table_data_loader(tbl, this.pro_comment_textBox1.Text, 2, TextAlignment.LEFT);
@@ -466,7 +466,19 @@ namespace AccountingSoftware.Accounting
                 //--------2nd add line seperator------
                 iText.Layout.Element.LineSeparator ls2 = new LineSeparator(new SolidLine(1));
                 final_doc.Add(ls);
-                //--------
+                //--------footer
+                footer_loader("Amount: $ " + this.amount_nud.Value.ToString("F"), final_doc);
+                footer_loader("+ Tax Sum: $ " + this.taxSum_nud.Value.ToString("F"), final_doc);
+                footer_loader("= Net amount: $ " + this.netAmount_nud.Value.ToString("F"), final_doc);
+                footer_loader("+ Shipping: $ " + this.shipping_nud.Value.ToString("F"), final_doc);
+                footer_loader("+ Other: $ " + this.other_nud.Value.ToString("F"), final_doc);
+                footer_loader("= Total: $ " + this.total_nud.Value.ToString("F"), final_doc);
+                footer_loader("- Paid Amount: $ " + this.paidAmount_nud.Value.ToString("F"), final_doc);
+                footer_loader("= Total Due: $ " + this.totalDue_nud.Value.ToString("F"), final_doc);
+
+
+
+
                 //---------------
                 final_doc.Close();
                 //------------------------
@@ -492,6 +504,17 @@ namespace AccountingSoftware.Accounting
             //--------------------
         }
 
+        void footer_loader(string txt, Document final_doc)
+        {
+            iText.Layout.Element.Paragraph fs_footer = new Paragraph(txt);
+            fs_footer.SetWidth(158);
+            fs_footer.SetBorder(new iText.Layout.Borders.SolidBorder(ColorConstants.BLACK, 1));
+            fs_footer.SetHorizontalAlignment(iText.Layout.Properties.HorizontalAlignment.RIGHT);
+            fs_footer.SetFontSize(8);
+            fs_footer.SetPadding(1);
+            fs_footer.SetMargin(0);
+            final_doc.Add(fs_footer);
+        }
         void table_header_loader(Table tbl, string cell_text, int col_span)
         {
 
