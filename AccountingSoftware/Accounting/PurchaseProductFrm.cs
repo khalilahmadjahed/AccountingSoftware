@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,6 +20,7 @@ namespace AccountingSoftware.Accounting
 
         Boolean is_del_btn = false;
         public int selected_purchase_id = 0;
+       
 
         //this function will Enable the Save and Cancle buttons after clicking the New, Edit or Delete buttons
         void new_edit_delete_btn()
@@ -79,6 +81,7 @@ namespace AccountingSoftware.Accounting
             save_cancle_btns();
             //this.salesInvoiceProductsTableAdapter1.Fill_All(this.accDs1.SalesInvoiceProducts);
             this.purchaseProductTableAdapter1.FillBy_PurchaseId(this.accDs1.PurchaseProduct, selected_purchase_id);
+            this.purchaseProductTableAdapter1.Fill_All(this.accDs1.PurchaseProduct);
         }
 
         private void edit_btn_Click(object sender, EventArgs e)

@@ -36,25 +36,6 @@
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            toolStrip1 = new ToolStrip();
-            new_btn = new ToolStripButton();
-            toolStripSeparator1 = new ToolStripSeparator();
-            edit_btn = new ToolStripButton();
-            toolStripSeparator2 = new ToolStripSeparator();
-            del_btn = new ToolStripButton();
-            toolStripSeparator3 = new ToolStripSeparator();
-            save_btn = new ToolStripButton();
-            toolStripSeparator4 = new ToolStripSeparator();
-            cancel_btn = new ToolStripButton();
-            toolStripSeparator5 = new ToolStripSeparator();
-            toolStripSeparator6 = new ToolStripSeparator();
-            search_btn = new ToolStripButton();
-            toolStripSeparator7 = new ToolStripSeparator();
-            toolStripButton1 = new ToolStripDropDownButton();
-            print_toolStripMenuItem2 = new ToolStripMenuItem();
-            pdf_toolStripMenuItem1 = new ToolStripMenuItem();
-            excel_printToolStripMenuItem = new ToolStripMenuItem();
-            toolStripSeparator8 = new ToolStripSeparator();
             groupBox1 = new GroupBox();
             invoiceId_txtBox = new TextBox();
             bindingSource1 = new BindingSource(components);
@@ -170,7 +151,19 @@
             productName_txtBox = new TextBox();
             label52 = new Label();
             label53 = new Label();
-            toolStrip1.SuspendLayout();
+            new_btn = new ToolStripButton();
+            toolStripSeparator1 = new ToolStripSeparator();
+            edit_btn = new ToolStripButton();
+            toolStripSeparator2 = new ToolStripSeparator();
+            del_btn = new ToolStripButton();
+            toolStripSeparator3 = new ToolStripSeparator();
+            save_btn = new ToolStripButton();
+            toolStripSeparator4 = new ToolStripSeparator();
+            cancel_btn = new ToolStripButton();
+            toolStripSeparator5 = new ToolStripSeparator();
+            toolStripButton1 = new ToolStripButton();
+            toolStripSeparator8 = new ToolStripSeparator();
+            toolStrip1 = new ToolStrip();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)accDs1).BeginInit();
@@ -198,173 +191,8 @@
             ((System.ComponentModel.ISupportInitialize)discount_nud).BeginInit();
             ((System.ComponentModel.ISupportInitialize)unitPrice_nud).BeginInit();
             ((System.ComponentModel.ISupportInitialize)qty_nud).BeginInit();
+            toolStrip1.SuspendLayout();
             SuspendLayout();
-            // 
-            // toolStrip1
-            // 
-            toolStrip1.AutoSize = false;
-            toolStrip1.Items.AddRange(new ToolStripItem[] { new_btn, toolStripSeparator1, edit_btn, toolStripSeparator2, del_btn, toolStripSeparator3, save_btn, toolStripSeparator4, cancel_btn, toolStripSeparator5, toolStripSeparator6, search_btn, toolStripSeparator7, toolStripButton1, toolStripSeparator8 });
-            toolStrip1.Location = new Point(0, 0);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(1269, 64);
-            toolStrip1.TabIndex = 1;
-            toolStrip1.Text = "toolStrip1";
-            // 
-            // new_btn
-            // 
-            new_btn.AutoSize = false;
-            new_btn.Image = Properties.Resources.new_butt;
-            new_btn.ImageScaling = ToolStripItemImageScaling.None;
-            new_btn.ImageTransparentColor = Color.Magenta;
-            new_btn.Name = "new_btn";
-            new_btn.Size = new Size(100, 58);
-            new_btn.Text = "New Invoice";
-            new_btn.TextImageRelation = TextImageRelation.ImageAboveText;
-            new_btn.Click += new_btn_Click;
-            // 
-            // toolStripSeparator1
-            // 
-            toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(6, 64);
-            // 
-            // edit_btn
-            // 
-            edit_btn.AutoSize = false;
-            edit_btn.Image = Properties.Resources.edit_butt;
-            edit_btn.ImageScaling = ToolStripItemImageScaling.None;
-            edit_btn.ImageTransparentColor = Color.Magenta;
-            edit_btn.Name = "edit_btn";
-            edit_btn.Size = new Size(70, 58);
-            edit_btn.Text = "Edit";
-            edit_btn.TextImageRelation = TextImageRelation.ImageAboveText;
-            edit_btn.Click += edit_btn_Click;
-            // 
-            // toolStripSeparator2
-            // 
-            toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(6, 64);
-            // 
-            // del_btn
-            // 
-            del_btn.AutoSize = false;
-            del_btn.Image = Properties.Resources.del_butt;
-            del_btn.ImageScaling = ToolStripItemImageScaling.None;
-            del_btn.ImageTransparentColor = Color.Magenta;
-            del_btn.Name = "del_btn";
-            del_btn.Size = new Size(90, 58);
-            del_btn.Text = "Delete";
-            del_btn.TextImageRelation = TextImageRelation.ImageAboveText;
-            del_btn.Visible = false;
-            del_btn.Click += del_btn_Click;
-            // 
-            // toolStripSeparator3
-            // 
-            toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(6, 64);
-            toolStripSeparator3.Visible = false;
-            // 
-            // save_btn
-            // 
-            save_btn.AutoSize = false;
-            save_btn.Enabled = false;
-            save_btn.Image = Properties.Resources.save_utt;
-            save_btn.ImageScaling = ToolStripItemImageScaling.None;
-            save_btn.ImageTransparentColor = Color.Magenta;
-            save_btn.Name = "save_btn";
-            save_btn.Size = new Size(90, 58);
-            save_btn.Text = "Save";
-            save_btn.TextImageRelation = TextImageRelation.ImageAboveText;
-            save_btn.Click += save_btn_Click;
-            // 
-            // toolStripSeparator4
-            // 
-            toolStripSeparator4.Name = "toolStripSeparator4";
-            toolStripSeparator4.Size = new Size(6, 64);
-            // 
-            // cancel_btn
-            // 
-            cancel_btn.AutoSize = false;
-            cancel_btn.Enabled = false;
-            cancel_btn.Image = Properties.Resources.canecl_butt;
-            cancel_btn.ImageScaling = ToolStripItemImageScaling.None;
-            cancel_btn.ImageTransparentColor = Color.Magenta;
-            cancel_btn.Name = "cancel_btn";
-            cancel_btn.Size = new Size(90, 58);
-            cancel_btn.Text = "Cancel";
-            cancel_btn.TextImageRelation = TextImageRelation.ImageAboveText;
-            cancel_btn.Click += cancel_btn_Click;
-            // 
-            // toolStripSeparator5
-            // 
-            toolStripSeparator5.Name = "toolStripSeparator5";
-            toolStripSeparator5.Size = new Size(6, 64);
-            // 
-            // toolStripSeparator6
-            // 
-            toolStripSeparator6.Alignment = ToolStripItemAlignment.Right;
-            toolStripSeparator6.Name = "toolStripSeparator6";
-            toolStripSeparator6.Size = new Size(6, 64);
-            // 
-            // search_btn
-            // 
-            search_btn.Alignment = ToolStripItemAlignment.Right;
-            search_btn.AutoSize = false;
-            search_btn.Image = Properties.Resources.Search;
-            search_btn.ImageScaling = ToolStripItemImageScaling.None;
-            search_btn.ImageTransparentColor = Color.Magenta;
-            search_btn.Name = "search_btn";
-            search_btn.Size = new Size(90, 58);
-            search_btn.Text = "Search";
-            search_btn.TextImageRelation = TextImageRelation.ImageAboveText;
-            // 
-            // toolStripSeparator7
-            // 
-            toolStripSeparator7.Alignment = ToolStripItemAlignment.Right;
-            toolStripSeparator7.Name = "toolStripSeparator7";
-            toolStripSeparator7.Size = new Size(6, 64);
-            // 
-            // toolStripButton1
-            // 
-            toolStripButton1.AutoSize = false;
-            toolStripButton1.DropDownItems.AddRange(new ToolStripItem[] { print_toolStripMenuItem2, pdf_toolStripMenuItem1, excel_printToolStripMenuItem });
-            toolStripButton1.ForeColor = Color.Black;
-            toolStripButton1.Image = Properties.Resources.printer;
-            toolStripButton1.ImageScaling = ToolStripItemImageScaling.None;
-            toolStripButton1.ImageTransparentColor = Color.Magenta;
-            toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Size = new Size(90, 58);
-            toolStripButton1.Text = "Print";
-            toolStripButton1.TextImageRelation = TextImageRelation.ImageAboveText;
-            // 
-            // print_toolStripMenuItem2
-            // 
-            print_toolStripMenuItem2.Image = Properties.Resources.printer;
-            print_toolStripMenuItem2.ImageScaling = ToolStripItemImageScaling.None;
-            print_toolStripMenuItem2.Name = "print_toolStripMenuItem2";
-            print_toolStripMenuItem2.Size = new Size(188, 30);
-            print_toolStripMenuItem2.Text = "Print";
-            print_toolStripMenuItem2.Click += print_toolStripMenuItem2_Click;
-            // 
-            // pdf_toolStripMenuItem1
-            // 
-            pdf_toolStripMenuItem1.Image = Properties.Resources.pdf;
-            pdf_toolStripMenuItem1.ImageScaling = ToolStripItemImageScaling.None;
-            pdf_toolStripMenuItem1.Name = "pdf_toolStripMenuItem1";
-            pdf_toolStripMenuItem1.Size = new Size(188, 30);
-            pdf_toolStripMenuItem1.Text = "Save as Pdf";
-            // 
-            // excel_printToolStripMenuItem
-            // 
-            excel_printToolStripMenuItem.Image = Properties.Resources.excel;
-            excel_printToolStripMenuItem.ImageScaling = ToolStripItemImageScaling.None;
-            excel_printToolStripMenuItem.Name = "excel_printToolStripMenuItem";
-            excel_printToolStripMenuItem.Size = new Size(188, 30);
-            excel_printToolStripMenuItem.Text = "Export to Excel";
-            // 
-            // toolStripSeparator8
-            // 
-            toolStripSeparator8.Name = "toolStripSeparator8";
-            toolStripSeparator8.Size = new Size(6, 64);
             // 
             // groupBox1
             // 
@@ -555,7 +383,7 @@
             panel1.Dock = DockStyle.Bottom;
             panel1.Location = new Point(0, 735);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1269, 34);
+            panel1.Size = new Size(891, 34);
             panel1.TabIndex = 4;
             // 
             // label12
@@ -1507,11 +1335,128 @@
             label53.TabIndex = 34;
             label53.Text = "ID:";
             // 
+            // new_btn
+            // 
+            new_btn.AutoSize = false;
+            new_btn.Image = Properties.Resources.new_butt;
+            new_btn.ImageScaling = ToolStripItemImageScaling.None;
+            new_btn.ImageTransparentColor = Color.Magenta;
+            new_btn.Name = "new_btn";
+            new_btn.Size = new Size(100, 58);
+            new_btn.Text = "New Invoice";
+            new_btn.TextImageRelation = TextImageRelation.ImageAboveText;
+            new_btn.Click += new_btn_Click;
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(6, 64);
+            // 
+            // edit_btn
+            // 
+            edit_btn.AutoSize = false;
+            edit_btn.Image = Properties.Resources.edit_butt;
+            edit_btn.ImageScaling = ToolStripItemImageScaling.None;
+            edit_btn.ImageTransparentColor = Color.Magenta;
+            edit_btn.Name = "edit_btn";
+            edit_btn.Size = new Size(70, 58);
+            edit_btn.Text = "Edit";
+            edit_btn.TextImageRelation = TextImageRelation.ImageAboveText;
+            edit_btn.Click += edit_btn_Click;
+            // 
+            // toolStripSeparator2
+            // 
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(6, 64);
+            // 
+            // del_btn
+            // 
+            del_btn.AutoSize = false;
+            del_btn.Image = Properties.Resources.del_butt;
+            del_btn.ImageScaling = ToolStripItemImageScaling.None;
+            del_btn.ImageTransparentColor = Color.Magenta;
+            del_btn.Name = "del_btn";
+            del_btn.Size = new Size(90, 58);
+            del_btn.Text = "Delete";
+            del_btn.TextImageRelation = TextImageRelation.ImageAboveText;
+            del_btn.Visible = false;
+            del_btn.Click += del_btn_Click;
+            // 
+            // toolStripSeparator3
+            // 
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(6, 64);
+            toolStripSeparator3.Visible = false;
+            // 
+            // save_btn
+            // 
+            save_btn.AutoSize = false;
+            save_btn.Enabled = false;
+            save_btn.Image = Properties.Resources.save_utt;
+            save_btn.ImageScaling = ToolStripItemImageScaling.None;
+            save_btn.ImageTransparentColor = Color.Magenta;
+            save_btn.Name = "save_btn";
+            save_btn.Size = new Size(90, 58);
+            save_btn.Text = "Save";
+            save_btn.TextImageRelation = TextImageRelation.ImageAboveText;
+            save_btn.Click += save_btn_Click;
+            // 
+            // toolStripSeparator4
+            // 
+            toolStripSeparator4.Name = "toolStripSeparator4";
+            toolStripSeparator4.Size = new Size(6, 64);
+            // 
+            // cancel_btn
+            // 
+            cancel_btn.AutoSize = false;
+            cancel_btn.Enabled = false;
+            cancel_btn.Image = Properties.Resources.canecl_butt;
+            cancel_btn.ImageScaling = ToolStripItemImageScaling.None;
+            cancel_btn.ImageTransparentColor = Color.Magenta;
+            cancel_btn.Name = "cancel_btn";
+            cancel_btn.Size = new Size(90, 58);
+            cancel_btn.Text = "Cancel";
+            cancel_btn.TextImageRelation = TextImageRelation.ImageAboveText;
+            cancel_btn.Click += cancel_btn_Click;
+            // 
+            // toolStripSeparator5
+            // 
+            toolStripSeparator5.Name = "toolStripSeparator5";
+            toolStripSeparator5.Size = new Size(6, 64);
+            // 
+            // toolStripButton1
+            // 
+            toolStripButton1.AutoSize = false;
+            toolStripButton1.ForeColor = Color.Black;
+            toolStripButton1.Image = Properties.Resources.printer;
+            toolStripButton1.ImageScaling = ToolStripItemImageScaling.None;
+            toolStripButton1.ImageTransparentColor = Color.Magenta;
+            toolStripButton1.Name = "toolStripButton1";
+            toolStripButton1.Size = new Size(90, 58);
+            toolStripButton1.Text = "Print";
+            toolStripButton1.TextImageRelation = TextImageRelation.ImageAboveText;
+            toolStripButton1.Click += print_toolStripMenuItem2_Click;
+            // 
+            // toolStripSeparator8
+            // 
+            toolStripSeparator8.Name = "toolStripSeparator8";
+            toolStripSeparator8.Size = new Size(6, 64);
+            // 
+            // toolStrip1
+            // 
+            toolStrip1.AutoSize = false;
+            toolStrip1.Items.AddRange(new ToolStripItem[] { new_btn, toolStripSeparator1, edit_btn, toolStripSeparator2, del_btn, toolStripSeparator3, save_btn, toolStripSeparator4, cancel_btn, toolStripSeparator5, toolStripButton1, toolStripSeparator8 });
+            toolStrip1.Location = new Point(0, 0);
+            toolStrip1.Name = "toolStrip1";
+            toolStrip1.Size = new Size(891, 64);
+            toolStrip1.TabIndex = 1;
+            toolStrip1.Text = "toolStrip1";
+            // 
             // SalesInvoiceFrm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1269, 769);
+            ClientSize = new Size(891, 769);
             Controls.Add(pro_id_txtBox);
             Controls.Add(label38);
             Controls.Add(label39);
@@ -1576,8 +1521,6 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Sales Invoice";
             Load += SalesInvoiceFrm_Load;
-            toolStrip1.ResumeLayout(false);
-            toolStrip1.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
@@ -1609,26 +1552,13 @@
             ((System.ComponentModel.ISupportInitialize)discount_nud).EndInit();
             ((System.ComponentModel.ISupportInitialize)unitPrice_nud).EndInit();
             ((System.ComponentModel.ISupportInitialize)qty_nud).EndInit();
+            toolStrip1.ResumeLayout(false);
+            toolStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private ToolStrip toolStrip1;
-        private ToolStripButton new_btn;
-        private ToolStripSeparator toolStripSeparator1;
-        private ToolStripButton edit_btn;
-        private ToolStripSeparator toolStripSeparator2;
-        private ToolStripButton del_btn;
-        private ToolStripSeparator toolStripSeparator3;
-        private ToolStripButton save_btn;
-        private ToolStripSeparator toolStripSeparator4;
-        private ToolStripButton cancel_btn;
-        private ToolStripSeparator toolStripSeparator5;
-        private ToolStripSeparator toolStripSeparator6;
-        private ToolStripButton search_btn;
-        private ToolStripSeparator toolStripSeparator7;
         private GroupBox groupBox1;
         private TextBox comment_txtBox;
         private Label label9;
@@ -1712,10 +1642,6 @@
         private Label label36;
         private Label label35;
         private Ds.AccDsTableAdapters.ReceiveMoneyTableAdapter receiveMoneyTableAdapter1;
-        private ToolStripDropDownButton toolStripButton1;
-        private ToolStripMenuItem print_toolStripMenuItem2;
-        private ToolStripMenuItem pdf_toolStripMenuItem1;
-        private ToolStripMenuItem excel_printToolStripMenuItem;
         private Panel prog_panel1;
         private ProgressBar progressBar1;
         private Label prog_label9;
@@ -1748,6 +1674,18 @@
         private TextBox productName_txtBox;
         private Label label52;
         private Label label53;
+        private ToolStripButton new_btn;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripButton edit_btn;
+        private ToolStripSeparator toolStripSeparator2;
+        private ToolStripButton del_btn;
+        private ToolStripSeparator toolStripSeparator3;
+        private ToolStripButton save_btn;
+        private ToolStripSeparator toolStripSeparator4;
+        private ToolStripButton cancel_btn;
+        private ToolStripSeparator toolStripSeparator5;
+        private ToolStripButton toolStripButton1;
         private ToolStripSeparator toolStripSeparator8;
+        private ToolStrip toolStrip1;
     }
 }
