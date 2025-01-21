@@ -352,6 +352,8 @@ C:\Users\khali\Desktop\forgit\forGit\AccountingSoftware\AccountingSoftware\bin\D
 C:\Users\khali\Desktop\forgit\forGit\AccountingSoftware\AccountingSoftware\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.WinForms.xml
 C:\Users\khali\Desktop\forgit\forGit\AccountingSoftware\AccountingSoftware\bin\Debug\net8.0-windows\Microsoft.Web.WebView2.Wpf.xml
 C:\Users\khali\Desktop\forgit\forGit\AccountingSoftware\AccountingSoftware\obj\Debug\net8.0-windows\AccountingSoftware.csproj.AssemblyReference.cache
+C:\Users\khali\Desktop\forgit\forGit\AccountingSoftware\AccountingSoftware\obj\Debug\net8.0-windows\AccountingSoftware.Accounting.Common.Login.resources
+C:\Users\khali\Desktop\forgit\forGit\AccountingSoftware\AccountingSoftware\obj\Debug\net8.0-windows\AccountingSoftware.Accounting.Common.Users.resources
 C:\Users\khali\Desktop\forgit\forGit\AccountingSoftware\AccountingSoftware\obj\Debug\net8.0-windows\AccountingSoftware.Accounting.CostFrm.resources
 C:\Users\khali\Desktop\forgit\forGit\AccountingSoftware\AccountingSoftware\obj\Debug\net8.0-windows\AccountingSoftware.Accounting.CustomerSearchFrm.resources
 C:\Users\khali\Desktop\forgit\forGit\AccountingSoftware\AccountingSoftware\obj\Debug\net8.0-windows\AccountingSoftware.Accounting.CustomersFrm.resources

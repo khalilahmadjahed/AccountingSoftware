@@ -65,6 +65,7 @@
             rep_cm = new ContextMenuStrip(components);
             toolStripMenuItem1 = new ToolStripMenuItem();
             purchaseBillListToolStripMenuItem = new ToolStripMenuItem();
+            users_toolStripMenuItem2 = new ToolStripMenuItem();
             top_panel1.SuspendLayout();
             bott_pnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -372,9 +373,9 @@
             // 
             // tools_contextMenu
             // 
-            tools_contextMenu.Items.AddRange(new ToolStripItem[] { settings_MenuItem });
+            tools_contextMenu.Items.AddRange(new ToolStripItem[] { settings_MenuItem, users_toolStripMenuItem2 });
             tools_contextMenu.Name = "contextMenuStrip1";
-            tools_contextMenu.Size = new Size(133, 44);
+            tools_contextMenu.Size = new Size(197, 106);
             // 
             // settings_MenuItem
             // 
@@ -410,6 +411,16 @@
             purchaseBillListToolStripMenuItem.Size = new Size(178, 38);
             purchaseBillListToolStripMenuItem.Text = "Purchase Bill List";
             purchaseBillListToolStripMenuItem.Click += purchaseBillListToolStripMenuItem_Click;
+            // 
+            // users_toolStripMenuItem2
+            // 
+            users_toolStripMenuItem2.AutoSize = false;
+            users_toolStripMenuItem2.Image = Properties.Resources.user_icon;
+            users_toolStripMenuItem2.ImageScaling = ToolStripItemImageScaling.None;
+            users_toolStripMenuItem2.Name = "users_toolStripMenuItem2";
+            users_toolStripMenuItem2.Size = new Size(180, 40);
+            users_toolStripMenuItem2.Text = "Users";
+            users_toolStripMenuItem2.Click += users_toolStripMenuItem2_Click;
             // 
             // MainFrm
             // 
@@ -466,5 +477,6 @@
         private ContextMenuStrip rep_cm;
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem purchaseBillListToolStripMenuItem;
+        private ToolStripMenuItem users_toolStripMenuItem2;
     }
 }

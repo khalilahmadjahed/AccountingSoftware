@@ -1,4 +1,5 @@
 ﻿using AccountingSoftware.Accounting;
+using AccountingSoftware.Accounting.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -198,6 +199,13 @@ namespace AccountingSoftware
             AccountingSoftware.Accounting.PurchaseBillListFrm PBLFrm = new PurchaseBillListFrm(); // SILFrm == Sales Invoice List Form
             PBLFrm.MdiParent = this;
             PBLFrm.Show();
+        }
+
+        private void users_toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            AccountingSoftware.Accounting.Common.Users usersFrm = new Users(); // Users form
+            usersFrm.MdiParent = this;
+            usersFrm.Show();
         }
     }
 }
