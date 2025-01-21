@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            TreeNode treeNode11 = new TreeNode("Customers");
-            TreeNode treeNode12 = new TreeNode("Products");
-            TreeNode treeNode13 = new TreeNode("Sales Invoice");
-            TreeNode treeNode14 = new TreeNode("Purchase Bill");
-            TreeNode treeNode15 = new TreeNode("Invoices", new TreeNode[] { treeNode13, treeNode14 });
-            TreeNode treeNode16 = new TreeNode("Spend Money");
-            TreeNode treeNode17 = new TreeNode("Receive Money");
-            TreeNode treeNode18 = new TreeNode("Payments", new TreeNode[] { treeNode16, treeNode17 });
-            TreeNode treeNode19 = new TreeNode("Cost");
-            TreeNode treeNode20 = new TreeNode("All Tools", new TreeNode[] { treeNode11, treeNode12, treeNode15, treeNode18, treeNode19 });
+            TreeNode treeNode1 = new TreeNode("Customers");
+            TreeNode treeNode2 = new TreeNode("Products");
+            TreeNode treeNode3 = new TreeNode("Sales Invoice");
+            TreeNode treeNode4 = new TreeNode("Purchase Bill");
+            TreeNode treeNode5 = new TreeNode("Invoices", new TreeNode[] { treeNode3, treeNode4 });
+            TreeNode treeNode6 = new TreeNode("Spend Money");
+            TreeNode treeNode7 = new TreeNode("Receive Money");
+            TreeNode treeNode8 = new TreeNode("Payments", new TreeNode[] { treeNode6, treeNode7 });
+            TreeNode treeNode9 = new TreeNode("Cost");
+            TreeNode treeNode10 = new TreeNode("All Tools", new TreeNode[] { treeNode1, treeNode2, treeNode5, treeNode8, treeNode9 });
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrm));
             top_panel1 = new Panel();
             cls_btn = new Button();
@@ -48,11 +48,11 @@
             report_btn = new Button();
             Accounting_btn = new Button();
             bott_pnl = new Panel();
-            pictureBox1 = new PictureBox();
+            user_pictureBox1 = new PictureBox();
             background_comBox = new ComboBox();
             dateTime_lbl = new Label();
             label3 = new Label();
-            label1 = new Label();
+            user_label1 = new Label();
             label2 = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
             treeView_panel1 = new Panel();
@@ -68,7 +68,7 @@
             purchaseBillListToolStripMenuItem = new ToolStripMenuItem();
             top_panel1.SuspendLayout();
             bott_pnl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)user_pictureBox1).BeginInit();
             treeView_panel1.SuspendLayout();
             tools_contextMenu.SuspendLayout();
             rep_cm.SuspendLayout();
@@ -180,11 +180,11 @@
             // bott_pnl
             // 
             bott_pnl.BorderStyle = BorderStyle.FixedSingle;
-            bott_pnl.Controls.Add(pictureBox1);
+            bott_pnl.Controls.Add(user_pictureBox1);
             bott_pnl.Controls.Add(background_comBox);
             bott_pnl.Controls.Add(dateTime_lbl);
             bott_pnl.Controls.Add(label3);
-            bott_pnl.Controls.Add(label1);
+            bott_pnl.Controls.Add(user_label1);
             bott_pnl.Controls.Add(label2);
             bott_pnl.Dock = DockStyle.Bottom;
             bott_pnl.Location = new Point(0, 498);
@@ -192,14 +192,14 @@
             bott_pnl.Size = new Size(826, 34);
             bott_pnl.TabIndex = 1;
             // 
-            // pictureBox1
+            // user_pictureBox1
             // 
-            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
-            pictureBox1.Location = new Point(220, -1);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(46, 34);
-            pictureBox1.TabIndex = 2;
-            pictureBox1.TabStop = false;
+            user_pictureBox1.Location = new Point(220, -1);
+            user_pictureBox1.Name = "user_pictureBox1";
+            user_pictureBox1.Size = new Size(46, 34);
+            user_pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            user_pictureBox1.TabIndex = 2;
+            user_pictureBox1.TabStop = false;
             // 
             // background_comBox
             // 
@@ -231,18 +231,18 @@
             label3.Name = "label3";
             label3.Size = new Size(21, 34);
             label3.TabIndex = 2;
-            label3.Text = " -";
+            label3.Text = " |";
             label3.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label1
+            // user_label1
             // 
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(268, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(74, 33);
-            label1.TabIndex = 2;
-            label1.Text = " -";
-            label1.TextAlign = ContentAlignment.MiddleLeft;
+            user_label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            user_label1.Location = new Point(267, 0);
+            user_label1.Name = "user_label1";
+            user_label1.Size = new Size(74, 33);
+            user_label1.TabIndex = 2;
+            user_label1.Text = " -";
+            user_label1.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
@@ -305,47 +305,47 @@
             acc_treeView.ItemHeight = 40;
             acc_treeView.Location = new Point(0, 0);
             acc_treeView.Name = "acc_treeView";
-            treeNode11.ImageKey = "tree_customers.png";
-            treeNode11.Name = "Customers";
-            treeNode11.SelectedImageKey = "tree_customers.png";
-            treeNode11.Text = "Customers";
-            treeNode12.ImageKey = "products.png";
-            treeNode12.Name = "products";
-            treeNode12.SelectedImageKey = "products.png";
-            treeNode12.Text = "Products";
-            treeNode13.ImageKey = "tree_sale_invoice.png";
-            treeNode13.Name = "Sales_Invoice";
-            treeNode13.SelectedImageKey = "tree_sale_invoice.png";
-            treeNode13.Text = "Sales Invoice";
-            treeNode14.ImageKey = "tree_purchase_bill.png";
-            treeNode14.Name = "Purchase_Bill";
-            treeNode14.SelectedImageKey = "tree_purchase_bill.png";
-            treeNode14.Text = "Purchase Bill";
-            treeNode15.ImageKey = "tree_invoice.png";
-            treeNode15.Name = "Invoices";
-            treeNode15.SelectedImageKey = "tree_invoice.png";
-            treeNode15.Text = "Invoices";
-            treeNode16.ImageKey = "tree_spend.png";
-            treeNode16.Name = "Spend_Money";
-            treeNode16.SelectedImageKey = "tree_spend.png";
-            treeNode16.Text = "Spend Money";
-            treeNode17.ImageKey = "tree_receive.png";
-            treeNode17.Name = "Receive_Money";
-            treeNode17.SelectedImageKey = "tree_receive.png";
-            treeNode17.Text = "Receive Money";
-            treeNode18.ImageKey = "tree_payment.png";
-            treeNode18.Name = "Payments";
-            treeNode18.SelectedImageKey = "tree_payment.png";
-            treeNode18.Text = "Payments";
-            treeNode19.ImageKey = "tree_expense.png";
-            treeNode19.Name = "Cost";
-            treeNode19.SelectedImageKey = "tree_expense.png";
-            treeNode19.Text = "Cost";
-            treeNode20.ImageKey = "tree_root.png";
-            treeNode20.Name = "Root";
-            treeNode20.SelectedImageKey = "tree_root.png";
-            treeNode20.Text = "All Tools";
-            acc_treeView.Nodes.AddRange(new TreeNode[] { treeNode20 });
+            treeNode1.ImageKey = "tree_customers.png";
+            treeNode1.Name = "Customers";
+            treeNode1.SelectedImageKey = "tree_customers.png";
+            treeNode1.Text = "Customers";
+            treeNode2.ImageKey = "products.png";
+            treeNode2.Name = "products";
+            treeNode2.SelectedImageKey = "products.png";
+            treeNode2.Text = "Products";
+            treeNode3.ImageKey = "tree_sale_invoice.png";
+            treeNode3.Name = "Sales_Invoice";
+            treeNode3.SelectedImageKey = "tree_sale_invoice.png";
+            treeNode3.Text = "Sales Invoice";
+            treeNode4.ImageKey = "tree_purchase_bill.png";
+            treeNode4.Name = "Purchase_Bill";
+            treeNode4.SelectedImageKey = "tree_purchase_bill.png";
+            treeNode4.Text = "Purchase Bill";
+            treeNode5.ImageKey = "tree_invoice.png";
+            treeNode5.Name = "Invoices";
+            treeNode5.SelectedImageKey = "tree_invoice.png";
+            treeNode5.Text = "Invoices";
+            treeNode6.ImageKey = "tree_spend.png";
+            treeNode6.Name = "Spend_Money";
+            treeNode6.SelectedImageKey = "tree_spend.png";
+            treeNode6.Text = "Spend Money";
+            treeNode7.ImageKey = "tree_receive.png";
+            treeNode7.Name = "Receive_Money";
+            treeNode7.SelectedImageKey = "tree_receive.png";
+            treeNode7.Text = "Receive Money";
+            treeNode8.ImageKey = "tree_payment.png";
+            treeNode8.Name = "Payments";
+            treeNode8.SelectedImageKey = "tree_payment.png";
+            treeNode8.Text = "Payments";
+            treeNode9.ImageKey = "tree_expense.png";
+            treeNode9.Name = "Cost";
+            treeNode9.SelectedImageKey = "tree_expense.png";
+            treeNode9.Text = "Cost";
+            treeNode10.ImageKey = "tree_root.png";
+            treeNode10.Name = "Root";
+            treeNode10.SelectedImageKey = "tree_root.png";
+            treeNode10.Text = "All Tools";
+            acc_treeView.Nodes.AddRange(new TreeNode[] { treeNode10 });
             acc_treeView.SelectedImageIndex = 0;
             acc_treeView.Size = new Size(276, 415);
             acc_treeView.TabIndex = 0;
@@ -443,7 +443,7 @@
             top_panel1.ResumeLayout(false);
             bott_pnl.ResumeLayout(false);
             bott_pnl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)user_pictureBox1).EndInit();
             treeView_panel1.ResumeLayout(false);
             tools_contextMenu.ResumeLayout(false);
             rep_cm.ResumeLayout(false);
@@ -462,8 +462,7 @@
         private Panel bott_pnl;
         private ComboBox background_comBox;
         private Label label2;
-        private PictureBox pictureBox1;
-        private Label label1;
+        private Label user_label1;
         private Label dateTime_lbl;
         private Label label3;
         private System.Windows.Forms.Timer timer1;
@@ -478,5 +477,6 @@
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem purchaseBillListToolStripMenuItem;
         private ToolStripMenuItem users_toolStripMenuItem2;
+        public PictureBox user_pictureBox1;
     }
 }

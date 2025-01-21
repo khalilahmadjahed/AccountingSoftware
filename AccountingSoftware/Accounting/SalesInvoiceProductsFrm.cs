@@ -76,7 +76,7 @@ namespace AccountingSoftware.Accounting
             this.invoiceId_lbl.Text = selected_invoice_id.ToString();
             //---------------------
             //Reg_user, Reg_Date and Reg_time
-            this.reg_user_label.Text = "Login User";
+            this.reg_user_label.Text = AccountingSoftware.Properties.Settings.Default.login_user_name;
             this.reg_date_label.Text = DateTime.Now.ToShortDateString();
             this.reg_time_label.Text = DateTime.Now.ToString("HH:mm:ss");
         }
@@ -89,7 +89,7 @@ namespace AccountingSoftware.Accounting
             this.invoiceId_lbl.Text = selected_invoice_id.ToString();
             //--------------------- 
             //Reg_user, Reg_Date and Reg_time
-            this.reg_user_label.Text = "Login User";
+            this.reg_user_label.Text = AccountingSoftware.Properties.Settings.Default.login_user_name;
             this.reg_date_label.Text = DateTime.Now.ToShortDateString();
             this.reg_time_label.Text = DateTime.Now.ToString("HH:mm:ss");
         }

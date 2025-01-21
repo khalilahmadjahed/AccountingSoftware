@@ -130,5 +130,17 @@ namespace AccountingSoftware.Properties {
                 this["sett_billTax"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Admin")]
+        public string login_user_name {
+            get {
+                return ((string)(this["login_user_name"]));
+            }
+            set {
+                this["login_user_name"] = value;
+            }
+        }
     }
 }

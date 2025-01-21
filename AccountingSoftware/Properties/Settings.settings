@@ -29,5 +29,8 @@
     <Setting Name="sett_billTax" Type="System.Decimal" Scope="User">
       <Value Profile="(Default)">4</Value>
     </Setting>
+    <Setting Name="login_user_name" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Admin</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

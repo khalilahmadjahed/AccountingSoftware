@@ -75,7 +75,7 @@ namespace AccountingSoftware.Accounting.Common
             this.password_repeat_txtBox.Text = "";
 
             //Reg_user, Reg_Date and Reg_time
-            this.reg_user_label.Text = "Login User";
+            this.reg_user_label.Text = AccountingSoftware.Properties.Settings.Default.login_user_name;
             this.reg_date_label.Text = DateTime.Now.ToShortDateString();
             this.reg_time_label.Text = DateTime.Now.ToString("HH:mm:ss");
         }
@@ -87,7 +87,7 @@ namespace AccountingSoftware.Accounting.Common
 
             //-----------------
             //Reg_user, Reg_Date and Reg_time
-            this.reg_user_label.Text = "Login User";
+            this.reg_user_label.Text = AccountingSoftware.Properties.Settings.Default.login_user_name;
             this.reg_date_label.Text = DateTime.Now.ToShortDateString();
             this.reg_time_label.Text = DateTime.Now.ToString("HH:mm:ss");
         }

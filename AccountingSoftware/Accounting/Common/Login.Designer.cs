@@ -33,7 +33,7 @@
             bindingSource1 = new BindingSource(components);
             accDs1 = new Ds.AccDs();
             label2 = new Label();
-            comboBox1 = new ComboBox();
+            users_comboBox1 = new ComboBox();
             user_password_txtBox = new TextBox();
             label3 = new Label();
             ok_button1 = new Button();
@@ -78,16 +78,16 @@
             label2.TabIndex = 31;
             label2.Text = "User Name:";
             // 
-            // comboBox1
+            // users_comboBox1
             // 
-            comboBox1.DataSource = bindingSource1;
-            comboBox1.DisplayMember = "UserName";
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(154, 179);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(136, 23);
-            comboBox1.TabIndex = 32;
+            users_comboBox1.DataSource = bindingSource1;
+            users_comboBox1.DisplayMember = "UserName";
+            users_comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            users_comboBox1.FormattingEnabled = true;
+            users_comboBox1.Location = new Point(154, 179);
+            users_comboBox1.Name = "users_comboBox1";
+            users_comboBox1.Size = new Size(136, 23);
+            users_comboBox1.TabIndex = 32;
             // 
             // user_password_txtBox
             // 
@@ -172,7 +172,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = cancel_button2;
-            ClientSize = new Size(430, 314);
+            ClientSize = new Size(426, 319);
             ControlBox = false;
             Controls.Add(correct_pass_txtBox);
             Controls.Add(label1);
@@ -181,7 +181,7 @@
             Controls.Add(ok_button1);
             Controls.Add(user_password_txtBox);
             Controls.Add(label3);
-            Controls.Add(comboBox1);
+            Controls.Add(users_comboBox1);
             Controls.Add(label2);
             Controls.Add(photo_pictureBox1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -200,10 +200,7 @@
         }
 
         #endregion
-
-        private PictureBox photo_pictureBox1;
         private Label label2;
-        private ComboBox comboBox1;
         private TextBox user_password_txtBox;
         private Label label3;
         private Button ok_button1;
@@ -214,5 +211,7 @@
         private Ds.AccDsTableAdapters.UsersTableAdapter usersTableAdapter1;
         private TextBox correct_pass_txtBox;
         private Label label1;
+        public ComboBox users_comboBox1;
+        public PictureBox photo_pictureBox1;
     }
 }

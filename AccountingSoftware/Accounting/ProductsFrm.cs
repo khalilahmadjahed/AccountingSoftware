@@ -80,7 +80,7 @@ namespace AccountingSoftware.Accounting
             this.bindingSource1.AddNew();
 
             //Reg_user, Reg_Date and Reg_time
-            this.reg_user_label.Text = "Login User";
+            this.reg_user_label.Text = AccountingSoftware.Properties.Settings.Default.login_user_name;
             this.reg_date_label.Text = DateTime.Now.ToShortDateString();
             this.reg_time_label.Text = DateTime.Now.ToString("HH:mm:ss");
         }
@@ -90,7 +90,7 @@ namespace AccountingSoftware.Accounting
             is_del_btn = false;
             new_edit_delete_btn();
             //Reg_user, Reg_Date and Reg_time
-            this.reg_user_label.Text = "Login User";
+            this.reg_user_label.Text = AccountingSoftware.Properties.Settings.Default.login_user_name;
             this.reg_date_label.Text = DateTime.Now.ToShortDateString();
             this.reg_time_label.Text = DateTime.Now.ToString("HH:mm:ss");
         }

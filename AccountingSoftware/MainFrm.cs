@@ -75,7 +75,14 @@ namespace AccountingSoftware
                DialogResult dr = frm.ShowDialog();
                 if (dr == DialogResult.OK)
                 {
-                    
+                    this.user_label1.Text = frm.users_comboBox1.Text;
+                    this.user_pictureBox1.Image = frm.photo_pictureBox1.Image;
+                    //---------------------save user name in settings---------
+                    AccountingSoftware.Properties.Settings.Default.login_user_name = this. user_label1.Text;
+                    AccountingSoftware.Properties.Settings.Default.Save();
+                    //-------------------------------------------------------
+
+
                 }
                 if (dr == DialogResult.Cancel)
                 {
@@ -86,6 +93,7 @@ namespace AccountingSoftware
             {
                 MessageBox.Show(ex.Message);
             }
+            
            
         }
 
