@@ -62,6 +62,7 @@ namespace AccountingSoftware.Accounting.Common
         {
             save_cancle_btns();
             this.usersTableAdapter1.Fill(this.accDs1.Users);
+
         }
 
         private void new_btn_Click(object sender, EventArgs e)

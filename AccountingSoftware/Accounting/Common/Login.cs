@@ -19,12 +19,25 @@ namespace AccountingSoftware.Accounting.Common
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            this.usersTableAdapter1.Fill(this.accDs1.Users);
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (this.user_password_txtBox.Text == this.correct_pass_txtBox.Text)
+            {
+                DialogResult = DialogResult.OK;
+            }
+            else
+            {
+                MessageBox.Show("The password is incorrect! Please try again!");
+            }
         }
     }
 }

@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            TreeNode treeNode1 = new TreeNode("Customers");
-            TreeNode treeNode2 = new TreeNode("Products");
-            TreeNode treeNode3 = new TreeNode("Sales Invoice");
-            TreeNode treeNode4 = new TreeNode("Purchase Bill");
-            TreeNode treeNode5 = new TreeNode("Invoices", new TreeNode[] { treeNode3, treeNode4 });
-            TreeNode treeNode6 = new TreeNode("Spend Money");
-            TreeNode treeNode7 = new TreeNode("Receive Money");
-            TreeNode treeNode8 = new TreeNode("Payments", new TreeNode[] { treeNode6, treeNode7 });
-            TreeNode treeNode9 = new TreeNode("Cost");
-            TreeNode treeNode10 = new TreeNode("All Tools", new TreeNode[] { treeNode1, treeNode2, treeNode5, treeNode8, treeNode9 });
+            TreeNode treeNode11 = new TreeNode("Customers");
+            TreeNode treeNode12 = new TreeNode("Products");
+            TreeNode treeNode13 = new TreeNode("Sales Invoice");
+            TreeNode treeNode14 = new TreeNode("Purchase Bill");
+            TreeNode treeNode15 = new TreeNode("Invoices", new TreeNode[] { treeNode13, treeNode14 });
+            TreeNode treeNode16 = new TreeNode("Spend Money");
+            TreeNode treeNode17 = new TreeNode("Receive Money");
+            TreeNode treeNode18 = new TreeNode("Payments", new TreeNode[] { treeNode16, treeNode17 });
+            TreeNode treeNode19 = new TreeNode("Cost");
+            TreeNode treeNode20 = new TreeNode("All Tools", new TreeNode[] { treeNode11, treeNode12, treeNode15, treeNode18, treeNode19 });
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrm));
             top_panel1 = new Panel();
             cls_btn = new Button();
@@ -62,10 +62,10 @@
             imageList1 = new ImageList(components);
             tools_contextMenu = new ContextMenuStrip(components);
             settings_MenuItem = new ToolStripMenuItem();
+            users_toolStripMenuItem2 = new ToolStripMenuItem();
             rep_cm = new ContextMenuStrip(components);
             toolStripMenuItem1 = new ToolStripMenuItem();
             purchaseBillListToolStripMenuItem = new ToolStripMenuItem();
-            users_toolStripMenuItem2 = new ToolStripMenuItem();
             top_panel1.SuspendLayout();
             bott_pnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -305,47 +305,47 @@
             acc_treeView.ItemHeight = 40;
             acc_treeView.Location = new Point(0, 0);
             acc_treeView.Name = "acc_treeView";
-            treeNode1.ImageKey = "tree_customers.png";
-            treeNode1.Name = "Customers";
-            treeNode1.SelectedImageKey = "tree_customers.png";
-            treeNode1.Text = "Customers";
-            treeNode2.ImageKey = "products.png";
-            treeNode2.Name = "products";
-            treeNode2.SelectedImageKey = "products.png";
-            treeNode2.Text = "Products";
-            treeNode3.ImageKey = "tree_sale_invoice.png";
-            treeNode3.Name = "Sales_Invoice";
-            treeNode3.SelectedImageKey = "tree_sale_invoice.png";
-            treeNode3.Text = "Sales Invoice";
-            treeNode4.ImageKey = "tree_purchase_bill.png";
-            treeNode4.Name = "Purchase_Bill";
-            treeNode4.SelectedImageKey = "tree_purchase_bill.png";
-            treeNode4.Text = "Purchase Bill";
-            treeNode5.ImageKey = "tree_invoice.png";
-            treeNode5.Name = "Invoices";
-            treeNode5.SelectedImageKey = "tree_invoice.png";
-            treeNode5.Text = "Invoices";
-            treeNode6.ImageKey = "tree_spend.png";
-            treeNode6.Name = "Spend_Money";
-            treeNode6.SelectedImageKey = "tree_spend.png";
-            treeNode6.Text = "Spend Money";
-            treeNode7.ImageKey = "tree_receive.png";
-            treeNode7.Name = "Receive_Money";
-            treeNode7.SelectedImageKey = "tree_receive.png";
-            treeNode7.Text = "Receive Money";
-            treeNode8.ImageKey = "tree_payment.png";
-            treeNode8.Name = "Payments";
-            treeNode8.SelectedImageKey = "tree_payment.png";
-            treeNode8.Text = "Payments";
-            treeNode9.ImageKey = "tree_expense.png";
-            treeNode9.Name = "Cost";
-            treeNode9.SelectedImageKey = "tree_expense.png";
-            treeNode9.Text = "Cost";
-            treeNode10.ImageKey = "tree_root.png";
-            treeNode10.Name = "Root";
-            treeNode10.SelectedImageKey = "tree_root.png";
-            treeNode10.Text = "All Tools";
-            acc_treeView.Nodes.AddRange(new TreeNode[] { treeNode10 });
+            treeNode11.ImageKey = "tree_customers.png";
+            treeNode11.Name = "Customers";
+            treeNode11.SelectedImageKey = "tree_customers.png";
+            treeNode11.Text = "Customers";
+            treeNode12.ImageKey = "products.png";
+            treeNode12.Name = "products";
+            treeNode12.SelectedImageKey = "products.png";
+            treeNode12.Text = "Products";
+            treeNode13.ImageKey = "tree_sale_invoice.png";
+            treeNode13.Name = "Sales_Invoice";
+            treeNode13.SelectedImageKey = "tree_sale_invoice.png";
+            treeNode13.Text = "Sales Invoice";
+            treeNode14.ImageKey = "tree_purchase_bill.png";
+            treeNode14.Name = "Purchase_Bill";
+            treeNode14.SelectedImageKey = "tree_purchase_bill.png";
+            treeNode14.Text = "Purchase Bill";
+            treeNode15.ImageKey = "tree_invoice.png";
+            treeNode15.Name = "Invoices";
+            treeNode15.SelectedImageKey = "tree_invoice.png";
+            treeNode15.Text = "Invoices";
+            treeNode16.ImageKey = "tree_spend.png";
+            treeNode16.Name = "Spend_Money";
+            treeNode16.SelectedImageKey = "tree_spend.png";
+            treeNode16.Text = "Spend Money";
+            treeNode17.ImageKey = "tree_receive.png";
+            treeNode17.Name = "Receive_Money";
+            treeNode17.SelectedImageKey = "tree_receive.png";
+            treeNode17.Text = "Receive Money";
+            treeNode18.ImageKey = "tree_payment.png";
+            treeNode18.Name = "Payments";
+            treeNode18.SelectedImageKey = "tree_payment.png";
+            treeNode18.Text = "Payments";
+            treeNode19.ImageKey = "tree_expense.png";
+            treeNode19.Name = "Cost";
+            treeNode19.SelectedImageKey = "tree_expense.png";
+            treeNode19.Text = "Cost";
+            treeNode20.ImageKey = "tree_root.png";
+            treeNode20.Name = "Root";
+            treeNode20.SelectedImageKey = "tree_root.png";
+            treeNode20.Text = "All Tools";
+            acc_treeView.Nodes.AddRange(new TreeNode[] { treeNode20 });
             acc_treeView.SelectedImageIndex = 0;
             acc_treeView.Size = new Size(276, 415);
             acc_treeView.TabIndex = 0;
@@ -375,7 +375,7 @@
             // 
             tools_contextMenu.Items.AddRange(new ToolStripItem[] { settings_MenuItem, users_toolStripMenuItem2 });
             tools_contextMenu.Name = "contextMenuStrip1";
-            tools_contextMenu.Size = new Size(197, 106);
+            tools_contextMenu.Size = new Size(133, 84);
             // 
             // settings_MenuItem
             // 
@@ -386,6 +386,16 @@
             settings_MenuItem.Size = new Size(180, 40);
             settings_MenuItem.Text = "Settings";
             settings_MenuItem.Click += settings_MenuItem_Click;
+            // 
+            // users_toolStripMenuItem2
+            // 
+            users_toolStripMenuItem2.AutoSize = false;
+            users_toolStripMenuItem2.Image = Properties.Resources.user_icon;
+            users_toolStripMenuItem2.ImageScaling = ToolStripItemImageScaling.None;
+            users_toolStripMenuItem2.Name = "users_toolStripMenuItem2";
+            users_toolStripMenuItem2.Size = new Size(180, 40);
+            users_toolStripMenuItem2.Text = "Users";
+            users_toolStripMenuItem2.Click += users_toolStripMenuItem2_Click;
             // 
             // rep_cm
             // 
@@ -411,16 +421,6 @@
             purchaseBillListToolStripMenuItem.Size = new Size(178, 38);
             purchaseBillListToolStripMenuItem.Text = "Purchase Bill List";
             purchaseBillListToolStripMenuItem.Click += purchaseBillListToolStripMenuItem_Click;
-            // 
-            // users_toolStripMenuItem2
-            // 
-            users_toolStripMenuItem2.AutoSize = false;
-            users_toolStripMenuItem2.Image = Properties.Resources.user_icon;
-            users_toolStripMenuItem2.ImageScaling = ToolStripItemImageScaling.None;
-            users_toolStripMenuItem2.Name = "users_toolStripMenuItem2";
-            users_toolStripMenuItem2.Size = new Size(180, 40);
-            users_toolStripMenuItem2.Text = "Users";
-            users_toolStripMenuItem2.Click += users_toolStripMenuItem2_Click;
             // 
             // MainFrm
             // 

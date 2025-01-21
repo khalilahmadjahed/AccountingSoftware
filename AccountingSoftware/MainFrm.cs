@@ -62,12 +62,31 @@ namespace AccountingSoftware
 
         private void MainFrm_Load(object sender, EventArgs e)
         {
-            //-------------------- Load bck image -----------------------
-            int index;
-            index = AccountingSoftware.Properties.Settings.Default.sel_img_index;
-            //--------------
-            this.background_comBox.SelectedIndex = index;
-            //-----------------------------------------------------------
+            try
+            {
+                //-------------------- Load bck image -----------------------
+                int index;
+                index = AccountingSoftware.Properties.Settings.Default.sel_img_index;
+                //--------------
+                this.background_comBox.SelectedIndex = index;
+                //-----------------------------------------------------------
+
+                AccountingSoftware.Accounting.Common.Login frm = new Login();
+               DialogResult dr = frm.ShowDialog();
+                if (dr == DialogResult.OK)
+                {
+                    
+                }
+                if (dr == DialogResult.Cancel)
+                {
+                    this.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+           
         }
 
         //Expand the accounting tree view
