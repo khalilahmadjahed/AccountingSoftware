@@ -365,11 +365,10 @@
             // 
             // photo_pictureBox1
             // 
-            photo_pictureBox1.BorderStyle = BorderStyle.FixedSingle;
             photo_pictureBox1.DataBindings.Add(new Binding("Image", bindingSource1, "Photo", true));
-            photo_pictureBox1.Location = new Point(479, 37);
+            photo_pictureBox1.Location = new Point(484, 37);
             photo_pictureBox1.Name = "photo_pictureBox1";
-            photo_pictureBox1.Size = new Size(100, 78);
+            photo_pictureBox1.Size = new Size(90, 80);
             photo_pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             photo_pictureBox1.TabIndex = 29;
             photo_pictureBox1.TabStop = false;
@@ -377,12 +376,13 @@
             // browse_button1
             // 
             browse_button1.ForeColor = Color.Black;
-            browse_button1.Location = new Point(479, 121);
+            browse_button1.Location = new Point(484, 121);
             browse_button1.Name = "browse_button1";
-            browse_button1.Size = new Size(100, 23);
+            browse_button1.Size = new Size(90, 23);
             browse_button1.TabIndex = 28;
             browse_button1.Text = "Browse";
             browse_button1.UseVisualStyleBackColor = true;
+            browse_button1.Click += browse_button1_Click;
             // 
             // comment_textBox1
             // 

@@ -71,7 +71,7 @@ namespace AccountingSoftware.Accounting.Common
             //Add a row
             this.bindingSource1.AddNew();
 
-            this.password_repeat_txtBox.Text = ""; 
+            this.password_repeat_txtBox.Text = "";
 
             //Reg_user, Reg_Date and Reg_time
             this.reg_user_label.Text = "Login User";
@@ -130,7 +130,7 @@ namespace AccountingSoftware.Accounting.Common
                 }
                 //--------------
 
-                
+
             }
             catch (Exception ex)
             {
@@ -146,6 +146,16 @@ namespace AccountingSoftware.Accounting.Common
             this.accDs1.Users.RejectChanges();
         }
 
-       
+        private void browse_button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog op = new OpenFileDialog();
+            op.Filter = "Jpg Files|*.jpg";
+            DialogResult dr;
+            dr = op.ShowDialog();
+            if (dr == DialogResult.OK)
+            {
+                this.photo_pictureBox1.LoadAsync(op.FileName);
+            }
+        }
     }
 }
