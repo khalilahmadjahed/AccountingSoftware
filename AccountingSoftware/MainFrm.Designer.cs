@@ -66,12 +66,16 @@
             rep_cm = new ContextMenuStrip(components);
             toolStripMenuItem1 = new ToolStripMenuItem();
             purchaseBillListToolStripMenuItem = new ToolStripMenuItem();
+            about_cm = new ContextMenuStrip(components);
+            about_us_toolStripMenuItem3 = new ToolStripMenuItem();
+            toolStripMenuItem2 = new ToolStripMenuItem();
             top_panel1.SuspendLayout();
             bott_pnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)user_pictureBox1).BeginInit();
             treeView_panel1.SuspendLayout();
             tools_contextMenu.SuspendLayout();
             rep_cm.SuspendLayout();
+            about_cm.SuspendLayout();
             SuspendLayout();
             // 
             // top_panel1
@@ -128,6 +132,7 @@
             help_btn.Text = "Help F5";
             help_btn.TextImageRelation = TextImageRelation.ImageAboveText;
             help_btn.UseVisualStyleBackColor = true;
+            help_btn.Click += help_btn_Click;
             // 
             // tools_btn
             // 
@@ -422,6 +427,30 @@
             purchaseBillListToolStripMenuItem.Text = "Purchase Bill List";
             purchaseBillListToolStripMenuItem.Click += purchaseBillListToolStripMenuItem_Click;
             // 
+            // about_cm
+            // 
+            about_cm.Items.AddRange(new ToolStripItem[] { about_us_toolStripMenuItem3, toolStripMenuItem2 });
+            about_cm.Name = "contextMenuStrip1";
+            about_cm.Size = new Size(140, 82);
+            // 
+            // about_us_toolStripMenuItem3
+            // 
+            about_us_toolStripMenuItem3.Image = Properties.Resources.top_Help_butt;
+            about_us_toolStripMenuItem3.ImageScaling = ToolStripItemImageScaling.None;
+            about_us_toolStripMenuItem3.Name = "about_us_toolStripMenuItem3";
+            about_us_toolStripMenuItem3.Size = new Size(139, 38);
+            about_us_toolStripMenuItem3.Text = "About Us";
+            about_us_toolStripMenuItem3.Click += about_us_toolStripMenuItem3_Click;
+            // 
+            // toolStripMenuItem2
+            // 
+            toolStripMenuItem2.AutoSize = false;
+            toolStripMenuItem2.Image = Properties.Resources.top_help;
+            toolStripMenuItem2.ImageScaling = ToolStripItemImageScaling.None;
+            toolStripMenuItem2.Name = "toolStripMenuItem2";
+            toolStripMenuItem2.Size = new Size(180, 40);
+            toolStripMenuItem2.Text = "Help";
+            // 
             // MainFrm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -447,6 +476,7 @@
             treeView_panel1.ResumeLayout(false);
             tools_contextMenu.ResumeLayout(false);
             rep_cm.ResumeLayout(false);
+            about_cm.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -478,5 +508,8 @@
         private ToolStripMenuItem purchaseBillListToolStripMenuItem;
         private ToolStripMenuItem users_toolStripMenuItem2;
         public PictureBox user_pictureBox1;
+        private ContextMenuStrip about_cm;
+        private ToolStripMenuItem about_us_toolStripMenuItem3;
+        private ToolStripMenuItem toolStripMenuItem2;
     }
 }

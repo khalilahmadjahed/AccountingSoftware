@@ -72,13 +72,13 @@ namespace AccountingSoftware
                 //-----------------------------------------------------------
 
                 AccountingSoftware.Accounting.Common.Login frm = new Login();
-               DialogResult dr = frm.ShowDialog();
+                DialogResult dr = frm.ShowDialog();
                 if (dr == DialogResult.OK)
                 {
                     this.user_label1.Text = frm.users_comboBox1.Text;
                     this.user_pictureBox1.Image = frm.photo_pictureBox1.Image;
                     //---------------------save user name in settings---------
-                    AccountingSoftware.Properties.Settings.Default.login_user_name = this. user_label1.Text;
+                    AccountingSoftware.Properties.Settings.Default.login_user_name = this.user_label1.Text;
                     AccountingSoftware.Properties.Settings.Default.Save();
                     //-------------------------------------------------------
 
@@ -93,8 +93,8 @@ namespace AccountingSoftware
             {
                 MessageBox.Show(ex.Message);
             }
-            
-           
+
+
         }
 
         //Expand the accounting tree view
@@ -233,6 +233,20 @@ namespace AccountingSoftware
             AccountingSoftware.Accounting.Common.Users usersFrm = new Users(); // Users form
             usersFrm.MdiParent = this;
             usersFrm.Show();
+        }
+
+        private void about_us_toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            AccountingSoftware.Accounting.Common.AboutusFrm aboutUsFrm = new AboutusFrm(); // About US form
+            //aboutUsFrm.MdiParent = this;
+            aboutUsFrm.ShowDialog();
+        }
+
+        private void help_btn_Click(object sender, EventArgs e)
+        {
+            Point helpPoint;
+            helpPoint = new Point(this.help_btn.Left, this.top_panel1.Height);
+            this.about_cm.Show(helpPoint);
         }
     }
 }
