@@ -248,5 +248,34 @@ namespace AccountingSoftware
             helpPoint = new Point(this.help_btn.Left, this.top_panel1.Height);
             this.about_cm.Show(helpPoint);
         }
+
+        private void MainFrm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F2)
+            {
+                Accounting_btn_Click(sender, e);
+                this.acc_treeView.Focus();
+            }
+            if (e.KeyCode == Keys.F3)
+            {
+                report_btn_Click(sender, e);
+            }
+            if (e.KeyCode == Keys.F4)
+            {
+                tools_btn_Click(sender, e);
+            }
+            if (e.KeyCode == Keys.F5)
+            {
+                help_btn_Click(sender, e);
+            }
+        }
+
+        private void acc_treeView_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                acc_treeView_DoubleClick(sender, e);
+            }
+        }
     }
 }

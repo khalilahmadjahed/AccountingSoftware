@@ -356,6 +356,7 @@
             acc_treeView.TabIndex = 0;
             acc_treeView.AfterSelect += acc_treeView_AfterSelect;
             acc_treeView.DoubleClick += acc_treeView_DoubleClick;
+            acc_treeView.KeyDown += acc_treeView_KeyDown;
             // 
             // imageList1
             // 
@@ -462,6 +463,7 @@
             Controls.Add(top_panel1);
             FormBorderStyle = FormBorderStyle.None;
             IsMdiContainer = true;
+            KeyPreview = true;
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "MainFrm";
@@ -469,6 +471,7 @@
             Text = "MainFrm";
             WindowState = FormWindowState.Maximized;
             Load += MainFrm_Load;
+            KeyDown += MainFrm_KeyDown;
             top_panel1.ResumeLayout(false);
             bott_pnl.ResumeLayout(false);
             bott_pnl.PerformLayout();
