@@ -32,5 +32,16 @@
     <Setting Name="login_user_name" Type="System.String" Scope="User">
       <Value Profile="(Default)">Admin</Value>
     </Setting>
+    <Setting Name="default_connection_string" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionString&gt;Data Source=JAHED\JAHEDSQL;Initial Catalog=Accounting;Integrated Security=True;TrustServerCertificate=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;Microsoft.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=JAHED\JAHEDSQL;Initial Catalog=Accounting;Integrated Security=True;TrustServerCertificate=True</Value>
+    </Setting>
+    <Setting Name="main_connection_string" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=JAHED\JAHEDSQL;Initial Catalog=Accounting;Integrated Security=True;TrustServerCertificate=True</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

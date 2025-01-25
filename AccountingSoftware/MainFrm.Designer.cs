@@ -432,14 +432,15 @@
             // 
             about_cm.Items.AddRange(new ToolStripItem[] { about_us_toolStripMenuItem3, toolStripMenuItem2 });
             about_cm.Name = "contextMenuStrip1";
-            about_cm.Size = new Size(140, 82);
+            about_cm.Size = new Size(197, 104);
+            about_cm.Opening += about_cm_Opening;
             // 
             // about_us_toolStripMenuItem3
             // 
             about_us_toolStripMenuItem3.Image = Properties.Resources.top_Help_butt;
             about_us_toolStripMenuItem3.ImageScaling = ToolStripItemImageScaling.None;
             about_us_toolStripMenuItem3.Name = "about_us_toolStripMenuItem3";
-            about_us_toolStripMenuItem3.Size = new Size(139, 38);
+            about_us_toolStripMenuItem3.Size = new Size(196, 38);
             about_us_toolStripMenuItem3.Text = "About Us";
             about_us_toolStripMenuItem3.Click += about_us_toolStripMenuItem3_Click;
             // 

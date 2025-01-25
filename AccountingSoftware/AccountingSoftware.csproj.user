@@ -7,6 +7,9 @@
     <Compile Update="Accounting\Common\Login.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Accounting\Common\SQL_SettingFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Accounting\Common\Users.cs">
       <SubType>Form</SubType>
     </Compile>

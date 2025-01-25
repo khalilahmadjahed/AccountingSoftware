@@ -142,5 +142,29 @@ namespace AccountingSoftware.Properties {
                 this["login_user_name"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=JAHED\\JAHEDSQL;Initial Catalog=Accounting;Integrated Security=True;Tr" +
+            "ustServerCertificate=True")]
+        public string default_connection_string {
+            get {
+                return ((string)(this["default_connection_string"]));
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=JAHED\\JAHEDSQL;Initial Catalog=Accounting;Integrated Security=True;Tr" +
+            "ustServerCertificate=True")]
+        public string main_connection_string {
+            get {
+                return ((string)(this["main_connection_string"]));
+            }
+            set {
+                this["main_connection_string"] = value;
+            }
+        }
     }
 }

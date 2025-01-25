@@ -277,5 +277,10 @@ namespace AccountingSoftware
                 acc_treeView_DoubleClick(sender, e);
             }
         }
+
+        private void about_cm_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }

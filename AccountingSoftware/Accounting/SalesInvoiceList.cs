@@ -28,6 +28,7 @@ namespace AccountingSoftware.Accounting
         {
             try
             {
+                this.salesInvoiceTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
                 this.salesInvoiceTableAdapter1.Fill_All(this.accDs1.SalesInvoice);
             }
             catch (Exception ex)

@@ -68,8 +68,15 @@ namespace AccountingSoftware.Accounting
         private void ProductsFrm_Load(object sender, EventArgs e)
         {
             save_cancle_btns();
-            this.productsTableAdapter1.Fill_All(this.accDs1.Products);
-            //MessageBox.Show(this.accDs1.Products.Rows.Count.ToString());
+            try
+            {
+                this.productsTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
+                this.productsTableAdapter1.Fill_All(this.accDs1.Products);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error " + ex.Message);
+            }
         }
 
         private void new_btn_Click(object sender, EventArgs e)
@@ -108,7 +115,8 @@ namespace AccountingSoftware.Accounting
             try
             {
                 this.bindingSource1.EndEdit();
-                int returnValue;
+                int returnValue =0 ;
+                this.productsTableAdapter1.Fill_All(this.accDs1.Products);
                 returnValue = this.productsTableAdapter1.Update(this.accDs1.Products);
                 //--------------
                 if (returnValue > 0)
@@ -152,6 +160,7 @@ namespace AccountingSoftware.Accounting
         {
             Int32 id;
             Int32.TryParse(this.search_id_textBox1.Text, out id);
+            this.productsTableAdapter1.Fill_All(this.accDs1.Products);
             this.productsTableAdapter1.FillBy_id(accDs1.Products, id);
         }
 
@@ -159,6 +168,7 @@ namespace AccountingSoftware.Accounting
         {
             string searchByLastName;
             searchByLastName = "%" + this.search_proName_textBox2.Text + "%";
+            this.productsTableAdapter1.Fill_All(this.accDs1.Products);
             this.productsTableAdapter1.FillBy_productName(accDs1.Products, searchByLastName);
         }
 

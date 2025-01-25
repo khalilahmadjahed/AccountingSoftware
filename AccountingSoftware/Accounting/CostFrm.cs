@@ -70,6 +70,15 @@ namespace AccountingSoftware.Accounting
 
         private void CostFrm_Load(object sender, EventArgs e)
         {
+            try
+            {
+                this.costTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
+                this.costTableAdapter1.Fill_All(this.accDs1.Cost);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error " + ex.Message);
+            }
             save_cancle_btns();
 
             //------------------
@@ -149,6 +158,7 @@ namespace AccountingSoftware.Accounting
                 //-----------------------
                 this.bindingSource1.EndEdit();
                 int returnValue = 0;
+                this.costTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
                 returnValue = this.costTableAdapter1.Update(this.accDs1.Cost);
 
                 //-------------------

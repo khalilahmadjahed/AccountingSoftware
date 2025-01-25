@@ -62,8 +62,18 @@ namespace AccountingSoftware.Accounting
         private void SalesInvoiceProductsFrm_Load(object sender, EventArgs e)
         {
             save_cancle_btns();
-            //this.salesInvoiceProductsTableAdapter1.Fill_All(this.accDs1.SalesInvoiceProducts);
-            this.salesInvoiceProductsTableAdapter1.FillBy_InvoiceId(this.accDs1.SalesInvoiceProducts, selected_invoice_id);
+
+            try
+            {
+                this.salesInvoiceProductsTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
+                this.salesInvoiceProductsTableAdapter1.FillBy_InvoiceId(this.accDs1.SalesInvoiceProducts, selected_invoice_id);
+                //this.salesInvoiceProductsTableAdapter1.Fill_All(this.accDs1.SalesInvoiceProducts);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error " + ex.Message);
+            }
+           
         }
 
         private void new_btn_Click(object sender, EventArgs e)
@@ -107,7 +117,8 @@ namespace AccountingSoftware.Accounting
             try
             {
                 this.bindingSource3.EndEdit();
-                int returnValue;
+                int returnValue = 0;
+                this.salesInvoiceProductsTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
                 returnValue = this.salesInvoiceProductsTableAdapter1.Update(this.accDs1.SalesInvoiceProducts);
                 //--------------
                 if (returnValue > 0)

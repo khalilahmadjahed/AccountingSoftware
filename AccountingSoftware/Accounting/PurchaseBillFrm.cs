@@ -36,19 +36,26 @@ namespace AccountingSoftware.Accounting
         {
             save_cancle_btns();
             // ------------------
-
-            this.purchaseBillTableAdapter1.FillBy_bill_id(this.accDs1.PurchaseBill, sel_bill_id);
-
-            //--------Load invoice products----------
-
-            if (sel_bill_id > 0)
+            try
             {
-                this.purchaseProductTableAdapter1.FillBy_PurchaseId(this.accDs1.PurchaseProduct, sel_bill_id);
+                this.purchaseBillTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
+                this.purchaseBillTableAdapter1.FillBy_bill_id(this.accDs1.PurchaseBill, sel_bill_id);
 
-                //--------------------------------------------------
-                AllSumCalc();
+                //--------Load invoice products----------
+
+                if (sel_bill_id > 0)
+                {
+                    this.purchaseProductTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
+                    this.purchaseProductTableAdapter1.FillBy_PurchaseId(this.accDs1.PurchaseProduct, sel_bill_id);
+
+                    //--------------------------------------------------
+                    AllSumCalc();
+                }
             }
-
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error " + ex.Message);
+            }
         }
 
         void new_edit_delete_btns()
@@ -131,6 +138,7 @@ namespace AccountingSoftware.Accounting
             {
                 this.bindingSource1.EndEdit();
                 int returnValue = 0;
+                this.purchaseBillTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
                 returnValue = this.purchaseBillTableAdapter1.Update(this.accDs1.PurchaseBill);
 
                 //-------------------
@@ -213,6 +221,7 @@ namespace AccountingSoftware.Accounting
                 int selected_purchase_id;
                 selected_purchase_id = int.Parse(this.purchaseId_txtBox.Text);
                 //this.purchaseProductTableAdapter1.FillBy_PurchaseId(this.accDs1.PurchaseProduct, selected_purchase_id);
+                this.purchaseProductTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
                 this.purchaseProductTableAdapter1.Fill_All(this.accDs1.PurchaseProduct);
 
                 //Calculate Sum of Colnms
@@ -244,6 +253,8 @@ namespace AccountingSoftware.Accounting
 
                 //--------Load Spend Money----------
                 selected_purchase_id = int.Parse(this.purchaseId_txtBox.Text);
+
+                this.spendMoneyTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
                 this.spendMoneyTableAdapter1.FillBy_PurchaseId(this.accDs1.SpendMoney, selected_purchase_id);
 
                 //--------Calc sum----------

@@ -124,17 +124,28 @@ namespace AccountingSoftware.Accounting
         {
             save_cancle_btns();
 
-            //------------------
-            if (selectedInvoiceId <= 0)
+            try
             {
-                this.receiveMoneyTableAdapter1.Fill_All(this.accDs1.ReceiveMoney);//Load all data
-                this.customerSearch_btn.Enabled = true;
+                //------------------
+                if (selectedInvoiceId <= 0)
+                {
+                    this.receiveMoneyTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
+                    this.receiveMoneyTableAdapter1.Fill_All(this.accDs1.ReceiveMoney);//Load all data
+                    this.customerSearch_btn.Enabled = true;
+                }
+                else
+                {
+                    this.receiveMoneyTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
+                    this.receiveMoneyTableAdapter1.FillBy_InvoiceId(this.accDs1.ReceiveMoney, selectedInvoiceId);
+                    this.customerSearch_btn.Enabled = false;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                this.receiveMoneyTableAdapter1.FillBy_InvoiceId(this.accDs1.ReceiveMoney, selectedInvoiceId);
-                this.customerSearch_btn.Enabled = false;
+                MessageBox.Show("Error " + ex.Message);
             }
+
+            
 
             //--------Load invoice products----------//Remove at the end
             // int selectedInvoiceId = int.Parse(this.invoiceId_txtBox.Text);
@@ -178,6 +189,7 @@ namespace AccountingSoftware.Accounting
                 //-----------------------
                 this.bindingSource1.EndEdit();
                 int returnValue = 0;
+                this.receiveMoneyTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
                 returnValue = this.receiveMoneyTableAdapter1.Update(this.accDs1.ReceiveMoney);
 
                 //-------------------

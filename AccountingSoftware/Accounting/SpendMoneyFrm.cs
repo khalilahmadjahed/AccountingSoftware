@@ -123,17 +123,28 @@ namespace AccountingSoftware.Accounting
         {
             save_cancle_btns();
 
-            //------------------
-            if (selectedPurchaseId <= 0)
+            try
             {
-                this.spendMoneyTableAdapter1.Fill_All(this.accDs1.SpendMoney);//Load all data
-                this.customerSearch_btn.Enabled = true;
+                //------------------
+                if (selectedPurchaseId <= 0)
+                {
+                    this.spendMoneyTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
+                    this.spendMoneyTableAdapter1.Fill_All(this.accDs1.SpendMoney);//Load all data
+                    this.customerSearch_btn.Enabled = true;
+                }
+                else
+                {
+                    this.spendMoneyTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
+                    this.spendMoneyTableAdapter1.FillBy_PurchaseId(this.accDs1.SpendMoney, selectedPurchaseId);
+                    this.customerSearch_btn.Enabled = false;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                this.spendMoneyTableAdapter1.FillBy_PurchaseId(this.accDs1.SpendMoney, selectedPurchaseId);
-                this.customerSearch_btn.Enabled = false;
+                MessageBox.Show("Error " + ex.Message);
             }
+
+            
         }
 
         private void del_btn_Click(object sender, EventArgs e)
@@ -171,6 +182,7 @@ namespace AccountingSoftware.Accounting
                 //-----------------------
                 this.bindingSource1.EndEdit();
                 int returnValue = 0;
+                this.spendMoneyTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
                 returnValue = this.spendMoneyTableAdapter1.Update(this.accDs1.SpendMoney);
 
                 //-------------------

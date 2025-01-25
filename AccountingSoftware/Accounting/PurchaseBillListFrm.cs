@@ -28,13 +28,14 @@ namespace AccountingSoftware.Accounting
         {
             try
             {
+                this.purchaseBillTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
                 this.purchaseBillTableAdapter1.Fill_All(this.accDs1.PurchaseBill);
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show("Error! " + ex.Message);
+                MessageBox.Show("Error " + ex.Message);
             }
+            
         }
 
         private void new_btn_Click(object sender, EventArgs e)

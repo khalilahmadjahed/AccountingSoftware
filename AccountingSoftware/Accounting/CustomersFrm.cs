@@ -78,7 +78,17 @@ namespace AccountingSoftware.Accounting
         private void CustomersFrm_Load(object sender, EventArgs e)
         {
             save_cancle_btns();
-            this.customersTableAdapter1.Fill_All(this.accDs1.Customers);
+            
+
+            try
+            {
+                this.customersTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
+                this.customersTableAdapter1.Fill_All(this.accDs1.Customers);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error " + ex.Message);
+            }
         }
 
         private void new_btn_Click(object sender, EventArgs e)
@@ -121,6 +131,7 @@ namespace AccountingSoftware.Accounting
             {
                 this.bindingSource1.EndEdit();
                 int returnValue;
+                this.customersTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
                 returnValue = this.customersTableAdapter1.Update(this.accDs1.Customers);
                 //--------------
                 if (returnValue > 0)
@@ -165,6 +176,7 @@ namespace AccountingSoftware.Accounting
         {
             Int32 id;
             Int32.TryParse(this.search_id_textBox1.Text, out id);
+            this.customersTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
             this.customersTableAdapter1.FillBy_id(accDs1.Customers, id);
         }
 
@@ -172,6 +184,7 @@ namespace AccountingSoftware.Accounting
         {
             string searchByLastName;
             searchByLastName = "%" + this.search_lName_textBox2.Text + "%";
+            this.customersTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
             this.customersTableAdapter1.FillBy_lastName(accDs1.Customers, searchByLastName);
         }
 

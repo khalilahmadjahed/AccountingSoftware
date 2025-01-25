@@ -19,7 +19,16 @@ namespace AccountingSoftware.Accounting.Common
 
         private void Login_Load(object sender, EventArgs e)
         {
-            this.usersTableAdapter1.Fill(this.accDs1.Users);
+            try
+            {
+                this.usersTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
+                this.usersTableAdapter1.Fill(this.accDs1.Users);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error! " + ex.Message);
+            }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -37,6 +46,23 @@ namespace AccountingSoftware.Accounting.Common
             else
             {
                 MessageBox.Show("The password is incorrect! Please try again!");
+            }
+        }
+
+        private void sql_sett_button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                AccountingSoftware.Accounting.Common.SQL_SettingFrm frm = new SQL_SettingFrm(); 
+
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    Login_Load(sender, e);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error! " + ex.Message);
             }
         }
     }

@@ -32,18 +32,25 @@ namespace AccountingSoftware.Accounting
             save_cancle_btns();
             // ------------------
 
-            this.salesInvoiceTableAdapter1.FillBy_invoice_id(this.accDs1.SalesInvoice, sel_invoice_id);
-
-            //--------Load invoice products----------
-
-            if (sel_invoice_id > 0)
+            try
             {
-                this.salesInvoiceProductsTableAdapter1.FillBy_InvoiceId(this.accDs1.SalesInvoiceProducts, sel_invoice_id);
+                this.salesInvoiceTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
+                this.salesInvoiceTableAdapter1.FillBy_invoice_id(this.accDs1.SalesInvoice, sel_invoice_id);
 
-                //--------------------------------------------------
-                AllSumCalc();
+                //--------Load invoice products----------
+
+                if (sel_invoice_id > 0)
+                {
+                    this.salesInvoiceProductsTableAdapter1.FillBy_InvoiceId(this.accDs1.SalesInvoiceProducts, sel_invoice_id);
+
+                    //--------------------------------------------------
+                    AllSumCalc();
+                }
             }
-
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error " + ex.Message);
+            }
         }
 
         void new_edit_delete_btns()
@@ -126,6 +133,7 @@ namespace AccountingSoftware.Accounting
             {
                 this.bindingSource1.EndEdit();
                 int returnValue = 0;
+                this.salesInvoiceTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
                 returnValue = this.salesInvoiceTableAdapter1.Update(this.accDs1.SalesInvoice);
 
                 //-------------------
@@ -200,6 +208,7 @@ namespace AccountingSoftware.Accounting
             //--------Load invoice products----------
             int selectedInvoiceId;
             selectedInvoiceId = int.Parse(this.invoiceId_txtBox.Text);
+            this.salesInvoiceProductsTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
             this.salesInvoiceProductsTableAdapter1.FillBy_InvoiceId(this.accDs1.SalesInvoiceProducts, selectedInvoiceId);
 
             AllSumCalc();
@@ -213,6 +222,7 @@ namespace AccountingSoftware.Accounting
                 //--------Load invoice products----------
                 int selectedInvoiceId;
                 selectedInvoiceId = int.Parse(this.invoiceId_txtBox.Text);
+                this.salesInvoiceProductsTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
                 this.salesInvoiceProductsTableAdapter1.FillBy_InvoiceId(this.accDs1.SalesInvoiceProducts, selectedInvoiceId);
 
                 //Calculate Sum of Colnms
@@ -244,6 +254,7 @@ namespace AccountingSoftware.Accounting
 
                 //--------Load Receive Money----------
                 selectedInvoiceId = int.Parse(this.invoiceId_txtBox.Text);
+                this.receiveMoneyTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
                 this.receiveMoneyTableAdapter1.FillBy_InvoiceId(this.accDs1.ReceiveMoney, selectedInvoiceId);
 
                 //--------Calc sum----------
@@ -347,6 +358,7 @@ namespace AccountingSoftware.Accounting
             //--------Load Receive Money----------
             int selectedInvoiceId;
             selectedInvoiceId = int.Parse(this.invoiceId_txtBox.Text);
+            this.receiveMoneyTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
             this.receiveMoneyTableAdapter1.FillBy_InvoiceId(this.accDs1.ReceiveMoney, selectedInvoiceId);
 
             AllSumCalc();

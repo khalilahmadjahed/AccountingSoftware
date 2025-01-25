@@ -80,8 +80,17 @@ namespace AccountingSoftware.Accounting
         {
             save_cancle_btns();
             //this.salesInvoiceProductsTableAdapter1.Fill_All(this.accDs1.SalesInvoiceProducts);
-            this.purchaseProductTableAdapter1.FillBy_PurchaseId(this.accDs1.PurchaseProduct, selected_purchase_id);
-            this.purchaseProductTableAdapter1.Fill_All(this.accDs1.PurchaseProduct);
+            try
+            {
+                this.purchaseProductTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
+                this.purchaseProductTableAdapter1.FillBy_PurchaseId(this.accDs1.PurchaseProduct, selected_purchase_id);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error " + ex.Message);
+            }
+            
+            //this.purchaseProductTableAdapter1.Fill_All(this.accDs1.PurchaseProduct);
         }
 
         private void edit_btn_Click(object sender, EventArgs e)
@@ -111,6 +120,7 @@ namespace AccountingSoftware.Accounting
             {
                 this.bindingSource1.EndEdit();
                 int returnValue = 0;
+                this.purchaseProductTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
                 returnValue = this.purchaseProductTableAdapter1.Update(this.accDs1.PurchaseProduct);
                 //--------------
                 if (returnValue > 0)

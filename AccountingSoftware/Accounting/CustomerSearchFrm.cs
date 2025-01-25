@@ -18,13 +18,24 @@ namespace AccountingSoftware.Accounting
         }
         private void CustomerSearchFrm_Load(object sender, EventArgs e)
         {
-            this.customersTableAdapter1.Fill_All(this.accDs1.Customers);
+            
+
+            try
+            {
+                this.customersTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
+                this.customersTableAdapter1.Fill_All(this.accDs1.Customers);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error " + ex.Message);
+            }
         }
 
         private void search_id_button1_Click(object sender, EventArgs e)
         {
             Int32 id;
             Int32.TryParse(this.search_id_textBox1.Text, out id);
+            this.customersTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
             this.customersTableAdapter1.FillBy_id(accDs1.Customers, id);
         }
 
@@ -32,6 +43,7 @@ namespace AccountingSoftware.Accounting
         {
             string searchByLastName;
             searchByLastName = "%" + this.search_lName_textBox2.Text + "%";
+            this.customersTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
             this.customersTableAdapter1.FillBy_lastName(this.accDs1.Customers, searchByLastName);
         }
 
@@ -47,6 +59,7 @@ namespace AccountingSoftware.Accounting
 
         private void showAll_btn_Click(object sender, EventArgs e)
         {
+            this.customersTableAdapter1.Connection.ConnectionString = AccountingSoftware.Properties.Settings.Default.main_connection_string;
             this.customersTableAdapter1.Fill_All(this.accDs1.Customers);
         }
     }

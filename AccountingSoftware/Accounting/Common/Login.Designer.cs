@@ -42,6 +42,7 @@
             usersTableAdapter1 = new Ds.AccDsTableAdapters.UsersTableAdapter();
             correct_pass_txtBox = new TextBox();
             label1 = new Label();
+            sql_sett_button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)photo_pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)accDs1).BeginInit();
@@ -166,14 +167,26 @@
             label1.TabIndex = 38;
             label1.Text = "Password:";
             // 
+            // sql_sett_button1
+            // 
+            sql_sett_button1.Font = new Font("Segoe UI", 5F);
+            sql_sett_button1.Image = Properties.Resources.settings;
+            sql_sett_button1.Location = new Point(367, 7);
+            sql_sett_button1.Name = "sql_sett_button1";
+            sql_sett_button1.Size = new Size(44, 38);
+            sql_sett_button1.TabIndex = 39;
+            sql_sett_button1.UseVisualStyleBackColor = true;
+            sql_sett_button1.Click += sql_sett_button1_Click;
+            // 
             // Login
             // 
             AcceptButton = ok_button1;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = cancel_button2;
-            ClientSize = new Size(426, 319);
+            ClientSize = new Size(418, 311);
             ControlBox = false;
+            Controls.Add(sql_sett_button1);
             Controls.Add(correct_pass_txtBox);
             Controls.Add(label1);
             Controls.Add(panel1);
@@ -213,5 +226,6 @@
         private Label label1;
         public ComboBox users_comboBox1;
         public PictureBox photo_pictureBox1;
+        private Button sql_sett_button1;
     }
 }
